@@ -1,0 +1,150 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Oswald|Lato|Droid+Sans|PT+Sans|Source+Sans+Pro|Open+Sans+Condensed:300|Roboto+Condensed|Droid+Serif|Ubuntu|Raleway|Montserrat|PT+Sans+Narrow|Roboto+Slab|Lobster|Arimo|Yanone+Kaffeesatz|Lora|Bitter);
+body
+{
+	overflow-x: auto;
+  /*position: absolute; */
+}
+
+.jumbotron{
+    margin: 0;
+    height: 650px;
+    width: 100% !important;
+    bottom: 0;
+    z-index: -2;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: auto;
+}
+
+.navbar{
+  background-color: #34495e;
+  border-radius: 0;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-brand{
+	color:#27ae60;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+  color:#d35400;
+
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover{
+  color: #000;
+}
+
+.southernimage{
+	background-image: url('../images/siteimage.jpg');
+	/*background-repeat: no-repeat;*/
+    background-position: center;
+    /*background-attachment: fixed;*/
+}
+
+
+.modal-header{
+  background-color: #000;
+  color: #FFF;
+}
+
+.modal-body{
+    height: 250px;
+}
+
+.modal-footer{
+	margin-top: 0;
+	background-color: #7f8c8d;
+}
+
+.dropdown-menu > li > a:hover{
+  background-color: #009900;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+.divider{
+  border: 1px solid #000;
+  background-color: #000;
+}
+
+.home-top{
+background-image: url('../images/readingpark.jpg');
+  background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+    background-size: cover;
+}
+
+.home-top-text
+{
+  color:#000 ;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.home-bottom{
+  background-image: url('../images/contactone.jpg');
+  background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+    background-size: cover;
+}
+
+.home-bottom-text
+{
+  color:#fff ;
+  background-color:#000 ;
+  opacity: 0.5;
+}
+
+.contact-images{
+  /*background-color: #FFF;*/
+  margin-top: 250px;
+  margin-left: 250px;
+  /**/
+  /*height: 100px;*/
+  /*width: 250px;*/
+}
+
+.littleright{
+  margin-right: 20px;
+  width: 98px;
+  height:100px;
+}
+
+#img_container
+{
+ position:absolute;
+ display:none;
+ border:1px solid #f00;
+ background:#fff;
+ }
+#large_img
+{
+ width:170px;
+ height:190px;
+ }
+
+ .contact-button{
+   background-color: transparent;
+ }
+
+ .contact-button:hover{
+  background-color: transparent;
+  border-radius: 14%;
+ }
+
+ .tooltip{
+  background-color: #000;
+  color: #FFF;
+ }
