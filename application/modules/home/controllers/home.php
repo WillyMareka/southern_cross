@@ -14,10 +14,5 @@ class Home extends MY_Controller
 		$this->load->view('v_home');
 	}
 
-	function courses()
-	{
-		$this->load->view('v_courses');
-	}
-
 
 }
