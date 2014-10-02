@@ -230,6 +230,7 @@ background-image: url('../images/uni2.jpg');
 
 .bottom_announce{
   margin-left: 40px;
+  margin-top: 0;
 }
 
 .special_announcement{
@@ -239,5 +240,44 @@ background-image: url('../images/uni2.jpg');
   font-size: 18px;
   font-family: "Ubuntu";
   color: #c0392b;
+}
+
+.top-under{
+background-image: url('../images/topundergraduateform.jpg');
+  background-repeat: no-repeat;
+  background-position:top;
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+  background-size: cover;
+  height: 600px;
+}
+
+.admission{
+  width: 100%;
+}
+
+.titleadmissionno{
+  font-size: 25px;
+  width: 70%;
+  margin-left: 20px;
+  color: #19197A;
+}
+
+.admissionno{
+  float: right;
+  width: 30%;
+}
+
+.Admlength{
+  width:200px;
+  border-radius:50px; 
+}
+
+.procedure{
+  background-image: url('../images/secondundergraduateform.jpg');
+  background-repeat: no-repeat;
+  background-position:top;
+  height: 400px;
 }
 

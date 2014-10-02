@@ -35,16 +35,16 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="doctoralapp.php">Doctoral</a></li>
-            <li><a href="mastersapp.php">Masters</a></li>
-            <li><a href="bachelorapp.php">Bachelor</a></li>
-            <li><a href="underapp.php">Under-Graduate</a></li>
+            <li><a href="<?php echo base_url()."applications/doctoral"; ?>">Doctoral</a></li>
+            <li><a href="<?php echo base_url()."applications/masters"; ?>">Masters</a></li>
+            <li><a href="<?php echo base_url()."applications/bachelor"; ?>">Bachelor</a></li>
+            <li><a href="<?php echo base_url()."applications/undergraduate"; ?>">Under-Graduate</a></li>
           </ul>
         </li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href=" <?php echo base_url()."courses"; ?>">Announcements</a></li>
+        <li><a href="<?php echo base_url()."courses"; ?>">Announcements</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">E-Learning<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -202,8 +202,6 @@
 	    <script src="<?php echo base_url(). 'assets/flat-ui/js/jquery.tagsinput.js'?>"></script>
 	    <script src="<?php echo base_url(). 'assets/flat-ui/js/jquery.placeholder.js'?>"></script>
 	    <script src="<?php echo base_url(). 'assets/script/jquery/jquery-ui.js'?>"></script>
-      
-      <script src="<?php echo base_url(). 'assets/bootstrap/plugins/transitions.js'?>"></script>
 	    <script src="<?php echo base_url(). 'assets/js/main.js'?>"></script>
 	</body>
 </html>
