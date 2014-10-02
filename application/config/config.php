@@ -26,7 +26,7 @@ $config['base_url']	= 'http://'.$_SERVER['SERVER_NAME'].'/SouthernCross/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = 'index';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'qazwsxedcrfv123456789';
+$config['encryption_key'] = 'zasstyq856q6a';
 
 /*
 |--------------------------------------------------------------------------

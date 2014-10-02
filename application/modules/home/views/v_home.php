@@ -13,7 +13,6 @@
 
 	</head>
 	<body>
-		
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,6 +29,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+		
         <li><a href="#Home">Home</a></li>
         <li><a href="#Contacts">Contacts</a></li>
         <li class="dropdown">
@@ -44,7 +44,7 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="courses.php">Courses</a></li>
+        <li><a href=" <?php echo base_url()."courses"; ?>">Announcements</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">E-Learning<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -88,6 +88,62 @@
   <h1>Condusive environment</h1>
   <h3>Feel confortable while studying</h3>
   </div>
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner home-slide">
+
+    <div class="item active">
+      <div class="carousel-caption">
+    <h4>"Isn't it a bit unnerving that doctors call what they do "practice"?"</h4>
+    <p>- George Carlin</p>
+  </div>
+  <img src="<?php echo base_url(). 'assets/images/slideimage.jpg'?>" alt="plain_black_image">
+</div>
+
+<div class="item">
+  <div class="carousel-caption">
+    <h4>"Let food be thy medicine and medicine be thy food."</h4>
+    <p>- Hippocrites</p>
+  </div>
+  <img src="<?php echo base_url(). 'assets/images/slideimage.jpg'?>" alt="plain_black_image">
+  
+</div>
+
+<div class="item">
+  <div class="carousel-caption">
+    <h4>"Always laugh when you can, it is cheap medicine."</h4>
+    <p>- George Gordon Byron</p>
+  </div>
+  <img src="<?php echo base_url(). 'assets/images/slideimage.jpg'?>" alt="plain_black_image">
+</div>
+
+<div class="item">
+  <div class="carousel-caption">
+    <h4>"A medicine cat has no time for doubt. Put your energy into today and stop worrying about the past."</h4>
+    <p>- Erin Hunter, Rising Storm</p>
+  </div>
+  <img src="<?php echo base_url(). 'assets/images/slideimage.jpg'?>" alt="plain_black_image">
+</div>
+    
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
 </div>
 
 <div class="jumbotron home-bottom" id="Contacts">
@@ -98,27 +154,34 @@
     <img id="large_img" src="" />
   </div>
   <div class="contact-images">
-    <a href="www.facebook.com">
+
+    <a href="http://www.facebook.com">
     <button type="button" class="btn btn-default contact-button" data-toggle="tooltip" data-placement="top" title="Facebook">
      <img id="img1"  class="littleright" width="98" height="100" src="<?php echo base_url(). 'assets/icons/facebook.jpg'?>" onmouseover="show('img_container',this,'large_img');">
     </button></a>
-    <a href="www.gmail.com">
+
+    <a href="http://www.gmail.com">
     <button type="button" class="btn btn-default contact-button" data-toggle="tooltip" data-placement="top" title="Gmail">
      <img id="img2" class="littleright" width="98" height="100" src="<?php echo base_url(). 'assets/icons/gmail.jpg'?>" onmouseover="show('img_container',this,'large_img');">
     </button></a>
-    <a href="www.twitter.com">
+
+    <a href="http://www.twitter.com">
     <button type="button" class="btn btn-default contact-button" data-toggle="tooltip" data-placement="top" title="Twitter">
      <img id="img3" class="littleright" width="98" height="100" src="<?php echo base_url(). 'assets/icons/twitter.jpg'?>" onmouseover="show('img_container',this,'large_img');">
     </button></a>
-    <a href="www.instragram.com">
+
+    <a href="http://www.instragram.com">
     <button type="button" class="btn btn-default contact-button" data-toggle="tooltip" data-placement="top" title="Instagram">
      <img id="img4" class="littleright" width="98" height="100" src="<?php echo base_url(). 'assets/icons/instagram.jpg'?>" onmouseover="show('img_container',this,'large_img');">
     </button></a>
-    <a href="www.yahoo.com">
+
+    <a href="http://www.yahoo.com">
     <button type="button" class="btn btn-default contact-button" data-toggle="tooltip" data-placement="top" title="Yahoo">
      <img id="img5" class="littleright" width="98" height="100" src="<?php echo base_url(). 'assets/icons/yahoo.jpg'?>" onmouseover="show('img_container',this,'large_img');">
     </button></a>
+
   </div>
+
 
 
 </div>
@@ -140,6 +203,7 @@
 	    <script src="<?php echo base_url(). 'assets/flat-ui/js/jquery.placeholder.js'?>"></script>
 	    <script src="<?php echo base_url(). 'assets/script/jquery/jquery-ui.js'?>"></script>
       
+      <script src="<?php echo base_url(). 'assets/bootstrap/plugins/transitions.js'?>"></script>
 	    <script src="<?php echo base_url(). 'assets/js/main.js'?>"></script>
 	</body>
 </html>
