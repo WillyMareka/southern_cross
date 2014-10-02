@@ -1,19 +1,18 @@
-<?php if (! defined("BASEPATH")) exit("No direct access to scripts is allowed");
-	
-	/**
-	* 
-	*/
-	class Home extends CI_Controller
-	{
-		
-		function __construct()
-		{
-			parent::__construct();
-		}
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-		public function index()
-		{
-			$this->load->view('home_view');
-		}
+class Home extends MY_Controller
+{
+	function __construct()
+    {
+        // Call the Model constructor
+        parent::__construct();
+        $this->load->model('m_home');
+    }
+
+	function index()
+	{
+		$this->load->view('v_home');
 	}
-?>
+
+
+}
