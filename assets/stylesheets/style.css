@@ -2,12 +2,12 @@
 body
 {
 	overflow-x: auto;
-  /*position: absolute; */
+  position: relative;
 }
 
 .jumbotron{
     margin: 0;
-    height: 650px;
+    height: 600px;
     width: 100% !important;
     bottom: 0;
     z-index: -2;
@@ -16,7 +16,7 @@ body
 }
 
 .navbar{
-  background-color: #34495e;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0;
   color: #fff;
   margin-bottom: 0;
@@ -35,7 +35,7 @@ body
 	color: #ecf0f1;
 }
 .navbar-default .navbar-nav > li > a:hover{
-  color: #000;
+  color: #7f8c8d;
 }
 
 .southernimage{
@@ -171,3 +171,57 @@ background-image: url('../images/uni2.jpg');
   text-align: center;
   /*bottom: 0px;*/
  }
+
+ .first-header-ann{
+  margin-top: 350px;
+  margin-left: 90px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  opacity: 0.8;
+ }
+
+ .top-announcement{
+  background-image: url('../images/header.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  /*background-attachment: fixed;*/
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+ /* background-size: cover;*/
+  height: 800px;
+
+ }
+
+ hr{
+  margin-top: 24px;
+  border: 2px solid #000;
+ }
+
+ .fields{
+  background-image: url('../images/header.jpg');
+  background-repeat: no-repeat;
+  background-position:bottom;
+  /*background-attachment: fixed;*/
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+  background-size: cover;
+  height: 1000px;
+}
+
+.collap-color{
+  background-color: #bdc3c7;
+  color: #000;
+}
+
+.bottom_announce{
+  margin-left: 40px;
+}
+
+.special_announcement{
+  margin-left: 80px;
+  font-size: 18px;
+  font-family: "Ubuntu";
+  color: #c0392b;
+}

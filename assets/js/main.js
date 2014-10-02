@@ -23,6 +23,7 @@ $(function() {
 
 });
 
+//BEGIN increase icons in home page
 function show(obj,obj1,obj2)
 {
  document.getElementById(obj).style.display="block";
@@ -69,3 +70,5 @@ function findPosY(obj)
   curtop += obj.y;
  return curtop;
 }
+
+//END increase icons in home page

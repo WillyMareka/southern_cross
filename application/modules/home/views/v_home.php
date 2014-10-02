@@ -44,7 +44,7 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="courses.php">Courses</a></li>
+        <li><a href=" <?php echo base_url()."courses"; ?>">Announcements</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">E-Learning<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -203,6 +203,7 @@
 	    <script src="<?php echo base_url(). 'assets/flat-ui/js/jquery.placeholder.js'?>"></script>
 	    <script src="<?php echo base_url(). 'assets/script/jquery/jquery-ui.js'?>"></script>
       
+      <script src="<?php echo base_url(). 'assets/bootstrap/plugins/transitions.js'?>"></script>
 	    <script src="<?php echo base_url(). 'assets/js/main.js'?>"></script>
 	</body>
 </html>
