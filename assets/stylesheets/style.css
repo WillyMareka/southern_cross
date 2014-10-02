@@ -201,13 +201,26 @@ background-image: url('../images/uni2.jpg');
  .fields{
   background-image: url('../images/header.jpg');
   background-repeat: no-repeat;
-  background-position:bottom;
-  /*background-attachment: fixed;*/
+  background-position:center;
+  background-attachment: fixed;
     -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
   background-size: cover;
-  height: 1000px;
+  height: 600px;
+  bottom: 0;
+}
+
+.bottomimage{
+  background-image: url('../images/header.jpg');
+  background-repeat: no-repeat;
+  background-position:bottom;
+  background-attachment: fixed;
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+  background-size: cover;
+ height: 100px;
 }
 
 .collap-color{
@@ -220,8 +233,11 @@ background-image: url('../images/uni2.jpg');
 }
 
 .special_announcement{
+  /*background-color: #000;
+  opacity:0.7;*/
   margin-left: 80px;
   font-size: 18px;
   font-family: "Ubuntu";
   color: #c0392b;
 }
+

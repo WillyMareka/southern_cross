@@ -5,5 +5,6 @@ class Courses extends MX_Controller
 	function index()
 	{
 		$this->load->view('v_courses');
+		
 	}
 }
