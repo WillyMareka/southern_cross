@@ -18,7 +18,7 @@ class Admin extends MY_Controller
 	public function index()
 	{
 		//$this->template($this->cont_data);
-		//$data['application'] = $this->m_admin->applications();
+		$data['application'] = $this->m_admin->applications();
 		$this->load->view('admin_view', $data);
 	}
 
