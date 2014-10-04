@@ -75,7 +75,7 @@ class Admin extends MY_Controller
 		$this->db->query($sql);
 
 		
-			redirect('admin/application');
+			$this->application();
 		
 	
 	}
@@ -93,7 +93,7 @@ class Admin extends MY_Controller
 		$this->db->query($sql);
 
 		
-			redirect('admin/application');
+		$this->application();
 		
 	
 	}
