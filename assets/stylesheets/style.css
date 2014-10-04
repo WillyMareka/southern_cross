@@ -4,7 +4,9 @@ body
 	overflow-x: auto;
   position: relative;
 }
-
+.home-body{
+background-color: #ADADAD;
+}
 .jumbotron{
     margin: 0;
     height: 600px;
@@ -19,11 +21,17 @@ body
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0;
   color: #fff;
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  height:70px;
 }
 
 .navbar-default .navbar-brand{
 	color:#27ae60;
+  margin-bottom: 20px;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  margin-bottom: 20px;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
@@ -33,6 +41,7 @@ body
 
 .navbar-default .navbar-nav > li > a{
 	color: #ecf0f1;
+  margin-top: 10px;
 }
 .navbar-default .navbar-nav > li > a:hover{
   color: #7f8c8d;
@@ -40,7 +49,7 @@ body
 
 .southernimage{
 	background-image: url('../images/siteimage.jpg');
-	/*background-repeat: no-repeat;*/
+	background-repeat: no-repeat;
     background-position: center;
     /*background-attachment: fixed;*/
 }
@@ -163,8 +172,8 @@ background-image: url('../images/uni2.jpg');
   color: #FFF;
   /*font-size: 24px;*/
   font-family: "Helvetica";
-  /*text-align: center;*/
-  /*background-color: transparent;*/
+  text-align: center;
+  /*background-color: #808080;*/
  }
 
  .carousel-caption{
@@ -281,3 +290,100 @@ background-image: url('../images/topundergraduateform.jpg');
   height: 400px;
 }
 
+.home-icon{
+  width: 50px;
+  height: 50px;
+}
+
+
+.carou{
+  margin-top: 70px;
+  margin-right: 180px;
+  margin-left: 180px; 
+  height: 244px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.status{
+  background-color: #454545;
+  height: 310px;
+  margin: 10px 180px;
+}
+
+.inlining{
+  display: inline;
+}
+
+.status h3{
+  text-align: top;
+}
+
+.footer{
+  margin-top: 10px;
+  height: 400px;
+  margin-bottom: 0;
+  
+}
+
+.form-control{
+  width:300px;
+}
+
+.footer_form{
+  background-image: url('../images/black.jpg');
+  background-position: center;
+  background-color: #0066FF;
+  width:550px;
+  margin-left: 180px;
+  float: left;
+  height: 320px;
+  border:2px solid #000;
+  border-radius: 16px;
+}
+
+.footer_contacts{
+  background-image: url('../images/contactone.jpg');
+  /*opacity: 0.7;*/
+  background-position: center;
+  background-color: #CCCCA3;
+  width: 300px;
+  float: right;
+  margin-right: 180px;
+  border:2px solid #000;
+  border-radius: 16px;
+  height: 320px;
+  font-family: "Ubuntu";
+}
+
+.footer_contacts > a{
+  display: block;
+  margin: 20px;
+  color: rgba(0, 0, 0, 1.0);
+  font-size: 24px;
+}
+
+.status_image{
+  width: 250px;
+  height: 250px;
+}
+
+.form-group{
+  margin-left: 20px;
+  color: #FFF;
+  font-size: 24px;
+}
+
+.contact_icons{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.ind{
+  width: 20px;
+}
+
+.home-body{
+  background-image: url('../images/green.jpg');
+  height: 100%;
+}
