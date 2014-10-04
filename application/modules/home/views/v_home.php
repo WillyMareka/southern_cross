@@ -185,6 +185,10 @@
        <label for="InputMobile">MOBILE NUMBER</label>
        <input type="text" class="form-control" id="InputMobile" required placeholder="Enter Mobile Number">
      </div>
+     <div class="form-group">
+       <label for="InputMessage">MESSAGE</label>
+       <textarea class="form-control" id="InputMessage" required placeholder="Enter Message"></textarea>
+     </div>
      
     <button type="submit" class="btn btn-info">Submit</button>
   </form>
