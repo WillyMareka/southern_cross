@@ -1,15 +1,14 @@
 <?php 
 
-class Announcements extends MX_Controller
+class Admin extends MX_Controller
 {
 	function __construct()
     {
         // Call the Model constructor
         parent::__construct();
-        $this->load->model('m_announcements');
+        $this->load->model('admin_model');
     }
 	function index()
 	{
-		$this->load->view('announcement');
 	}
 }
