@@ -22,4 +22,8 @@ class Applications extends MX_Controller
       $this->load->view('undergradate_form');
 	}
 
+	function diploma(){
+      $this->load->view('diploma_certificate_form.php');
+	}
+
 }
