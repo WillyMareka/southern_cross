@@ -1,86 +1,26 @@
-<html>
-<head>
-<style>
-#img_container
-{
- position:absolute;
- display:none;
- border:1px solid #f00;
- background:#fff;
- }
-#large_img
-{
- width:304px;
- height:400px;
- }
-</style>
-<script>
-function show(obj,obj1,obj2)
-{
- document.getElementById(obj).style.display="block";
- document.getElementById(obj2).src=obj1.src;
- var x_coords=findPosX(obj1);
- var y_coords=findPosY(obj1);
- document.getElementById(obj).style.left=x_coords;
- document.getElementById(obj).style.top=y_coords;
- }
- 
-function hide(id)
-{
- document.getElementById(id).style.display="none";
- }
- 
-function findPosX(obj)
-{
- var curleft = 0;
- if (document.getElementById || document.all)
- {
-  while (obj.offsetParent)
-  {
-   curleft += obj.offsetLeft
-   obj = obj.offsetParent;
-  }
- }
- else if (document.layers)
-  curleft += obj.x;
- return curleft;
-}
- 
-function findPosY(obj)
-{
- var curtop = 0;
- if (document.getElementById || document.all)
- {
-  while (obj.offsetParent)
-  {
-   curtop += obj.offsetTop
-   obj = obj.offsetParent;
-  }
- }
- else if (document.layers)
-  curtop += obj.y;
- return curtop;
-}
-</script>
-</head>
-<body>
-<div>
-
- <img id="img1" width="117" height="180" src="resource/facebook.jpg" onmouseover="show('img_container',this,'large_img');">
-
- <img id="img2" width="117" height="180" src="resource/gmail.jpg" onmouseover="show('img_container',this,'large_img');">
-
- <img id="img3" width="117" height="180" src="resource/twitter.jpg" onmouseover="show('img_container',this,'large_img');">
-
- <img id="img4" width="117" height="180" src="resource/instagram.jpg" onmouseover="show('img_container',this,'large_img');">
-
- <img id="img5" width="117" height="180" src="resource/yahoo.jpg" onmouseover="show('img_container',this,'large_img');">
-
-</div>
-<div id="img_container" onmouseout="hide(this.id);">
- <img id="large_img" src="" />
-</div>
-
-
-</body>
-</html> 
+<div class="carousel-inner">
+    <div class="item active">
+      <div class="carousel-caption">
+        <h4>"Isn't it a bit unnerving that doctors call what they do "practice"?"</h4>
+        <p>- George Carlin</p>
+      </div>
+    </div>
+    <div class="item active">
+      <div class="carousel-caption">
+        <h4>"Let food be thy medicine and medicine be thy food."</h4>
+        <p>- Hippocrites</p>
+      </div>
+    </div>
+    <div class="item active">
+      <div class="carousel-caption">
+        <h4>"Always laugh when you can, it is cheap medicine."</h4>
+        <p>- George Gordon Byron</p>
+      </div>
+    </div>
+    <div class="item active">
+      <div class="carousel-caption">
+        <h4>"A medicine cat has no time for doubt. Put your energy into today and stop worrying about the past."</h4>
+        <p>- Erin Hunter, Rising Storm</p>
+      </div>
+    </div>
+  </div>
