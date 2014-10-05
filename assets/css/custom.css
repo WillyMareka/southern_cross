@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
-
+@-ms-viewport{
+  width: device-width;
+}
 .brand{
 	font-family: 'Dancing Script', cursive ,Helvetica;
 	font-size: 25px!important;
@@ -7,8 +9,10 @@
 body {
 	font-size: 13px;
 	font-family: 'Open Sans', Arial, sans-serif;
-	background: #fff;
-	color: #777
+	width: 100%;
+	height:100%;
+	color: #777;
+	z-index: 10;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #333;
@@ -1733,7 +1737,108 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 }
 @media(max-width:767px){body{padding:0!important}.wrapper{padding:20px 15px}}
 
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
 /*CUSTOM CSS*/
+.content{
+	
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%
+}
+
+.blue_strip{
+	background:#00006B;
+	width: 100%;
+	height: 50px;
+}
+.light_blue_strip{
+	background:#08ADEF;
+	width: 100%;
+	height: 5px;
+}
+.clear_right{
+	clear: right;
+}
+.top_logo{
+	padding: 0 5px;
+	color: #00006B;
+}
+
+.top_logo img{
+	margin:0 30px;
+	width:300px;
+	height: 260px;
+}
+.top_logo h1{
+	font-size: 65px;
+	margin: 105px 0 0 35px;
+	bottom: 0;
+	color: #00006B;
+
+}
+
+.logo_information{
+	width:650px;
+	color: #00006B;
+}
+
+.top_header{
+	font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+
+.top_mini_header{
+	font-size: 20px;
+}
+
+.logo_more_information{
+	padding: 0 100px 0;
+	text-align: right;
+
+}
+.logo_information h3{
+	padding: 10px 160px 10px;
+	color: #00006B;
+}
+
+.large_bcg_img{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background:url('../images/topundergraduateform.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	top:0;
+	margin: 0;
+	padding: 0;
+	z-index: 0;
+}
+
+.content{
+	z-index: 20;
+}
+
+.z_index{
+	z-index: 1000;
+}
+.form_header{
+	
+	width: 100%;
+	height: 300px;
+}
 .lec_info{
 	background: #ffffff;
 	width: 90%;
@@ -1781,6 +1886,9 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 	float: left;
 }
 
+.float_right{
+	float: right;
+}
 .fixed_height{
 	height:420px;
 }
@@ -1791,11 +1899,6 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 }
 .btn-box.big i{
 	height:40px;
-}
-.inputs{
-	border:0!important;
-	background-color: #E6E6E6!important;
-	width: 100%;
 }
 
 .inputs_md{
@@ -1877,11 +1980,45 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 .border-row {
     border-bottom: 1px solid #ccc;
 }
+
+.footer{
+	background:url('../images/bottompart.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width:100%;
+	height: 50px;
+}
+
+.bottom_blue_strip{
+	background:#00006B;
+	width: 100%;
+	height: 100px;
+	margin: 20px 0;
+}
+
+.form_title{
+	background:#C8ECFC;
+	width: 100%;
+	text-align: center;
+}
+
+.form_title h2{
+	color:#00006B;
+	font-size: 25px;
+}
 /*END OF CUSTOM CSS*/
 
 /*OVERRIDDEN BOOTSTRAP AND OTHER CSS*/
 .navbar-fixed-top, .navbar-fixed-bottom{
 	z-index: 1000;
+}
+
+.width_sm{
+	width:50px!important;
+}
+
+.padding_none{
+	padding: 0;
 }
 
 .ui,.modal{
@@ -1897,6 +2034,8 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 
 .table{
 	border-radius: 0;
+	padding: 0!important;
+	width:1700px!important;
 }
 .btn-box{
 	box-shadow: none;
@@ -1909,5 +2048,13 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 
 #basicinput{
 	height: 25px;
+}
+
+.width{
+	width:100%!important;
+}
+.row{
+	margin-left: 0;
+	width: 100%;
 }
 /*END OF OVERRIDDEN BOOTSTRAP*/
