@@ -14,5 +14,10 @@ class Home extends MY_Controller
 		$this->load->view('v_home');
 	}
 
+	function test_index()
+	{
+		$this->load->view('home');
+	}
+
 
 }
