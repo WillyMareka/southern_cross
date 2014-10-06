@@ -76,6 +76,7 @@ class Admin extends MY_Controller
 
 		
 			$this->application();
+			redirect('admin/application');
 		
 	
 	}
