@@ -47,7 +47,7 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Courses</a></li>
+        <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">E-Learning<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -93,20 +93,20 @@
    </ol>   
    <!-- Carousel items -->
    <div class="carousel-inner">
-      <div class="item active">
+      <div class="item texted active">
         <h4>"Isn't it a bit unnerving that doctors call what they do "practice" ? "</h4>
          
          <p>- George Carlin</p>
       </div>
-      <div class="item">
+      <div class="item texted">
          <h4>"Let food be thy medicine and medicine be thy food."</h4>
          <p>- Hippocrites</p>
       </div>
-      <div class="item">
+      <div class="item texted">
          <h4>"Always laugh when you can, it is cheap medicine."</h4>
          <p>- George Gordon Byron</p>
       </div>
-      <div class="item">
+      <div class="item texted">
          <h4>"A medicine cat has no time for doubt. Put your energy into today and stop worrying about the past."</h4>
          <p>- Erin Hunter, Rising Storm</p>
          

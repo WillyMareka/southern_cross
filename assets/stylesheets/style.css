@@ -300,8 +300,12 @@ background-image: url('../images/topundergraduateform.jpg');
   margin-top: 70px;
   margin-right: 180px;
   margin-left: 180px; 
-  height: 244px;
+  height: 280px;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.texted{
+  margin-top:80px;
 }
 
 .status{
