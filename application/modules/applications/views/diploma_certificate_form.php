@@ -8,6 +8,29 @@
    		<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/script/jquery/jquery-ui.css'?>"/>
 		<link rel="stylesheet" href="<?php echo base_url(). 'assets/stylesheets/animate.css'?>">
     	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/css/custom.css'?>">
+ 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
+  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.js' ?>"></script>
+  		<script>
+  			 $(function() {
+				$( "#datepicker" ).datepicker();
+				$( "#datepicker_work_from_1" ).datepicker();
+				$( "#datepicker_work_from_2" ).datepicker();
+				$( "#datepicker_work_from_3" ).datepicker();
+
+				$( "#datepicker_work_to_1" ).datepicker();
+				$( "#datepicker_work_to_2" ).datepicker();
+				$( "#datepicker_work_to_3" ).datepicker();
+
+				$( "#datepicker_duration_from_1" ).datepicker();
+				$( "#datepicker_duration_from_2" ).datepicker();
+				$( "#datepicker_duration_from_3" ).datepicker();
+
+				$( "#datepicker_duration_to_1" ).datepicker();
+				$( "#datepicker_duration_to_2" ).datepicker();
+				$( "#datepicker_duration_to_3" ).datepicker();
+				});
+  		</script>
 </head>
 <body>
 	<div class=" content container">
@@ -55,19 +78,19 @@
 							<label class=" name" for="top_f_name">First Name </label>
 							</td>
 							<td>
-							<input id="element_1" name="top_f_name" class=" form-control  " type="text" maxlength="255" value=""/> 	
+							<input required = "required"  id="element_1" name="top_f_name" class=" form-control  " type="text" maxlength="255" value=""/> 	
 							</td>
 							<td>
 							<label class=" description" for="top_s_name">Middle Name </label>
 							</td>
 							<td>
-							<input id="element_2" name="top_s_name" class=" form-control  " type="text" maxlength="255" value=""/> 
+							<input required = "required"  id="element_2" name="top_s_name" class=" form-control  " type="text" maxlength="255" value=""/> 
 							</td>
 							<td>
 							<label class=" description" for="top_l_name">Last Name </label>
 							</td>
 							<td>
-							<input id="element_3" name="top_l_name" class=" form-control  " type="text" maxlength="255" value="" /> 
+							<input required = "required"  id="element_3" name="top_l_name" class=" form-control  " type="text" maxlength="255" value="" /> 
 							</td>
 							</tr>
 							<tr>
@@ -75,7 +98,7 @@
 							<label class=" " for="applicant_picture">Picture:  </label>
 							</td>
 							<td colspan="4">
-							<input id="applicant_picture" name="applicant_picture" class=" input inputs" type="file"/> 
+							<input required = "required"  id="applicant_picture" name="applicant_picture" class=" input inputs" type="file"/> 
 							</td>
 							</tr>
 							</tbody>
@@ -94,7 +117,7 @@
 						</tr>
 						<tr>
 							<td colspan="6">
-								<select class=" form-control  select medium" id="yr_of_entry" name="yr_of_entry"> 
+								<select required = "required" class=" form-control  select medium" id="yr_of_entry" name="yr_of_entry"> 
 									<option value="" selected="selected">--Select Option--</option>
 									<option value="1" >2015</option>
 									<option value="2" >2016</option>
@@ -108,8 +131,8 @@
 						<label class=" description" for="course_selection">I would like to be considered for </label>
 						</td>
 						<td>
-						<select class=" form-control  select medium" id="diploma_level" name="diploma_level"> 
-							<option value="0" selected="selected">--Select Option--</option>
+						<select required = "required" class=" form-control  select medium" id="diploma_level" name="diploma_level"> 
+							<option value="" selected="selected">--Select Option--</option>
 							<option disabled="disabled">Diploma Level</option>
 							<option value="1" >Diploma in Community Health and Development Social Work.</option>
 							<option value="2" >Diploma in Counseling.</option>
@@ -141,7 +164,7 @@
 						<label class=" choice" for="study_campus">Regular Day Classes</label>
 						</td>
 						<td>
-						<input id="study_campus" name="study_campus" class="  checkbox" type="checkbox" value="1" />
+						<input required = "required"  id="study_campus" name="study_campus" class="  checkbox" type="checkbox" value="1" />
 						</td>
 						</tr>
 					</tbody>
@@ -163,19 +186,19 @@
 						<label class=" description" for="l_name">Last (family) Name </label>
 						</td>
 						<td>
-						<input id="last_fam_name" name="l_name" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="last_fam_name" name="l_name" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="s_name">Middle Name </label>
 						</td>
 						<td>
-						<input id="element_10" name="s_name" class=" form-control  " type="text" maxlength="255" value="" /> 
+						<input required = "required"  id="element_10" name="s_name" class=" form-control  " type="text" maxlength="255" value="" /> 
 						</td>
 						<td>
 						<label class=" description" for="f_name">First Name</label>
 						</td>
 						<td>
-						<input id="element_11" name="f_name" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="element_11" name="f_name" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						</tr>
 						<tr>
@@ -184,7 +207,7 @@
 						</td>
 						<td>
 						<div class=" form-group">
-						<input type="date" name="dob" title="Enter Date Of Birth">
+						<input required = "required"  type="text" name="dob" id="datepicker" title="Enter Date Of Birth">
 						</div>
 						</td>
 						</tr>
@@ -193,22 +216,22 @@
 						<label class=" description" for="citizenship">Citizenship </label>
 						</td>
 						<td>
-						<input id="citizenship" name="citizenship" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="citizenship" name="citizenship" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="birth_country">Country of Birth </label>
 						</td>
 						<td>
-						<input id="birth_country" name="birth_country" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="birth_country" name="birth_country" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="applicant_gender">Gender:  </label>
 						</td>
 						<td>
-						<select name="applicant_gender" class="form-control select">
-							<option>--Select Gender--</option>
+						<select required = "required" name="applicant_gender" class="form-control select">
+							<option value="">--Select Gender--</option>
 							<option value="male">Male</option>
-							<option value="female" class="">Female</option>
+							<option value="female">Female</option>
 						</select>
 						</td>
 							
@@ -218,7 +241,7 @@
 						<label class=" description" for="marital_status">Marital Status:  </label>
 						</td>
 						<td>
-						<select class=" form-control select medium" id="marital_status" name="marital_status"> 
+						<select required = "required" class=" form-control select medium" id="marital_status" name="marital_status"> 
 							<option value="" selected="selected">--Select Option--</option>
 							<option value="Single" >Single</option>
 							<option value="Married" >Married</option>
@@ -232,19 +255,19 @@
 						<label class=" description" for="yrs_of_english_education">Years of formal education in English : </label>
 						</td>
 						<td>
-						<input id="yrs_of_english_education" name="yrs_of_english_education" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="yrs_of_english_education" name="yrs_of_english_education" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="educ_primary_level">Level: Primary </label>
 						</td>
 						<td>
-						<input id="educ_primary_level" name="educ_primary_level" class=" form-control  " type="text" maxlength="255" value="" /> 
+						<input required = "required"  id="educ_primary_level" name="educ_primary_level" class=" form-control  " type="text" maxlength="255" value="" /> 
 						</td>
 						<td>
 						<label class=" educ_secondary_level" for="educ_secondary_level">Secondary: </label>
 						</td>
 						<td>
-						<input id="educ_secondary_level" name="educ_secondary_level" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="educ_secondary_level" name="educ_secondary_level" class=" form-control  " type="text" maxlength="255" value="" />  
 							
 						</td>
 						<td>
@@ -252,7 +275,7 @@
 						<label class=" description" for="educ_post_secondary"> Post Secondary:  </label>
 						</td>
 						<td>
-						<input id="educ_post_secondary" name="educ_post_secondary" class=" form-control  " type="text" maxlength="255" value="" /> 
+						<input required = "required"  id="educ_post_secondary" name="educ_post_secondary" class=" form-control  " type="text" maxlength="255" value="" /> 
 						</td>
 						
 						</tr>
@@ -261,7 +284,7 @@
 						<label class=" description" for="other_languages">Other Languages spoken or written:  </label>
 						</td>
 						<td>
-						<input id="other_languages" name="other_languages" class=" form-control  " type="text" maxlength="255" value="" />
+						<input required = "required"  id="other_languages" name="other_languages" class=" form-control  " type="text" maxlength="255" value="" />
 						</td>
 						</tr>
 						<tr>
@@ -270,10 +293,10 @@
 						<label class=" description" for="applicant_disability">Do you have any disability?  </label>
 						</td>
 						<td>
-						<select id="applicant_disability" name="applicant_disability" class="  checkbox">
-							<option>--Select Option--</option>
-							<option>Yes</option>
-							<option>No</option>
+						<select required = "required" id="applicant_disability" name="applicant_disability">
+							<option value="">--Select Option--</option>
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
 						</select>
 						</td>
 						<td>
@@ -308,13 +331,13 @@
 						</td>
 						</td>
 						<td>
-						<input id="applicant_postal_address" name="applicant_postal_address" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="applicant_postal_address" name="applicant_postal_address" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="applicant_postal_code">Postal Code: </label>
 						</td>
 						<td>
-						<input id="applicant_postal_code" name="applicant_postal_code" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="applicant_postal_code" name="applicant_postal_code" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						</tr>
 						<tr>
@@ -322,13 +345,13 @@
 						<label class=" description" for="applicant_city">City/Town  </label>
 						</td>
 						<td>
-						<input id="applicant_city" name="applicant_city" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="applicant_city" name="applicant_city" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="applicant_country">Country:  </label>
 						</td>
 						<td>
-						<input id="applicant_country" name="applicant_country" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="applicant_country" name="applicant_country" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						</tr>
 						<tr>
@@ -336,25 +359,25 @@
 						<label class=" description" for="applicant_email">Email:  </label>
 						</td>
 						<td>
-						<input id="applicant_email" name="applicant_email" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="applicant_email" name="applicant_email" class=" form-control  " type="email" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="applicant_telephone_no">Telephone (Home): </label>
 						</td>
 						<td>
-						<input id="applicant_telephone_no" name="applicant_telephone_no" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="applicant_telephone_no" name="applicant_telephone_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="25" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="applicant_office_no">(Office):  </label>
 						</td>
 						<td>
-						<input id="applicant_office_no" name="applicant_office_no" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input id="applicant_office_no" name="applicant_office_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="applicant_mobile_no">Mobile: </label>
 						</td>
 						<td>
-						<input id="applicant_mobile_no" name="applicant_mobile_no" class=" form-control  " type="text" maxlength="255" value="" /> 
+						<input id="applicant_mobile_no" name="applicant_mobile_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" /> 
 						</td>
 							
 						</tr>
@@ -375,13 +398,13 @@
 						<label class=" description" for="sponsor_names">Names: </label>			 
 						</td>
 						<td>
-						<input id="sponsor_names" name="sponsor_names" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_names" name="sponsor_names" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="sponsor_relation">Relation to Applicant: </label>
 						</td>
 						<td>
-						<input id="sponsor_relation" name="sponsor_relation" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_relation" name="sponsor_relation" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 					</tr>
 					<tr>
@@ -390,13 +413,13 @@
 						<label class=" description" for="sponsor_address">Address: </label>
 						</td>
 						<td>
-						<input id="sponsor_address" name="sponsor_address" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_address" name="sponsor_address" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="sponsor_telephone_no">Telephone (Home): </label>
 						</td>
 						<td>
-						<input id="sponsor_telephone_no" name="sponsor_telephone_no" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_telephone_no" name="sponsor_telephone_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" />  
 						</td>
 						
 					</tr>
@@ -406,13 +429,13 @@
 						<label class=" description" for="sponsor_email">Email:  </label>
 						</td>
 						<td>
-						<input id="sponsor_email" name="sponsor_email" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_email" name="sponsor_email" class=" form-control  " type="email" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="sponsor_mobile">Mobile: </label>
 						</td>
 						<td>
-						<input id="sponsor_mobile" name="sponsor_mobile" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_mobile" name="sponsor_mobile" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="13" value="" />  
 						</td>
 						</tr>
 						<tr>
@@ -420,13 +443,13 @@
 						<label class=" description" for="sponsor_occupation">Occupation: </label>
 						</td>
 						<td>
-						<input id="sponsor_occupation" name="sponsor_occupation" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_occupation" name="sponsor_occupation" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="sponsor_monthly_income">Monthly Income: </label>
+						<label class=" description" for="sponsor_monthly_income">Monthly Income(No Comma's): </label>
 						</td>
 						<td>
-						<input id="sponsor_monthly_income" name="sponsor_monthly_income" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_monthly_income" name="sponsor_monthly_income" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" />  
 						</td>
 						
 					</tr>
@@ -451,7 +474,6 @@
 								<td>Name of Institution</td>
 								<td>Level</td>
 								<td>Area of Study</td>
-								<td>Name of Institution</td>
 								<td colspan="2">
 								<center>
 								Duration of Study
@@ -464,7 +486,6 @@
 								<td></td>
 								<td></td>
 								<td></td>
-								<td></td>
 								<td>From</td>
 								<td>To</td>
 								<td></td>
@@ -472,13 +493,12 @@
 
 							<tr>
 								
-								<td><input type="text" name="applicant_educ_institution_name_1" class=" form-control inputs institutions "></td>
-								<td><input type="text" name="applicant_educ_level_1" class=" form-control inputs institutions "></td>
-								<td><input type="text" name="applicant_educ_study_area_1" class=" form-control inputs institutions "></td>
-								<td><input type="text" name="applicant_educ_institution_name_1" class=" form-control inputs institutions"></td>
-								<td><input type="date" name="applicant_educ_duration_from_1" class=" form-control inputs institutions width_sm "></td>
-								<td><input type="date" name="applicant_educ_duration_to_1" class=" form-control inputs institutions width_sm"></td>
-								<td><input type="text" name="applicant_educ_certificates_1" class=" form-control inputs institutions "></td>
+								<td><input required = "required"  type="text" name="applicant_educ_institution_name_1" class=" form-control inputs institutions "></td>
+								<td><input required = "required"  type="text" name="applicant_educ_level_1" class=" form-control inputs institutions "></td>
+								<td><input required = "required"  type="text" name="applicant_educ_study_area_1" class=" form-control inputs institutions"></td>
+								<td><input required = "required"  type="text" id="datepicker_duration_from_1" name="applicant_educ_duration_from_1" class=" form-control inputs institutions width_sm "></td>
+								<td><input required = "required"  type="text" id="datepicker_duration_to_1" name="applicant_educ_duration_to_1" class=" form-control inputs institutions width_sm"></td>
+								<td><input required = "required"  type="text" name="applicant_educ_certificates_1" class=" form-control inputs institutions "></td>
 								
 							</tr>
 
@@ -487,22 +507,20 @@
 								<td><input type="text" name="applicant_educ_institution_name_2" class=" form-control inputs input institutions "></td>
 								<td><input type="text" name="applicant_educ_level_2" class=" form-control inputs input institutions "></td>
 								<td><input type="text" name="applicant_educ_study_area_2" class=" form-control inputs input institutions "></td>
-								<td><input type="text" name="applicant_educ_institution_name_2" class=" form-control inputs input institutions "></td>
-								<td><input type="date" name="applicant_educ_duration_from_2" class=" form-control inputs input institutions width_sm"></td>
-								<td><input type="date" name="applicant_educ_duration_to_2" class=" form-control inputs input institutions width_sm"></td>
+								<td><input type="text" id="datepicker_duration_from_2" name="applicant_educ_duration_from_2" class=" form-control inputs input institutions width_sm"></td>
+								<td><input type="text" id="datepicker_duration_to_2" name="applicant_educ_duration_to_2" class=" form-control inputs input institutions width_sm"></td>
 								<td><input type="text" name="applicant_educ_certificates_2" class=" form-control inputs input institutions "></td>
 								
 							</tr>
 
 							<tr>
 								
-								<td><input type="text" name="applicant_educ_institution_name_3" class=" form-control inputs input institutions "></td>
-								<td><input type="text" name="applicant_educ_level_3" class=" form-control inputs input institutions "></td>
-								<td><input type="text" name="applicant_educ_study_area_3" class=" form-control inputs input institutions "></td>
-								<td><input type="text" name="applicant_educ_institution_name_3" class=" form-control inputs input institutions "></td>
-								<td><input type="date" name="applicant_educ_duration_from_3" class=" form-control inputs input institutions width_sm "></td>
-								<td><input type="date" name="applicant_educ_duration_to_3" class=" form-control inputs input institutions  width_sm"></td>
-								<td><input type="text" name="applicant_educ_certificates_3" class=" form-control inputs input institutions "></td>
+								<td><input  type="text" name="applicant_educ_institution_name_3" class=" form-control inputs input institutions "></td>
+								<td><input  type="text" name="applicant_educ_level_3" class=" form-control inputs input institutions "></td>
+								<td><input  type="text" name="applicant_educ_study_area_3" class=" form-control inputs input institutions "></td>
+								<td><input  type="text" id="datepicker_duration_from_3" name="applicant_educ_duration_from_3" class=" form-control inputs input institutions width_sm "></td>
+								<td><input  type="text" id="datepicker_duration_to_3" name="applicant_educ_duration_to_3" class=" form-control inputs input institutions  width_sm"></td>
+								<td><input  type="text" name="applicant_educ_certificates_3" class=" form-control inputs input institutions "></td>
 								
 							</tr>
 						</tbody>
@@ -526,7 +544,7 @@
 						<label class=" description" for="applicant_denomination">Denomination: </label>
 						</td>
 						<td>
-						<select class=" form-control input" name="applicant_denomination">
+						<select required="required" class=" form-control input" name="applicant_denomination">
 							<option value="">--Select Denomination--</option>
 							<option value="Roman Catholic">Roman Catholic</option>
 							<option value="Hindu">Hindu</option>
@@ -536,7 +554,7 @@
 						</select>
 						<!-- 
 						<td>
-							<input class=" input" class=" " type="text" name="denomination_other">
+							<input required = "required"  class=" input" class=" " type="text" name="denomination_other">
 						</td> 
 						-->
 						</td>
@@ -565,34 +583,44 @@
 							</select>
 						</tr> -->
 						<tr>
-							<table class="  margin_bottom table table-bordered">
+							<table class=" margin_bottom table table-bordered">
 							<tbody>
+							<tr>
 							<th>Employer</th>
 							<th> Type of Work </th>
 							<th colspan="2"> Dates </th>
 							<th>Title </th>
+							</tr>
+							<th></th>
+							<th></th>
+							<th> To </th>
+							<th>From</th>
+							<th> </th>
 							<tr>
-								<td><input type="text" name="applicant_work_employer_1" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_type_1" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_to_1" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_from_1" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_title_1" class=" form-control inputs "></td>
+								
+							</tr>
+							<tr>
+								<td><input  type="text" name="applicant_work_employer_1" class=" form-control inputs "></td>
+								<td><input  type="text" name="applicant_work_type_1" class=" form-control inputs "></td>
+								<td><input  type="text" id="datepicker_work_to_1" name="applicant_work_to_1" class=" form-control inputs "></td>
+								<td><input  type="text" id="datepicker_work_from_1" name="applicant_work_from_1" class=" form-control inputs "></td>
+								<td><input  type="text" name="applicant_work_title_1" class=" form-control inputs "></td>
 							</tr>
 
 							<tr>
-								<td><input type="text" name="applicant_work_employer_2" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_type_2" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_to_2" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_from_2" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_title_2" class=" form-control inputs "></td>
+								<td><input  type="text" name="applicant_work_employer_2" class=" form-control inputs "></td>
+								<td><input  type="text" name="applicant_work_type_2" class=" form-control inputs "></td>
+								<td><input  type="text" id="datepicker_work_to_2" name="applicant_work_to_2" class=" form-control inputs "></td>
+								<td><input  type="text" id="datepicker_work_from_2" name="applicant_work_from_2" class=" form-control inputs "></td>
+								<td><input  type="text" name="applicant_work_title_2" class=" form-control inputs "></td>
 							</tr>
 
 							<tr>
-								<td><input type="text" name="applicant_work_employer_3" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_type_3" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_to_3" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_from_3" class=" form-control inputs "></td>
-								<td><input type="text" name="applicant_work_title_3" class=" form-control inputs "></td>
+								<td><input  type="text" name="applicant_work_employer_3" class=" form-control inputs "></td>
+								<td><input  type="text" name="applicant_work_type_3" class=" form-control inputs "></td>
+								<td><input  type="text" id="datepicker_work_to_3" name="applicant_work_to_3" class=" form-control inputs "></td>
+								<td><input  type="text" id="datepicker_work_from_3" name="applicant_work_from_3" class=" form-control inputs "></td>
+								<td><input  type="text" name="applicant_work_title_3" class=" form-control inputs "></td>
 							</tr>
 							</tbody>
 							</table>
@@ -611,7 +639,7 @@
 								<th colspan="10"><label  for="source_of_discovery">How did you learn about Southern Cross Institute of Tropical Medicine? </label></th>
 								<tr>
 									<td>
-									<select class="form-control select" name="source_of_discovery">
+									<select required = "required" class="form-control select" name="source_of_discovery">
 									<option value="">--Select Option--</option>
 										<option value="Newpaper">Newpaper</option>
 										<option value="Family/Friend">Family/Friend</option>
@@ -651,8 +679,8 @@
 							</tr>
 							<tr>
 								<td>
-									<p>I <input type="text" class=" declaration" name="applicant_declaration"> certify that all information given is true and accurate to the best of my knowledge. False information may lead to dismissal if admitted</p>
-										Agreement Date: <input type="text" disabled="disabled" value="<?php echo date('d /M /y');?>">
+									<p>I <input required = "required"  type="text" class=" declaration" name="applicant_declaration"> certify that all information given is true and accurate to the best of my knowledge. False information may lead to dismissal if admitted</p>
+									<p type="text" disabled="disabled" value="">Agreement made on: <?php echo date('d /M /y');?></p>
 								</td>
 							</tr>
 							</tbody>
@@ -669,8 +697,8 @@
 							</tr>
 							<tr>
 								<td>
-									<p>I <input type="text" class="declaration parent_declaration" name="parent_declaration"> (Parent/Guardian/Sponsor) second that the information given here is true and accurate to the best of my knowledge and i appreciate that any false information may lead to immediate dismissal of the applicant if admitted.</br> I hereby agree to undertake all tuition,boarding & any other financial responsibilities attracted by their entire stay at Southern Cross Institute of Tropical Medicine.</p>
-										Agreement Date: <input type="text" disabled="disabled" value="<?php echo date('d /M /y');?>">
+									<p>I <input required = "required"  type="text" class="declaration parent_declaration" name="parent_declaration"> (Parent/Guardian/Sponsor) second that the information given here is true and accurate to the best of my knowledge and i appreciate that any false information may lead to immediate dismissal of the applicant if admitted.</br> I hereby agree to undertake all tuition,boarding & any other financial responsibilities attracted by their entire stay at Southern Cross Institute of Tropical Medicine.</p>
+									<p type="text" disabled="disabled" value="">Agreement made on: <?php echo date('d /M /y');?></p>
 								</td>
 							</tr>
 							</tbody>
@@ -683,8 +711,8 @@
 			
 				<tr>
 					<td>
-					    <input type="hidden" name="form_id" value="911261" />
-						<input id="saveForm" class="btn button_text button" type="submit" name="submit" value="Submit" />
+					    <input required = "required"  type="hidden" name="form_id" value="911261" />
+						<input required = "required"  id="saveForm" class="btn button_text button" type="submit" name="submit" value="Submit" />
 					</td>
 				</tr>
 			</table>
