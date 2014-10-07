@@ -1,6 +1,6 @@
-<?php 
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class M_Announcements extends MX_Controller
+class M_announcements extends MY_Model
 {
 	function __construct()
     {
