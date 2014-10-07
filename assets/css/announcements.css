@@ -6,6 +6,8 @@
 body
 {
 	text-align: justify;
+	background: #fff !important;
+	color: #34495e;
 }
 
 .panel, .panel-heading
@@ -14,12 +16,12 @@ body
 }
 .panel-red {
   border-color: #2980b9;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 .panel-red > .panel-heading {
   background-color: #2980b9;
   border-color: #2980b9;
-  padding: 5px;
+  padding: 5px !important;
 }
 
 .panel-heading a
@@ -35,6 +37,12 @@ body
 }
 .panel-red > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #e67e22;
+  background: #ecf0f1;
+}
+
+.panel-body
+{
+	background: #ecf0f1;
 }
 
 .panel-body ol li
