@@ -11,7 +11,7 @@ class Home extends MY_Controller
 
 	function index()
 	{
-		$this->load->view('v_home');
+		$this->load->view('home');
 	}
 
   public function enter_comment(){

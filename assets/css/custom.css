@@ -2057,4 +2057,25 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 	margin-left: 0;
 	width: 100%;
 }
+
+/**Footer**/
+#footer {
+  padding: 25px 0;
+  border-top: 1px solid #5c5c5c;
+}
+#footer a:hover {
+  color: #ffffff;
+}
+#footer .copyright {
+  font-weight: normal;
+}
+#footer .copyright .brand {
+  position: relative;
+  top: -4px;
+  color: #ffffff;
+}
+#footer .copyright .sub-copy {
+  padding-top: 3px;
+  color: #6d6a6a;
+}
 /*END OF OVERRIDDEN BOOTSTRAP*/
