@@ -40,13 +40,14 @@ body
   background: #ecf0f1;
 }
 
-.panel-body
-{
-	background: #ecf0f1;
-}
 
 .panel-body ol li
 {
 	font-family: times, tahoma, helvetica;
 	font-size: 110%;
+}
+
+.navbar
+{
+	border-radius: 0;
 }
