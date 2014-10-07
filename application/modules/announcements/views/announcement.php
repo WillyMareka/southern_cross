@@ -4,17 +4,18 @@
 <head>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/bootstrap/css/bootstrap.min.css'?>">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/announcements.css'?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
 </head>
 <body>
   <div class = "container">
   <div class = "top-section">
   <p>Southern Cross Institute of Tropical Medicine is a Mid-Level Medical Training College located in Kibuye Market on a premises previously occupied by Lake Institute of Tropical Medicine (LIT MED)</p>
   <P>The college offers courses in the following fields:</P><div class="panel-group" id="accordion">
-    <div class="panel panel-success">
+    <div class="panel panel-red">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-            Diploma Programs<span class = "pull-right">Click to View</span>
+            <i class = "fa fa-mortar-board"></i> Diploma Programs<span class = "pull-right">Click to View</span>
           </a>
         </h4>
       </div>
@@ -31,11 +32,11 @@
         </div>
       </div>
     </div>
-    <div class="panel panel-success">
+    <div class="panel panel-red">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-            Certificate Programs<span class = "pull-right">Click to View</span>
+            <i class = "fa fa-mortar-board"></i> Certificate Programs<span class = "pull-right">Click to View</span>
           </a>
         </h4>
       </div>
@@ -49,17 +50,19 @@
         </div>
       </div>
     </div>
-    <div class="panel panel-success">
+    <div class="panel panel-red">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-            Professional Programs <span class = "pull-right">Click to View</span>
+            <i class = "fa fa-mortar-board"></i> Professional Programs <span class = "pull-right">Click to View</span>
           </a>
         </h4>
       </div>
       <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
-          Registered Community Health Nursing <i>(Subject to accreditation)</i>
+          <ol>
+            <li>Registered Community Health Nursing <i>(Subject to accreditation)</i></li>
+          </ol>
         </div>
       </div>
     </div>
