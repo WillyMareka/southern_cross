@@ -4,18 +4,10 @@
 <title>Services</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
-<link rel="icon" href="images/favicon.ico">
-<link rel="shortcut icon" href="images/favicon.ico" />
-<link rel="stylesheet" href="css/style.css">
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/script.js"></script> 
-<script src="js/superfish.js"></script>
-<script src="js/jquery.equalheights.js"></script>
-<script src="js/jquery.mobilemenu.js"></script>
-<script src="js/tmStickUp.js"></script>
-<script src="js/jquery.ui.totop.js"></script>
+<link rel="icon" href="<?php echo base_url(). 'assets/images/favicon.ico'?>">
+<link rel="shortcut icon" href="<?php echo base_url(). 'assets/images/favicon.ico'?>" />
+<link rel="stylesheet" href="<?php echo base_url(). 'assets/stylesheets/style.css'?>">
+
 <script>
  $(window).load(function(){
   $().UItoTop({ easingType: 'easeOutQuart' });
@@ -200,5 +192,16 @@
   </div>  
 </footer>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+
+
+<script src="<?php echo base_url(). 'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/jquery.ui.totop.js'?>"></script>
 </body>
 </html>
