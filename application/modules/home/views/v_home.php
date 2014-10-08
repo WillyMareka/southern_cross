@@ -172,22 +172,22 @@
 <div class="footer" id="Contacts">
   <div class="footer_form left">
 
-  <form role="form">
+  <form role="form" action="<?php echo base_url(). 'home/enter_comment'?>" method="POST">
      <div class="form-group">
        <label for="exampleInputEmail1">NAME</label>
-       <input type="text" class="form-control" id="InputName" required placeholder="Enter your Name">
+       <input type="text" class="form-control" name="name" id="InputName" required placeholder="Enter your Name">
      </div>
      <div class="form-group">
        <label for="exampleInputPassword1">EMAIL ADDRESS</label>
-       <input type="email" class="form-control" id="InputEmail" required placeholder="Enter Email">
+       <input type="email" class="form-control" name="email" id="InputEmail" required placeholder="Enter Email">
      </div>
      <div class="form-group">
        <label for="InputMobile">MOBILE NUMBER</label>
-       <input type="text" class="form-control" id="InputMobile" required placeholder="Enter Mobile Number">
+       <input type="text" class="form-control" name="mobile" id="InputMobile" required placeholder="Enter Mobile Number">
      </div>
      <div class="form-group">
        <label for="InputMessage">MESSAGE</label>
-       <textarea class="form-control" id="InputMessage" required placeholder="Enter Message"></textarea>
+       <textarea class="form-control" name="message" id="InputMessage" required placeholder="Enter Message"></textarea>
      </div>
      
     <button type="submit" class="btn btn-info">Submit</button>
