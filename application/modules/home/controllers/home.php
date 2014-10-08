@@ -14,10 +14,7 @@ class Home extends MY_Controller
 		$this->load->view('v_home');
 	}
 
-	function test_index()
-	{
-		$this->load->view('home');
-  }
+
 	public function enter_comment(){
         $this->load->library('form_validation');
 
@@ -31,7 +28,16 @@ class Home extends MY_Controller
            $result = $this->m_home->insert_comment();
            $this->load->view('v_home');
         }
-	}
 
+
+
+	// function test_index()
+	// {
+	// 	$this->load->view('home');
+
+	// }
+
+
+}
 
 }
