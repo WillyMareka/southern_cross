@@ -10,5 +10,10 @@ class Announcements extends MX_Controller
     }
 	function index()
 	{
+		// $this->load->view('announcement');
+	}
+
+	function announce(){
+		$this->load->view('announcement');
 	}
 }

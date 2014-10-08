@@ -18,7 +18,7 @@ class M_applications extends CI_Model {
     	$dob = $_POST['dob'];
     	$year_of_entry = $_POST['yr_of_entry'];
     	$diploma_level = $_POST['diploma_level'];
-    	$certificate_level = $_POST['certificate_level'];
+    	// $certificate_level = $_POST['certificate_level'];
     	$diploma_level = $_POST['diploma_level'];
     	$diploma_level = $_POST['diploma_level'];
 
@@ -60,7 +60,7 @@ class M_applications extends CI_Model {
 
 
     	$applicant_denomination = $_POST['applicant_denomination'];
-    	$applicant_work_experience = $_POST['applicant_work_experience'];
+    	// $applicant_work_experience = $_POST['applicant_work_experience'];
 
     	$applicant_work_employer_1 = $_POST['applicant_work_employer_1'];
     	$applicant_work_type_1 = $_POST['applicant_work_type_1'];
