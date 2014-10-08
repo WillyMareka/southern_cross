@@ -717,9 +717,17 @@
 				</tr>
 			</table>
 		<?php echo form_close(); ?>
-		<div id="footer" class="bottom_blue_strip">
-			Copyright Info
-		</div>
+
+		<footer id="footer" class="bottom_blue_strip">
+		    <div class="container">
+		      <div class="row">
+		        <div class="grid_12"> 
+		          <div class="copyright"><span class="brand">Southern Cross</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+		          </div>
+		        </div>
+		      </div>
+		    </div>  
+		  </footer>
 	</div>
 	</div>
 </body>
