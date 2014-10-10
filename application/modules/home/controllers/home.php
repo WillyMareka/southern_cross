@@ -11,33 +11,39 @@ class Home extends MY_Controller
 
 	function index()
 	{
-		$this->load->view('v_home');
+		$this->load->view('home');
 	}
 
-
-	public function enter_comment(){
+  public function enter_comment(){
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('email','Email Address','trim|required|min_length[6]|max_length[50]|valid_email|xss_clean');
 
         if($this->form_validation->run()==FALSE){
-        	echo "There was a problem with submitting your comment 1";
+          echo "There was a problem with submitting your comment 1";
         }else{
            $this->load->model('m_home');
            
            $result = $this->m_home->insert_comment();
            $this->load->view('v_home');
         }
+      }
 
+  public function blog(){
+    $this->load->view('blog');
+  }
 
+   public function contacts(){
+    $this->load->view('contacts');
+  }
 
-	// function test_index()
-	// {
-	// 	$this->load->view('home');
+   public function services(){
+    $this->load->view('services');
+  }
 
-	// }
+   public function about(){
+    $this->load->view('about');
+  }
 
-
-}
 
 }

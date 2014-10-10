@@ -4,8 +4,9 @@
 <title>Home</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
-<link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
-<link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
+<!-- <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>"> -->
+<!-- <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" /> -->
+<link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
 <link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
 
 <script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
@@ -41,12 +42,13 @@
                 header
   =================================-->
   <header>
+  <div class="tint">
     <div class="container">
       <div class="row">
         <div class="grid_12 rel">
           <h1>
             <a href="index.html">
-              <img src="<?php echo base_url() .'assets/images/home_logo.png'?>" alt="Logo alt">
+              <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt">
             </a>
           </h1>
         </div>
@@ -62,11 +64,15 @@
             <div class="navigation ">
               <nav>
                 <ul class="sf-menu">
-                 <li class="current"><a href="index.html">Home</a></li>
-                 <li><a href="about.html">About</a></li>
-                 <li><a href="services.html">Services</a></li>
-                 <li><a href="blog.html">Blog</a></li>
-                 <li><a href="contacts.html">Contacts</a></li>
+                 <li class="current"><a href="#">Home</a></li>
+                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
+                 <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
+                 <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
+                 <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+                 <li><a href="<?php echo base_url(). 'applications/diploma'?>">Applications</a></li>
+               </ul>
+               <ul class="sf-menu right">
+                 <li class="current"><a href="#">Home</a></li>
                </ul>
               </nav>
               <div class="clear"></div>
@@ -81,10 +87,10 @@
         <div class="row">
           <div class="grid_4">
             <a href="#" class="banner "><div class="maxheight">
-              <div class="fa fa-globe"></div>Global Research</div>
+              <div class="fa fa-globe"></div>Global Courses</div>
             </a>
             <a href="#" class="banner "><div class="maxheight">
-              <div class="fa fa-lightbulb-o"></div>Creative Ideas</div>
+              <i class="fa fa-line-chart"></i>Creative Ideas</div>
             </a>
             <a href="#" class="banner "><div class="maxheight1">
               <div class="fa fa-cog"></div>New Services</div>
@@ -94,29 +100,30 @@
             </a>
           </div>
           <div class="grid_5">
-            <h2>Strong <br> Stable <br> Safe</h2>
-            We help you run your business  in a successful way
+            <h2>Southern Cross University</h2>
+            University of Tropical Medicine
           </div>
         </div>
       </div>
     </section>
+  </div>
   </header>
   <div class="block-1">
     <div class="container">
       <div class="row">
         <div class="grid_3">
           <div class="block-1_count">10</div>
-          Years of <br> Experience
+          Years of <br> Educating the Nation
           <div class="clear"></div>
         </div>
         <div class="grid_3">
-          <div class="block-1_count">30</div>
-          Successful <br> Projects
+          <div class="block-1_count">200</div>
+          Successful <br> Working Class Citizens
           <div class="clear"></div>
         </div>
         <div class="grid_3">
           <div class="block-1_count">20</div>
-          Partner <br> Projects
+          Partner <br> Universities
           <div class="clear"></div>
         </div>
         <div class="grid_3">
@@ -136,7 +143,7 @@
             <h2 class="head__1">
               Welcome
             </h2>
-            <p>Read more about the <a href=" http://blog.templatemonster.com/free-website-templates/" rel="nofollow" class="color1">freebie</a> here. <br> Go to TemplateMonster.com and find more <a href="http://www.templatemonster.com/properties/topic/business-services/" rel="nofollow" class="color1">goodies</a> of this kind </p>
+            <p>To the <span class="light-blue-color">Southern Cross</span> Homepage. <br> Register for Courses <a href="#" rel="nofollow" class="color1">Here</a> </p>
             Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet site amet est vel, commodo venenatis eros. Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. nulla, eu sodales arcu. Quisque viverra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan 
           </div>
         </div>
@@ -146,7 +153,7 @@
       <div class="container">
         <div class="row">
           <div class="grid_7">
-            <h3>Our Advantages</h3>
+            <h3>Why You Should Study at Southern Cross</h3>
             <div class="block-2">
               <img src="<?php echo base_url() .'assets/images//page1_img1.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
@@ -159,7 +166,7 @@
             <div class="block-2">
               <img src="<?php echo base_url() .'assets/images//page1_img2.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
-                <div class="text1"><a href="#">Marketing</a></div>
+                <div class="text1"><a href="#">Marketability</a></div>
                 <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert varius augue, eu consectetur ligulaam dui eros dertoli.</p>Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tinciduntol nulla, eu sodales vertomin
                 <br>
                 <a href="#" class="link-1">more</a>
@@ -170,11 +177,11 @@
             <h3>Testimonials</h3>
             <blockquote class="bq1">
               <p>“Curabitur vel lorem sit amet nulla erero fermentum. In vitae varius auguectetu ligula. Etiam dui eros, laoreet site am est vel commodo venenatisipiscing... ”</p>
-              <span>Liza Jons</span>
+              <span>Testimonial One</span>
             </blockquote>
             <blockquote class="bq1">
               <p>“Burabitur vel lorem sit amet nulla erero fermentum. In vitae varius auguectetu ligula. Etiam dui eros, laoreet site am ast vel commodo venenatisipiscino... ”</p>
-              <span>Mark Brown</span>
+              <span>Testimonial Two</span>
             </blockquote>
           </div>
         </div>
@@ -183,14 +190,14 @@
     <div class="container">
       <div class="row">
         <div class="grid_5">
-          <h4>About Company</h4>
+          <h4>More about <span class="light-blue-color">Southern Cross</span></h4>
           <img src="<?php echo base_url() .'assets/images//page1_img3.jpg'?>" alt="" class="img_inner fleft">
             <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert arius augue, eu consectetur </p>
             <p class="offset__1">Eligulaam dui eros dertolisce dertolo adipiscing quam id risus sagittis</p>
             Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert rius augue, eu consectetur larem dui eros dertolisce dertolo 
         </div>
         <div class="grid_4">
-          <h4>Solutions</h4>
+          <h4>Other useful Links</h4>
           <ul class="list-1">
             <li><a href="#">Vivamus at magna non nunc tristique </a></li>
             <li><a href="#">Aliquam nibh ante, egestas id</a></li>
@@ -204,10 +211,10 @@
           <h4>Contact Info</h4>
           <address>
             <ul class="cont_address">
-              <li>8901 Marmora Road, Glasgow, D04 89GR</li>
-              <li>+1 (800) 123 9876</li>
-              <li><a href="#">info@demolink.org</a></li>
-              <li><a href="#">www.demolink.org</a></li>
+              <li>P.O. Box 370-40100, Kisumu Kenya</li>
+              <li>Email:<a href="#">southerncrossinstitute@gmail.com</a></li>
+              <li><a href="#">Tel Office:  +254(0)717 - 056 523</a></li>
+              <li><a href="#">Mobile: +254(0)717 - 056 523</a></li>
             </ul>
           </address>
         </div>
