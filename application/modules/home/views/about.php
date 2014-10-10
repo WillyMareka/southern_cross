@@ -4,18 +4,21 @@
 <title>About</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
-<link rel="icon" href="images/favicon.ico">
-<link rel="shortcut icon" href="images/favicon.ico" />
-<link rel="stylesheet" href="css/style.css">
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/script.js"></script> 
-<script src="js/superfish.js"></script>
-<script src="js/jquery.equalheights.js"></script>
-<script src="js/jquery.mobilemenu.js"></script>
-<script src="js/tmStickUp.js"></script>
-<script src="js/jquery.ui.totop.js"></script>
+<link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
+<link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
+<link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
+<link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
+
+
+<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
+<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 <script>
  $(window).load(function(){
   $().UItoTop({ easingType: 'easeOutQuart' });
@@ -60,11 +63,12 @@
           <div class="navigation ">
             <nav>
               <ul class="sf-menu">
-               <li><a href="index.html">Home</a></li>
-               <li class="current"><a href="about.html">About</a></li>
-               <li><a href="services.html">Services</a></li>
-               <li><a href="blog.html">Blog</a></li>
-               <li><a href="contacts.html">Contacts</a></li>
+               <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
+               <li class="current"><a href="#">About</a></li>
+               <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
+               <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
+               <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
              </ul>
             </nav>
             <div class="clear"></div>
@@ -167,7 +171,7 @@
     <div class="row">
       <div class="grid_12"> 
         <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-          <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+          <div class="sub-copy">Website designed by YoungWeb Company</div>
         </div>
       </div>
     </div>

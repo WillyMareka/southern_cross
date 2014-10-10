@@ -69,11 +69,11 @@
                  <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
                  <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
                  <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
-                 <li><a href="<?php echo base_url(). 'applications/diploma'?>">Applications</a></li>
+                 <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
                </ul>
-               <ul class="sf-menu right">
-                 <li class="current"><a href="#">Home</a></li>
-               </ul>
+              
+                 
+               
               </nav>
               <div class="clear"></div>
             </div>       
@@ -87,16 +87,16 @@
         <div class="row">
           <div class="grid_4">
             <a href="#" class="banner "><div class="maxheight">
-              <div class="fa fa-globe"></div>Global Courses</div>
+              <div class="fa fa-globe"></div>Doctoral</div>
             </a>
             <a href="#" class="banner "><div class="maxheight">
-              <i class="fa fa-line-chart"></i>Creative Ideas</div>
+              <i class="fa fa-line-chart"></i>Masters</div>
             </a>
             <a href="#" class="banner "><div class="maxheight1">
-              <div class="fa fa-cog"></div>New Services</div>
+              <div class="fa fa-cog"></div>Bachelor</div>
             </a>
-            <a href="#" class="banner "><div class="maxheight1">
-              <div class="fa fa-briefcase"></div>Pro Management</div>
+            <a href="<?php echo base_url(). 'applications/diploma'?>" class="banner "><div class="maxheight1">
+              <div class="fa fa-briefcase"></div>Diploma</div>
             </a>
           </div>
           <div class="grid_5">
@@ -104,6 +104,7 @@
             University of Tropical Medicine
           </div>
         </div>
+        <div class="regicolor"><span class="glyphicon glyphicon-circle-arrow-up"></span>Registrations</div>
       </div>
     </section>
   </div>

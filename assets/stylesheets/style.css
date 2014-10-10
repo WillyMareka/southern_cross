@@ -391,3 +391,28 @@ background-image: url('../images/topundergraduateform.jpg');
   background-image: url('../images/green.jpg');
   height: 100%;
 }
+
+.regicolor{
+  background-color: #000;
+}
+
+td .form-name{
+  width:150px;
+}
+
+
+.table{
+  width: 1100px;
+}
+
+.form-inputing{
+  width:1000px;
+}
+
+.form-email{
+  width: 100%;
+}
+
+.backcolor{
+  background-color: #B2B2B2;
+}

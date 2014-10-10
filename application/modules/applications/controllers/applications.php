@@ -23,7 +23,7 @@ class Applications extends MY_Controller
 	}
 
 	function diploma(){
-      $this->load->view('diploma_form.php');
+      $this->load->view('diploma_form');
 	}
 
 	function application_submit(){

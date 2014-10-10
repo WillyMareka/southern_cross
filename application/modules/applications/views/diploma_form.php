@@ -8,6 +8,7 @@
    		<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/script/jquery/jquery-ui.css'?>"/>
 		<link rel="stylesheet" href="<?php echo base_url(). 'assets/stylesheets/animate.css'?>">
     	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/css/custom.css'?>">
+    	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/stylesheets/style.css'?>">
  		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
   		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
   		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.js' ?>"></script>
@@ -33,7 +34,7 @@
   		</script>
 </head>
 <body>
-	<div class=" content container">
+	<div class=" content container ">
 
 <div class=" form_header">
 	<div class=" top_logo clearfix">
@@ -75,23 +76,27 @@
 							</tr>
 							<tr>
 							<td>
-							<label class=" name" for="top_f_name">First Name </label>
+							<label class=" name form-name" for="top_f_name">First Name </label>
 							</td>
 							<td>
-							<input required = "required"  id="element_1" name="top_f_name" class=" form-control  " type="text" maxlength="255" value=""/> 	
+							<input required = "required"  id="element_1" name="top_f_name" class=" form-control form-inputing" type="text" maxlength="20" value=""/> 	
 							</td>
+							<tr>
 							<td>
 							<label class=" description" for="top_s_name">Middle Name </label>
 							</td>
 							<td>
-							<input required = "required"  id="element_2" name="top_s_name" class=" form-control  " type="text" maxlength="255" value=""/> 
+							<input required = "required"  id="element_2" name="top_s_name" class=" form-control form-inputing " type="text" maxlength="20" value=""/> 
 							</td>
+						    </tr>
+							<tr>
 							<td>
 							<label class=" description" for="top_l_name">Last Name </label>
 							</td>
 							<td>
-							<input required = "required"  id="element_3" name="top_l_name" class=" form-control  " type="text" maxlength="255" value="" /> 
+							<input required = "required"  id="element_3" name="top_l_name" class=" form-control form-inputing " type="text" maxlength="20" value="" /> 
 							</td>
+						    </tr>
 							</tr>
 							<tr>
 							<td>
@@ -251,10 +256,10 @@
 						</td>
 						</tr>
 						<tr>
-						<td>
+						<td rowspan="2">
 						<label class=" description" for="yrs_of_english_education">Years of formal education in English : </label>
 						</td>
-						<td>
+						<td rowspan="2">
 						<input required = "required"  id="yrs_of_english_education" name="yrs_of_english_education" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
@@ -267,9 +272,9 @@
 						<label class=" educ_secondary_level" for="educ_secondary_level">Secondary: </label>
 						</td>
 						<td>
-						<input required = "required"  id="educ_secondary_level" name="educ_secondary_level" class=" form-control  " type="text" maxlength="255" value="" />  
-							
+						<input required = "required"  id="educ_secondary_level" name="educ_secondary_level" class=" form-control  " type="text" maxlength="255" value="" />  	
 						</td>
+						<tr>
 						<td>
 						<!-- seth -->
 						<label class=" description" for="educ_post_secondary"> Post Secondary:  </label>
@@ -277,7 +282,7 @@
 						<td>
 						<input required = "required"  id="educ_post_secondary" name="educ_post_secondary" class=" form-control  " type="text" maxlength="255" value="" /> 
 						</td>
-						
+						</tr>
 						</tr>
 						<tr>
 						<td>
@@ -358,9 +363,10 @@
 						<td>
 						<label class=" description" for="applicant_email">Email:  </label>
 						</td>
-						<td>
-						<input required = "required"  id="applicant_email" name="applicant_email" class=" form-control  " type="email" maxlength="255" value="" />  
+						<td colspan="3">
+						<input required = "required"  id="applicant_email" name="applicant_email" class=" form-control form-email " type="email" maxlength="255" value="" />  
 						</td>
+						<tr>
 						<td>
 						<label class=" description" for="applicant_telephone_no">Telephone (Home): </label>
 						</td>
@@ -379,7 +385,7 @@
 						<td>
 						<input id="applicant_mobile_no" name="applicant_mobile_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" /> 
 						</td>
-							
+						</tr>
 						</tr>
 					</tbody>
 					</table>
@@ -586,13 +592,12 @@
 							<table class=" margin_bottom table table-bordered">
 							<tbody>
 							<tr>
-							<th>Employer</th>
-							<th> Type of Work </th>
+							<th rowspan="2">Employer</th>
+							<th rowspan="2"> Type of Work </th>
 							<th colspan="2"> Dates </th>
 							<th>Title </th>
 							</tr>
-							<th></th>
-							<th></th>
+							
 							<th> To </th>
 							<th>From</th>
 							<th> </th>
