@@ -4,27 +4,12 @@
 <title>Home</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
-<!-- <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>"> -->
-<!-- <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" /> -->
+<link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
+<link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" /> 
 <link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
 <link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
 
-<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
-<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -65,16 +50,13 @@
               <nav>
                 <ul class="sf-menu">
                  <li class="current"><a href="#">Home</a></li>
-                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
-                 <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
-                 <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
-                 <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
-               </ul>
-              
+                 <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
+                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
+                 <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
                  
-               
-              </nav>
+               </ul>
+        </nav>
               <div class="clear"></div>
             </div>       
            <div class="clear"></div>  
@@ -127,9 +109,9 @@
           Partner <br> Universities
           <div class="clear"></div>
         </div>
-        <div class="grid_3">
+        <!-- <div class="grid_3">
           <a href="#" class="support"><img src="<?php echo base_url() .'assets/images/support.png'?>" alt=""></a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -174,7 +156,7 @@
               </div>
             </div>
           </div>
-          <div class="grid_4 preffix_1">
+        <!--   <div class="grid_4 preffix_1">
             <h3>Testimonials</h3>
             <blockquote class="bq1">
               <p>“Curabitur vel lorem sit amet nulla erero fermentum. In vitae varius auguectetu ligula. Etiam dui eros, laoreet site am est vel commodo venenatisipiscing... ”</p>
@@ -184,7 +166,7 @@
               <p>“Burabitur vel lorem sit amet nulla erero fermentum. In vitae varius auguectetu ligula. Etiam dui eros, laoreet site am ast vel commodo venenatisipiscino... ”</p>
               <span>Testimonial Two</span>
             </blockquote>
-          </div>
+          </div> -->
         </div>
       </div>
     </article>
@@ -237,6 +219,22 @@
   </footer>
   <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
+
+<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
+<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 
 
 </body>

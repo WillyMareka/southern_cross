@@ -55,11 +55,53 @@
 			<p><strong class=" float_left clearfix">Email: </strong>  southerncrossinstitute@gmail.com</p>
 		</div>
 		<div class="logo_more_information float_right">
-		<p><strong class=" float_left clearfix clear_right">Tel Office: </strong> +254(0)717 - 056 523</p>
-		<p><strong class=" float_left clearfix clear_right">Mobile: </strong> +254(0)717 - 056 523</p>
+		<p><strong class=" float_left clearfix clear_right">Tel Office: </strong> (+254) 0717 - 056 523</p>
+		<p><strong class=" float_left clearfix clear_right">Mobile: </strong> (+254) 0717 - 056 523</p>
 		</div>
 
 </div>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top appnav" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><strong>Diploma</strong></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
+        <li></li>
+        <li class="appactive leftdist"><a href="#">Diploma</a></li>
+        <li><a href="#">Bachelor</a></li>
+        <li><a href="#">Masters</a></li>
+        <li><a href="#">Doctoral</a></li>
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="active"><a href="#">Diploma</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Bachelor</a></li>
+            <li><a href="#">Masters</a></li>  
+            <li><a href="#">Doctoral</a></li>
+    
+          </ul>
+        </li> -->
+      </ul>
+     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
 
 	<!-- <div class=" large_bcg_img"></div> -->
 		<?php $attr = array('id' => 'application_form','class' => 'application_form','enctype'=>'multipart/form-data'); echo form_open(base_url().'applications/application_submit',$attr) ?>
@@ -98,14 +140,14 @@
 							</td>
 						    </tr>
 							</tr>
-							<tr>
+							<!-- <tr>
 							<td>
 							<label class=" " for="applicant_picture">Picture:  </label>
 							</td>
 							<td colspan="4">
 							<input required = "required"  id="applicant_picture" name="applicant_picture" class=" input inputs" type="file"/> 
 							</td>
-							</tr>
+							</tr> -->
 							</tbody>
 						</table>
 					</tr>
@@ -162,11 +204,11 @@
 					<table class=" table table-bordered margin_bottom">
 					<tbody>
 						<tr>
-						<td>
-						<label class=" description" for="study_campus">Campus of Study: Kisumu Main Campus </label>
+						<td class="desc1">
+						<label class=" description " for="study_campus">Campus of Study : Kisumu Main Campus</label>
 						</td>
-						<td>
-						<label class=" choice" for="study_campus">Regular Day Classes</label>
+						<td class="desc2">
+						<label class=" choice " for="study_campus">Regular Day Classes</label>
 						</td>
 						<td>
 						<input required = "required"  id="study_campus" name="study_campus" class="  checkbox" type="checkbox" value="1" />
@@ -249,9 +291,9 @@
 						<select required = "required" class=" form-control select medium" id="marital_status" name="marital_status"> 
 							<option value="" selected="selected">--Select Option--</option>
 							<option value="Single" >Single</option>
-							<option value="Married" >Married</option>
+							<!-- <option value="Married" >Married</option>
 							<option value="Divorced" >Divorced</option>
-							<option value="Widowed" >Widowed</option>
+							<option value="Widowed" >Widowed</option> -->
 						</select>
 						</td>
 						</tr>
@@ -473,30 +515,25 @@
 						<tbody>
 
 							<tr>
-								<th colspan="5">Please list all the schools previously attended in the order which you attended them (Primary, Secondary levels and others if any)</th>
+								<th colspan="5">Please list all the schools previously attended in the order which you attended them (Secondary levels, Primary Levels)</th>
 							</tr>
 							<tr>
 								
-								<td>Name of Institution</td>
-								<td>Level</td>
-								<td>Area of Study</td>
+								<td class="institute" rowspan="2">Name of Institution</td>
+								<td class="level" rowspan="2">Level</td>
+								<td rowspan="2">Area of Study</td>
 								<td colspan="2">
 								<center>
 								Duration of Study
 								</center>
 								</td>
-								<td>Degree/Diploma/Certificates attained</td>
+								<td rowspan="2">Degree/Diploma/Certificates attained</td>
 								
 							</tr>
 							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
 								<td>From</td>
 								<td>To</td>
-								<td></td>
 							</tr>
-
 							<tr>
 								
 								<td><input required = "required"  type="text" name="applicant_educ_institution_name_1" class=" form-control inputs institutions "></td>
@@ -542,9 +579,7 @@
 						<tr>
 							<th colspan="5">Religious Affiliations</th>
 						</tr>
-						<tr>
-						<td colspan="7">Protestants</td>
-						</tr>
+						
 						<tr>
 						<td>
 						<label class=" description" for="applicant_denomination">Denomination: </label>
@@ -553,6 +588,7 @@
 						<select required="required" class=" form-control input" name="applicant_denomination">
 							<option value="">--Select Denomination--</option>
 							<option value="Roman Catholic">Roman Catholic</option>
+							<option value="Protestant">Protestant</option>
 							<option value="Hindu">Hindu</option>
 							<option value="African Traditional Religion">African Traditional Religion</option>
 							<option value="Muslim">Muslim</option>
@@ -680,12 +716,12 @@
 						<table  class=" table table-bordered margin_bottom">
 							<tbody>
 							<tr>
-								<h5><label for="applicant_declaration">applicant Declaration: </label></h5>
+								<h5><label for="applicant_declaration">Student Declaration: </label></h5>
 							</tr>
 							<tr>
 								<td>
 									<p>I <input required = "required"  type="text" class=" declaration" name="applicant_declaration"> certify that all information given is true and accurate to the best of my knowledge. False information may lead to dismissal if admitted</p>
-									<p type="text" disabled="disabled" value="">Agreement made on: <?php echo date('d /M /y');?></p>
+									<!-- <p type="text" disabled="disabled" value="">Agreement made on: <?php echo date('d /M /y');?></p> -->
 								</td>
 							</tr>
 							</tbody>
@@ -693,7 +729,7 @@
 					</div>
 					</tr>
 
-					<tr>
+					<!-- <tr>
 					<div id="applicant_declaration">
 						<table  class=" table table-bordered margin_bottom">
 							<tbody>
@@ -709,7 +745,7 @@
 							</tbody>
 						</table>
 					</div>
-					</tr>
+					</tr> -->
 
 
 				</tbody>

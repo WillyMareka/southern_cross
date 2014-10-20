@@ -416,3 +416,58 @@ td .form-name{
 .backcolor{
   background-color: #B2B2B2;
 }
+
+.desc1{
+  width: 440px;
+  height: 20px;
+  /*display: block;*/
+  /*text-align: center;*/
+}
+
+.desc2{
+   width: 250px;
+}
+
+td.level{
+  width:100px;
+}
+
+td.institute{
+  width: 100px;
+}
+
+.appnav{
+  height:64px;
+  background-color:#000000;
+}
+
+.appnav .nav > li > a{
+color: #FFFFFF;
+}
+
+.appnav .nav > li > a:hover{
+  background-color:#000099;
+  color:#FFFFFF;
+  border-bottom:solid 4px #0066CC;
+}
+
+.appactive{
+  height:64px;
+  background-color: #000;
+}
+
+.leftdist{
+  margin-left: 100px;
+}
+
+.appactive > a:hover{
+  height:64px;
+  background-color: #000;
+}
+strong, b{
+  color: #fff;
+}
+.navbar-inverse .navbar-brand{
+  
+  font-size: 25px;
+}
