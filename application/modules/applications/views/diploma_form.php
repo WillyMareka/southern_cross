@@ -50,7 +50,7 @@
 		</div>
 		
 		<div class=" logo_more_information float_left">
-			<p><strong class=" float_left clearfix clear_right">Address: </strong> P.O. Box 370-40100</p>
+			<p><strong class=" float_left clearfix clear_right">Address: </strong> P.O. Box 1280</p>
 			<p>Kisumu,Kenya</p>
 			<p><strong class=" float_left clearfix">Email: </strong>  southerncrossinstitute@gmail.com</p>
 		</div>
@@ -81,9 +81,9 @@
         <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
         <li></li>
         <li class="appactive leftdist"><a href="#">Diploma</a></li>
-        <li><a href="#">Bachelor</a></li>
-        <li><a href="#">Masters</a></li>
-        <li><a href="#">Doctoral</a></li>
+        <li><a href="#">Certificate</a></li>
+        <li><a href="#">Short Courses</a></li>
+        
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
