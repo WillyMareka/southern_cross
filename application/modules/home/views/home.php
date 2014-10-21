@@ -9,7 +9,9 @@
 <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
 <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" /> 
 <link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
-<link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/home.css'?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/stylesheets/style.css'?>" />
+
 
 
 <!--[if lt IE 8]>
@@ -299,7 +301,7 @@ Information on workforce registration and licensure renewals can be used to calc
     <div class="container">
       <div class="row">
         <div class="grid_12"> 
-          <div class="copyright"><span class="brand">Southern Cross</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+          <div class="copyright"><span class="brand">Southern Cross</span> &copy; <span id="copyright-year"></span> | <a class="privacy" href="#">Privacy Policy</a>
           </div>
         </div>
       </div>
