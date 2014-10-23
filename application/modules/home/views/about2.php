@@ -60,32 +60,6 @@
     </section>
 
 
-
-	<!-- <section class="services wrapper">
-		<ul class="clearfix">
-			<li class="animated wow fadeInDown">
-				<img class="icon" src="<?php echo base_url() .'assets/images/icon1.png'?>" alt=""/>
-				<span class="separator"></span>
-				<h2>Officia Deserunt Mollit</h2>
-				<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua voluptate velit esse
-				cillum dolore.</p>
-			</li>
-			<li class="animated wow fadeInDown"  data-wow-delay=".2s">
-				<img class="icon" src="<?php echo base_url() .'assets/images/icon2.png'?>" alt=""/>
-				<span class="separator"></span>
-				<h2>Culpa Killum Dolore</h2>
-				<p>aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-			</li>
-			<li class="animated wow fadeInDown"  data-wow-delay=".4s">
-				<img class="icon" src="<?php echo base_url() .'assets/images/icon3.png'?>" alt=""/>
-				<span class="separator"></span>
-				<h2>Elit Tempor Incididunt</h2>
-				<p>nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat enim ad minim veniam.</p>
-			</li>
-		</ul>
-	</section> -->
-
-
 	<section class="video no-margin">
 		<div class="shadow"></div>
 
