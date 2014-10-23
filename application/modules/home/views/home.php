@@ -92,7 +92,7 @@
             MID-LEVEL MEDICAL TRAINING COLLEGE
           </div>
         </div>
-        <div class="regicolor"><span class="glyphicon glyphicon-circle-arrow-up"></span>Registrations</div>
+        <div><span class="glyphicon glyphicon-circle-arrow-up"></span>Registrations</div>
       </div>
     </section>
   </div>

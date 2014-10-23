@@ -392,8 +392,8 @@ background-image: url('../images/topundergraduateform.jpg');
   height: 100%;
 }
 
-.regicolor{
-  background-color: #000;
+.navigation .sf-menu .regicolor{
+  color: #000;
 }
 
 td .form-name{
@@ -483,3 +483,72 @@ strong, b{
 footer a:hover{
   color:#0033CC;
 }
+
+.billboard.light{
+  background-image: url('../images/green.jpg');
+}
+
+.buzconc{
+  /*margin-top: 90px;*/
+  text-align: center;
+  font-size: 60px;
+  font-weight: 100;
+  font-family: 'Ubuntu';
+  color: #FFFFFF;
+}
+
+.buzpre{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 60;
+  font-family: 'Ubuntu';
+}
+
+.buzcont{
+  /*margin: 18px;*/
+  /*text-align: justify;*/
+  font-size: 25px;
+  font-weight: 40;
+  font-family: 'Ubuntu';
+  background-color: #000000;
+  color:#FFFFFF;
+  opacity: 0.8;
+  width:800px;
+  height: 400px;
+  margin-top: 20px;
+  padding: 20px;
+  letter-spacing: 2px;
+}
+
+.preamble{
+  /*margin-bottom: 0;*/
+  height:600px;
+  background-image: url('../images/bench.jpg');
+  background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+    background-size: cover;
+}
+
+.no-margin{
+  margin:0;
+}
+
+.video{
+  height: 400px;
+}
+
+.premcontent{
+
+margin: 30px 20px;
+
+}
+
+
+
+
+

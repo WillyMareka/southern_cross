@@ -62,7 +62,7 @@
         <div class="grid_12 ">
           <div class="navigation ">
             <nav>
-              <ul class="sf-menu">
+              <ul class="sf-menu regicolor">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <li class="current"><a href="#">About</a></li>
                <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
