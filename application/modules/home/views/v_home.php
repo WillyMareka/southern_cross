@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/flat-ui/css/flat-ui.css'?>" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/kickstart/css/fonts/font-awesome/css/font-awesome.min.css'?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/script/jquery/jquery-ui.css'?>"/>
-		<link rel="stylesheet" href="<?php echo base_url(). 'assets/stylesheets/animate.css'?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/stylesheets/animate.css'?>">
     <link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/stylesheets/style.css'?>">
 
 	</head>

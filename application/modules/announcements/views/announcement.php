@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,13 +26,28 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-       
+        <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Application<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="<?php echo base_url(). 'applications/diploma'?>">Diploma</a></li>
+            <li><a href="#">Bachelor</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Masters</a></li>
+            <li><a href="#">Doctoral</a></li>
+          </ul>
+        </li>
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Log-In</a></li>
+        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
   </nav>
   <div class = "top-section">
-  <p>Southern Cross Institute of Tropical Medicine is a Mid-Level Medical Training College located in Kibuye Market on a premises previously occupied by Lake Institute of Tropical Medicine (LIT MED)</p>
+  <p>Southern Cross Institute of Tropical Medicine is a Mid-Level Medical Training College located in Tom Mboya/ Kibuye Market Area in Kisumu, behind Avenue Hospital off the Kisumu-Kakamega Road. </p>
   <P>The college offers courses in the following fields:</P><div class="panel-group" id="accordion">
     <div class="panel panel-red">
       <div class="panel-heading">
@@ -95,10 +111,10 @@
 
     <center>
     <p><h4><b>Registration of students begins on Friday 26th September 2014 until 30th September 2014 for new intakes <br/><a href = "<?php echo base_url() .'applications'?>">Apply here. </a></p>
-    <p>Continuing students are encouraged to register for progressive learning and continuity subject to certification of their course work</b></h4></p>
+    <!-- <p>Continuing students are encouraged to register for progressive learning and continuity subject to certification of their course work</b></h4></p> -->
     </center>
 
-    <center><h2>ALL ARE INVITED!!!</h2></center>
+    <center><h2>CERTIFICATION TO THE MEDICAL FRATERNITY!!!</h2></center>
   </div>
   </div>
 

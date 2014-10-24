@@ -4,27 +4,16 @@
 <title>Home</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
-<!-- <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>"> -->
-<!-- <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" /> -->
+    <link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/flat-ui/bootstrap/css/bootstrap.css'?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/flat-ui/css/flat-ui.css'?>" />
+<link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
+<link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" /> 
 <link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
-<link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/home.css'?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/stylesheets/style.css'?>" />
 
-<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
-<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
+
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -64,13 +53,14 @@
             <div class="navigation ">
               <nav>
                 <ul class="sf-menu">
-                 <li class="current"><a href="index.html">Home</a></li>
-                 <li><a href="about.html">About</a></li>
-                 <li><a href="services.html">Services</a></li>
-                 <li><a href="blog.html">Blog</a></li>
-                 <li><a href="contacts.html">Contacts</a></li>
+                 <li class="current"><a href="#">Home</a></li>
+                 <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
+                 <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
+                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
+                 <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+                 
                </ul>
-              </nav>
+        </nav>
               <div class="clear"></div>
             </div>       
            <div class="clear"></div>  
@@ -83,23 +73,26 @@
         <div class="row">
           <div class="grid_4">
             <a href="#" class="banner "><div class="maxheight">
-              <div class="fa fa-globe"></div>Global Courses</div>
+              <div class="fa fa-globe"></div>Certificate</div>
             </a>
-            <a href="#" class="banner "><div class="maxheight">
-              <i class="fa fa-line-chart"></i>Creative Ideas</div>
+            <a href="<?php echo base_url(). 'applications/diploma'?>" class="banner "><div class="maxheight1">
+              <div class="fa fa-briefcase"></div>Diploma</div>
             </a>
+            <!-- <a href="#" class="banner "><div class="maxheight">
+              <i class="fa fa-line-chart"></i>Masters</div>
+            </a> -->
             <a href="#" class="banner "><div class="maxheight1">
-              <div class="fa fa-cog"></div>New Services</div>
+              <div class="fa fa-cog"></div>Short Courses</div>
             </a>
-            <a href="#" class="banner "><div class="maxheight1">
-              <div class="fa fa-briefcase"></div>Pro Management</div>
-            </a>
+            
           </div>
           <div class="grid_5">
-            <h2>Southern Cross University</h2>
-            University of Tropical Medicine
+            <h2>Southern Cross Institute of Tropical Medicine</h2>
+
+            MID-LEVEL MEDICAL TRAINING COLLEGE
           </div>
         </div>
+        <div><span class="glyphicon glyphicon-circle-arrow-up"></span>Registrations</div>
       </div>
     </section>
   </div>
@@ -122,9 +115,9 @@
           Partner <br> Universities
           <div class="clear"></div>
         </div>
-        <div class="grid_3">
+        <!-- <div class="grid_3">
           <a href="#" class="support"><img src="<?php echo base_url() .'assets/images/support.png'?>" alt=""></a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -151,25 +144,109 @@
           <div class="grid_7">
             <h3>Why You Should Study at Southern Cross</h3>
             <div class="block-2">
-              <img src="<?php echo base_url() .'assets/images//page1_img1.jpg'?>" alt="" class="img_inner fleft">
+              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience1.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
                 <div class="text1"><a href="#">Experience</a></div>
                 <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert varius augue, eu consectetur ligulaam dui eros dertoli.</p>Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tinciduntol nulla, eu sodales vertomin
                 <br>
-                <a href="#" class="link-1">more</a>
+               
               </div>
             </div>
             <div class="block-2">
-              <img src="<?php echo base_url() .'assets/images//page1_img2.jpg'?>" alt="" class="img_inner fleft">
+              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience2.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
                 <div class="text1"><a href="#">Marketability</a></div>
-                <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert varius augue, eu consectetur ligulaam dui eros dertoli.</p>Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tinciduntol nulla, eu sodales vertomin
+                <p> A strategic alliance with a USA based Medical Institution will also facilitate deployment of Nursing and Social Work student into the US market.</p>
                 <br>
-                <a href="#" class="link-1">more</a>
+                <p style="font-size:15px"><strong>Kenya’s Health Workforce Training Capacity: a Situation Analysis</strong></p>
+                 <a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">More</a>
+
+                 <!-- Button trigger modal -->
+         <!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+             Launch demo modal
+        </button> -->
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Kenya’s Health Workforce Training Capacity: a Situation Analysis</h4>
+      </div>
+      <div class="modal-body">
+       <p> 
+        The health workforce is a vital component of any health system. Moving from a disease-specific approach to healthcare promotion, policy makers are now shifting towards a health systems approach, which includes strengthening the health workforce. The impetus for this new focus on health systems strengthening and human resources for health (HRH) came, in part, as a result of research from the 2004 Joint Learning Initiative and The World Health Report in 2006, which demonstrated a clear link between health workforce density and a number of health indicators (2004; 2006b).
+Numerous studies have explored the link between an adequate supply and deployment of HRH and health services delivery. The Joint Learning Initiative, comprised of global health experts, found that a density of 2.3 health care workers per 1,000 population was associated with 80% coverage in skilled birth attendance and measles vaccination (2004), and a distinct relationship between the density of the health workforce and mortality rates for mothers, infants and children under five. However, thirty-six sub-Saharan African countries, including Kenya, are facing a critical shortage of heath care workers. 
+The Government of Kenya (GoK), in partnership with the President’s Emergency Plan for AIDS Relief (PEPFAR), is considering interventions to scale-up Kenya’s health workforce, increasing the number of doctors, nurses, midwives, clinical officers and community workers, among other cadres. 
+
+It should be noted that registration as a professional health worker requires enrolling in and completing an approved training institution (i.e. intake and graduation), taking a licensure exam, and applying for registration.
+
+Kenya’s Health Workforce
+Information on workforce registration and licensure renewals can be used to calculate Kenya’s workforce-to-population density and compare it to the WHO recommendation of 2.3 health workers per 1,000 populations.
+</p>
+
+<table class="table table-hover">
+  <tr style="background-color:#0099CC">
+    <strong class="str"><td style="text-align:center" colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
+  </tr>
+  <tr style="background-color:#0099CC">
+    <strong>
+    <td></td>
+    <td>Doctors</td>
+    <td>Dentists</td>
+    <td>Nurses/Mid-Wives</td>
+    <td>Clinical Officers</td>
+    <td>Laboratory Techs</td>
+    <td>Total</td>
+    </strong>
+  </tr>
+  <tr style="background-color:#66FFFF">
+    <td>Registered</td>
+    <td>6,306</td>
+    <td>780</td>
+    <td>43,970</td>
+    <td>8,300</td>
+    <td>4,699</td>
+    <td>64,055</td>
+  </tr>
+  <tr style="background-color:#66FFFF">
+    <td>Licensure Renewals</td>
+    <td>4,756</td>
+    <td>590</td>
+    <td>28,214</td>
+    <td>6,300</td>
+    <td>2,092</td>
+    <td>41,952</td>
+  </tr>
+</table>
+
+
+<p>
+  Calculating workforce-to-population ratios based on both the number of “registered” and “retained” health care workers provides a range for workforce density estimates. According to the number of registered health personnel, Kenya has 1.54 health workers (doctors, nurses, midwives, and clinical officers) per 1,000 people. Based on the number of retained health personnel, Kenya has 1.03 health workers (doctors, nurses, midwives, and clinical officers) per 1,000 people based on the 2009 Census data for an estimated national population of 38.6M in 2010. Using either estimate, the density of health workers in Kenya is below the recommended 2.30 per 1,000 people. 
+</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+              </div>
+            </div>
+            <div class="block-2">
+              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience3.jpg'?>" alt="" class="img_inner fleft">
+              <div class="extra_wrapper">
+                <div class="text1"><a href="#">Career Advancement</a></div>
+                <p>The curriculum under the Certificate programs is designed to allow students to upgrade to Diploma level over 18 months bridging course upon graduation. <p>The College is also seeking to collaborate with Public Universities such as Maseno University, JKUAT and Moi University for advancement to a Degree course in Public Health for our Diploma students.</p>
+                <br>
+                
               </div>
             </div>
           </div>
-          <div class="grid_4 preffix_1">
+        <!--   <div class="grid_4 preffix_1">
             <h3>Testimonials</h3>
             <blockquote class="bq1">
               <p>“Curabitur vel lorem sit amet nulla erero fermentum. In vitae varius auguectetu ligula. Etiam dui eros, laoreet site am est vel commodo venenatisipiscing... ”</p>
@@ -179,7 +256,7 @@
               <p>“Burabitur vel lorem sit amet nulla erero fermentum. In vitae varius auguectetu ligula. Etiam dui eros, laoreet site am ast vel commodo venenatisipiscino... ”</p>
               <span>Testimonial Two</span>
             </blockquote>
-          </div>
+          </div> -->
         </div>
       </div>
     </article>
@@ -187,7 +264,7 @@
       <div class="row">
         <div class="grid_5">
           <h4>More about <span class="light-blue-color">Southern Cross</span></h4>
-          <img src="<?php echo base_url() .'assets/images//page1_img3.jpg'?>" alt="" class="img_inner fleft">
+          <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="" class="img_inner fleft">
             <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert arius augue, eu consectetur </p>
             <p class="offset__1">Eligulaam dui eros dertolisce dertolo adipiscing quam id risus sagittis</p>
             Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert rius augue, eu consectetur larem dui eros dertolisce dertolo 
@@ -224,7 +301,7 @@
     <div class="container">
       <div class="row">
         <div class="grid_12"> 
-          <div class="copyright"><span class="brand">Southern Cross</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+          <div class="copyright"><span class="brand">Southern Cross</span> &copy; <span id="copyright-year"></span> | <a class="privacy" href="#">Privacy Policy</a>
           </div>
         </div>
       </div>
@@ -232,6 +309,27 @@
   </footer>
   <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
+
+<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap.min.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-select.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-switch.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-checkbox.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-radio.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
+<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 
 
 </body>
