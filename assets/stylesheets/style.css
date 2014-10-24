@@ -494,15 +494,16 @@ footer a:hover{
   font-size: 60px;
   font-weight: 100;
   font-family: 'Ubuntu';
-  color: #FFFFFF;
+  color: #000;
 }
 
 .buzpre{
-  color: #FFFFFF;
+  color: #000;
   text-align: center;
   font-size: 40px;
   font-weight: 60;
   font-family: 'Ubuntu';
+  text-decoration: underline;
 }
 
 .buzcont{
@@ -511,10 +512,11 @@ footer a:hover{
   font-size: 25px;
   font-weight: 40;
   font-family: 'Ubuntu';
-  background-color: #000000;
-  color:#FFFFFF;
-  opacity: 0.8;
-  width:800px;
+  /*background-color: #000000;*/
+  color:#000;
+  text-align: center;
+  /*opacity: 0.8;*/
+  /*width:800px;*/
   height: 400px;
   margin-top: 20px;
   padding: 20px;
@@ -524,7 +526,7 @@ footer a:hover{
 .preamble{
   /*margin-bottom: 0;*/
   height:600px;
-  background-image: url('../images/bench.jpg');
+  /*background-image: url('../images/bench.jpg');*/
   background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
