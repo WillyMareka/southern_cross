@@ -48,7 +48,7 @@
       <div class="grid_12 rel">
         <h1>
           <a href="index.html">
-            <img src="images/logo.png" alt="Logo alt">
+            <img src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt">
           </a>
         </h1>
       </div>

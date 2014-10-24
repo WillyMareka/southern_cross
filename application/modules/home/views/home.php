@@ -37,7 +37,7 @@
         <div class="grid_12 rel">
           <h1>
             <a href="index.html">
-              <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt">
+              <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "150">
             </a>
           </h1>
         </div>
