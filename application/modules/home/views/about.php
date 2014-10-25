@@ -32,9 +32,10 @@
 		</header>
 
 		<div style="color:#0000FF"class="caption dark animated wow fadeInDown clearfix top-about">
+			<div class="topabout">
 			<h1>Southern Cross Institute of Tropical Medicine</h1>
 			<h4>MID-LEVEL MEDICAL TRAINING COLLEGE</h4>
-			<h5></h5>
+			</div>
 			<hr>
 		</div>
 		<div class="shadow"></div>
@@ -65,7 +66,7 @@
 
 		<img  alt="" class="video_logo animated wow fadeInDown"/>
 		<h3 class="animated wow fadeInDown">Video about Southern Cross</h3>
-		<a href="http://www.youtube.com/embed/cBJyo0tgLnw" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>
+		<a href="http://www.youtube.com/watch?v=uBcVE3tyI1w" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>
 	</section><!--  End video  -->
 
 

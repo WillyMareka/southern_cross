@@ -7,4 +7,6 @@ class Courses extends MX_Controller
 		$this->load->view('v_courses');
 		
 	}
+
+	
 }
