@@ -586,6 +586,24 @@ header nav{
 
 .offered{
   font-size: 25px;
+
+}
+
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+
+
+.sf-menu > li > a {
+color: #000000 !important;
+}
+
+.sf-menu > li.sfHover > a, .sf-menu > li.current > a, .sf-menu > li > a{
+color:#000;
 }
 
 
