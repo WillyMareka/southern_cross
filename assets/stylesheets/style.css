@@ -485,7 +485,7 @@ footer a:hover{
 }
 
 .billboard.light{
-  background-image: url('../images/green.jpg');
+  background-image: url('../images/uni2.jpg');
 }
 
 .buzconc{
@@ -494,15 +494,16 @@ footer a:hover{
   font-size: 60px;
   font-weight: 100;
   font-family: 'Ubuntu';
-  color: #FFFFFF;
+  color: #000;
 }
 
 .buzpre{
-  color: #FFFFFF;
+  color: #000;
   text-align: center;
   font-size: 40px;
   font-weight: 60;
   font-family: 'Ubuntu';
+  text-decoration: underline;
 }
 
 .buzcont{
@@ -511,10 +512,11 @@ footer a:hover{
   font-size: 25px;
   font-weight: 40;
   font-family: 'Ubuntu';
-  background-color: #000000;
-  color:#FFFFFF;
-  opacity: 0.8;
-  width:800px;
+  /*background-color: #000000;*/
+  color:#000;
+  text-align: center;
+  /*opacity: 0.8;*/
+  /*width:800px;*/
   height: 400px;
   margin-top: 20px;
   padding: 20px;
@@ -524,7 +526,7 @@ footer a:hover{
 .preamble{
   /*margin-bottom: 0;*/
   height:600px;
-  background-image: url('../images/bench.jpg');
+  /*background-image: url('../images/bench.jpg');*/
   background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -548,6 +550,61 @@ margin: 30px 20px;
 
 }
 
+.billboard .caption.dark h1, h4{
+  color:#001A66;
+  
+}
+
+.topabout{
+  background-color: #FFF;
+  opacity:0.7;
+}
+
+header.dark nav ul li a{
+  color:#000099;
+  
+  text-align: center;
+}
+
+header.dark nav ul li a:hover{
+  text-decoration: underline;
+}
+
+header nav{
+  float:left;
+  margin-left: 200px;
+
+}
+
+#nav ul li{
+  font-size: 60px;
+}
+
+#nav ul li a.active span{
+  font-size: 30px;
+}
+
+.offered{
+  font-size: 25px;
+
+}
+
+.right{
+  float: right;
+}
+
+.left{
+  float: left;
+}
+
+
+.sf-menu > li > a {
+color: #000000 !important;
+}
+
+.sf-menu > li.sfHover > a, .sf-menu > li.current > a, .sf-menu > li > a{
+color:#000;
+}
 
 
 

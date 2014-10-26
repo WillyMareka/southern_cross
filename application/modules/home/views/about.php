@@ -1,182 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>About</title>
-<meta charset="utf-8">
-<meta name="format-detection" content="telephone=no" />
-<link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
-<link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
-<link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
-<link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
+	<title>About</title>
+	<meta charset="utf-8">
+	<meta name="description" content="About Southern Cross"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/reset.css'?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/fancybox-thumbs.css'?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/fancybox-buttons.css'?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/fancybox.css'?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/animate.css'?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/main.css'?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/stylesheets/style.css'?>">
 
 
-<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
-<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
-<!--[if lt IE 8]>
- <div style=' clear: both; text-align:center; position: relative;'>
-   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-   </a>
-</div>
-<![endif]-->
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<link rel="stylesheet" media="screen" href="css/ie.css">
-<![endif]-->
+
+    
 </head>
+ <!-- <body style = "background-color: #999999 !important;">  -->
 <body>
-<!--==============================
-              header
-=================================-->
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="grid_12 rel">
-        <h1>
-          <a href="index.html">
-            <img src="images/logo.png" alt="Logo alt">
-          </a>
-        </h1>
-      </div>
+	<section class="billboard light">
+		<header class="wrapper dark">
+			
+			<nav>
+				<ul>  
+					<li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
+					<li><a class="active" href="">About Us</a></li>
+					<li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcement</a></li>
+					<li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div style="color:#0000FF"class="caption dark animated wow fadeInDown clearfix top-about">
+			<div class="topabout">
+			<h1>Southern Cross Institute of Tropical Medicine</h1>
+			<h4>MID-LEVEL MEDICAL TRAINING COLLEGE</h4>
+			</div>
+			<hr>
+		</div>
+		<div class="shadow"></div>
+	</section><!--  End billboard  -->
+
+    <section class="preamble">
+
+     <div class="premcontent animated wow fadeInDown">
+      <p class="buzconc">BUSINESS CONCEPT</p>
+      <p class="buzpre">Preamble</p>
+      <p class="buzcont">
+      	Kenya has a strong health component in its “Vision 2030” policy, 
+      	which aims to build a prosperous country with a high quality of life. 
+      	Within this policy the delivery of community based services are a flagship project. 
+      	Kenya revised its Community Strategy in 2007 as the vehicle to deliver the National Health Sector Strategic Plan. 
+      	Vertical programs use close-to-community providers to deliver services including maternal and child health, HIV, TB and malaria with varying degrees of success. 
+      	These programs have assisted the government to increase the number of trained community health workers and functional community units. 
+      	The government through the Division of Community Health Services has developed a scheme of service for Community Health providers and is reviewing the community strategy model based on lessons learnt and experiences from other countries.
+      </p>
     </div>
-  </div>
-  <section id="stuck_container">
-  <!--==============================
-              Stuck menu
-  =================================-->
-    <div class="container">
-      <div class="row">
-        <div class="grid_12 ">
-          <div class="navigation ">
-            <nav>
-              <ul class="sf-menu regicolor">
-               <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-               <li class="current"><a href="#">About</a></li>
-               <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
-               <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
-               <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
-               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
-             </ul>
-            </nav>
-            <div class="clear"></div>
-          </div>       
-         <div class="clear"></div>  
-        </div>
-     </div> 
-    </div> 
-  </section>
-</header>
-<!--=====================
-          Content
-======================-->
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
-  <div class="container">
-    <div class="row">
-      <div class="grid_12">
-        <h3>About Us</h3>
-        <img src="images/page2_img.jpg" alt="" class="img_inner fleft">
-        <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Livamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus liberoret. Praesenter faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequa. </a></p>
-          Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet site amet est vel, commodo venenatis eros. Fusce adipiscing quam id risus sagittis, non consequat lacus interdumertolo mokiju werto nulla, eu sodales arcu. Quisque viverra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend sed, cursus sit amet. Huisque viverra nulla nunc, eu ultrices libero ultricies eget. Ohasellus accumsajusto vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend sed, cursus sit amet ertolomino kolinomi holo. 
-        </div>
-      </div>
-    </div>
-  </div>
-  <article class="content_gray offset__1">
-    <div class="container">
-      <div class="row">
-        <div class="grid_12">
-          <h3>What We Offer</h3>
-        </div>
-        <div class="grid_4">
-          <div class="block-3">
-            <div class="count">1</div>
-            <div class="extra_wrapper">
-              <div class="text1"><a href="#">Lorem Ipsumen</a></div>
-              Curabitur vel lorem sit amet nulla corper fermentum In vitae varius augue, eu ctetur ligulaam dui eroserty. Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tinciduntol nulla eu 
-            </div>
-          </div>
-        </div>
-        <div class="grid_4">
-          <div class="block-3">
-            <div class="count">2</div>
-            <div class="extra_wrapper">
-              <div class="text1"><a href="#"> Ipsumen Dertol</a></div>
-              Trabitur vel lorem sit amet nulla corper fermentum In vitae varius augue, eu ctetur ligulaam dui eroserty. Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tinciduntol nulla  
-            </div>
-          </div>
-        </div>
-        <div class="grid_4">
-          <div class="block-3">
-            <div class="count">3</div>
-            <div class="extra_wrapper">
-              <div class="text1"><a href="#">Setorem Osumen</a></div>
-              Nurabitur vel lorem sit amet nulla corper fermentum In vitae varius augue, eu ctetur ligulaam dui eroserty. Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tincidunta eu sodales 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
-  <div class="container">
-    <div class="row">
-      <div class="grid_12">
-        <h3>Our Staff</h3>
-      </div>
-      <div class="grid_2">
-        <img src="images/page2_img1.jpg" alt="" class="bord_img">
-        <div class="text2"><a href="#">Sharon Brown</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div>
-      <div class="grid_2">
-        <img src="images/page2_img2.jpg" alt="" class="bord_img">
-        <div class="text2"><a href="#">Mark Carter</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div>
-      <div class="grid_2">
-        <img src="images/page2_img3.jpg" alt="" class="bord_img">
-        <div class="text2"><a href="#">Sandra Smith</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div>
-      <div class="grid_2">
-        <img src="images/page2_img4.jpg" alt="" class="bord_img">
-        <div class="text2"><a href="#">Tim Jons</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div>
-      <div class="grid_2">
-        <img src="images/page2_img5.jpg" alt="" class="bord_img">
-        <div class="text2"><a href="#">Richard Wright</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div>
-      <div class="grid_2">
-        <img src="images/page2_img6.jpg" alt="" class="bord_img">
-        <div class="text2"><a href="#">Kevin Steawart</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div>
-    </div>
-  </div>
-</section>
-<!--==============================
-              footer
-=================================-->
-<footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="grid_12"> 
-        <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-          <div class="sub-copy">Website designed by YoungWeb Company</div>
-        </div>
-      </div>
-    </div>
-  </div>  
-</footer>
-<a href="#" id="toTop" class="fa fa-chevron-up"></a>
+
+<div class="shadow"></div>
+    </section>
+
+
+	<section class="video no-margin">
+		<div class="shadow"></div>
+
+		<img  alt="" class="video_logo animated wow fadeInDown"/>
+		<h3 class="animated wow fadeInDown">Video about Southern Cross</h3>
+		<a href="http://www.youtube.com/watch?v=uBcVE3tyI1w" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>
+	</section><!--  End video  -->
+
+
+	<section class="testimonials wrapper">
+		<div class="title animated wow fadeIn">
+			<h2>Management Team</h2>
+			<h3>A limited liability company incorporated in Kenya, made up of a team of professionals with a combined experience in medical services, project management and finance. The consortium of professionals has been put together for the sole purpose of running a Mid-Level Medical College. </h3>
+			<hr class="separator"/>
+		</div>
+
+		<ul class="clearfix">
+			<li class="animated wow fadeInDown">
+				<p><img src="<?php echo base_url() .'assets/images/quotes.png'?>" alt="" class="quotes"/>
+					Tumanka is a founding Executive Director and Project Driver, and will focus on day-to-day operations as well as fund raising and business development. Prior to setting up the Company, Tumanka was previously in AMREF where he was tasked with establishing a new Health Centre in Magadi and Somalia as an Anesthetist under the humanitarian mission. He ventured into lecturing and rose to the position of a College Principle.
+				<span class="triangle"></span>
+				</p>
+				<div class="client">
+					<!-- <img src="<?php echo base_url() .'assets/images/client1.jpg'?>" class="avatar"/> -->
+					<div class="client_details">
+						<h4>Tumanka Ole Kamuaro</h4>
+						<h5>Founder and Executive Director</h5>
+					</div>
+				</div>
+			</li>
+			<li class="animated wow fadeInDown"  data-wow-delay=".2s">
+				<p><img src="<?php echo base_url() .'assets/images/quotes.png'?>" alt="" class="quotes"/>
+          A holder of a BSc. Law and an Associate of the Chartered Institute of Bankers (ACIB), is a career banker with 26 years working experience in the local banking industry in several senior capacities. He is the Company’s Financial Director and brings on board both legal and financial expertise and a wealth of financial management strategies to ensure business sustainability and continuity.
+				<span class="triangle"></span>
+				</p>
+				<div class="client">
+					<!-- <img src="<?php echo base_url() .'assets/images/client2.jpg'?>" class="avatar"/> -->
+					<div class="client_details">
+						<h4>Davis Mareka </h4>
+						<h5>Co-Founder and Finance Director</h5>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section><!--  End testimonials  -->
+
+
+	<section class="blog_posts">
+		<div class="wrapper">
+			<div class="title animated wow fadeIn">
+				<h2>Recent Posts</h2>
+				<h3>Most recent activities</h3>
+				<hr class="separator"/>
+			</div>
+
+			<ul class="clearfix">
+				<li class="animated wow fadeInDown">
+					<div class="media">
+						<div class="date">
+							<span class="day">25</span>
+							<span class="month">Nov</span>
+						</div>
+						<a href="#">
+							<img src="<?php echo base_url() .'assets/images/signing.jpg'?>" alt=""/>
+						</a>
+					</div>
+					<a href="#">
+						<h1>Completion all signing of contracts for ownership</h1>
+					</a>
+				</li>
+
+				<li class="animated wow fadeInDown" data-wow-delay=".2s">
+					<div class="media">
+						<div class="date">
+							<span class="day">15</span>
+							<span class="month">Dec</span>
+						</div>
+						<a href="#">
+							<img src="<?php echo base_url() .'assets/images/construction.jpg'?>" alt=""/>
+						</a>
+					</div>					
+					<a href="#">
+						<h1>Completion of the construction</h1>
+					</a>
+				</li>
+
+				<li class="animated wow fadeInDown" data-wow-delay=".4s">
+					<div class="media">
+						<div class="date">
+							<span class="day">1</span>
+							<span class="month">Jan</span>
+						</div>
+						<a href="#">
+							<img src="<?php echo base_url() .'assets/images/website.jpg'?>" alt=""/>
+						</a>
+					</div>
+					<a href="#">
+						<h1>Launching of the college website</h1>
+					</a>
+				</li>
+
+				<li class="animated wow fadeInDown" data-wow-delay=".6s">
+					<div class="media">
+						<div class="date">
+							<span class="day">10</span>
+							<span class="month">Jan</span>
+						</div>
+						<a href="#">
+							<img src="<?php echo base_url() .'assets/images/opening.jpg'?>" alt=""/>
+						</a>
+					</div>
+					<a href="#">
+						<h1>
+							Official opening of the college
+				        </h1>
+				</a>
+				</li>
+			</ul>
+		</div>
+	</section><!--  End blog_posts  -->
+
+
+	<footer>
+		<div class="wrapper">
+			<div class="rights">
+				
+				<p>© Southern Cross. All Rights Reserved 2014 - Medical Institute at <a href="http://southerncrossinstitute.edu" target="_blank">SouthernCrossInstitute.edu</a></p>
+			</div>
+
+			<nav>
+				<ul>
+					<li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
+					<li><a class="active" href="">About Us</a></li>
+					<li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcement</a></li>
+					<li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+				</ul>
+			</nav>
+		</div>		
+	</footer><!--  End footer  -->
+    
+    <script src="<?php echo base_url() .'assets/js/jquery2.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/fancybox.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/fancybox-buttons.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/fancybox-media.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/fancybox-thumbs.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/wow.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/main2.js'?>"></script>
 </body>
 </html>
