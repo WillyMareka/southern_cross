@@ -8,14 +8,14 @@
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Applications</li>
+                        <li class="active">Staff Details</li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
                     <?php
-                if ($application != NULL)
+                if ($staff != NULL)
                 {
             ?>
             <div class="row">
@@ -23,7 +23,7 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">Students Details</h3>
+                            <h3 class="box-title">Staff Details</h3>
                             <div class="box-tools">
                                 <div class="input-group">
                                     <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
@@ -37,49 +37,51 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th >#</th>
-                                        <th >First Name</th>
-                                        <th >Last Name</th>
-                                        <th >Other Names</th>
-                                        <th >Citizenship</th>
-                                        <th >Gender</th>
-                                        <th >Date of Birth</th>
-                                        <th >Status</th>
-                                        <th >View</th>
-                                    
+                                        <th rowspan="2">#</th>
+                                        <th rowspan="2">First Name</th>
+                                        <th rowspan="2">Last Name</th>
+                                        <th rowspan="2">Other Names</th>
+                                        
+                                        <th rowspan="2">Staff Phone</th>
+                                        <th rowspan="2">Staff Email</th>
+                                        <th rowspan="2">Registration Date</th>
+                                        <th rowspan="2">Status</th>
+                                        <th colspan="2">Actions</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Deactivate</th>
+                                        <th>Edit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                         $i=1; 
-                                        foreach ($application as $value) {
-                                        $id = $value['applicant_id'];
+                                        foreach ($staff as $value) {
+                                         $id = $value['id'];
                                     ?>
                                     <tr>
                                         <td><?php echo $i; ?></td>
                                         <td><?php echo $value['f_name'];?></td>
                                         <td><?php echo $value['s_name'];?></td>
-                                        <td><?php echo $value['l_name'];?></td>
-                                        <td><?php echo $value['citizenship'];?></td>
-                                        <td><?php echo $value['gender'];?></td>
-                                        <td><?php echo $value['dob'];?></td>
+                                        <td><?php echo $value['o_names'];?></td>
+                                        
+                                        <td><?php echo $value['phone_no'];?></td>
+                                        <td><?php echo $value['email'];?></td>
+                                        <td><?php echo $value['registration_date'];?></td>
 
-                                    <?php
+                                        <?php
                                         if($value['status'] == 1)
                                         {
-                                            $span = "<span class='label label-warning'>Pending</span>";
-                                        }else if ($value['status'] == 2)
+                                            $span = "<span class='label label-success'>Active</span>";
+                                        }else
                                         {
-                                            $span = "<span class='label label-success'>Approved</span>";
+                                            $span = "<span class='label label-danger'>Deactivated</span>";
                                         }
-                                        else if ($value['status'] == 3)
-                                        {
-                                            $span = "<span class='label label-danger'>Rejected</span>";
-                                        }
-                                    ?>
+                                         ?>
                                         
                                         <td><center><?php echo $span;?></center></td>
-                                        <td><center><a href="javascript:void(null)" onclick="applications(<?php echo $value['applicant_id']?>)"><span class="fa fa-edit" style="color:#0DCAF2"></span></a></center></td>
+                                        <td><center><a href="admin/deactivate/lecturers/<?php echo $id;?>"><span style="font-size: 1.4em;color: #E80207;" class="glyphicon glyphicon-remove-sign"></span></a></center></td>
+                                        <td><center><a href="javascript:void(null);" onclick="edit_lecturer(<?php echo $value['id']; ?>,'<?php echo $value['f_name']; ?>','<?php echo $value['s_name']; ?>','<?php echo $value['o_names']; ?>','<?php echo $value['phone_no']; ?>','<?php echo $value['email']; ?>','<?php echo $value['gender']; ?>','<?php echo $value['registration_date']; ?>','<?php echo $value['course_id']; ?>','<?php echo $value['status']; ?>')"><span style="color:#44D2F2;"><i class="fa fa-edit"></i></span></a></center></td>
                                     </tr>
                                     <?php
                                         $i++;
@@ -99,7 +101,7 @@
                     <div class="col-xs-12">
                         <div class="box">
                             <div class="box-header">
-                                <h3 class="box-title">Students Details</h3>
+                                <h3 class="box-title">Staff Details</h3>
                                 <div class="box-tools">
                                     <div class="input-group">
                                         <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
@@ -114,18 +116,19 @@
                             
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Other Names</th>
-                                            <th>Student Phone</th>
-                                            <th>Student Email</th>
-                                            <th>Admission Date</th>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Other Names</th>
+                                        
+                                        <th>Staff Phone</th>
+                                        <th>Staff Email</th>
+                                        <th>Registration Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td colspan="7"><center>No data found in this table...</center></td>
+                                            <td colspan="8"><center>No data found in this table...</center></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -136,7 +139,6 @@
                 <?php
                     }
                 ?>
-
                 </section><!-- /.content -->
             </aside><!-- /.right-si-->
 </div>

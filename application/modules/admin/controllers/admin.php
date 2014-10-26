@@ -21,4 +21,58 @@ class Admin extends MY_Controller
 		$data['content_view'] = "registercourse";
 		$this->load->view('admin_view', $data);
 	}
+
+	public function view_staff_page()
+	{
+		$data['content_view'] = "view_staff_page";
+		$data['application'] = $this->m_admin->applications();
+		$data['staff'] = $this->m_admin->get_staff();
+
+		$this->load->view("admin_view", $data);
+	}
+
+	public function add_staff()
+	{
+		$data['content_view'] = "add_staff_page";
+
+		$this->load->view("admin_view", $data);
+	}
+
+	public function register_employees()
+	{
+		// print_r($this->input->post());die;
+		$path = '';
+		$config['upload_path'] = './upload/';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$this->load->library('upload', $config);
+		//print_r($this->upload->do_upload('photos'));die;
+		if ( ! $this->upload->do_upload('photos'))
+		{
+			$error = array('error' => $this->upload->display_errors());
+			print_r($error);die;
+		}
+		else
+		{
+			$data = array('upload_data' => $this->upload->data());
+			foreach ($data as $key => $value) {
+				$path = base_url().'upload/'.$value['file_name'];
+			}
+
+			$this->m_admin->addStaff($path);
+			redirect('admin/add_staff');
+			// echo "Success!";die;
+		}
+	}
+
+	public function edit_application()
+	{
+		
+	}
+	
+	public function ss_applicants_details($id)
+	{
+		
+	}
+
+	
 }
