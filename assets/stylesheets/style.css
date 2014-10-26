@@ -391,3 +391,164 @@ background-image: url('../images/topundergraduateform.jpg');
   background-image: url('../images/green.jpg');
   height: 100%;
 }
+
+.navigation .sf-menu .regicolor{
+  color: #000;
+}
+
+td .form-name{
+  width:150px;
+}
+
+
+.table{
+  width: 1100px;
+}
+
+.form-inputing{
+  width:1000px;
+}
+
+.form-email{
+  width: 100%;
+}
+
+.backcolor{
+  background-color: #B2B2B2;
+}
+
+.desc1{
+  width: 440px;
+  height: 20px;
+  /*display: block;*/
+  /*text-align: center;*/
+}
+
+.desc2{
+   width: 250px;
+}
+
+td.level{
+  width:100px;
+}
+
+td.institute{
+  width: 100px;
+}
+
+.appnav{
+  height:64px;
+  background-color:#000000;
+}
+
+.appnav .nav > li > a{
+color: #FFFFFF;
+}
+
+.appnav .nav > li > a:hover{
+  background-color:#000099;
+  color:#FFFFFF;
+  border-bottom:solid 4px #0066CC;
+}
+
+.appactive{
+  height:64px;
+  background-color: #000;
+}
+
+.leftdist{
+  margin-left: 100px;
+}
+
+.appactive > a:hover{
+  height:64px;
+  background-color: #000;
+}
+strong, b{
+  color: #fff;
+}
+.navbar-inverse .navbar-brand{
+  
+  font-size: 25px;
+}
+
+.str{
+  font-weight: bold;
+}
+
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th{
+  background-color: #FF0000;
+}
+
+footer a:hover{
+  color:#0033CC;
+}
+
+.billboard.light{
+  background-image: url('../images/green.jpg');
+}
+
+.buzconc{
+  /*margin-top: 90px;*/
+  text-align: center;
+  font-size: 60px;
+  font-weight: 100;
+  font-family: 'Ubuntu';
+  color: #FFFFFF;
+}
+
+.buzpre{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 60;
+  font-family: 'Ubuntu';
+}
+
+.buzcont{
+  /*margin: 18px;*/
+  /*text-align: justify;*/
+  font-size: 25px;
+  font-weight: 40;
+  font-family: 'Ubuntu';
+  background-color: #000000;
+  color:#FFFFFF;
+  opacity: 0.8;
+  width:800px;
+  height: 400px;
+  margin-top: 20px;
+  padding: 20px;
+  letter-spacing: 2px;
+}
+
+.preamble{
+  /*margin-bottom: 0;*/
+  height:600px;
+  background-image: url('../images/bench.jpg');
+  background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+    background-size: cover;
+}
+
+.no-margin{
+  margin:0;
+}
+
+.video{
+  height: 400px;
+}
+
+.premcontent{
+
+margin: 30px 20px;
+
+}
+
+
+
+
+

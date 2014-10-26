@@ -22,12 +22,8 @@ class Applications extends MY_Controller
       $this->load->view('bachelor_form');
 	}
 
-	function undergraduate(){
-      $this->load->view('undergradate_form');
-	}
-
 	function diploma(){
-      $this->load->view('diploma_certificate_form.php');
+      $this->load->view('diploma_form');
 	}
 
 	function application_submit(){

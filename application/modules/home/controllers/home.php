@@ -29,11 +29,21 @@ class Home extends MY_Controller
         }
       }
 
-	function test_index()
-	{
-		$this->load->view('home');
+  public function blog(){
+    $this->load->view('blog');
+  }
 
-	}
+   public function contacts(){
+    $this->load->view('contacts');
+  }
+
+   public function services(){
+    $this->load->view('services');
+  }
+
+   public function about(){
+    $this->load->view('about2');
+  }
 
 
 }
