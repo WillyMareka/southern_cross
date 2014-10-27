@@ -1,44 +1,50 @@
+<<<<<<< HEAD
 <?php if (! defined("BASEPATH")) exit('No direct script access allowed');
+=======
+<?php 
+>>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534
 
-/**
-* 
-*/
 class Admin extends MY_Controller
 {
-	
 	function __construct()
+    {
+        // Call the Model constructor
+        parent::__construct();
+        $this->load->model('admin_model');
+        $this->load->model('m_admin');
+    }
+	function index()
 	{
-		// $this->cont_data['content_view']	=	"admin_view";
-		// $this->cont_data['heading']			=	"Administrator";
-		// $this->cont_data['sidebar']			=	"admin_side";
-		// $this->cont_data['title']			=	"CRS";
-		$this->load->model('m_admin');
-	}
-
-	public function index()
-	{
-		//$this->template($this->cont_data);
-		$data['content_view'] = 'application_view';
+		$data['content_view'] = "application_view";
 		$data['application'] = $this->m_admin->applications();
 		$this->load->view('admin_view', $data);
 	}
 
-	public function application()
+	function register()
 	{
-		$data['content_view'] = 'application_view';
-		$data['application'] = $this->m_admin->applications();
+		$data['content_view'] = "registercourse";
 		$this->load->view('admin_view', $data);
 	}
 
-	function form()
+	public function view_staff_page()
 	{
-		$data['content_view'] = 'application_form';
-		$data['courses'] = $this->m_admin->get_courses();
-		$this->load->view('admin_view', $data);	
+		$data['content_view'] = "view_staff_page";
+		$data['application'] = $this->m_admin->applications();
+		$data['staff'] = $this->m_admin->get_staff();
+
+		$this->load->view("admin_view", $data);
 	}
 
-	function submit_application()
+	public function add_staff()
 	{
+		$data['content_view'] = "add_staff_page";
+
+		$this->load->view("admin_view", $data);
+	}
+
+	public function register_employees()
+	{
+		// print_r($this->input->post());die;
 		$path = '';
 		$config['upload_path'] = './applicant_data/applicant_pictures/';
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
@@ -56,47 +62,27 @@ class Admin extends MY_Controller
 				$path = base_url() .'applicant_data/applicant_pictures/'.$value['file_name'];
 			}
 
-			$this->m_admin->add_application($path);
-			redirect('admin/application');
+			$this->m_admin->addStaff($path);
+			redirect('admin/add_staff');
 			// echo "Success!";die;
 		}
 	}
 
-	function activate($id)
+	public function edit_application()
 	{
-
-		$sql = "UPDATE
-						`applications`
-					SET
-						`status` = 2
-					WHERE 
-						`id` = '$id'";
-
-		$this->db->query($sql);
-
 		
-			$this->application();
-		
-	
 	}
-
-	function deactivate($id)
+	
+	public function ss_applicants_details($id)
 	{
-
-		$sql = "UPDATE
-						`applications`
-					SET
-						`status` = 3
-					WHERE 
-						`id` = '$id'";
-
-		$this->db->query($sql);
-
 		
-		$this->application();
-		
-	
 	}
+<<<<<<< HEAD
 }
 
 ?>
+=======
+
+	
+}
+>>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534
