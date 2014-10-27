@@ -40,7 +40,7 @@ class Admin extends MY_Controller
 	function submit_application()
 	{
 		$path = '';
-		$config['upload_path'] = './upload/';
+		$config['upload_path'] = './applicant_data/applicant_pictures/';
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
 		$this->load->library('upload', $config);
 		//print_r($this->upload->do_upload('photos'));die;
@@ -53,7 +53,7 @@ class Admin extends MY_Controller
 		{
 			$data = array('upload_data' => $this->upload->data());
 			foreach ($data as $key => $value) {
-				$path = base_url().'upload/'.$value['file_name'];
+				$path = base_url() .'applicant_data/applicant_pictures/'.$value['file_name'];
 			}
 
 			$this->m_admin->add_application($path);

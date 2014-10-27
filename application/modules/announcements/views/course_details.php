@@ -77,7 +77,7 @@
                  <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
                  <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
                  <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
-                 <li><a href="#">Courses Details</a></li>
+                 
                  
                </ul>
         </nav>

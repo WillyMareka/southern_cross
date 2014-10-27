@@ -147,7 +147,7 @@
               <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience1.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
                 <div class="text1"><a href="#">Experience</a></div>
-                <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert varius augue, eu consectetur ligulaam dui eros dertoli.</p>Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. Proin ut tinciduntol nulla, eu sodales vertomin
+                <p>American hospitals in the United States recruit nurses from overseas, especially from the Philippines and Africa, to accommodate the nursing shortage, and our College is negotiating with a US based College of Medicine to formalize a Student Exchange program. Our College will institute a curriculum from a US based Medical College into our local curriculum to allow Transfer of Credits and Student Exchange between the affiliate Colleges. The College intends to pioneer in this unique arrangement that will create preferential job opportunities in the United States and other international markets for our graduates. 
                 <br>
                
               </div>
@@ -265,11 +265,11 @@ Information on workforce registration and licensure renewals can be used to calc
         <div class="grid_5">
           <h4>More about <span class="light-blue-color">Southern Cross</span></h4>
           <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="" class="img_inner fleft">
-            <p>Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert arius augue, eu consectetur </p>
-            <p class="offset__1">Eligulaam dui eros dertolisce dertolo adipiscing quam id risus sagittis</p>
-            Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert rius augue, eu consectetur larem dui eros dertolisce dertolo 
+            <p>A limited liability company incorporated in Kenya, made up of a team of professionals with a combined experience in medical services, project management and finance. The consortium of professionals has been put together for the sole purpose of running a Mid-Level Medical College. </p>
+            <!-- <p class="offset__1">Eligulaam dui eros dertolisce dertolo adipiscing quam id risus sagittis</p>
+            Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert rius augue, eu consectetur larem dui eros dertolisce dertolo  -->
         </div>
-        <div class="grid_4">
+        <!-- <div class="grid_4">
           <h4>Other useful Links</h4>
           <ul class="list-1">
             <li><a href="#">Vivamus at magna non nunc tristique </a></li>
@@ -279,7 +279,7 @@ Information on workforce registration and licensure renewals can be used to calc
             <li><a href="#">Laoreet metus id laoreet</a></li>
             <li><a href="#">Jalesuadaorem ipsum dolor sit ame</a></li>
           </ul>
-        </div>
+        </div> -->
         <div class="grid_3">
           <h4>Contact Info</h4>
           <address>
