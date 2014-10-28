@@ -13,6 +13,7 @@ class Admin extends MY_Controller
 	{
 		$data['content_view'] = "application_view";
 		$data['application'] = $this->m_admin->applications();
+		
 		$this->load->view('admin_view', $data);
 	}
 
@@ -66,12 +67,26 @@ class Admin extends MY_Controller
 
 	public function edit_application()
 	{
+		$id = $this->input->post('editid');
+		$status = $this->input->post('editstatus');
+		
+		$sql = "UPDATE
+					`applicant_personal_info`
+				SET
+					`status` = '$status'
+				WHERE
+					`applicant_id` = '$id'";
+		$this->db->query($sql);
+
+		$this->index();
 		
 	}
 	
 	public function ss_applicants_details($id)
 	{
-		
+		$info = $this->m_admin->applications($id);
+
+		$this->load->view("admin_view", $data);
 	}
 
 	

@@ -32,15 +32,51 @@ class M_admin extends MY_Model {
                         `aei`.`entry_id`,
                         `aei`.`applicant_id`,
                         `aei`.`yrs_of_english`,
-                        `aei`.`secondary_level`
+                        `aei`.`primary_level`,
+                        `aei`.`secondary_level`,
+                        `aeis`.`institution_name`,
+                        `agi`.`sponsor_names`
                     FROM `applicant_personal_info` `api`
                     LEFT JOIN `applicant_education_info` `aei`
                     ON `api`.`applicant_id` = `aei`.`applicant_id`
+                    LEFT JOIN `applicant_educational_institutions` `aeis`
+                    ON `api`.`applicant_id` = `aeis`.`applicant_id`
+                    LEFT JOIN `applicant_guardian_info` `agi`
+                    ON `api`.`applicant_id` = `agi`.`applicant_id`
                     ";
+
+                    // echo $sql;die();
         $res = $this->db->query($sql);
 
         return $res->result_array();
     }
+
+ public function application($id)
+    {
+        $sql = "SELECT `api`.`applicant_id`,
+                        `api`.`f_name`,
+                        `api`.`s_name`,
+                        `api`.`l_name`,
+                        `api`.`dob`,
+                        `api`.`gender`,
+                        `api`.`citizenship`,
+                        `api`.`status`,
+                        `aei`.`entry_id`,
+                        `aei`.`applicant_id`,
+                        `aei`.`yrs_of_english`,
+                        `aei`.`secondary_level`
+                    FROM `applicant_personal_info` `api`
+                    LEFT JOIN `applicant_education_info` `aei`
+                    ON `api`.`applicant_id` = `aei`.`applicant_id`
+                    WHERE `api`.`applicant_id` = '$id'
+                    ";
+
+                    // echo $sql;die();
+        $res = $this->db->query($sql);
+
+        return $res->result_array();
+    }
+
 
     function get_staff()
     {
