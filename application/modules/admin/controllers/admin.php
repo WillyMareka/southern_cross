@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php if (! defined("BASEPATH")) exit('No direct script access allowed');
-=======
-<?php 
->>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534
 
 class Admin extends MY_Controller
 {
@@ -77,12 +73,7 @@ class Admin extends MY_Controller
 	{
 		
 	}
-<<<<<<< HEAD
+
 }
 
-?>
-=======
 
-	
-}
->>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534
