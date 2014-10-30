@@ -25,6 +25,7 @@
 .navigation nav {
   position: relative;
   padding: 0;
+  /*background-color: #FFF;*/
 }
 .select-menu {
   display: none !important;
@@ -59,11 +60,13 @@
 }
 .sf-menu > li > a {
   position: relative;
-  color: #ffffff;
+  color: #FFF;
   text-align: center;
+  font-weight: 100;
+  font-size: 30px;
 }
 .sf-menu > li > a.sf-with-ul:after {
-  content: '';
+  content: '|';
   position: absolute;
   width: 5px;
   bottom: 15px;

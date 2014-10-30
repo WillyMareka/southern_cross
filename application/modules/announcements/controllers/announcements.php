@@ -16,4 +16,9 @@ class Announcements extends MX_Controller
 	function announce(){
 		$this->load->view('announcement');
 	}
+
+	function course_details()
+	{
+		$this->load->view('course_details');
+	}
 }

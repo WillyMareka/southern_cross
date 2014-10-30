@@ -42,7 +42,7 @@ class Home extends MY_Controller
   }
 
    public function about(){
-    $this->load->view('about2');
+    $this->load->view('about');
   }
 
 

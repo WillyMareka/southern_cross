@@ -63,7 +63,7 @@
         <div class="grid_12 ">
           <div class="navigation ">
             <nav>
-              <ul class="sf-menu">
+              <ul style="backgound-color:#FFF;" class="sf-menu">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
                <li class="current"><a href="#">Services</a></li>
@@ -83,30 +83,30 @@
 <!--=====================
           Content
 ======================-->
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
+<section id="content"><div class="ic">SouthernCross @ www.southerncrossinstitute.edu - July 28, 2014!</div>
   <div class="container">
     <div class="row">
       <div class="grid_12">
-        <h3>Featured Services</h3>    
+        <h3>Mission</h3>    
       </div>
       <div class="grid_2">
-        <div class="text2 color1"><a href="#">Vivamus at magna</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
+        <div class="text2 color1"><a href="#">Specialized Training</a></div>To provide not just education, but specialized training to make our students experts in their primary medical fields while maintaining competitive rates. 
       </div>
       <div class="grid_2">
-        <div class="text2 color1"><a href="#">Integer convallis</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
+        <div class="text2 color1"><a href="#">Admiration</a></div>We are committed to being the most admired medical training college in Kenya
       </div>
       <div class="grid_2">
-        <div class="text2 color1"><a href="#">Desato limo dew</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
+        <div class="text2 color1"><a href="#">Medical Standards</a></div>Providing tertiary education that meets the required medical standards in East and Central Africa, and the European and American market
       </div>
       <div class="grid_2">
-        <div class="text2 color1"><a href="#">Vestibulum volutpa</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
+        <div class="text2 color1"><a href="#">Institute Continuation</a></div>Professionally manage the institution to run efficiently and operating cost-effectively
       </div>
-      <div class="grid_2">
+      <!-- <div class="grid_2">
         <div class="text2 color1"><a href="#">Еestibu dertolo</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
       </div>
       <div class="grid_2">
         <div class="text2 color1"><a href="#">Nolutpaersa fert</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div>
+      </div> -->
     </div>
   </div>
   <article class="content_gray offset__2">
@@ -115,45 +115,47 @@
         <div class="grid_4">
           <h3>Services List</h3>
           <ul class="list-1">
-            <li><a href="#">Vivamus at magna non nunc tristique </a></li>
-            <li><a href="#">Aliquam nibh ante, egestas id</a></li>
-            <li><a href="#">Ommodo luctus libero</a></li>
-            <li><a href="#">Faucibus malesuada faucibusonec </a></li>
-            <li><a href="#">Laoreet metus id laoreet</a></li>
-            <li><a href="#">Jalesuadaorem ipsum dolor sit ame</a></li>
-            <li><a href="#">Konsectetur adipiscing elitert</a></li>
-            <li><a href="#">Tliquam nibh ante, egestas idi</a></li>
-            <li><a href="#">Ammodo luctus liberom</a></li>
-            <li><a href="#">Noaucibus malesuada faucibonecy </a></li>
+            <li><a href="#">Provide first-class training for Community Health Officers, Clinical Officers, Registered Nurses and other Mid-Level Medical Practitioners</a></li>
+            <li><a href="#">Engage and sustain a highly qualified staff in academics and administration</a></li>
+            <li><a href="#">Provide consistent and reliable service to students and sponsors</a></li>
+            <li><a href="#">Meet Service Level Agreements</a></li>
+            
           </ul>
         </div>
         <div class="grid_4">
-          <h3>How We Work</h3>
+          <h3>Keys</h3>
           <div class="block-2">
-            <img src="images/page3_img1.jpg" alt="" class="img_inner fleft">
+            <!-- <img src="images/page3_img1.jpg" alt="" class="img_inner fleft"> -->
             <div class="extra_wrapper">
-              <div class="text1"><a href="#">Aliquam nibh ante</a></div>
-              Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert varius augue eu consectetur ligulaam dui
+              <div class="text1"><a href="#">To Success</a></div>
+                <p>• Provide a market-needed educational training.</p>
+                <p>• Be as convenient as possible.</p>
+                <p>• Employ strict financial controls.</p>
+
             </div>
           </div>
-          <div class="block-2 offset__1">
+          <!-- <div class="block-2 offset__1">
             <img src="images/page3_img2.jpg" alt="" class="img_inner fleft">
             <div class="extra_wrapper">
               <div class="text1"><a href="#">Olquam nibh ante</a></div>
               Trabitur vel lorem sit amet nulla ullamcorper fermentum In vitae varius augue, eu consectetur ligulaam dui eroserty.
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="grid_3 preffix_1">
-          <h3>Additional Info</h3>
+          <h3>Objectives</h3>
           <div class="block-2">
-              <div class="text1"><a href="#"> Ipsumen Dertol</a></div>
-              Trabitur vel lorem sit amet nulla corper fermentum In vitae varius augue, eu ctetur ligulaam dui eroserty. Fusce adipiscing quam id risus sagittis, non consequat lacus <br> <a href="#" class="link-1">more</a>
+              <!-- <div class="text1"><a href="#"> Ipsumen Dertol</a></div> -->
+                <p>• Create job opportunities for the youth in the East & Central African region</p>
+                <p>• Become the premier medical college in the East & Central African region</p>
+                <p>• Attain profitability within the first 2 years and a balanced strategic growth</p>
+                <p>• Achieve country market penetration of 10% by year 3 and 15% by year 5</p>
+
           </div>
-          <div class="block-2 ">
+          <!-- <div class="block-2 ">
               <div class="text1"><a href="#">Setorem Osumen</a></div>
               Nurabitur vel lorem sit amet nulla corper fermentum In vitae varius augue, eu ctetur ligulaam dui eroserty. Fusce adipiscing quam id risus sagittis, non consequat lacus  <br> <a href="#" class="link-1">more</a> 
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -161,31 +163,41 @@
   <div class="container">
     <div class="row">
       <div class="grid_12">
-        <h3>Methods</h3>
+        <h3>Values</h3>
       </div>
       <div class="grid_4">
-        <img src="images/page3_img3.jpg" alt="" class="img_inner fleft">
+        <!-- <img src="images/page3_img3.jpg" alt="" class="img_inner fleft"> -->
         <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae </a></p>
-          <p class="offset__1">Eligulaam dui eros rtolisce dertolo adipiscing quam id </p>
+          <p class="fwn"><a href="#">Our Management Principles</a></p>
+          <p class="offset__1">--</p>
         </div>
-          Curabitur vel lorem sit amet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur larem dui eros 
+          <p>1.  Committing to client satisfaction as our most important business objective</p>
+          <p>2.  Maintaining the highest standards of professionalism and academic excellence</p>
+          <p>3.  Maintaining the highest standards of ethics and business conduct and operating at all times within the laws of Kenya and the by-laws of counties in which we do business</p>
+          <p>4.  Encourage initiative, recognize individual contribution, and treat each person with respect and fairness</p>
+          <p>5.  Identifying and responding aggressively to new opportunities, and committing to success in each undertaking</p>
+
       </div>
       <div class="grid_4">
-        <img src="images/page3_img4.jpg" alt="" class="img_inner fleft">
+        <!-- <img src="images/page3_img4.jpg" alt="" class="img_inner fleft"> -->
         <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Lurabitur vel lorem sit amet nulla ullamcorper fermentum In vitae </a></p>
-          <p class="offset__1">Eligulaam dui eros rtolisce dertolo adipiscing ua i isus </p>
+          <p class="fwn"><a href="#">Our Team</a></p>
+          <p class="offset__1">--</p>
         </div>
-          Kurabitur vel lorem sit amet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur larem dui eros 
+          Backed by skilled and professional staff, which is our greatest resource, we are able to deliver outstanding performance through demonstrated experience & expertise in all aspects of Academics and Management of the Medical College. 
       </div>
       <div class="grid_4">
-        <img src="images/page3_img5.jpg" alt="" class="img_inner fleft">
+        <!-- <img src="images/page3_img5.jpg" alt="" class="img_inner fleft"> -->
         <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Ourabitur vel lorem sit amet nulla ullamcorper fermentum In vitae </a></p>
-          <p class="offset__1">Eligulaam dui eros rtolisce dertolo adipiscing quam </p>
+          <p class="fwn"><a href="#">Our team includes</a></p>
+          <p class="offset__1">--</p>
         </div>
-        Turabitur vel lorem sit amet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur larem dui eros 
+        <p>1.  Executives</p>
+        <p>2.  Qualified Lecturers</p>
+        <p>3.  Teaching Professionals</p>
+        <p>4.  Administrative Professionals</p>
+        <p>5.  Skilled Manpower</p>
+
       </div>
     </div>
   </div>
@@ -197,8 +209,8 @@
   <div class="container">
     <div class="row">
       <div class="grid_12"> 
-        <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-          <div class="sub-copy">Website designed by YoungWeb Company</div>
+        <div class="copyright"><span class="brand">SouthernCross</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+          <div class="sub-copy">www.southerncrossinstitute.edu</div>
         </div>
       </div>
     </div>

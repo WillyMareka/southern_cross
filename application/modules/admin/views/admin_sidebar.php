@@ -8,7 +8,7 @@
                     <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
-                    <p>Hello, Jane</p>
+                    <p>Hello, Mareka</p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -29,10 +29,19 @@
             	        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo base_url().'admin/application'?>">
-                        <i class="fa fa-th"></i> <span>Applications</span> <small class="badge pull-right bg-green">new</small>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-th"></i> <span>Registration</span> 
+                        <i class="fa fa-angle-left pull-right"></i>
                     </a>
+                    <ul class="treeview-menu">
+                        <li>
+                            <a href="<?php echo base_url().'admin/add_staff'?>">Employee Registration</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url().'admin/view_staff_page'?>">View Employees</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="active">
                     <a href="<?php echo base_url().'admin/form'?>">

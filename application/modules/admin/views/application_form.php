@@ -102,5 +102,5 @@
                     </div>
 
                 </section><!-- /.content -->
-            </aside><!-- /.right-si
+            </aside><!-- /.right-si-->
 </div>
