@@ -14,11 +14,7 @@
 | path to your installation.
 |
 */
-<<<<<<< HEAD
 $config['base_url']	= 'http://'.$_SERVER['SERVER_NAME'].'/southerncross/';
-=======
-$config['base_url']	= 'http://'.$_SERVER['SERVER_NAME'].'/southern_cross/';
->>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534
 
 /*
 |--------------------------------------------------------------------------
