@@ -57,16 +57,28 @@ background-color: #ADADAD;
 
 .modal-header{
   background-color: #000;
-  color: #FFF;
+  
 }
 
-.modal-body{
-    height: 250px;
+.modal-title{
+color: #FFF;
 }
+
+/*.modal-body{
+    height: 250px;
+}*/
 
 .modal-footer{
 	margin-top: 0;
 	background-color: #7f8c8d;
+}
+
+.modal-content{
+   width: 900px;
+}
+
+.modal-table{
+  width:850px !important;
 }
 
 .dropdown-menu > li > a:hover{
@@ -467,6 +479,11 @@ color: #FFFFFF;
 strong, b{
   color: #fff;
 }
+
+.marketbold{
+  color: #000;
+}
+
 .navbar-inverse .navbar-brand{
   
   font-size: 25px;
