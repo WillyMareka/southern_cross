@@ -176,7 +176,6 @@
            Backed by highly skilled and professional staff, which is our greatest resource, we are able to deliver outstanding performance through demonstrated experience & expertise in all aspects of Academics and Management of the Medical College
       </div>
       <div class="grid_4">
-        <!-- <img src="images/page3_img5.jpg" alt="" class="img_inner fleft"> -->
         <div class="extra_wrapper">
           <p class="fwn"><a href="#">Organization Structure</a></p>
           <p class="offset__1">--</p>
