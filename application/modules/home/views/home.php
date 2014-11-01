@@ -150,11 +150,11 @@
     <article class="content_gray">
       <div class="container">
         <div class="row">
-          <div class="grid_8">
+          <div class="grid_12">
             <h3>Why You Should Study at Southern Cross Institute</h3>
 
             <div class="block-2">
-              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience3.jpg'?>" alt="" class="img_inner fleft">
+              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/doctor.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
                 <div class="text1"><a href="#">Career Advancement</a></div>
                 <p>The curriculum under the Certificate programs is designed to allow students to upgrade to Diploma level over 18 months bridging course upon graduation. <p>The College is also seeking to collaborate with Public Universities such as Maseno University, JKUAT and Moi University for advancement to a Degree course in Public Health for our Diploma students.</p>
@@ -173,7 +173,7 @@
               </div>
             </div>
             <div class="block-2">
-              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience2.jpg'?>" alt="" class="img_inner fleft">
+              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/nursework.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
                 <div class="text1"><a href="#">Marketability</a></div>
                 <p> A strategic alliance with a USA based Medical Institution will also facilitate deployment of Nursing and Social Work student into the US market.</p>

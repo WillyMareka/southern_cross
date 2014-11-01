@@ -10,6 +10,16 @@
 <link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
 
 
+<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
+<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
+
 <script>
  $(window).load(function(){
   $().UItoTop({ easingType: 'easeOutQuart' });
@@ -176,6 +186,7 @@
            Backed by highly skilled and professional staff, which is our greatest resource, we are able to deliver outstanding performance through demonstrated experience & expertise in all aspects of Academics and Management of the Medical College
       </div>
       <div class="grid_4">
+        <!-- <img src="images/page3_img5.jpg" alt="" class="img_inner fleft"> -->
         <div class="extra_wrapper">
           <p class="fwn"><a href="#">Organization Structure</a></p>
           <p class="offset__1">--</p>
