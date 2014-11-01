@@ -12,7 +12,12 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/home.css'?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/stylesheets/style.css'?>" />
 
-
+<style type="text/css">
+  .mynav > nav > ul > li > a
+  {
+    color: #fff !important;
+  }
+</style>
 
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
@@ -50,7 +55,7 @@
       <div class="container">
         <div class="row">
           <div class="grid_12 ">
-            <div class="navigation ">
+            <div class="navigation mynav">
               <nav>
                 <ul class="sf-menu" style="color:#FFF">
                  <li class="current"><a href="#">Home</a></li>
