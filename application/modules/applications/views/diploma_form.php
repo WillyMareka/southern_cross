@@ -9,29 +9,7 @@
 		<link rel="stylesheet" href="<?php echo base_url(). 'assets/stylesheets/animate.css'?>">
     	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/css/custom.css'?>">
     	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/stylesheets/style.css'?>">
- 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
-  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.js' ?>"></script>
-  		<script>
-  			 $(function() {
-				$( "#datepicker" ).datepicker();
-				$( "#datepicker_work_from_1" ).datepicker();
-				$( "#datepicker_work_from_2" ).datepicker();
-				$( "#datepicker_work_from_3" ).datepicker();
-
-				$( "#datepicker_work_to_1" ).datepicker();
-				$( "#datepicker_work_to_2" ).datepicker();
-				$( "#datepicker_work_to_3" ).datepicker();
-
-				$( "#datepicker_duration_from_1" ).datepicker();
-				$( "#datepicker_duration_from_2" ).datepicker();
-				$( "#datepicker_duration_from_3" ).datepicker();
-
-				$( "#datepicker_duration_to_1" ).datepicker();
-				$( "#datepicker_duration_to_2" ).datepicker();
-				$( "#datepicker_duration_to_3" ).datepicker();
-				});
-  		</script>
+ 		
 </head>
 <body>
 	<div class=" content container ">
@@ -771,5 +749,31 @@
 		  </footer>
 	</div>
 	</div>
+
+
+
+	<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
+  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.js' ?>"></script>
+  		<script>
+  			 $(function() {
+				$( "#datepicker" ).datepicker();
+				$( "#datepicker_work_from_1" ).datepicker();
+				$( "#datepicker_work_from_2" ).datepicker();
+				$( "#datepicker_work_from_3" ).datepicker();
+
+				$( "#datepicker_work_to_1" ).datepicker();
+				$( "#datepicker_work_to_2" ).datepicker();
+				$( "#datepicker_work_to_3" ).datepicker();
+
+				$( "#datepicker_duration_from_1" ).datepicker();
+				$( "#datepicker_duration_from_2" ).datepicker();
+				$( "#datepicker_duration_from_3" ).datepicker();
+
+				$( "#datepicker_duration_to_1" ).datepicker();
+				$( "#datepicker_duration_to_2" ).datepicker();
+				$( "#datepicker_duration_to_3" ).datepicker();
+				});
+  		</script>
 </body>
 </html>

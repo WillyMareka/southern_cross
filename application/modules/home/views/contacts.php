@@ -66,7 +66,7 @@
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
                <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
-               <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
+               
                <li class="current"><a href="#">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
              </ul>
