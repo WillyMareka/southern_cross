@@ -12,12 +12,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/home.css'?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/stylesheets/style.css'?>" />
 
-<style type="text/css">
-  .mynav > nav > ul > li > a
-  {
-    color: #fff !important;
-  }
-</style>
+
 
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
@@ -356,7 +351,12 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
 <script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
-
+<style type="text/css">
+  .mynav > nav > ul > li > a
+  {
+    color: #fff !important;
+  }
+</style>
 
 </body>
 </html>
