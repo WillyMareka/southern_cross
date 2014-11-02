@@ -19,9 +19,6 @@ class M_applications extends CI_Model {
     	$year_of_entry = $_POST['yr_of_entry'];
     	$diploma_level = $_POST['diploma_level'];
     	// $certificate_level = $_POST['certificate_level'];
-    	$diploma_level = $_POST['diploma_level'];
-    	$diploma_level = $_POST['diploma_level'];
-
     	$citizenship = $_POST['citizenship'];
     	$birth_country = $_POST['birth_country'];
     	$applicant_gender = $_POST['applicant_gender'];
