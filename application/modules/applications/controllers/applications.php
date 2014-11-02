@@ -54,7 +54,7 @@ class Applications extends MY_Controller
 
 		redirect(base_url().'home');
 
-		// echo "Success!";die;
+		//echo "Success!";die;
 	}
 
 }

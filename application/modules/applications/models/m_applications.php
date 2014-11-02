@@ -10,7 +10,7 @@ class M_applications extends CI_Model {
     }
 
     public function add_applicant($path){
-    	// echo "<pre>";print_r($this->input->post());echo "</pre>";exit;
+    	//echo "<pre>";print_r($this->input->post());echo "</pre>";exit;
     	// echo "<pre>";print_r(count($this->input->post()));echo "</pre>";exit;
     	$f_name = $_POST['f_name'];
     	$s_name = $_POST['s_name'];
@@ -72,7 +72,7 @@ class M_applications extends CI_Model {
     	$source_of_discovery = $_POST['source_of_discovery'];
     	$reason_for_study = $_POST['reason_for_study'];
     	$applicant_declaration = $_POST['applicant_declaration'];
-    	$parent_declaration = $_POST['parent_declaration'];
+    	// $parent_declaration = $_POST['parent_declaration'];
 
 
     	$personal_info_data = array();
@@ -176,13 +176,12 @@ class M_applications extends CI_Model {
     		'applicant_id' =>$applicant_id,
     		'source_of_discovery' =>$source_of_discovery,
     		'reason_for_study' =>$reason_for_study,
-    		'student_declaration' =>$applicant_declaration,
-    		'parent_declaration' =>$parent_declaration
+    		'student_declaration' =>$applicant_declaration
     		);
     	array_push($additional_info_data, $additional_info);
     	$this->db->insert_batch('applicant_additional_info',$additional_info_data);
 
-    	echo "SUCCESSSSSS";
+    	echo "Successful Entry of Applicant Information";
     }
 
     public function insert_into_db($table_name = null,$data = null){

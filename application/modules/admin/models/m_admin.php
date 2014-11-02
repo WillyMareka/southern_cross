@@ -28,7 +28,7 @@ class M_admin extends MY_Model {
                         `api`.`dob`,
                         `api`.`gender`,
                         `api`.`citizenship`,
-                        `api`.`status`,
+                        -- `api`.`status`,
                         `aei`.`entry_id`,
                         `aei`.`applicant_id`,
                         `aei`.`yrs_of_english`,

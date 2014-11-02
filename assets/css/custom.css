@@ -2006,6 +2006,9 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 	color:#00006B;
 	font-size: 25px;
 }
+.margin-vert{
+	margin:5px 0;
+}
 /*END OF CUSTOM CSS*/
 
 /*OVERRIDDEN BOOTSTRAP AND OTHER CSS*/
@@ -2028,8 +2031,9 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 .modal{
 }
 
-.button{
-	
+.button-submit-app{
+	height: 50px;
+	width: 500px;
 }
 
 .table{
