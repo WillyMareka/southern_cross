@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php if (! defined("BASEPATH")) exit('No direct script access allowed');
-=======
-<?php 
->>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534
 
 class Admin extends MY_Controller
 {
@@ -42,6 +38,13 @@ class Admin extends MY_Controller
 		$this->load->view("admin_view", $data);
 	}
 
+	public function add_lecturer(){
+		$data['courses']=$this->m_admin->get_courses();
+		$data['content_view'] = "add_lecturer_page";
+		$data['reg_status']='No lecturer registered today';
+
+		$this->load->view("admin_view",$data);
+	}
 	public function register_employees()
 	{
 		// print_r($this->input->post());die;
@@ -68,6 +71,39 @@ class Admin extends MY_Controller
 		}
 	}
 
+	public function register_lecturers()
+	{
+		//echo"<pre>"; print_r($this->input->post());echo "</pre>"; die;
+		$path = '';
+		$config['upload_path'] = './applicant_data/lecturer_pictures/';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$this->load->library('upload', $config);
+		//print_r($this->upload->do_upload('photos'));die;
+		if ( ! $this->upload->do_upload('lec_photo'))
+		{
+			$error = array('error' => $this->upload->display_errors());
+			//print_r($error);die;
+			$data['reg_status'] = "Please select a gif|jpg|png|jpeg image to upload before submission.";
+		}
+		else
+		{
+			$data = array('upload_data' => $this->upload->data());
+			foreach ($data as $key => $value) {
+				$path = base_url() .'applicant_data/lecturer_pictures/'.$value['file_name'];
+			$this->m_admin->add_lecturer($path);
+		$data['reg_status'] = "Registry of Lecturer was successful.";
+			}
+			//echo $path."  SUCCESS";exit;
+
+
+        $data['courses']=$this->m_admin->get_courses();
+        $data['content_view'] = "add_lecturer_page";
+
+        $this->load->view("admin_view",$data);
+		}
+	}
+
+
 	public function edit_application()
 	{
 		
@@ -76,13 +112,5 @@ class Admin extends MY_Controller
 	public function ss_applicants_details($id)
 	{
 		
-	}
-<<<<<<< HEAD
+	}	
 }
-
-?>
-=======
-
-	
-}
->>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534

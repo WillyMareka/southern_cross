@@ -1,0 +1,3 @@
+lecturers
+applicant_additional_info
+applicant_religion_info

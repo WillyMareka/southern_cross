@@ -14,7 +14,9 @@
 | path to your installation.
 |
 */
+
 $config['base_url']	= 'http://'.$_SERVER['SERVER_NAME'].'/southerncross/';
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +28,7 @@ $config['base_url']	= 'http://'.$_SERVER['SERVER_NAME'].'/southerncross/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
