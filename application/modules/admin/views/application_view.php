@@ -50,6 +50,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+<<<<<<< HEAD
+                                   <?php echo $application; ?>
+=======
                                     <?php
                                         $i=1; 
                                         foreach ($application as $value) {
@@ -85,6 +88,7 @@
                                         $i++;
                                         }
                                     ?>
+>>>>>>> 563767909a6b2d9d8cf2b4e6e9d3a32d6d9a24e4
                                 </tbody>
                             </table>
                         </div>

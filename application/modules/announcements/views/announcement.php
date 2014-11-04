@@ -47,7 +47,7 @@
   </div><!-- /.container-fluid -->
   </nav>
   <div class = "top-section">
-  <p>Southern Cross Institute of Tropical Medicine is a Mid-Level Medical Training College located in Tom Mboya/ Kibuye Market Area in Kisumu, behind Avenue Hospital off the Kisumu-Kakamega Road. </p>
+  <p>Southern Cross Institute of Tropical Medicine is a Mid-Level Medical Training College located in Migosi Area of Kisumu County, and set up on a 4 storey building previously known as Mamalea, off the Kisumu-Kakamega Road.</p>
   <P>The college offers courses in the following fields:</P><div class="panel-group" id="accordion">
     <div class="panel panel-red">
       <div class="panel-heading">
@@ -65,7 +65,6 @@
             <li>Diploma in Social Work</li>
             <li>Diploma in Clinical Medicine and Surgery <i>(Subject to accreditation)</i></li>
             <li>Diploma in Community Development <i>(Subject to accreditation)</i></li>
-            <li>Diploma in Pharmacy <i>(Subject to accreditation)</i></li>
           </ol>
         </div>
       </div>
@@ -84,6 +83,7 @@
             <li>Certificate in Community Health & Development</li>
             <li>Certificate in Medical & Psychological Counseling</li>
             <li>Certificate in Social Work</li>
+            <li>Certificate in HIV Management</li>
           </ol>
         </div>
       </div>
@@ -110,9 +110,9 @@
     <p>The curriculum under the <span><a href= "<?php echo base_url() .'courses/category/certificate'?>">Certificate Programs</a></span> is designed to allow students to upgrade to <span><a href = "<?php echo base_url() .'courses/category/diploma'?>">Diploma Level</a></span> on a 1 <sup>1</sup>/<sub>2</sub> year course upon graduation. The College is also seeking to collaborate with public Universities such as Maseno Uuniversity, JKUAT and MOI University for advancement to Degree course in Public Health for our Diploma Students. A strategic alliance with a USA based medical institution will also facilitate deployment of Nursing and Social Work students into the US Market</p>
 
     <center>
-    <p><h4><b>Registration of students begins on Friday 26th September 2014 until 30th September 2014 for new intakes <br/><a href = "<?php echo base_url() .'applications'?>">Apply here. </a></p>
-    <!-- <p>Continuing students are encouraged to register for progressive learning and continuity subject to certification of their course work</b></h4></p> -->
-    </center>
+    <p><h4><b>Registration of students is ongoing for the new January 2015 intakes <br/><a href = "<?php echo base_url() .'applications'?>">Apply here. </a></p>
+    <!-- <p>Continuing students are encouraged to register for progressive learning and continuity subject to certification of their course work</b></h4></p>
+    </center> -->
 
     <center><h2>CERTIFICATION TO THE MEDICAL FRATERNITY!!!</h2></center>
   </div>

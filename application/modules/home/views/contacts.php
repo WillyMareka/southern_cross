@@ -66,7 +66,7 @@
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
                <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
-               <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
+               
                <li class="current"><a href="#">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
              </ul>
@@ -96,28 +96,24 @@
       <div class="grid_5">
         <h3 class="head__1">Address:</h3>
         <address class="text3">
-          138 Atlantis Ln <br>Kingsport <br>Illinois121164
+          P.O. Box 1280-40100 <br>Kisumu, Kenya 
         </address>
       </div>
       <div class="grid_4">
-        <h3 class="head__1">Phone:</h3>
+        <h3 class="head__1">Facebook:</h3>
         <div class="text3">
-          +254(0)717 - 056 523 <br>+254(0)717 - 056 523
+          Southern Cross Institute of Tropical Medicine 
         </div>
       </div>
       <div class="grid_3">
-        <h3 class="head__1">E-mail:</h3>
+        <h3 class="head__1">Site:</h3>
         <div class="text3">
-          <a href="#">southerncrossinstitute@gmail.com</a>
+          <a href="#">www.southercrossintitute.edu.co.ke</a>
         </div>
       </div>
       <div class="grid_12">
-        <h3 class="head__1">Miscellaneous information:</h3>
-        <div class="fwn">
-          <p>24/7 support is available for all <a href="http://www.templatemonster.com/" rel="nofollow" class="color1">premium themes</a>.</p>
-          <p>If you have problems with customization of freebies, ask guys from <a href="http://www.templatetuning.com/" rel="nofollow" class="color1">TemplateTuning</a> to help you.</p>
-          Aliquam nibh ante, egestas id dictum a, commodo luctus liberoret. Praesenter faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequa. 
-        </div>
+        <h3 class="head__1">Email to us:</h3>
+        
               <form id="contact-form">
                   <div class="contact-form-loader"></div>
                   <fieldset>
@@ -126,23 +122,28 @@
                       <span class="empty-message">*This field is required.</span>
                       <span class="error-message">*This is not a valid name.</span>
                     </label>
-                   
+                  
                     <label class="email">
+                     <br>
                       <input type="text" name="email" placeholder="E-mail:" value="" data-constraints="@Required @Email" />
                       <span class="empty-message">*This field is required.</span>
                       <span class="error-message">*This is not a valid email.</span>
                     </label>
+
                     <label class="phone">
+                     <br>
                       <input type="text" name="phone" placeholder="Phone:" value="" data-constraints="@Required @JustNumbers" />
                       <span class="empty-message">*This field is required.</span>
                       <span class="error-message">*This is not a valid phone.</span>
                     </label>
                    
                     <label class="message">
+                     <br>
                       <textarea name="message" placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
                       <span class="empty-message">*This field is required.</span>
                       <span class="error-message">*The message is too short.</span>
                     </label>
+                    
                     <div class="clear"></div>
                     <div>
                       <a href="#" class="btn" data-type="submit">Send e-mail</a>
@@ -156,7 +157,7 @@
                           <h4 class="modal-title">Modal title</h4>
                         </div>
                         <div class="modal-body">
-                          You message has been sent! We will be in touch soon.
+                          Your message has been sent! We will be in touch soon.
                         </div>      
                       </div>
                     </div>
@@ -173,8 +174,8 @@
   <div class="container">
     <div class="row">
       <div class="grid_12"> 
-        <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-          <div class="sub-copy">Website designed by YoungWeb Company</div>
+        <div class="copyright"><span class="brand">SouthernCross</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+          <div class="sub-copy">www.southerncrossinstitute.edu</div>
         </div>
       </div>
     </div>

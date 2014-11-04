@@ -25,7 +25,9 @@
         <!-- Theme style -->
         <link href="<?php echo base_url().'assets/admin/css/AdminLTE.css' ?>" rel="stylesheet" type="text/css" />
 
-               
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.js' ?>"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

@@ -81,7 +81,7 @@
                                         
                                         <td><center><?php echo $span;?></center></td>
                                         <td><center><a href="admin/deactivate/lecturers/<?php echo $id;?>"><span style="font-size: 1.4em;color: #E80207;" class="glyphicon glyphicon-remove-sign"></span></a></center></td>
-                                        <td><center><a href="javascript:void(null);" onclick="edit_lecturer(<?php echo $value['id']; ?>,'<?php echo $value['f_name']; ?>','<?php echo $value['s_name']; ?>','<?php echo $value['o_names']; ?>','<?php echo $value['phone_no']; ?>','<?php echo $value['email']; ?>','<?php echo $value['gender']; ?>','<?php echo $value['registration_date']; ?>','<?php echo $value['course_id']; ?>','<?php echo $value['status']; ?>')"><span style="color:#44D2F2;"><i class="fa fa-edit"></i></span></a></center></td>
+                                        <td><center><a href="javascript:void(null);" onclick="edit_lecturer(<?php echo $value['id']; ?>,'<?php echo $value['f_name']; ?>','<?php echo $value['s_name']; ?>','<?php echo $value['o_names']; ?>','<?php echo $value['phone_no']; ?>','<?php echo $value['email']; ?>','<?php echo $value['gender']; ?>','<?php echo $value['registration_date']; ?>','<?php echo $value['status']; ?>')"><span style="color:#44D2F2;"><i class="fa fa-edit"></i></span></a></center></td>
                                     </tr>
                                     <?php
                                         $i++;

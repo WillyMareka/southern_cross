@@ -6,10 +6,11 @@ class MY_Controller extends MX_Controller
     {
         // Call the Model constructor
         parent::__construct();
+        $this->load->model('admin/m_admin');
     }
 
-	function index()
-	{
-		
-	}
+    function index()
+    {
+    	
+    }
 }

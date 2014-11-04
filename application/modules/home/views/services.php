@@ -10,22 +10,7 @@
 <link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
 
 
-<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
-<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -67,7 +52,7 @@
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
                <li class="current"><a href="#">Services</a></li>
-               <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
+              
                <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
              </ul>
@@ -89,17 +74,17 @@
       <div class="grid_12">
         <h3>Mission</h3>    
       </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Specialized Training</a></div>To provide not just education, but specialized training to make our students experts in their primary medical fields while maintaining competitive rates. 
+      <div class="grid_3">
+        <div class="text2 color1"><a href="#">Specialized Training</a></div>To provide not just education, but specialized training to make our students experts in their primary medical fields while maintaining high levels of professionalism, honesty and integrity
       </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Admiration</a></div>We are committed to being the most admired medical training college in Kenya
+      <div class="grid_3">
+        <div class="text2 color1"><a href="#">Vision</a></div>We are committed to being the most sort after mid-level) medical training college in Kenya and beyond
       </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Medical Standards</a></div>Providing tertiary education that meets the required medical standards in East and Central Africa, and the European and American market
+      <div class="grid_3">
+        <div class="text2 color1"><a href="#">Medical Standards</a></div>Providing tertiary education that meets the current trends in medicare provisions in Kenya and beyond)
       </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Institute Continuation</a></div>Professionally manage the institution to run efficiently and operating cost-effectively
+      <div class="grid_3">
+        <div class="text2 color1"><a href="#">Continuity</a></div>We are guided by and strive to uphold effective corporate governance, objective policies formulation, constructive networking, professionalism and sound management, with emphasis on exceeding customer satisfaction, operational functionality, efficientservice delivery and cost-effectiveness for sustained growth
       </div>
       <!-- <div class="grid_2">
         <div class="text2 color1"><a href="#">Еestibu dertolo</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
@@ -113,9 +98,9 @@
     <div class="container">
       <div class="row">
         <div class="grid_4">
-          <h3>Services List</h3>
+          <h3>Undertaking</h3>
           <ul class="list-1">
-            <li><a href="#">Provide first-class training for Community Health Officers, Clinical Officers, Registered Nurses and other Mid-Level Medical Practitioners</a></li>
+            <li><a href="#">Provide first class training for Community Health Workers ), Clinical Officers, Registered Nurses and other Mid-Level Medical Practitioners</a></li>
             <li><a href="#">Engage and sustain a highly qualified staff in academics and administration</a></li>
             <li><a href="#">Provide consistent and reliable service to students and sponsors</a></li>
             <li><a href="#">Meet Service Level Agreements</a></li>
@@ -123,14 +108,15 @@
           </ul>
         </div>
         <div class="grid_4">
-          <h3>Keys</h3>
+          <h3>Keys To Success</h3>
           <div class="block-2">
             <!-- <img src="images/page3_img1.jpg" alt="" class="img_inner fleft"> -->
             <div class="extra_wrapper">
-              <div class="text1"><a href="#">To Success</a></div>
-                <p>• Provide a market-needed educational training.</p>
-                <p>• Be as convenient as possible.</p>
-                <p>• Employ strict financial controls.</p>
+              
+                <p>• Provide market-oriented programs</p>
+                <p>• Provide high academic standards</p>
+                <p>• Make research an integral part of learning</p>
+                <p>• Create a good network for student placements in the job market</p>
 
             </div>
           </div>
@@ -146,10 +132,8 @@
           <h3>Objectives</h3>
           <div class="block-2">
               <!-- <div class="text1"><a href="#"> Ipsumen Dertol</a></div> -->
-                <p>• Create job opportunities for the youth in the East & Central African region</p>
-                <p>• Become the premier medical college in the East & Central African region</p>
-                <p>• Attain profitability within the first 2 years and a balanced strategic growth</p>
-                <p>• Achieve country market penetration of 10% by year 3 and 15% by year 5</p>
+                <p>• Become the premier mid-level medical college in East and Central Africa</p>
+                <p>• Become the centre of research and academic excellence</p>
 
           </div>
           <!-- <div class="block-2 ">
@@ -184,12 +168,12 @@
           <p class="fwn"><a href="#">Our Team</a></p>
           <p class="offset__1">--</p>
         </div>
-          Backed by skilled and professional staff, which is our greatest resource, we are able to deliver outstanding performance through demonstrated experience & expertise in all aspects of Academics and Management of the Medical College. 
+           Backed by highly skilled and professional staff, which is our greatest resource, we are able to deliver outstanding performance through demonstrated experience & expertise in all aspects of Academics and Management of the Medical College
       </div>
       <div class="grid_4">
         <!-- <img src="images/page3_img5.jpg" alt="" class="img_inner fleft"> -->
         <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Our team includes</a></p>
+          <p class="fwn"><a href="#">Organization Structure</a></p>
           <p class="offset__1">--</p>
         </div>
         <p>1.  Executives</p>
@@ -219,14 +203,21 @@
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
 
-<script src="<?php echo base_url(). 'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.ui.totop.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
+<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
+
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
 </body>
 </html>

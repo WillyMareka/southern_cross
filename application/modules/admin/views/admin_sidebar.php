@@ -38,6 +38,11 @@
                         <li>
                             <a href="<?php echo base_url().'admin/add_staff'?>">Employee Registration</a>
                         </li>
+
+                        <li>
+                            <a href="<?php echo base_url().'admin/add_lecturer'?>">Lecturer Registration</a>
+                        </li>
+
                         <li>
                             <a href="<?php echo base_url().'admin/view_staff_page'?>">View Employees</a>
                         </li>
