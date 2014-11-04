@@ -168,8 +168,8 @@ class M_admin extends MY_Model {
         $course_details=$this->get_course_by_id($lec_course);
         //UNCOMMENT THE BELOW CODE TO ADD THE COURSE SHORT CODE TO THE LECTURER ID.
         //BE SURE TO COMMENT THE ONE BELOW IT UPON DECISION TO DO SO
-        //$assigned_id = "CL/".$course_details[0]['course_short_code']."/".$lec_table_id."/".date('y');
-        $assigned_id = "CL\/".$lec_table_id."\/".date('y');
+        $assigned_id = "CL\/".$course_details[0]['course_short_code']."\/".$lec_table_id."\/".date('y');
+        //$assigned_id = "CL\/".$lec_table_id."\/".date('y');
         //echo $assigned_id;exit;
 
         $query = "UPDATE `lecturers` SET `assigned_id`= '$assigned_id' WHERE id = '$lec_table_id'";
