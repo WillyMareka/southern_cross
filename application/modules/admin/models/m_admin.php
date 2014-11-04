@@ -9,37 +9,20 @@ class M_admin extends MY_Model {
         date_default_timezone_set('Africa/Nairobi');
     }
 
-    // public function applications()
-    // {
-    // 	$sql = "SELECT * FROM `applications`";
-
-
-    // 	$apps = $this->db->query($sql);
-    	
-    // 	return $apps->result_array();
-    // }
-
     public function applications()
     {
-        $sql = "SELECT `api`.`applicant_id`,
-                        `api`.`f_name`,
-                        `api`.`s_name`,
-                        `api`.`l_name`,
-                        `api`.`dob`,
-                        `api`.`gender`,
-                        `api`.`citizenship`,
-                        `api`.`status`,
-                        `aei`.`entry_id`,
-                        `aei`.`applicant_id`,
-                        `aei`.`yrs_of_english`,
-                        `aei`.`secondary_level`
-                    FROM `applicant_personal_info` `api`
-                    LEFT JOIN `applicant_education_info` `aei`
-                    ON `api`.`applicant_id` = `aei`.`applicant_id`
-                    ";
-        $res = $this->db->query($sql);
+       $query = $this->db->query(
+                "SELECT * FROM applicant_personal_info api
+               JOIN applicant_guardian_info agi ON agi.applicant_id = api.applicant_id
+               JOIN applicant_educational_institutions aei ON aei.applicant_id = api.applicant_id
+               JOIN applicant_education_info aeinfo ON aeinfo.applicant_id = api.applicant_id
+               JOIN applicant_contact_info aci ON aci.applicant_id = api.applicant_id
+               JOIN applicant_course ac ON ac.applicant_id = api.applicant_id
+               JOIN courses ON courses.course_id = ac.course_id
+               ");
+       $result = $query->result_array();
 
-        return $res->result_array();
+       return $result;
     }
 
     function get_staff()

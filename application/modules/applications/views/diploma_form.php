@@ -323,13 +323,13 @@
 							<option value="Yes">Yes</option>
 							<option value="No">No</option>
 						</select>
-						<div class="disability_info margin-vert">
-						<label class=" description" for="applicant_disability_info"> If yes state nature of disability :  </label>
-
-						<input id="applicant_disability_info" name="applicant_disability_info" class=" form-control  " type="text" maxlength="255" />  
-						</div>
 						</td>
-
+						<td>
+						<label class=" description" for="applicant_disability_info"> If yes state nature of disability :  </label>
+						</td>
+						<td>
+						<input id="applicant_disability_info" name="applicant_disability_info" class=" form-control  " type="text" maxlength="255" value="" />  
+						</td>
 						</tr>	
 						</tr>
 					</tbody>
@@ -563,22 +563,20 @@
 						<label class=" description" for="applicant_denomination">Denomination: </label>
 						</td>
 						<td>
-						<select required="required" class=" form-control input" id="applicant_denomination" name="applicant_denomination">
+						<select required="required" class=" form-control input" name="applicant_denomination">
 							<option value="">--Select Denomination--</option>
 							<option value="Roman Catholic">Roman Catholic</option>
 							<option value="Protestant">Protestant</option>
 							<option value="Hindu">Hindu</option>
 							<option value="African Traditional Religion">African Traditional Religion</option>
 							<option value="Muslim">Muslim</option>
-							<option value="Other">Other(Specify)</option>
+							<option value="Other(Specify)">Other(Specify)</option>
 						</select>
-						 
-						<div class="specified_denomination margin-vert">
-							<label for="denomination_other">Specify Other Religion: </label>
-							<input  class=" input" class=" " type="text" id="denomination_other" name="denomination_other">
-							</div>
+						<!-- 
+						<td>
+							<input required = "required"  class=" input" class=" " type="text" name="denomination_other">
 						</td> 
-						
+						-->
 						</td>
 						</tr>	
 						</tbody>
@@ -660,7 +658,7 @@
 								<th colspan="10"><label  for="source_of_discovery">How did you learn about Southern Cross Institute of Tropical Medicine? </label></th>
 								<tr>
 									<td>
-									<select required = "required" class="form-control select" id="source_of_discovery" name="source_of_discovery">
+									<select required = "required" class="form-control select" name="source_of_discovery">
 									<option value="">--Select Option--</option>
 										<option value="Newpaper">Newpaper</option>
 										<option value="Family/Friend">Family/Friend</option>
@@ -671,11 +669,6 @@
 										<option value="Exhibition">Exhibition</option>
 										<option value="Other">Other(Specify):</option>
 									</select>
-									<div class="discovery_other margin-vert">
-										<label for="source_of_discovery_other">Specify Other Source of Discovery</label></br>
-										<input type="text" class="source_of_discovery_other" id="source_of_discovery_other" name="source_of_discovery_other" />
-									</div>
-									</td>
 								</tr>
 							</tbody>
 							</tr>
@@ -687,11 +680,10 @@
 						<table class=" table table-bordered margin_bottom">
 							<tbody>
 								<tr>
-								<td colspan="2"><h5><label for="reason_for_study">Why do you wish to study through Southern Cross Institute of Tropical Medicine?('Give a Brief Account')</label></h5></td>
+								<td colspan="1"><h5><label for="reason_for_study">Why do you wish to study through Southern Cross Institute of Tropical Medicine?('Give a Brief Account')</label></h5></td>
 								</tr>
 								<tr>
-								<td><textarea rows="8" style="width:900px;" name="reason_for_study" class=" inputs input form-control reason_for_study"></textarea></td>	
-								<td>It is advisable to give a reason as it may improve your consideration chances</td>						
+								<td><textarea name="reason_for_study" class=" inputs input form-control reason_for_study"></textarea></td>							
 								</tr>
 							</tbody>
 						</table>
@@ -738,9 +730,8 @@
 			
 				<tr>
 					<td>
-					<center>
-						<input required = "required"  id="saveForm" class="btn button_text button button-submit-app" type="submit" name="submit" value="Submit Application Form" />
-					</center>
+					    <input required = "required"  type="hidden" name="form_id" value="911261" />
+						<input required = "required"  id="saveForm" class="btn button_text button" type="submit" name="submit" value="Submit" />
 					</td>
 				</tr>
 			</table>
@@ -758,7 +749,6 @@
 		  </footer>
 	</div>
 	</div>
-<<<<<<< HEAD
 
 
 
@@ -785,8 +775,5 @@
 				$( "#datepicker_duration_to_3" ).datepicker();
 				});
   		</script>
-=======
-	<script type="text/javascript" src="<?php echo base_url().'assets/js/diploma_application_form.js' ?>"></script>
->>>>>>> 6692a8c4f87d9f127b35e0a78f661d790cc821d3
 </body>
 </html>
