@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 <?php if (! defined("BASEPATH")) exit('No direct script access allowed');
-=======
-<?php 
->>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534
 
 class Admin extends MY_Controller
 {
+	var $applicant_row;
 	function __construct()
     {
         // Call the Model constructor
@@ -16,7 +13,7 @@ class Admin extends MY_Controller
 	function index()
 	{
 		$data['content_view'] = "application_view";
-		$data['application'] = $this->m_admin->applications();
+		$data['application'] = $this->createApplications();
 		$this->load->view('admin_view', $data);
 	}
 
@@ -77,12 +74,50 @@ class Admin extends MY_Controller
 	{
 		
 	}
-<<<<<<< HEAD
-}
 
-?>
-=======
+	public function createApplications()
+	{
+		$this->applicant_row = '';
+		$applicants = $this->m_admin->applications();
+		$counter = 0;
+		foreach ($applicants as $key => $value) {
+			$counter++;
+			$this->applicant_row .= '<tr>';
+			$this->applicant_row .= '<td>'.$counter.'</td>';
+			$this->applicant_row .= '<td>'.$value['f_name'].'</td>';
+			$this->applicant_row .= '<td>'.$value['s_name'].'</td>';
+			$this->applicant_row .= '<td>'.$value['l_name'].'</td>';
+			$this->applicant_row .= '<td>'.$value['citizenship'].'</td>';
+			$this->applicant_row .= '<td>'.strtoupper($value['gender']).'</td>';
+			$this->applicant_row .= '<td>'.date("d-m-Y", strtotime($value['dob'])).'</td>';
+			$this->applicant_row .= '<td><a href = "'.base_url().'">Active</a></td>';
+			$this->applicant_row .= '<td><a href = "'.base_url().'admin/viewapplicantdetails/'.$value['applicant_id'].'">View More</a></td>';
+			$this->applicant_row .= '<tr>';
+		}
 
+		return $this->applicant_row;
+	}
+
+	public function viewapplicantdetails($a_id)
+	{
+		$applicant_array = $this->getapplicantdetails($a_id);
+		$data['content_view'] = "applicant_view";
+		$data['application'] = $applicant_array;
+		$this->load->view('admin_view', $data);
+	}
+	public function getapplicantdetails($applicant_id)
+	{
+		$applicant_details = array();
+		$applicants = $this->m_admin->applications();
+		foreach ($applicants as $applicant) {
+			if($applicant['applicant_id'] == $applicant_id)
+			{
+				$applicant_details = $applicant;
+			}
+		}
+
+		return $applicant_details;
+	}
 	
 }
->>>>>>> 21fd725f555a335ed8bf056df86302b9cc161534
+

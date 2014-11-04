@@ -8,4 +8,12 @@ class MY_Model extends CI_Model {
         parent::__construct();
         date_default_timezone_set('Africa/Nairobi');
     }
+
+    public function getCourses()
+    {
+    	$query = $this->db->query("SELECT * FROM courses");
+    	$result = $query->result_array();
+
+    	return $result;
+    }
 }

@@ -118,14 +118,14 @@
 							</td>
 						    </tr>
 							</tr>
-							<!-- <tr>
+							<tr>
 							<td>
 							<label class=" " for="applicant_picture">Picture:  </label>
 							</td>
 							<td colspan="4">
 							<input required = "required"  id="applicant_picture" name="applicant_picture" class=" input inputs" type="file"/> 
 							</td>
-							</tr> -->
+							</tr>
 							</tbody>
 						</table>
 					</tr>
@@ -683,7 +683,7 @@
 								<td colspan="1"><h5><label for="reason_for_study">Why do you wish to study through Southern Cross Institute of Tropical Medicine?('Give a Brief Account')</label></h5></td>
 								</tr>
 								<tr>
-								<td><textarea rows="8" name="reason_for_study" class=" inputs input form-control reason_for_study"></textarea></td>							
+								<td><textarea name="reason_for_study" class=" inputs input form-control reason_for_study"></textarea></td>							
 								</tr>
 							</tbody>
 						</table>
