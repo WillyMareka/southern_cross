@@ -1,5 +1,5 @@
 CREATE TABLE `applicant_personal_info` (
-  `applicant_id` int(11) NOT NULL AUTO_INCREMENT,
+  `applicant_id` int(11) NOT NULL,
   `f_name` varchar(100) NOT NULL,
   `s_name` varchar(100) NOT NULL,
   `l_name` varchar(100) NOT NULL,

@@ -1,5 +1,5 @@
 CREATE TABLE `student_messages` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `lecturer_id` int(11) NOT NULL,
   `message` varchar(250) NOT NULL,
   `subject` varchar(250) NOT NULL,
@@ -8,6 +8,5 @@ CREATE TABLE `student_messages` (
   `unit` int(11) NOT NULL,
   `group_id` int(11) NOT NULL DEFAULT '0',
   `reply` varchar(250) DEFAULT NULL,
-  `status` int(11) DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `status` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1

@@ -1,5 +1,5 @@
 CREATE TABLE `students` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
   `othernames` varchar(255) NOT NULL,
@@ -10,6 +10,5 @@ CREATE TABLE `students` (
   `location` varchar(250) NOT NULL,
   `photo` varchar(255) NOT NULL,
   `admission_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `group_id` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `group_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1

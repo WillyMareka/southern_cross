@@ -1,5 +1,5 @@
 CREATE TABLE `lecturer_units` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `lecturer_id` int(11) NOT NULL,
   `unit_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)

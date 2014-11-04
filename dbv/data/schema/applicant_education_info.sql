@@ -1,5 +1,5 @@
 CREATE TABLE `applicant_education_info` (
-  `entry_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) NOT NULL,
   `applicant_id` int(11) NOT NULL,
   `yrs_of_english` int(11) NOT NULL,
   `primary_level` varchar(255) NOT NULL,

@@ -1,5 +1,5 @@
 CREATE TABLE `applicant_contact_info` (
-  `entry_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) NOT NULL,
   `applicant_id` int(11) NOT NULL,
   `postal_code` varchar(250) NOT NULL,
   `current_city` varchar(250) NOT NULL,

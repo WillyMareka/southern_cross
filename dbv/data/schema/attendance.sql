@@ -1,5 +1,5 @@
 CREATE TABLE `attendance` (
-  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `record_id` int(11) NOT NULL,
   `unit_id` int(11) DEFAULT NULL,
   `student_id` int(11) NOT NULL,
   `present_hrs` int(11) NOT NULL DEFAULT '0',

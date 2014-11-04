@@ -1,5 +1,5 @@
 CREATE TABLE `applicant_guardian_info` (
-  `entry_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) NOT NULL,
   `applicant_id` int(11) NOT NULL,
   `sponsor_names` varchar(250) NOT NULL,
   `sponsor_relation` varchar(250) NOT NULL,

@@ -50,9 +50,9 @@
       <div class="container">
         <div class="row">
           <div class="grid_12 ">
-            <div class="navigation ">
+            <div class="navigation mynav">
               <nav>
-                <ul class="sf-menu">
+                <ul class="sf-menu" style="color:#FFF">
                  <li class="current"><a href="#">Home</a></li>
                  <!-- <li><a href="<?php //echo base_url(). 'announcements/announce'?>">Announcements</a></li> -->
                  <li><a href="<?php echo base_url(). 'home/programs'?>">Programs Offered</a></li>
@@ -97,9 +97,10 @@
     </section>
   </div>
   </header>
-  <div class="block-1">
+ <!--  <div class="block-1">
     <div class="container">
       <div class="row">
+        Certification to the Medical Fraternity
         <div class="grid_3">
           <div class="block-1_count">10</div>
           Years of <br> Educating the Nation
@@ -115,12 +116,12 @@
           Partner <br> Universities
           <div class="clear"></div>
         </div>
-        <!-- <div class="grid_3">
+         <div class="grid_3">
           <a href="#" class="support"><img src="<?php echo base_url() .'assets/images/support.png'?>" alt=""></a>
-        </div> -->
+        </div> 
       </div>
     </div>
-  </div>
+  </div> -->
   <!--=====================
             Content
   ======================-->
@@ -132,8 +133,11 @@
             <h2 class="head__1">
               Welcome
             </h2>
-            <p>To the <span class="light-blue-color">Southern Cross</span> Homepage. <br> Register for Courses <a href="#" rel="nofollow" class="color1">Here</a> </p>
-            Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet site amet est vel, commodo venenatis eros. Fusce adipiscing quam id risus sagittis, non consequat lacus interdum. nulla, eu sodales arcu. Quisque viverra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan 
+            <h4>
+               Certification to the Medical Fraternity
+            </h4>
+            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> </p>
+            
           </div>
         </div>
       </div>
@@ -141,24 +145,35 @@
     <article class="content_gray">
       <div class="container">
         <div class="row">
-          <div class="grid_7">
-            <h3>Why You Should Study at Southern Cross</h3>
+          <div class="grid_12">
+            <h3>Why You Should Study at Southern Cross Institute</h3>
+
+            <div class="block-2">
+              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/doctor.jpg'?>" alt="" class="img_inner fleft">
+              <div class="extra_wrapper">
+                <div class="text1"><a href="#">Career Advancement</a></div>
+                <p>The curriculum under the Certificate programs is designed to allow students to upgrade to Diploma level over 18 months bridging course upon graduation. <p>The College is also seeking to collaborate with Public Universities such as Maseno University, JKUAT and Moi University for advancement to a Degree course in Public Health for our Diploma students.</p>
+                <br>
+                
+              </div>
+            </div>
+
             <div class="block-2">
               <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience1.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
-                <div class="text1"><a href="#">Experience</a></div>
+                <div class="text1"><a href="#">Exposure</a></div>
                 <p>American hospitals in the United States recruit nurses from overseas, especially from the Philippines and Africa, to accommodate the nursing shortage, and our College is negotiating with a US based College of Medicine to formalize a Student Exchange program. Our College will institute a curriculum from a US based Medical College into our local curriculum to allow Transfer of Credits and Student Exchange between the affiliate Colleges. The College intends to pioneer in this unique arrangement that will create preferential job opportunities in the United States and other international markets for our graduates. 
                 <br>
                
               </div>
             </div>
             <div class="block-2">
-              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience2.jpg'?>" alt="" class="img_inner fleft">
+              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/nursework.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
                 <div class="text1"><a href="#">Marketability</a></div>
                 <p> A strategic alliance with a USA based Medical Institution will also facilitate deployment of Nursing and Social Work student into the US market.</p>
                 <br>
-                <p style="font-size:15px"><strong>Kenya’s Health Workforce Training Capacity: a Situation Analysis</strong></p>
+                <p style="font-size:15px"><strong class='marketbold'>Kenya’s Health Workforce Training Capacity: a Situation Analysis</strong></p>
                  <a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">More</a>
 
                  <!-- Button trigger modal -->
@@ -169,26 +184,31 @@
 <!-- Modal -->
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
+    <div class="modal-content modal-lg">
+      <div class="modal-header modal-lg">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Kenya’s Health Workforce Training Capacity: a Situation Analysis</h4>
+        <h4 class="modal-title">Kenya’s Health Workforce Training Capacity: A Situation Analysis</h4>
       </div>
       <div class="modal-body">
        <p> 
-        The health workforce is a vital component of any health system. Moving from a disease-specific approach to healthcare promotion, policy makers are now shifting towards a health systems approach, which includes strengthening the health workforce. The impetus for this new focus on health systems strengthening and human resources for health (HRH) came, in part, as a result of research from the 2004 Joint Learning Initiative and The World Health Report in 2006, which demonstrated a clear link between health workforce density and a number of health indicators (2004; 2006b).
-Numerous studies have explored the link between an adequate supply and deployment of HRH and health services delivery. The Joint Learning Initiative, comprised of global health experts, found that a density of 2.3 health care workers per 1,000 population was associated with 80% coverage in skilled birth attendance and measles vaccination (2004), and a distinct relationship between the density of the health workforce and mortality rates for mothers, infants and children under five. However, thirty-six sub-Saharan African countries, including Kenya, are facing a critical shortage of heath care workers. 
-The Government of Kenya (GoK), in partnership with the President’s Emergency Plan for AIDS Relief (PEPFAR), is considering interventions to scale-up Kenya’s health workforce, increasing the number of doctors, nurses, midwives, clinical officers and community workers, among other cadres. 
+        The health workforce is a vital component of any health system. Moving from a disease-specific approach to healthcare promotion, policy makers are now shifting towards a health systems approach, which includes strengthening the health workforce. The impetus for this new focus on health systems strengthening and human resources for health (HRH) came, in part, 
+           as a result of research from the 2004 Joint Learning Initiative and The World Health Report in 2006, which demonstrated a clear 
+         link between health workforce density and a number of health indicators (2004; 2006b).Numerous studies have explored the link between an adequate 
+           supply and deployment of HRH and health services delivery. The Joint Learning Initiative, comprised of global health experts, 
+        found that a density of 2.3 health care workers per 1,000 population was associated with 80% coverage in skilled birth attendance and measles vaccination (2004), and a distinct 
+           relationship between the density of the health workforce and mortality rates for mothers, infants and children under five. However, thirty-six sub-Saharan African countries, including 
+        Kenya, are facing a critical shortage of heath care workers. The Government of Kenya (GoK), in partnership with the President’s Emergency Plan for AIDS Relief (PEPFAR), is 
+           considering interventions to scale-up Kenya’s health workforce, increasing the number of doctors, nurses, midwives, clinical 
+        officers and community workers, among other cadres. It should be noted that registration as a professional health worker requires enrolling in and completing an approved training 
+           institution (i.e. intake and graduation), taking a licensure exam, and applying for registration.Kenya’s Health WorkforceInformation on workforce registration and licensure renewals can be used to calculate Kenya’s workforce-to-population density and 
+        compare it to the WHO recommendation of 2.3 health workers per 1,000 populations.
+        </p>
 
-It should be noted that registration as a professional health worker requires enrolling in and completing an approved training institution (i.e. intake and graduation), taking a licensure exam, and applying for registration.
-
-Kenya’s Health Workforce
-Information on workforce registration and licensure renewals can be used to calculate Kenya’s workforce-to-population density and compare it to the WHO recommendation of 2.3 health workers per 1,000 populations.
-</p>
-
-<table class="table table-hover">
+<table class="table modal-table">
   <tr style="background-color:#0099CC">
-    <strong class="str"><td style="text-align:center" colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
+    <strong class="str"><td style="text-align:center" 
+
+colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
   </tr>
   <tr style="background-color:#0099CC">
     <strong>
@@ -223,11 +243,17 @@ Information on workforce registration and licensure renewals can be used to calc
 
 
 <p>
-  Calculating workforce-to-population ratios based on both the number of “registered” and “retained” health care workers provides a range for workforce density estimates. According to the number of registered health personnel, Kenya has 1.54 health workers (doctors, nurses, midwives, and clinical officers) per 1,000 people. Based on the number of retained health personnel, Kenya has 1.03 health workers (doctors, nurses, midwives, and clinical officers) per 1,000 people based on the 2009 Census data for an estimated national population of 38.6M in 2010. Using either estimate, the density of health workers in Kenya is below the recommended 2.30 per 1,000 people. 
+  Calculating workforce-to-population ratios based on both the number of “registered” and “retained” health care workers provides a range for workforce density estimates. According to 
+   the number of registered health personnel, Kenya has 1.54 health workers (doctors, nurses, midwives, and clinical officers) per 
+  1,000 people. Based on the number of retained health personnel, Kenya has 1.03 health workers (doctors, nurses, midwives, and 
+    clinical officers) per 1,000 people based on the 2009 Census data for an estimated national population of 38.6M in 2010. Using 
+  either estimate, the density of health workers in Kenya is below the recommended 2.30 per 1,000 people. 
 </p>
 
       </div>
-      <div class="modal-footer">
+
+
+    <div class="modal-footer modal-lg">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
@@ -236,15 +262,10 @@ Information on workforce registration and licensure renewals can be used to calc
 </div>
               </div>
             </div>
-            <div class="block-2">
-              <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/experience3.jpg'?>" alt="" class="img_inner fleft">
-              <div class="extra_wrapper">
-                <div class="text1"><a href="#">Career Advancement</a></div>
-                <p>The curriculum under the Certificate programs is designed to allow students to upgrade to Diploma level over 18 months bridging course upon graduation. <p>The College is also seeking to collaborate with Public Universities such as Maseno University, JKUAT and Moi University for advancement to a Degree course in Public Health for our Diploma students.</p>
-                <br>
-                
-              </div>
-            </div>
+            
+
+
+
           </div>
         <!--   <div class="grid_4 preffix_1">
             <h3>Testimonials</h3>
@@ -284,7 +305,7 @@ Information on workforce registration and licensure renewals can be used to calc
           <h4>Contact Info</h4>
           <address>
             <ul class="cont_address">
-              <li>P.O. Box 370-40100, Kisumu Kenya</li>
+              <li>P.O. Box 1280-40100, Kisumu Kenya</li>
               <li>Email:<a href="#">southerncrossinstitute@gmail.com</a></li>
               <li><a href="#">Tel Office:  +254(0)717 - 056 523</a></li>
               <li><a href="#">Mobile: +254(0)717 - 056 523</a></li>
@@ -301,7 +322,7 @@ Information on workforce registration and licensure renewals can be used to calc
     <div class="container">
       <div class="row">
         <div class="grid_12"> 
-          <div class="copyright"><span class="brand">Southern Cross</span> &copy; <span id="copyright-year"></span> | <a class="privacy" href="#">Privacy Policy</a>
+          <div class="copyright"><span class="brand">Southern Cross Institute</span> &copy; <span id="copyright-year"></span> | <a class="privacy" href="#">Privacy Policy</a>
           </div>
         </div>
       </div>
@@ -330,7 +351,12 @@ Information on workforce registration and licensure renewals can be used to calc
 <script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
-
+<style type="text/css">
+  .mynav > nav > ul > li > a
+  {
+    color: #fff !important;
+  }
+</style>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 CREATE TABLE `administrator` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `f_name` varchar(100) NOT NULL,
   `s_name` varchar(100) NOT NULL,
   `o_names` varchar(100) NOT NULL,

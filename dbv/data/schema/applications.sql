@@ -1,5 +1,5 @@
 CREATE TABLE `applications` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `f_name` varchar(20) NOT NULL,
   `m_name` varchar(20) NOT NULL,
   `l_name` varchar(20) NOT NULL,

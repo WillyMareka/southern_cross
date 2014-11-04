@@ -70,7 +70,7 @@
 				                            </div>
 				                           <div class="input-group" style="width: 100%;padding:4px;">
 				                                <span class="input-group-addon" style="width: 40%;">Photo: </span>
-				                                <input type = "file" name = "lec_photo" class="textfield form-control" />
+				                                <input type = "file" name = "photos" class="textfield form-control" />
 				                           </div>
 				                           
 				                           

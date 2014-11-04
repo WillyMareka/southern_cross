@@ -1,5 +1,5 @@
 CREATE TABLE `applicant_work_info` (
-  `entry_id` int(11) NOT NULL AUTO_INCREMENT,
+  `entry_id` int(11) NOT NULL,
   `applicant_id` int(11) NOT NULL,
   `employer` varchar(250) NOT NULL,
   `work_type` varchar(250) NOT NULL,

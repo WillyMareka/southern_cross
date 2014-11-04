@@ -66,7 +66,7 @@
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
                <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
-               <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
+               
                <li class="current"><a href="#">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
              </ul>
@@ -89,7 +89,7 @@
         <h3>Contacts</h3>
         <div class="map">
           <figure class="">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
+            <iframe src="https://www.google.com/maps/place/Kisumu+Kibuye+Church+Of+God+In+East+Africa+-+Kenya/@-0.0977199,34.7686855,17z/data=!4m2!3m1!1s0x182aa481458e0583:0x33a81152df1d3453?hl=en-US" style="border:0"></iframe>
           </figure>
         </div>
       </div>
