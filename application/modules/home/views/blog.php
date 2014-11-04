@@ -82,7 +82,7 @@
 <!--=====================
           Content
 ======================-->
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
+<!-- <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
   <div class="container">
     <div class="row">
       <div class="grid_12">
@@ -138,7 +138,7 @@
 <!--==============================
               footer
 =================================-->
-<footer id="footer">
+<!-- <footer id="footer">
   <div class="container">
     <div class="row">
       <div class="grid_12"> 
@@ -149,6 +149,6 @@
     </div>
   </div>  
 </footer>
-<a href="#" id="toTop" class="fa fa-chevron-up"></a>
+<a href="#" id="toTop" class="fa fa-chevron-up"></a>  --> 
 </body>
 </html>

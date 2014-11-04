@@ -54,8 +54,8 @@
               <nav>
                 <ul class="sf-menu" style="color:#FFF">
                  <li class="current"><a href="#">Home</a></li>
-                 <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
-                 <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
+                 <!-- <li><a href="<?php //echo base_url(). 'announcements/announce'?>">Announcements</a></li> -->
+                 <li><a href="<?php echo base_url(). 'home/programs'?>">Programs Offered</a></li>
                  <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
                  
@@ -72,16 +72,16 @@
       <div class="container">
         <div class="row">
           <div class="grid_4">
-            <a href="#" class="banner "><div class="maxheight">
+            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight">
               <div class="fa fa-globe"></div>Certificate</div>
             </a>
-            <a href="<?php echo base_url(). 'applications/diploma'?>" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-briefcase"></div>Diploma</div>
             </a>
             <!-- <a href="#" class="banner "><div class="maxheight">
               <i class="fa fa-line-chart"></i>Masters</div>
             </a> -->
-            <a href="#" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-cog"></div>Short Courses</div>
             </a>
             
