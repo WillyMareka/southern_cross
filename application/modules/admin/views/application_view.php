@@ -65,14 +65,14 @@
                                         <td><?php echo $value['dob'];?></td>
 
                                     <?php
-                                        if($value['status'] == 1)
+                                        if($value['status'] == 0)
                                         {
                                             $span = "<span class='label label-warning'>Pending</span>";
-                                        }else if ($value['status'] == 2)
+                                        }else if ($value['status'] == 1)
                                         {
                                             $span = "<span class='label label-success'>Approved</span>";
                                         }
-                                        else if ($value['status'] == 3)
+                                        else if ($value['status'] == 2)
                                         {
                                             $span = "<span class='label label-danger'>Rejected</span>";
                                         }
