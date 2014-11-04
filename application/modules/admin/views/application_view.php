@@ -79,7 +79,7 @@
                                     ?>
                                         
                                         <td><center><?php echo $span;?></center></td>
-                                        <td><center><a href="javascript:void(null)" onclick="applications(<?php echo $value['applicant_id']?>)"><span class="fa fa-edit" style="color:#0DCAF2"></span></a></center></td>
+                                        <td><center><a href="javascript:void(null)" onclick="applications(<?php echo $value['applicant_id']?>,'<?php echo $value['f_name']?>','<?php echo $value['s_name']?>','<?php echo $value['l_name']?>','<?php echo $value['citizenship']?>','<?php echo $value['secondary_level']?>', '<?php echo $value['primary_level']?>', '<?php echo $value['institution_name']?>', '<?php echo $value['sponsor_names']?>',<?php echo $value['status']?>)"><span class="fa fa-edit" style="color:#0DCAF2"></span></a></center></td>
                                     </tr>
                                     <?php
                                         $i++;
@@ -170,43 +170,39 @@
                         <div>
 
                         <input type="hidden" name="editid" id="editid" />
-                           <!-- <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;" >First Name:</span>
-                                <input class="textfield form-control" type="text" name="f_name" id="f_name" required/>
+                           <div class="input-group" style="width: 100%;padding:4px;">
+                                <span class="input-group-addon" style="width: 40%;" >Applicant`s Names:</span>
+                                <input class="textfield form-control" type="text" name="f_name" id="f_name" readonly/>
+                                <input class="textfield form-control" type="text" name="s_name" id="s_name" readonly/>
+                                <input class="textfield form-control" type="text" name="o_name" id="l_name" readonly/>
+                            </div>
+                            
+                            <div class="input-group" style="width: 100%;padding:4px;">
+                                <span class="input-group-addon" style="width: 40%;">Citizenship: </span>
+                                <input class="textfield form-control" type="text" name="citizen" id="citizen" readonly/>
                             </div>
                             <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;" >second Name:</span>
-                                <input class="textfield form-control" type="text" name="s_name" id="s_name" required/>
-                            </div>
-                            <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;" >Other Name:</span>
-                                <input class="textfield form-control" type="text" name="o_name" id="o_name" required/>
-                            </div>
-                            <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;">Phone Number: </span>
-                                <input class="textfield form-control" type="text" name="phone" id="phone" required/>
+                                <span class="input-group-addon" style="width: 40%;">School: </span>
+                                <input class="textfield form-control" type="text" name="school" id="school" readonly/>
                             </div>
                              <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;">Lecturer Email@: </span>
-                                <input class="textfield form-control" type="text" name="lemail" id="lemail" required/>
+                                <span class="input-group-addon" style="width: 40%;">Secondary Level: </span>
+                                <input class="textfield form-control" type="text" name="s_level" id="s_level" readonly/>
                             </div>
                             <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;">Gender: </span>
-                                <input class="textfield form-control" type="text" name="lgender" id="lgender" readonly />
-                            </div> -->
-                            <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;">Registration Date: </span>
-                                <input class="textfield form-control" type="text" name="box1" id="box1" readonly/>
+                                <span class="input-group-addon" style="width: 40%;">Primary Level: </span>
+                                <input class="textfield form-control" type="text" name="p_level" id="p_level" readonly />
                             </div>
+                            
                             <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;">Course: </span>
-                                <input class="textfield form-control" type="text" name="box2" id="box2" readonly />
+                                <span class="input-group-addon" style="width: 40%;">Guardian`s Names: </span>
+                                <input class="textfield form-control" type="text" name="guardian" id="guardian" readonly />
                            </div>
                            <div class="input-group" style="width: 100%;padding:4px;">
                             <span class="input-group-addon" style="width: 40%;"> Status :</span>
-                            <span class="input-group-addon" style="width: 30%;"><input type="radio" name="editstatus" value="1"> <span class='label label-success'>Activate</span> <span style="font-size: 1.4em;color: #3e8f3e;" class="glyphicon glyphicon-ok-sign"></span></input></span>
-                            <span class="input-group-addon" style="width: 30%;"><input type="radio" name="editstatus" value="0"> <span class="label label-danger">Deactivate</span> <span style="font-size: 1.4em;color: #eb9316;" class="glyphicon glyphicon-remove-sign"></span></input></span>
-                            <span class="input-group-addon" style="width: 30%;"><input type="radio" name="editstatus" value="0"> <span class="label label-danger">Pending</span> <span style="font-size: 1.4em;color: #eb9316;" class="glyphicon glyphicon-warning-sign"></span></input></span>
+                            <span class="input-group-addon" style="width: 30%;"><input type="radio" name="editstatus" value="2"> <span class='label label-success'>Accept</span></input></span>
+                            <span class="input-group-addon" style="width: 30%;"><input type="radio" name="editstatus" value="3"> <span class="label label-danger">Reject</span></input></span>
+                            <span class="input-group-addon" style="width: 30%;"><input type="radio" name="editstatus" value="1"> <span class="label label-warning">Pending</span></input></span>
                         </div>  
 
                             <div style="margin-left:685px;">
