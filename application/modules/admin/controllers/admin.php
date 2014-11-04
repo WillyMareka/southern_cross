@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php if (! defined("BASEPATH")) exit('No direct script access allowed');
-=======
-<?php 
->>>>>>> 3510ba9349cd5f38275ef9f4acbf15191022be2c
 
 class Admin extends MY_Controller
 {
