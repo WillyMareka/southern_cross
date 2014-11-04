@@ -37,8 +37,8 @@ class Home extends MY_Controller
     $this->load->view('contacts');
   }
 
-   public function services(){
-    $this->load->view('services');
+   public function programs(){
+    $this->load->view('programs');
   }
 
    public function about(){
