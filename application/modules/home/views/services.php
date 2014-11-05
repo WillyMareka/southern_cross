@@ -212,7 +212,7 @@
 <script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
-
+<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
 <script>
  $(window).load(function(){
   $().UItoTop({ easingType: 'easeOutQuart' });

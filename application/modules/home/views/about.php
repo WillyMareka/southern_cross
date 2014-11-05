@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Services</title>
+<title>About</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
 <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
@@ -10,22 +10,7 @@
 <link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
 
 
-<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
-<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -65,9 +50,8 @@
             <nav>
               <ul style="backgound-color:#FFF;" class="sf-menu">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-               <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
-               <li class="current"><a href="#">Services</a></li>
-               <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
+               <li class="current"><a href="#">About</a></li>
+               <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
                <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
              </ul>
@@ -219,14 +203,21 @@
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
 
-<script src="<?php echo base_url(). 'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
+<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 <script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.ui.totop.js'?>"></script>
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
 </body>
 </html>

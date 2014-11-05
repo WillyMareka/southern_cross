@@ -54,9 +54,9 @@
               <nav>
                 <ul class="sf-menu" style="color:#FFF">
                  <li class="current"><a href="#">Home</a></li>
-                 <!-- <li><a href="<?php //echo base_url(). 'announcements/announce'?>">Announcements</a></li> -->
                  <li><a href="<?php echo base_url(). 'home/programs'?>">Programs Offered</a></li>
                  <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
+                 <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
                  
                </ul>
@@ -351,6 +351,7 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
 <script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
 <style type="text/css">
   .mynav > nav > ul > li > a
   {

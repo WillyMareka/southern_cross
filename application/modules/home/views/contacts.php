@@ -10,21 +10,7 @@
 <link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
 
 
-<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
-<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
+
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -182,5 +168,22 @@
   </div>  
 </footer>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+
+<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
+<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
 </body>
 </html>
