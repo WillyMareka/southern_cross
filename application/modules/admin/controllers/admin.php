@@ -128,9 +128,11 @@ class Admin extends MY_Controller
 	public function ss_applicants_details($id)
 	{
 
+
 		$info = $this->m_admin->applications($id);
 
 		$this->load->view("admin_view", $data);
 	}
 }
+
 
