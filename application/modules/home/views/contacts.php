@@ -75,7 +75,7 @@
         <h3>Contacts</h3>
         <div class="map">
           <figure class="">
-            <iframe src="https://www.google.com/maps/place/Kisumu+Kibuye+Church+Of+God+In+East+Africa+-+Kenya/@-0.0977199,34.7686855,17z/data=!4m2!3m1!1s0x182aa481458e0583:0x33a81152df1d3453?hl=en-US" style="border:0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3989.813079732551!2d34.768328!3d-0.092865!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1415209241149" width="600" height="450" frameborder="0" style="border:0"></iframe>
           </figure>
         </div>
       </div>
