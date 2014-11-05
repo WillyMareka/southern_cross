@@ -48,7 +48,7 @@
         <div class="grid_12 ">
           <div class="navigation ">
             <nav>
-              <ul style="backgound-color:#FFF;" class="sf-menu">
+              <ul style="backgound-color:#FFF;" class="sf-menu" style="color:#000">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
                <li class="current"><a href="#">Services</a></li>
