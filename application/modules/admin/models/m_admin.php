@@ -79,11 +79,13 @@ class M_admin extends MY_Model {
                     `o_names`,
                     `gender`,
                     `phone_no`,
+                    `identity`,
                     `email`,
-                    `registration_date`,
+                    YEAR(`registration_date`) AS year,
+                    MONTH(`registration_date`) AS month,
                     `status`
                 FROM 
-                    `lecturers`
+                    `staff`
                 ";
 
         $staff = $this->db->query($sql);
@@ -150,11 +152,12 @@ class M_admin extends MY_Model {
         $dob = $this->input->post('dob');
         $gender = $this->input->post('gender');
         $phone = $this->input->post('phonenumber');
+        $identification = $this->input->post('identification');
         $email = $this->input->post('staff_email');
         $location = strtoupper($this->input->post('location'));
        // $course = $this->input->post('course');
 
-        $query = "INSERT INTO staff VALUES(NULL, '$firstname', '$lastname', '$others', '$dob', '$gender', '$email', '$phone', '$path', NULL, 1, '$location')";
+        $query = "INSERT INTO staff VALUES(NULL, '$firstname', '$lastname', '$others', '$dob', '$gender', '$email', '$phone', '$identification', '$path', NULL, 1, '$location')";
         $result = $this->db->query($query);
     }
 
