@@ -927,4 +927,23 @@ a.color1:hover {
   width: 100%!important;
   height: 100%!important;
 }
+
+.margin-right-sm{
+  margin-right: 5px;
+}
+
+.float-left{
+  float: left;
+}
+
+.clear{
+  clear: both;
+}
+/*Overridden bootstrap*/
+.modal-sm .modal-content{
+  width:500px!important;
+}
+.btn{
+  border-radius: 0!important;
+}
 /****END OF CUSTOM CSS ****/

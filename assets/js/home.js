@@ -32,6 +32,36 @@ $(function(){
    })
   }
  }
+// CUSTOM JS
+$(".warning_msg").hide();
+ $(".login_button").click(function(e){
+  e.preventDefault();
+  var pwd=$(".password").val();
+  var uname = $(".user_name").val();
+
+  if (pwd == "" || uname == "") {
+    $(".warning_msg").slideDown();
+  }else{
+    //alert(pwd);alert(uname);return;
+    $.ajax({
+      type:"POST",
+      url:"users/login",
+      data:{'username':uname,
+            'password':pwd
+            },
+            success:function(msg){
+              //alert(msg);
+              var redirection = "users/check_type/";
+              var full_url = redirection.concat(msg);
+
+              //alert(full_url);return;
+              window.location.href = full_url;
+            }
+    });
+  };
+
+ });
+ //END OF CUSTOM JS
 });
 var ua=navigator.userAgent.toLocaleLowerCase(),
  regV = /ipod|ipad|iphone/gi,
