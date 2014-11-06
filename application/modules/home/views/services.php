@@ -29,7 +29,7 @@
 <!--==============================
               header
 =================================-->
-<header>
+<header class="hed">
   <div class="container">
     <div class="row">
       <div class="grid_12 rel">
@@ -76,13 +76,13 @@
       <div class="grid_12">
         <h3>Mission</h3>    
       </div>
-      <div class="grid_3">
+      <div class="grid_2">
         <div class="text2 color1"><a href="#">Specialized Training</a></div>To provide not just education, but specialized training to make our students experts in their primary medical fields while maintaining high levels of professionalism, honesty and integrity
       </div>
-      <div class="grid_3">
+      <div class="grid_2">
         <div class="text2 color1"><a href="#">Vision</a></div>We are committed to being the most sort after mid-level) medical training college in Kenya and beyond
       </div>
-      <div class="grid_3">
+      <div class="grid_2">
         <div class="text2 color1"><a href="#">Medical Standards</a></div>Providing tertiary education that meets the current trends in medicare provisions in Kenya and beyond)
       </div>
       <div class="grid_3">
@@ -99,7 +99,7 @@
   <article class="content_gray offset__2">
     <div class="container">
       <div class="row">
-        <div class="grid_4">
+        <div class="grid_3">
           <h3>Undertaking</h3>
           <ul class="list-1">
             <li><a href="#">Provide first class training for Community Health Workers ), Clinical Officers, Registered Nurses and other Mid-Level Medical Practitioners</a></li>
@@ -109,7 +109,7 @@
             
           </ul>
         </div>
-        <div class="grid_4">
+        <div class="grid_3">
           <h3>Keys To Success</h3>
           <div class="block-2">
             <!-- <img src="images/page3_img1.jpg" alt="" class="img_inner fleft"> -->
@@ -130,7 +130,7 @@
             </div>
           </div> -->
         </div>
-        <div class="grid_3 preffix_1">
+        <div class="grid_4 preffix_1">
           <h3>Objectives</h3>
           <div class="block-2">
               <!-- <div class="text1"><a href="#"> Ipsumen Dertol</a></div> -->
@@ -193,12 +193,12 @@
 <!-- Modal -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content modcont">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <h4 class="modal-title" id="myModalLabel">Organizational Structure</h4>
       </div>
-      <div class="modal-body">
+      <div  class="modal-body">
         <img src="<?php echo base_url() .'assets/images/Organization.jpg'?>" alt="" class="img_inner fleft">
       </div>
       <div class="modal-footer">

@@ -17,6 +17,11 @@ background-color: #ADADAD;
     overflow: auto;
 }
 
+.side-course{
+  overflow-x: auto;
+  position: relative;
+}
+
 .navbar{
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0;
@@ -24,6 +29,8 @@ background-color: #ADADAD;
   margin-bottom: 20px;
   height:70px;
 }
+
+
 
 .navbar-default .navbar-brand{
 	color:#27ae60;
@@ -577,6 +584,16 @@ margin: 30px 20px;
   opacity:0.7;
 }
 
+.not_home{
+  font-weight: 23;
+  background-color: #FFF;
+}
+
+/*#stuck_container{
+    font-weight: 23;
+  background-color: #FFF;
+}*/
+
 header.dark nav ul li a{
   color:#000099;
   
@@ -616,13 +633,28 @@ header nav{
 
 
 .sf-menu > li > a {
-color: #000000 !important;
+color: #666666 !important;
 }
 
-.sf-menu > li.sfHover > a, .sf-menu > li.current > a, .sf-menu > li > a{
-color:#000;
+.sf-menu > li > a{
+  color: #666666 !important;;
 }
 
+
+.hed {
+  color: #e6e5e5;
+  display: block;
+  position: relative;
+  z-index: 999;
+  width: 100%!important;
+  background: url(../images/banner.jpg) center 0 no-repeat !important;
+  background-size: cover;
+}
+
+.modcont{
+  width:600px; 
+  height:500px;
+}
 
 
 

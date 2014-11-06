@@ -10,6 +10,7 @@
 <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
 <link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
 <link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
+<link rel="stylesheet" href="<?php echo base_url() .'assets/stylesheets/style.css'?>">
 
 
 
@@ -34,9 +35,7 @@
     <div class="row">
       <div class="grid_12 rel">
         <h1>
-          <a href="index.html">
-            <img src="images/logo.png" alt="Logo alt">
-          </a>
+          
         </h1>
       </div>
     </div>
@@ -45,10 +44,10 @@
   <!--==============================
               Stuck menu
   =================================-->
-    <div class="container">
+    <div class="container" class="not_home">
       <div class="row">
         <div class="grid_12 ">
-          <div class="navigation ">
+          <div class="navigation">
             <nav>
               <ul class="sf-menu">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
@@ -57,6 +56,7 @@
                
                <li class="current"><a href="#">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
+               <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
              </ul>
             </nav>
             <div class="clear"></div>

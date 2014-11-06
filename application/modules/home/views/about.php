@@ -22,7 +22,7 @@
     <header class="wrapper dark">
       
       <nav>
-        <ul>  
+        <ul class="sf-menu">  
           <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
           <li><a class="active" href="">Premeable</a></li>
           <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
