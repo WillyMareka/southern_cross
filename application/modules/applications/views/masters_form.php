@@ -32,10 +32,11 @@
       <ul class="nav navbar-nav">
 		
         <li><a href="<?php echo base_url()."home"; ?>">Home</a></li>
-        <li><a href="<?php echo base_url()."applications/doctoral"; ?>">Doctoral</a></li>
+        <li><a href="<?php echo base_url()."applications/doctoral"; ?>">Diploma</a></li>
         <li class="active"><a href="#">Masters</a></li>
-        <li><a href="<?php echo base_url()."applications/bachelor"; ?>">Bachelor</a></li>
-        <li><a href="<?php echo base_url()."applications/undergraduate"; ?>">Under-Graduate</a></li>
+        <li><a href="<?php echo base_url()."applications/bachelor"; ?>">Certicate</a></li>
+        <li><a href="<?php echo base_url()."applications/undergraduate"; ?>">Short Courses</a></li>
+        <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
        
       </ul>
       

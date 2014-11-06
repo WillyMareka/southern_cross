@@ -59,8 +59,9 @@
         <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
         <li></li>
         <li class="leftdist"><a href="<?php echo base_url().'applications/diploma'?>">Diploma</a></li>
-        <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li>
+        <li><a href="<?php echo base_url(). 'applications/certificate'?>">Certificate</a></li>
         <li class="appactive"><a href="#">Short Courses</a></li>
+        <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
         
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>

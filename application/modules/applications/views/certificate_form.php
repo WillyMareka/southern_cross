@@ -61,6 +61,7 @@
         <li class="leftdist"><a href="<?php echo base_url().'applications/diploma'?>">Diploma</a></li>
         <li class="appactive"><a href="#">Certificate</a></li>
         <li><a href="<?php echo base_url().'applications/certificate'?>">Short Courses</a></li>
+        <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
         
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
