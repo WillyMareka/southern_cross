@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Services</title>
+<title>About Us</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
+ <link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/flat-ui/bootstrap/css/bootstrap.css'?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/flat-ui/css/flat-ui.css'?>" />
 <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
 <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
 <link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
@@ -50,8 +52,8 @@
             <nav>
               <ul style="backgound-color:#FFF;" class="sf-menu" style="color:#000">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-               <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
-               <li class="current"><a href="#">Services</a></li>
+               <!-- <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li> -->
+               <li class="current"><a href="#">About Us</a></li>
               
                <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
@@ -170,19 +172,44 @@
         </div>
            Backed by highly skilled and professional staff, which is our greatest resource, we are able to deliver outstanding performance through demonstrated experience & expertise in all aspects of Academics and Management of the Medical College
       </div>
-      <div class="grid_4">
+      <div class="grid_3">
         <!-- <img src="images/page3_img5.jpg" alt="" class="img_inner fleft"> -->
         <div class="extra_wrapper">
           <p class="fwn"><a href="#">Organization Structure</a></p>
           <p class="offset__1">--</p>
         </div>
-        <p>1.  Executives</p>
+        <!-- <p>1.  Executives</p>
         <p>2.  Qualified Lecturers</p>
         <p>3.  Teaching Professionals</p>
         <p>4.  Administrative Professionals</p>
-        <p>5.  Skilled Manpower</p>
-
+        <p>5.  Skilled Manpower</p> -->
+     <img width="450px" height="300px" src="<?php echo base_url() .'assets/images/Organization.jpg'?>" alt="" class="img_inner fleft">
       </div>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+  Click for larger View
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Organizational Structure</h4>
+      </div>
+      <div class="modal-body">
+        <img src="<?php echo base_url() .'assets/images/Organization.jpg'?>" alt="" class="img_inner fleft">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </div>
   </div>
 </section>
@@ -206,13 +233,17 @@
 <script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap.min.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-select.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-switch.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-checkbox.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-radio.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
 <script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
-
 <script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
 
 <script>

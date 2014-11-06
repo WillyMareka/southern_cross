@@ -4,6 +4,8 @@
 <title>Contacts</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/flat-ui/bootstrap/css/bootstrap.css'?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/flat-ui/css/flat-ui.css'?>" />
 <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
 <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
 <link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
@@ -50,8 +52,8 @@
             <nav>
               <ul class="sf-menu">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-               <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
-               <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
+               
+               <li><a href="<?php echo base_url(). 'home/services'?>">Programs Offered</a></li>
                
                <li class="current"><a href="#">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
@@ -172,6 +174,11 @@
 <script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap.min.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-select.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-switch.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-checkbox.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-radio.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
 <script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>

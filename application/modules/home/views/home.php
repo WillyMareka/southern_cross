@@ -54,10 +54,10 @@
               <nav>
                 <ul class="sf-menu" style="color:#FFF">
                  <li class="current"><a href="#">Home</a></li>
-                 <li><a href="<?php echo base_url(). 'home/programs'?>">Programs Offered</a></li>
-                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
-                 <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
+                 <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
+                 <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+                 <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
                  
                </ul>
         </nav>
@@ -72,19 +72,20 @@
       <div class="container">
         <div class="row">
           <div class="grid_4">
-            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight">
+
+            <a href="<?php echo base_url(). 'applications/certificate'?>" class="banner "><div class="maxheight">
               <div class="fa fa-globe"></div>Certificate</div>
             </a>
-            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'applications/diploma'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-briefcase"></div>Diploma</div>
             </a>
-            <!-- <a href="#" class="banner "><div class="maxheight">
-              <i class="fa fa-line-chart"></i>Masters</div>
-            </a> -->
-            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-cog"></div>Short Courses</div>
             </a>
-            
+            <a href="<?php echo base_url(). 'home/about'?>" class="banner "><div class="maxheight">
+              <i class="fa fa-line-chart"></i>Preamble</div>
+            </a>
+
           </div>
           <div class="grid_5">
             <h2>Southern Cross Institute of Tropical Medicine</h2>
@@ -330,12 +331,7 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
   </footer>
   <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
+
 
 <script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
@@ -358,6 +354,12 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
     color: #fff !important;
   }
 </style>
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
 
 </body>
 </html>
