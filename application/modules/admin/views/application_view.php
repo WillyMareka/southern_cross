@@ -50,41 +50,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                        $i=1; 
-                                        foreach ($application as $value) {
-                                        $id = $value['applicant_id'];
-                                    ?>
-                                    <tr>
-                                        <td><?php echo $i; ?></td>
-                                        <td><?php echo $value['f_name'];?></td>
-                                        <td><?php echo $value['s_name'];?></td>
-                                        <td><?php echo $value['l_name'];?></td>
-                                        <td><?php echo $value['citizenship'];?></td>
-                                        <td><?php echo $value['gender'];?></td>
-                                        <td><?php echo $value['dob'];?></td>
-
-                                    <?php
-                                        if($value['status'] == 1)
-                                        {
-                                            $span = "<span class='label label-warning'>Pending</span>";
-                                        }else if ($value['status'] == 2)
-                                        {
-                                            $span = "<span class='label label-success'>Approved</span>";
-                                        }
-                                        else if ($value['status'] == 3)
-                                        {
-                                            $span = "<span class='label label-danger'>Rejected</span>";
-                                        }
-                                    ?>
-                                        
-                                        <td><center><?php echo $span;?></center></td>
-                                        <td><center><a href="javascript:void(null)" onclick="applications(<?php echo $value['applicant_id']?>)"><span class="fa fa-edit" style="color:#0DCAF2"></span></a></center></td>
-                                    </tr>
-                                    <?php
-                                        $i++;
-                                        }
-                                    ?>
+                                   <?php echo $application; ?>
                                 </tbody>
                             </table>
                         </div>

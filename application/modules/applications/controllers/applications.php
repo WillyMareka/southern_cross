@@ -44,11 +44,12 @@ class Applications extends MY_Controller
 			$data = array('upload_data' => $this->upload->data());
 			// print_r($data);exit;
 			foreach ($data as $key => $value) {
-				$path = base_url().'applicant/'.$value['file_name'];
+				$path = base_url().'applicant_data/applicant_pictures/'.$value['file_name'];
 			}
 			// echo "THIS WORkS".$path;die;
 
-			$this->m_applications->add_applicant($path);
+			$value = $this->m_applications->add_applicant($path);
+			echo $value;die;
 
 		}
 
