@@ -10,16 +10,16 @@ class Applications extends MY_Controller
 		// $this->load->view('v_application');
 	}
 
-	function doctoral(){
-      $this->load->view('doctoral_form');
+	function short_courses(){
+      $this->load->view('short_courses_form');
 	}
 
 	function masters(){
       $this->load->view('masters_form');
 	}
 
-	function bachelor(){
-      $this->load->view('bachelor_form');
+	function certificate(){
+      $this->load->view('certificate_form');
 	}
 
 	function diploma(){

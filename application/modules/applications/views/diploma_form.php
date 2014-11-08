@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
 		
-		<title>Diploma/Certificate Application Form</title>
+		<title>Diploma Application Form</title>
 		<link rel="icon" type="image/x-icon" href="<?php echo base_url(). 'assets/icons/hospital.ico'?>" />
 		<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/bootstrap/css/bootstrap.css'?>"/>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/kickstart/css/fonts/font-awesome/css/font-awesome.min.css'?>">
@@ -23,7 +23,7 @@
 		<center><p class="top_header clearfix ">SOUTHERN CROSS</p></center>
 		<center><p class="top_mini_header clearfix">INSTITUTE OF TROPICAL MEDICINE</p></center>
 		 -->
-		<div class="form_title"><strong><h2>DIPLOMA & CERTIFICATE APPLICATION FORM</h2></strong></div>
+		<div class="form_title"><strong><h2>DIPLOMA APPLICATION FORM</h2></strong></div>
 		<div class=" logo_information">
 		</div>
 		
@@ -59,8 +59,9 @@
         <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
         <li></li>
         <li class="appactive leftdist"><a href="#">Diploma</a></li>
-        <li><a href="#">Certificate</a></li>
-        <li><a href="#">Short Courses</a></li>
+        <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li>
+        <li><a href="<?php echo base_url().'applications/short_courses'?>">Short Courses</a></li>
+        <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
         
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>

@@ -1,232 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Services</title>
-<meta charset="utf-8">
-<meta name="format-detection" content="telephone=no" />
-<link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
-<link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
-<link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
-<link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
+  <title>About</title>
+  <meta charset="utf-8">
+  <meta name="description" content="About Southern Cross"/>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/reset.css'?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/fancybox-thumbs.css'?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/fancybox-buttons.css'?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/fancybox.css'?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/animate.css'?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/main.css'?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/stylesheets/style.css'?>">
 
 
-<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
-<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
 
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
-<!--[if lt IE 8]>
- <div style=' clear: both; text-align:center; position: relative;'>
-   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-   </a>
-</div>
-<![endif]-->
-<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<link rel="stylesheet" media="screen" href="css/ie.css">
-<![endif]-->
+    
 </head>
+ <!-- <body style = "background-color: #999999 !important;">  -->
 <body>
-<!--==============================
-              header
-=================================-->
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="grid_12 rel">
-        <h1>
-          <a href="index.html">
-            <img src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt">
+  <section class="billboard light">
+    <header class="wrapper dark">
+      
+      <nav>
+        <ul class="sf-menu">  
+          <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
+          <li><a class="active" href="">Premeable</a></li>
+          <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
+          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcement</a></li>
+          <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div style="color:#0000FF"class="caption dark animated wow fadeInDown clearfix top-about">
+      <div class="topabout">
+      <h1>Southern Cross Institute of Tropical Medicine</h1>
+      <h4>MID-LEVEL MEDICAL TRAINING COLLEGE</h4>
+      </div>
+      <hr>
+    </div>
+    <div class="shadow"></div>
+  </section><!--  End billboard  -->
+
+    <!-- <section class="preamble">
+
+     <div class="premcontent animated wow fadeInDown">
+      <p class="buzconc">BUSINESS CONCEPT</p>
+      <p class="buzpre">Preamble</p>
+      <p class="buzcont">
+        Kenya has a strong health component in its “Vision 2030” policy, 
+        which aims to build a prosperous country with a high quality of life. 
+        Within this policy the delivery of community based services are a flagship project. 
+        Kenya revised its Community Strategy in 2007 as the vehicle to deliver the National Health Sector Strategic Plan. 
+        Vertical programs use close-to-community providers to deliver services including maternal and child health, HIV, TB and malaria with varying degrees of success. 
+        These programs have assisted the government to increase the number of trained community health workers and functional community units. 
+        The government through the Division of Community Health Services has developed a scheme of service for Community Health providers and is reviewing the community strategy model based on lessons learnt and experiences from other countries.
+      </p>
+    </div>
+
+<div class="shadow"></div>
+    </section> -->
+
+
+  <section class="video no-margin">
+    <div class="shadow"></div>
+
+    <img  alt="" class="video_logo animated wow fadeInDown"/>
+    <h3 class="animated wow fadeInDown">Video about Southern Cross</h3>
+    <a href="http://www.youtube.com/watch?v=uBcVE3tyI1w" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>
+  </section><!--  End video  -->
+
+
+  <section class="testimonials wrapper">
+    <div class="title animated wow fadeIn">
+      <h2>Management Team</h2>
+      <h3>A limited liability company incorporated in Kenya, made up of a team of professionals with a combined experience in medical services, project management and finance. The consortium of professionals has been put together for the sole purpose of running a Mid-Level Medical College. </h3>
+      <hr class="separator"/>
+    </div>
+
+    <ul class="clearfix">
+      <li class="animated wow fadeInDown">
+        <p><img src="<?php echo base_url() .'assets/images/quotes.png'?>" alt="" class="quotes"/>
+          Tumanka is a founding Executive Director and Project Driver, and will focus on day-to-day operations as well as fund raising and business development. Prior to setting up the Company, Tumanka was previously in AMREF where he was tasked with establishing a new Health Centre in Magadi and Somalia as an Anesthetist under the humanitarian mission. He ventured into lecturing and rose to the position of a College Principle.
+        <span class="triangle"></span>
+        </p>
+        <div class="client">
+          <!-- <img src="<?php echo base_url() .'assets/images/client1.jpg'?>" class="avatar"/> -->
+          <div class="client_details">
+            <h4>Tumanka Ole Kamuaro</h4>
+            <h5>Founder and Executive Director</h5>
+          </div>
+        </div>
+      </li>
+      <li class="animated wow fadeInDown"  data-wow-delay=".2s">
+        <p><img src="<?php echo base_url() .'assets/images/quotes.png'?>" alt="" class="quotes"/>
+          A holder of a BSc. Law and an Associate of the Chartered Institute of Bankers (ACIB), is a career banker with 26 years working experience in the local banking industry in several senior capacities. He is the Company’s Financial Director and brings on board both legal and financial expertise and a wealth of financial management strategies to ensure business sustainability and continuity.
+        <span class="triangle"></span>
+        </p>
+        <div class="client">
+          <!-- <img src="<?php echo base_url() .'assets/images/client2.jpg'?>" class="avatar"/> -->
+          <div class="client_details">
+            <h4>Davis Mareka </h4>
+            <h5>Co-Founder and Finance Director</h5>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section><!--  End testimonials  -->
+
+
+  <section class="blog_posts">
+    <div class="wrapper">
+      <div class="title animated wow fadeIn">
+        <h2>Recent Posts</h2>
+        <h3>Most recent activities</h3>
+        <hr class="separator"/>
+      </div>
+
+      <ul class="clearfix">
+        <li class="animated wow fadeInDown">
+          <div class="media">
+            <div class="date">
+              <span class="day">25</span>
+              <span class="month">Nov</span>
+            </div>
+            <a href="#">
+              <img src="<?php echo base_url() .'assets/images/signing.jpg'?>" alt=""/>
+            </a>
+          </div>
+          <a href="#">
+            <h1>Completion all signing of contracts for ownership</h1>
           </a>
-        </h1>
-      </div>
-    </div>
-  </div>
-  <section id="stuck_container">
-  <!--==============================
-              Stuck menu
-  =================================-->
-    <div class="container">
-      <div class="row">
-        <div class="grid_12 ">
-          <div class="navigation ">
-            <nav>
-              <ul style="backgound-color:#FFF;" class="sf-menu">
-               <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-               <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
-               <li class="current"><a href="#">Services</a></li>
-               <li><a href="<?php echo base_url(). 'home/blog'?>">Blog</a></li>
-               <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
-               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
-             </ul>
-            </nav>
-            <div class="clear"></div>
-          </div>       
-         <div class="clear"></div>  
-        </div>
-     </div> 
-    </div> 
-  </section>
-</header>
-<!--=====================
-          Content
-======================-->
-<section id="content"><div class="ic">SouthernCross @ www.southerncrossinstitute.edu - July 28, 2014!</div>
-  <div class="container">
-    <div class="row">
-      <div class="grid_12">
-        <h3>Mission</h3>    
-      </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Specialized Training</a></div>To provide not just education, but specialized training to make our students experts in their primary medical fields while maintaining competitive rates. 
-      </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Admiration</a></div>We are committed to being the most admired medical training college in Kenya
-      </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Medical Standards</a></div>Providing tertiary education that meets the required medical standards in East and Central Africa, and the European and American market
-      </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Institute Continuation</a></div>Professionally manage the institution to run efficiently and operating cost-effectively
-      </div>
-      <!-- <div class="grid_2">
-        <div class="text2 color1"><a href="#">Еestibu dertolo</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div>
-      <div class="grid_2">
-        <div class="text2 color1"><a href="#">Nolutpaersa fert</a></div>Curabitur vel lorem sitmet nulla ullamcorper mentum In vitae dert rius augue, eu consectetur ligulaam dui eros dertolisce dertoloing quam id risus sagittis
-      </div> -->
-    </div>
-  </div>
-  <article class="content_gray offset__2">
-    <div class="container">
-      <div class="row">
-        <div class="grid_4">
-          <h3>Services List</h3>
-          <ul class="list-1">
-            <li><a href="#">Provide first-class training for Community Health Officers, Clinical Officers, Registered Nurses and other Mid-Level Medical Practitioners</a></li>
-            <li><a href="#">Engage and sustain a highly qualified staff in academics and administration</a></li>
-            <li><a href="#">Provide consistent and reliable service to students and sponsors</a></li>
-            <li><a href="#">Meet Service Level Agreements</a></li>
-            
-          </ul>
-        </div>
-        <div class="grid_4">
-          <h3>Keys</h3>
-          <div class="block-2">
-            <!-- <img src="images/page3_img1.jpg" alt="" class="img_inner fleft"> -->
-            <div class="extra_wrapper">
-              <div class="text1"><a href="#">To Success</a></div>
-                <p>• Provide a market-needed educational training.</p>
-                <p>• Be as convenient as possible.</p>
-                <p>• Employ strict financial controls.</p>
+        </li>
 
+        <li class="animated wow fadeInDown" data-wow-delay=".2s">
+          <div class="media">
+            <div class="date">
+              <span class="day">15</span>
+              <span class="month">Dec</span>
             </div>
-          </div>
-          <!-- <div class="block-2 offset__1">
-            <img src="images/page3_img2.jpg" alt="" class="img_inner fleft">
-            <div class="extra_wrapper">
-              <div class="text1"><a href="#">Olquam nibh ante</a></div>
-              Trabitur vel lorem sit amet nulla ullamcorper fermentum In vitae varius augue, eu consectetur ligulaam dui eroserty.
+            <a href="#">
+              <img src="<?php echo base_url() .'assets/images/construction.jpg'?>" alt=""/>
+            </a>
+          </div>          
+          <a href="#">
+            <h1>Completion of the construction</h1>
+          </a>
+        </li>
+
+        <li class="animated wow fadeInDown" data-wow-delay=".4s">
+          <div class="media">
+            <div class="date">
+              <span class="day">1</span>
+              <span class="month">Jan</span>
             </div>
-          </div> -->
-        </div>
-        <div class="grid_3 preffix_1">
-          <h3>Objectives</h3>
-          <div class="block-2">
-              <!-- <div class="text1"><a href="#"> Ipsumen Dertol</a></div> -->
-                <p>• Create job opportunities for the youth in the East & Central African region</p>
-                <p>• Become the premier medical college in the East & Central African region</p>
-                <p>• Attain profitability within the first 2 years and a balanced strategic growth</p>
-                <p>• Achieve country market penetration of 10% by year 3 and 15% by year 5</p>
-
+            <a href="#">
+              <img src="<?php echo base_url() .'assets/images/website.jpg'?>" alt=""/>
+            </a>
           </div>
-          <!-- <div class="block-2 ">
-              <div class="text1"><a href="#">Setorem Osumen</a></div>
-              Nurabitur vel lorem sit amet nulla corper fermentum In vitae varius augue, eu ctetur ligulaam dui eroserty. Fusce adipiscing quam id risus sagittis, non consequat lacus  <br> <a href="#" class="link-1">more</a> 
-          </div> -->
-        </div>
-      </div>
+          <a href="#">
+            <h1>Launching of the college website</h1>
+          </a>
+        </li>
+
+        <li class="animated wow fadeInDown" data-wow-delay=".6s">
+          <div class="media">
+            <div class="date">
+              <span class="day">10</span>
+              <span class="month">Jan</span>
+            </div>
+            <a href="#">
+              <img src="<?php echo base_url() .'assets/images/opening.jpg'?>" alt=""/>
+            </a>
+          </div>
+          <a href="#">
+            <h1>
+              Official opening of the college
+                </h1>
+        </a>
+        </li>
+      </ul>
     </div>
-  </article>
-  <div class="container">
-    <div class="row">
-      <div class="grid_12">
-        <h3>Values</h3>
-      </div>
-      <div class="grid_4">
-        <!-- <img src="images/page3_img3.jpg" alt="" class="img_inner fleft"> -->
-        <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Our Management Principles</a></p>
-          <p class="offset__1">--</p>
-        </div>
-          <p>1.  Committing to client satisfaction as our most important business objective</p>
-          <p>2.  Maintaining the highest standards of professionalism and academic excellence</p>
-          <p>3.  Maintaining the highest standards of ethics and business conduct and operating at all times within the laws of Kenya and the by-laws of counties in which we do business</p>
-          <p>4.  Encourage initiative, recognize individual contribution, and treat each person with respect and fairness</p>
-          <p>5.  Identifying and responding aggressively to new opportunities, and committing to success in each undertaking</p>
-
-      </div>
-      <div class="grid_4">
-        <!-- <img src="images/page3_img4.jpg" alt="" class="img_inner fleft"> -->
-        <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Our Team</a></p>
-          <p class="offset__1">--</p>
-        </div>
-          Backed by highly skilled and professional staff, which is our greatest resource, we are able to deliver outstanding performance through demonstrated experience & expertise in all aspects of Academics and Management of the Medical College. 
-      </div>
-      <div class="grid_4">
-        <!-- <img src="images/page3_img5.jpg" alt="" class="img_inner fleft"> -->
-        <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Our team includes</a></p>
-          <p class="offset__1">--</p>
-        </div>
-        <p>1.  Executives</p>
-        <p>2.  Qualified Lecturers</p>
-        <p>3.  Teaching Professionals</p>
-        <p>4.  Administrative Professionals</p>
-        <p>5.  Skilled Manpower</p>
-
-      </div>
-    </div>
-  </div>
-</section>
-<!--==============================
-              footer
-=================================-->
-<footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="grid_12"> 
-        <div class="copyright"><span class="brand">SouthernCross</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
-          <div class="sub-copy">p</div>
-        </div>
-      </div>
-    </div>
-  </div>  
-</footer>
-<a href="#" id="toTop" class="fa fa-chevron-up"></a>
+  </section><!--  End blog_posts  -->
 
 
-<script src="<?php echo base_url(). 'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/jquery.ui.totop.js'?>"></script>
+  <footer>
+    <div class="wrapper">
+      <div class="rights">
+        
+        <p>© Southern Cross. All Rights Reserved 2014 - Medical Institute at <a href="http://southerncrossinstitute.edu" target="_blank">SouthernCrossInstitute.edu</a></p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
+          <li><a class="active" href="">About Us</a></li>
+          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcement</a></li>
+          <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>    
+  </footer><!--  End footer  -->
+    
+    <script src="<?php echo base_url() .'assets/js/jquery2.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/fancybox.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/fancybox-buttons.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/fancybox-media.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/fancybox-thumbs.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/wow.js'?>"></script>
+    <script src="<?php echo base_url() .'assets/js/main2.js'?>"></script>
 </body>
 </html>
