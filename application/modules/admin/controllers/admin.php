@@ -103,6 +103,7 @@ class Admin extends MY_Controller
 		$applicant_array = $this->getapplicantdetails($a_id);
 		$data['content_view'] = "applicant_view";
 		$data['application'] = $applicant_array;
+		$data['education'] = $this->m_admin->getApplicantInstitutions($a_id);
 		$this->load->view('admin_view', $data);
 	}
 	public function getapplicantdetails($applicant_id)

@@ -14,7 +14,6 @@ class M_admin extends MY_Model {
        $query = $this->db->query(
                 "SELECT * FROM applicant_personal_info api
                JOIN applicant_guardian_info agi ON agi.applicant_id = api.applicant_id
-               JOIN applicant_educational_institutions aei ON aei.applicant_id = api.applicant_id
                JOIN applicant_education_info aeinfo ON aeinfo.applicant_id = api.applicant_id
                JOIN applicant_contact_info aci ON aci.applicant_id = api.applicant_id
                JOIN applicant_course ac ON ac.applicant_id = api.applicant_id
@@ -25,6 +24,12 @@ class M_admin extends MY_Model {
        return $result;
     }
 
+    public function getApplicantInstitutions($a_id)
+    {
+        $query = $this->db->get_where('applicant_educational_institutions', array('applicant_id' => $a_id));
+        $result = $query->result_array();
+        return $result;
+    }
     function get_staff()
     {
         $sql = "SELECT
