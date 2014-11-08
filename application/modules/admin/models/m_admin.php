@@ -18,6 +18,8 @@ class M_admin extends MY_Model {
                JOIN applicant_contact_info aci ON aci.applicant_id = api.applicant_id
                JOIN applicant_course ac ON ac.applicant_id = api.applicant_id
                JOIN courses ON courses.course_id = ac.course_id
+               JOIN application_approvals aa ON aa.applicant_id = api.applicant_id
+               WHERE aa.status = 0 
                ");
        $result = $query->result_array();
 
@@ -114,7 +116,7 @@ class M_admin extends MY_Model {
         $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.")");
         if($query)
         {
-            echo "true";
+            $query = $this->db->query("UPDATE application_approvals SET status = 1 WHERE applicant_id = " .$a_id);
         }
         else
         {
