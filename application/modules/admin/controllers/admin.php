@@ -119,6 +119,35 @@ class Admin extends MY_Controller
 
 		return $applicant_details;
 	}
+
+	public function acceptApplicant($a_id)
+	{
+		$applicant_details = $this->getapplicantdetails($a_id);
+
+		$course_short_code = $applicant_details['course_short_code'];
+		$intake = $applicant_details['intake'];
+
+		$admission_month = date("m");
+
+		$students_in_course = $this->m_admin->getCourseById($course_short_code);
+		$noofstudents = count($students_in_course);
+		$noofstudents++;
+
+		if($noofstudents < 10)
+		{
+			$noofstudents = '00' . $noofstudents;
+		}
+		else if($noofstudents < 100)
+		{
+			$noofstudents = '0' . $noofstudents;
+		}
+
+		$student_no = $course_short_code .'/' . $noofstudents . '/' . $admission_month . '/' . $intake;
+
+		$saved = $this->m_admin->save_student($student_no, $course_short_code, $a_id);
+
+	}
+
 	
 }
 

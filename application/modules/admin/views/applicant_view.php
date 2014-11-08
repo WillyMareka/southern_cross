@@ -125,8 +125,8 @@
 					?>
 				</table>
 			</div>
-			<a class = "btn btn-success"><i class = "fa fa-save"></i> Accept Student</a>
-			<a class = "btn btn-danger"><i class = "fa fa-user"></i> Decline Student</a>
+			<a class = "btn btn-success" href = "<?php echo base_url() .'admin/acceptApplicant/'.$applicant_id?>"><i class = "fa fa-save"></i> Accept Student</a>
+			<a class = "btn btn-danger" href = "<?php echo base_url() .'admin/rejectApplicant/'.$applicant_id?>"><i class = "fa fa-user"></i> Decline Student</a>
 		</div>
 		<div></div>
 	</div>

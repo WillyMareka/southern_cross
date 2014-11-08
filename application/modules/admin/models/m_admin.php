@@ -100,6 +100,27 @@ class M_admin extends MY_Model {
         $result = $this->db->query($query);
     }
 
+    function getCourseById($course_id)
+    {
+        $query = $this->db->get_where('student_course', array('course_id' => $course_id));
+
+        $result = $query->result_array();
+
+        return $result;
+    }
+
+    function save_student($student_no, $course_short_code, $a_id)
+    {
+        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.")");
+        if($query)
+        {
+            echo "true";
+        }
+        else
+        {
+            echo "false";
+        }
+    }
 
    
 }
