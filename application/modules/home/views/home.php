@@ -54,10 +54,10 @@
               <nav>
                 <ul class="sf-menu" style="color:#FFF">
                  <li class="current"><a href="#">Home</a></li>
-                 <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
+                 <!-- <li><a href="<?php //echo base_url(). 'announcements/announce'?>">Announcements</a></li> -->
+                 <li><a href="<?php echo base_url(). 'home/programs'?>">Programs Offered</a></li>
+                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
-                 <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
-                 <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
                  
                </ul>
         </nav>
@@ -72,20 +72,19 @@
       <div class="container">
         <div class="row">
           <div class="grid_4">
-
-            <a href="<?php echo base_url(). 'applications/certificate'?>" class="banner "><div class="maxheight">
+            <a href="#" class="banner" data-toggle="modal" data-target="#login_modal"><div class="maxheight">
+              <i class="fa fa-user"></i>Login</div>
+            </a>
+            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight">
               <div class="fa fa-globe"></div>Certificate</div>
             </a>
-            <a href="<?php echo base_url(). 'applications/diploma'?>" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-briefcase"></div>Diploma</div>
             </a>
-            <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-cog"></div>Short Courses</div>
             </a>
-            <a href="<?php echo base_url(). 'home/about'?>" class="banner "><div class="maxheight">
-              <i class="fa fa-line-chart"></i>Preamble</div>
-            </a>
-
+            
           </div>
           <div class="grid_5">
             <h2>Southern Cross Institute of Tropical Medicine</h2>
@@ -126,6 +125,33 @@
   <!--=====================
             Content
   ======================-->
+  <!--Login modal -->
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+      <?php $attr = array('id' =>"login_form",'name' => "login_form"); echo form_open("users/login",$attr); ?>
+      <label for="user_name">User name:* </label>
+      <input type="text" class="input form-control user_name" name="user_name" required title="Please fill in the required fields">
+      <label for="password">Password:* </label>
+      <input type="password" class="input form-control password" name="password" required title="Please fill in the required fields">
+      <p class="warning_msg">**Please ensure all fields are filled**</p>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary margin-right-sm login_button">Login</button>
+        <?php echo form_close(); ?>
+      </div>
+  </div>
+</div>
+</div>
+
+
   <section id="content">
     <div class="container">
       <div class="row">
@@ -331,12 +357,17 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
   </footer>
   <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
-
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
 
 <script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/bootstrap/js/bootstrap.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap.min.js'?>"></script>
       <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-select.js'?>"></script>
       <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-switch.js'?>"></script>
       <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-checkbox.js'?>"></script>
@@ -347,21 +378,12 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
 <script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
-<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
 <style type="text/css">
   .mynav > nav > ul > li > a
   {
     color: #fff !important;
   }
 </style>
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-
- 
-</script>
 
 </body>
 </html>
