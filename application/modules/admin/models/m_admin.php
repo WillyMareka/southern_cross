@@ -11,65 +11,27 @@ class M_admin extends MY_Model {
 
     public function applications()
     {
+       $query = $this->db->query(
+                "SELECT * FROM applicant_personal_info api
+               JOIN applicant_guardian_info agi ON agi.applicant_id = api.applicant_id
+               JOIN applicant_education_info aeinfo ON aeinfo.applicant_id = api.applicant_id
+               JOIN applicant_contact_info aci ON aci.applicant_id = api.applicant_id
+               JOIN applicant_course ac ON ac.applicant_id = api.applicant_id
+               JOIN courses ON courses.course_id = ac.course_id
+               JOIN application_approvals aa ON aa.applicant_id = api.applicant_id
+               WHERE aa.status = 0 
+               ");
+       $result = $query->result_array();
 
-        $sql = "SELECT `api`.`applicant_id`,
-                        `api`.`f_name`,
-                        `api`.`s_name`,
-                        `api`.`l_name`,
-                        `api`.`dob`,
-                        `api`.`gender`,
-                        `api`.`citizenship`,
-                        `api`.`status`,
-                        `aei`.`entry_id`,
-                        `aei`.`applicant_id`,
-                        `aei`.`yrs_of_english`,
-                        `aei`.`primary_level`,
-                        `aei`.`secondary_level`,
-                        `aeis`.`institution_name`,
-                        `agi`.`sponsor_names`
-                    FROM `applicant_personal_info` `api`
-                    LEFT JOIN `applicant_education_info` `aei`
-                    ON `api`.`applicant_id` = `aei`.`applicant_id`
-                    LEFT JOIN `applicant_educational_institutions` `aeis`
-                    ON `api`.`applicant_id` = `aeis`.`applicant_id`
-                    LEFT JOIN `applicant_guardian_info` `agi`
-                    ON `api`.`applicant_id` = `agi`.`applicant_id`
-                    ";
-
-                    // echo $sql;die();
-        $res = $this->db->query($sql);
-
-        return $res->result_array();
+       return $result;
     }
 
- public function application($id)
+    public function getApplicantInstitutions($a_id)
     {
-        $sql = "SELECT `api`.`applicant_id`,
-                        `api`.`f_name`,
-                        `api`.`s_name`,
-                        `api`.`l_name`,
-                        `api`.`dob`,
-                        `api`.`gender`,
-                        `api`.`citizenship`,
-                        `api`.`status`,
-                        `aei`.`entry_id`,
-                        `aei`.`applicant_id`,
-                        `aei`.`yrs_of_english`,
-                        `aei`.`secondary_level`
-                    FROM `applicant_personal_info` `api`
-                    LEFT JOIN `applicant_education_info` `aei`
-                    ON `api`.`applicant_id` = `aei`.`applicant_id`
-                    WHERE `api`.`applicant_id` = '$id'
-                    ";
-
-                    // echo $sql;die();
-        $res = $this->db->query($sql);
-
-        return $res->result_array();
-
+        $query = $this->db->get_where('applicant_educational_institutions', array('applicant_id' => $a_id));
+        $result = $query->result_array();
+        return $result;
     }
-
-
     function get_staff()
     {
         $sql = "SELECT
@@ -107,24 +69,6 @@ class M_admin extends MY_Model {
 
     }
 
-    function get_course_by_id($course_id)
-    {
-        $sql = "SELECT
-                    `course_id`,
-                    `course_name`,
-                    `course_short_code`,
-                    `Description`
-                FROM
-                    `courses`
-                WHERE `course_id` =".$course_id;
-
-        $courses = $this->db->query($sql);
-
-        return $courses->result_array();
-
-    }
-
-
     function add_application($path)
     {
         $firstname = strtoupper($this->input->post('firstname'));
@@ -158,55 +102,27 @@ class M_admin extends MY_Model {
         $result = $this->db->query($query);
     }
 
-    public function add_lecturer($path){
-        $lec_data = array();
-        $lec_course = $this->input->post('lec_course');
-        $firstname = strtoupper($this->input->post('firstname'));
-        $surname = strtoupper($this->input->post('surname'));
-        $othername = strtoupper($this->input->post('othername'));
-        $national_id = $this->input->post('passport_id');
-        $dob = $this->input->post('dob');
-        $gender = strtoupper($this->input->post('gender'));
-        $phone = $this->input->post('phonenumber');
-        $email = $this->input->post('lec_email');
-        $location = strtoupper($this->input->post('location'));
+    function getCourseById($course_id)
+    {
+        $query = $this->db->get_where('student_course', array('course_id' => $course_id));
 
-        $lec_info = array(
-            'course' => $lec_course,
-            'f_name' => $firstname,
-            's_name' => $surname,
-            'o_names' => $othername,
-            'national_id' => $national_id,
-            'dob' => $dob,
-            'gender' => $gender,
-            'email' => $email,
-            'phone_no' => $phone,
-            'profile_picture' => $path,
-            'status' => 1,
-            'location' => $location
+        $result = $query->result_array();
 
-         );
-        array_push($lec_data, $lec_info);
-        $this->db->insert_batch('lecturers',$lec_data);
-
-        $lec_table_id = mysql_insert_id();
-        $year=date('y');
- 
-
-        $course_details=$this->get_course_by_id($lec_course);
-        //UNCOMMENT THE BELOW CODE TO ADD THE COURSE SHORT CODE TO THE LECTURER ID.
-        //BE SURE TO COMMENT THE ONE BELOW IT UPON DECISION TO DO SO
-        $assigned_id = "CL\/".$course_details[0]['course_short_code']."\/".$lec_table_id."\/".date('y');
-        //$assigned_id = "CL\/".$lec_table_id."\/".date('y');
-        //echo $assigned_id;exit;
-
-        $query = "UPDATE `lecturers` SET `assigned_id`= '$assigned_id' WHERE id = '$lec_table_id'";
-
-        //echo $query;exit;
-        $update=$this->db->query($query);
-        
+        return $result;
     }
 
+    function save_student($student_no, $course_short_code, $a_id)
+    {
+        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.")");
+        if($query)
+        {
+            $query = $this->db->query("UPDATE application_approvals SET status = 1 WHERE applicant_id = " .$a_id);
+        }
+        else
+        {
+            echo "false";
+        }
+    }
 
    
 }
