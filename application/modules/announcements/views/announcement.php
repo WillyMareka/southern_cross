@@ -31,10 +31,10 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Application<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="<?php echo base_url(). 'applications/diploma'?>">Diploma</a></li>
-            <li><a href="#">Bachelor</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Masters</a></li>
-            <li><a href="#">Doctoral</a></li>
+            <li><a href="<?php echo base_url(). 'applications/certificate'?>">Certificate</a></li>
+            
+            <li><a href="<?php echo base_url(). 'applications/short_courses'?>">Short Courses</a></li>
+            
           </ul>
         </li>
       </ul>

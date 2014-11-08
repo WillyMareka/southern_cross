@@ -4,27 +4,16 @@
 <title>Contacts</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/flat-ui/bootstrap/css/bootstrap.css'?>"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/flat-ui/css/flat-ui.css'?>" />
 <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
 <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
 <link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
 <link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
+<link rel="stylesheet" href="<?php echo base_url() .'assets/stylesheets/style.css'?>">
 
 
-<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
-<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
-<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
+
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -46,9 +35,7 @@
     <div class="row">
       <div class="grid_12 rel">
         <h1>
-          <a href="index.html">
-            <img src="images/logo.png" alt="Logo alt">
-          </a>
+          
         </h1>
       </div>
     </div>
@@ -57,18 +44,16 @@
   <!--==============================
               Stuck menu
   =================================-->
-    <div class="container">
+    <div class="container" class="not_home">
       <div class="row">
         <div class="grid_12 ">
-          <div class="navigation ">
+          <div class="navigation">
             <nav>
               <ul class="sf-menu">
-               <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-               <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
-               <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
-               
-               <li class="current"><a href="#">Contacts</a></li>
+               <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>   
+               <li><a href="<?php echo base_url(). 'home/services'?>">Programs Offered</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
+               <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
              </ul>
             </nav>
             <div class="clear"></div>
@@ -89,7 +74,7 @@
         <h3>Contacts</h3>
         <div class="map">
           <figure class="">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3989.813079732551!2d34.768328!3d-0.092865!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1415209241149" width="600" height="450" frameborder="0" style="border:0"></iframe>
           </figure>
         </div>
       </div>
@@ -182,5 +167,27 @@
   </div>  
 </footer>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+
+<script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery-migrate-1.1.1.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.easing.1.3.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap.min.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-select.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/bootstrap-switch.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-checkbox.js'?>"></script>
+      <script src="<?php echo base_url(). 'assets/flat-ui/js/flatui-radio.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/home.js'?>"></script> 
+<script src="<?php echo base_url() .'assets/js/superfish.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.equalheights.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
+<script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
 </body>
 </html>

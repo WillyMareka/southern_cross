@@ -35,7 +35,7 @@
 						</div>
 
 					<!-- Nav -->
-						<nav id="nav">
+						<nav id="nav" class="side-course">
 							
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Courses Offered</span></a></li>
@@ -75,8 +75,8 @@
                 <ul style="display:inline-block;" class="menu right">
                  <li class="current"><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
-                 <li><a href="<?php echo base_url(). 'home/services'?>">Services</a></li>
-                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
+                 <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
+                 <li><a href="<?php echo base_url(). 'home/about'?>">Premeable</a></li>
                  
                  
                </ul>
