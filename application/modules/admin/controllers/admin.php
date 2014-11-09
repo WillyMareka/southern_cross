@@ -146,6 +146,8 @@ class Admin extends MY_Controller
 
 		$saved = $this->m_admin->save_student($student_no, $course_short_code, $a_id);
 
+		redirect("admin");
+
 	}
 
 	
