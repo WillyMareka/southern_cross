@@ -56,7 +56,7 @@
                  <li class="current"><a href="#">Home</a></li>
                  <!-- <li><a href="<?php //echo base_url(). 'announcements/announce'?>">Announcements</a></li> -->
                  <li><a href="<?php echo base_url(). 'home/programs'?>">Programs Offered</a></li>
-                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
+                 <li><a href="<?php echo base_url(). 'home/serives'?>">About</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
                  
                </ul>
