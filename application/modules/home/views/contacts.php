@@ -50,8 +50,11 @@
           <div class="navigation">
             <nav>
               <ul class="sf-menu">
-               <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>   
+               <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
+               
                <li><a href="<?php echo base_url(). 'home/services'?>">Programs Offered</a></li>
+               
+               <!-- <li class="current"><a href="#">Contacts</a></li> -->
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
                <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
                <li class="white-text"><a href="#" class="" data-toggle="modal" data-target="#login_modal">Login</a></li>
@@ -132,15 +135,17 @@
                     
                     <div class="clear"></div>
                     <div>
-                      <a href="#" class="btn" data-type="submit">Send e-mail</a>
+                      <a class="btn btn-primary" data-toggle="modal" data-type="submit" data-target="#sent">Send e-mail</a>
                     </div>
                   </fieldset> 
-                  <div class="modal fade response-message">
+
+                  <!-- Modal -->
+                  <div id="sent" class="modal fade response-message" >
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title">Modal title</h4>
+                          <h4 class="modal-title">Success</h4>
                         </div>
                         <div class="modal-body">
                           Your message has been sent! We will be in touch soon.
@@ -216,6 +221,7 @@
   $().UItoTop({ easingType: 'easeOutQuart' });
   $('#stuck_container').tmStickUp({});  
  }); 
+
 </script>
 </body>
 </html>

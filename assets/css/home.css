@@ -15,6 +15,7 @@
 .navigation {
   z-index: 999;
   position: relative;
+  /*left: -20px;*/
   padding: 35px 0;
   background: rgba(40, 40, 60, 0.5);
 }
