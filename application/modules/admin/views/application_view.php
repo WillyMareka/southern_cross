@@ -50,13 +50,28 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-<<<<<<< HEAD
-                                   <?php echo $application; ?>
-=======
+
+                                   <?php //echo $application; ?>
+
                                     <?php
                                         $i=1; 
                                         foreach ($application as $value) {
                                         $id = $value['applicant_id'];
+                                        switch ($value['month']) {
+                                             case '01': $month = "Jan";  break;
+                                             case '02': $month = "Feb";  break;
+                                             case '03': $month = "Mar";  break;
+                                             case '04': $month = "April";  break;
+                                             case '05': $month = "May";  break;
+                                             case '06': $month = "Jun";  break;
+                                             case '07': $month = "Jul"; break;
+                                             case '08': $month = "Aug";  break;
+                                             case '09': $month = "Sep";  break;
+                                             case '10': $month = "Oct";  break;
+                                             case '11': $month = "Nov";  break;
+                                             case '12': $month = "Dec";  break;
+                                             default:  $month = " ";     break;
+                                         }
                                     ?>
                                     <tr>
                                         <td><?php echo $i; ?></td>
@@ -65,17 +80,17 @@
                                         <td><?php echo $value['l_name'];?></td>
                                         <td><?php echo $value['citizenship'];?></td>
                                         <td><?php echo $value['gender'];?></td>
-                                        <td><?php echo $value['dob'];?></td>
+                                        <td><?php echo $month." ".$value['year'];?></td>
 
                                     <?php
-                                        if($value['status'] == 0)
+                                        if($value['status'] == 1)
                                         {
                                             $span = "<span class='label label-warning'>Pending</span>";
-                                        }else if ($value['status'] == 1)
+                                        }else if ($value['status'] == 2)
                                         {
                                             $span = "<span class='label label-success'>Approved</span>";
                                         }
-                                        else if ($value['status'] == 2)
+                                        else if ($value['status'] == 3)
                                         {
                                             $span = "<span class='label label-danger'>Rejected</span>";
                                         }
@@ -88,7 +103,7 @@
                                         $i++;
                                         }
                                     ?>
->>>>>>> 563767909a6b2d9d8cf2b4e6e9d3a32d6d9a24e4
+
                                 </tbody>
                             </table>
                         </div>

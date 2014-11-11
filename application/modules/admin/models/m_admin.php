@@ -16,7 +16,8 @@ class M_admin extends MY_Model {
                         `api`.`f_name`,
                         `api`.`s_name`,
                         `api`.`l_name`,
-                        `api`.`dob`,
+                        YEAR(`api`.`dob`) AS year,
+                        MONTH(`api`.`dob`) AS month,
                         `api`.`gender`,
                         `api`.`citizenship`,
                         `api`.`status`,
@@ -208,6 +209,19 @@ class M_admin extends MY_Model {
         //echo $query;exit;
         $update=$this->db->query($query);
         
+    }
+
+    public function get_gender_details()
+    {
+       $sql = "SELECT 
+                    COUNT(*) AS `total`,
+                    SUM(CASE WHEN `gender` = 'Female' AND `status` = 2 THEN 1 ELSE 0 END) AS `approved_female`,
+                    SUM(CASE WHEN `gender` = 'Male' AND `status` = 2 THEN 1 ELSE 0 END) AS `approved_male`,
+                    SUM(CASE WHEN `gender` = 'Female' AND `status` = 1 THEN 1 ELSE 0 END) AS `unapproved_female`,
+                    SUM(CASE WHEN `gender` = 'Male' AND `status` = 1 THEN 1 ELSE 0 END) AS `unapproved_male`,
+                SUM(CASE WHEN `gender` = 'Female' AND `status` = 3 THEN 1 ELSE 0 END) AS `rejected_female`,
+                    SUM(CASE WHEN `gender` = 'Male' AND `status` = 3 THEN 1 ELSE 0 END) AS `rejected_male`
+                FROM `applicant_personal_info`";
     }
 
 

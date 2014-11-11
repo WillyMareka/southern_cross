@@ -1,1 +1,0 @@
-ALTER TABLE `staff` ADD `identity` VARCHAR( 12 ) NOT NULL AFTER `phone_no` ;
