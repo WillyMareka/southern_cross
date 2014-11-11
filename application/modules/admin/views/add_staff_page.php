@@ -1,4 +1,9 @@
 <div>
+<script type="text/javascript">
+$(function(){
+	$("#dob").datepicker();
+});
+</script>
     <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
@@ -58,6 +63,10 @@
 				                             <div class="input-group" style="width: 100%;padding:4px;">
 				                                <span class="input-group-addon" style="width: 40%;">Staff Email@: </span>
 				                                <input class="textfield form-control" type="text" name="staff_email" id="staff_email" required/>
+				                            </div>
+				                            <div class="input-group" style="width: 100%;padding:4px;">
+				                                <span class="input-group-addon" style="width: 40%;">National ID/ Passport No: </span>
+				                                <input class="textfield form-control" type="text" name="identification" id="identification" required/>
 				                            </div>
 				                            <div class="input-group" style="width: 100%;padding:4px;">
 				                                <span class="input-group-addon" style="width: 40%;">Date of Birth: </span>

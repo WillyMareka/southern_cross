@@ -107,31 +107,38 @@
                   <div class="contact-form-loader"></div>
                   <fieldset>
                     <label class="name">
+
                       <input type="text" name="name" placeholder="Name:" value="" data-constraints="@Required @JustLetters"  />
                       <span class="empty-message">*This field is required.</span>
-                      <span class="error-message">*This is not a valid name.</span>
+                      <!-- <span class="error-message">*This is not a valid name.</span> -->
+                      
                     </label>
-                  
+                  <br>
                     <label class="email">
                      <br>
                       <input type="text" name="email" placeholder="E-mail:" value="" data-constraints="@Required @Email" />
                       <span class="empty-message">*This field is required.</span>
-                      <span class="error-message">*This is not a valid email.</span>
+                      <!-- <span class="error-message">*This is not a valid email.</span> -->
+                      
                     </label>
+                    <br>
 
                     <label class="phone">
                      <br>
                       <input type="text" name="phone" placeholder="Phone:" value="" data-constraints="@Required @JustNumbers" />
                       <span class="empty-message">*This field is required.</span>
-                      <span class="error-message">*This is not a valid phone.</span>
+                      <!-- <span class="error-message">*This is not a valid phone.</span> -->
+                      
                     </label>
-                   
+                   <br>
                     <label class="message">
                      <br>
                       <textarea name="message" placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
                       <span class="empty-message">*This field is required.</span>
-                      <span class="error-message">*The message is too short.</span>
+                      <!-- <span class="error-message">*The message is too short.</span> -->
+                      
                     </label>
+                    <br>
                     
                     <div class="clear"></div>
                     <div>
