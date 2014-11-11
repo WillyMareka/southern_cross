@@ -16,6 +16,7 @@
   z-index: 999;
   position: relative;
   padding: 35px 0;
+  background: rgba(40, 40, 60, 0.5);
 }
 .navigation .sf-menu {
   z-index: 990;
@@ -60,10 +61,10 @@
 }
 .sf-menu > li > a {
   position: relative;
-  color: #666666;
+  color: #ffffff;
   text-align: center;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 25px;
   margin-left: 35px;
 }
 .sf-menu > li > a.sf-with-ul:after {
@@ -894,6 +895,13 @@ a.color1:hover {
   max-height: 219px;
   margin:10px 0;
 }
+.login_link{
+    right: 0;
+    font-size: 2em;
+    float: right;
+    margin-top: 50px;
+    margin-right: 85px;
+}
 
 .float-left{
   float: left;
@@ -939,6 +947,9 @@ a.color1:hover {
   float: left;
 }
 
+.white-text > a{
+  color:white !important;
+}
 .clear{
   clear: both;
 }

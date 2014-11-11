@@ -40,7 +40,7 @@
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo base_url(). 'admin/index'?>">Log-In</a></li>
+        <li><a href="#" class="" data-toggle="modal" data-target="#login_modal">Login</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -117,6 +117,32 @@
     <center><h2>CERTIFICATION TO THE MEDICAL FRATERNITY!!!</h2></center>
   </div>
   </div>
+
+<!--Login modal -->
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+      <?php $attr = array('id' =>"login_form",'name' => "login_form"); echo form_open("users/login",$attr); ?>
+      <label for="user_name">User name:* </label>
+      <input type="text" class="input form-control user_name" name="user_name" required title="Please fill in the required fields">
+      <label for="password">Password:* </label>
+      <input type="password" class="input form-control password" name="password" required title="Please fill in the required fields">
+      <p class="warning_msg">**Please ensure all fields are filled**</p>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary margin-right-sm login_button">Login</button>
+        <?php echo form_close(); ?>
+      </div>
+  </div>
+</div>
+</div>
 
   <script type="text/javascript" src = "<?php echo base_url() .'assets/js/jquery.min.js'?>"></script>
   <script type="text/javascript" src = "<?php echo base_url() .'assets/bootstrap/js/bootstrap.js'?>"></script>

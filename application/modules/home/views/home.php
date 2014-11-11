@@ -36,10 +36,12 @@
       <div class="row">
         <div class="grid_12 rel">
           <h1>
-            <a href="index.html">
+            <a href="#">
               <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "150">
             </a>
           </h1>
+
+          
         </div>
       </div>
     </div>
@@ -58,7 +60,7 @@
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
                  <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
                  <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
-                 
+                 <li><a href="#" class="white-text" data-toggle="modal" data-target="#login_modal">Login</a></li>
                </ul>
         </nav>
               <div class="clear"></div>
@@ -72,10 +74,6 @@
       <div class="container">
         <div class="row">
           <div class="grid_4">
-            <a href="#" class="banner" data-toggle="modal" data-target="#login_modal"><div class="maxheight">
-              <i class="fa fa-user"></i>Login</div>
-            </a>
-
             <a href="<?php echo base_url(). 'applications/certificate'?>" class="banner "><div class="maxheight">
               <div class="fa fa-globe"></div>Certificate</div>
             </a>
@@ -135,7 +133,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
       </div>
       <div class="modal-body">
       <?php $attr = array('id' =>"login_form",'name' => "login_form"); echo form_open("users/login",$attr); ?>
