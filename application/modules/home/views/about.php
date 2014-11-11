@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>About</title>
+  <title>Premeable</title>
   <meta charset="utf-8">
   <meta name="description" content="About Southern Cross"/>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/reset.css'?>">

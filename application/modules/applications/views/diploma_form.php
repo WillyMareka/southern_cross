@@ -9,7 +9,26 @@
 		<link rel="stylesheet" href="<?php echo base_url(). 'assets/stylesheets/animate.css'?>">
     	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/css/custom.css'?>">
     	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/stylesheets/style.css'?>">
- 		
+ 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
+  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.js' ?>"></script>
+  		<script>
+  			 $(function() {
+				$( "#datepicker" ).datepicker();
+				$( "#datepicker_work_from_1" ).datepicker();
+				$( "#datepicker_work_from_2" ).datepicker();
+				$( "#datepicker_work_from_3" ).datepicker();
+				$( "#datepicker_work_to_1" ).datepicker();
+				$( "#datepicker_work_to_2" ).datepicker();
+				$( "#datepicker_work_to_3" ).datepicker();
+				$( "#datepicker_duration_from_1" ).datepicker();
+				$( "#datepicker_duration_from_2" ).datepicker();
+				$( "#datepicker_duration_from_3" ).datepicker();
+				$( "#datepicker_duration_to_1" ).datepicker();
+				$( "#datepicker_duration_to_2" ).datepicker();
+				$( "#datepicker_duration_to_3" ).datepicker();
+				});
+  		</script>
 </head>
 <body>
 	<div class=" content container ">
@@ -324,13 +343,13 @@
 							<option value="Yes">Yes</option>
 							<option value="No">No</option>
 						</select>
-						</td>
-						<td>
+						<div class="disability_info margin-vert">
 						<label class=" description" for="applicant_disability_info"> If yes state nature of disability :  </label>
+
+						<input id="applicant_disability_info" name="applicant_disability_info" class=" form-control  " type="text" maxlength="255" />  
+						</div>
 						</td>
-						<td>
-						<input id="applicant_disability_info" name="applicant_disability_info" class=" form-control  " type="text" maxlength="255" value="" />  
-						</td>
+
 						</tr>	
 						</tr>
 					</tbody>
@@ -564,20 +583,22 @@
 						<label class=" description" for="applicant_denomination">Denomination: </label>
 						</td>
 						<td>
-						<select required="required" class=" form-control input" name="applicant_denomination">
+						<select required="required" class=" form-control input" id="applicant_denomination" name="applicant_denomination">
 							<option value="">--Select Denomination--</option>
 							<option value="Roman Catholic">Roman Catholic</option>
 							<option value="Protestant">Protestant</option>
 							<option value="Hindu">Hindu</option>
 							<option value="African Traditional Religion">African Traditional Religion</option>
 							<option value="Muslim">Muslim</option>
-							<option value="Other(Specify)">Other(Specify)</option>
+							<option value="Other">Other(Specify)</option>
 						</select>
-						<!-- 
-						<td>
-							<input required = "required"  class=" input" class=" " type="text" name="denomination_other">
+						 
+						<div class="specified_denomination margin-vert">
+							<label for="denomination_other">Specify Other Religion: </label>
+							<input  class=" input" class=" " type="text" id="denomination_other" name="denomination_other">
+							</div>
 						</td> 
-						-->
+						
 						</td>
 						</tr>	
 						</tbody>
@@ -659,7 +680,7 @@
 								<th colspan="10"><label  for="source_of_discovery">How did you learn about Southern Cross Institute of Tropical Medicine? </label></th>
 								<tr>
 									<td>
-									<select required = "required" class="form-control select" name="source_of_discovery">
+									<select required = "required" class="form-control select" id="source_of_discovery" name="source_of_discovery">
 									<option value="">--Select Option--</option>
 										<option value="Newpaper">Newpaper</option>
 										<option value="Family/Friend">Family/Friend</option>
@@ -670,6 +691,11 @@
 										<option value="Exhibition">Exhibition</option>
 										<option value="Other">Other(Specify):</option>
 									</select>
+									<div class="discovery_other margin-vert">
+										<label for="source_of_discovery_other">Specify Other Source of Discovery</label></br>
+										<input type="text" class="source_of_discovery_other" id="source_of_discovery_other" name="source_of_discovery_other" />
+									</div>
+									</td>
 								</tr>
 							</tbody>
 							</tr>
@@ -681,10 +707,11 @@
 						<table class=" table table-bordered margin_bottom">
 							<tbody>
 								<tr>
-								<td colspan="1"><h5><label for="reason_for_study">Why do you wish to study through Southern Cross Institute of Tropical Medicine?('Give a Brief Account')</label></h5></td>
+								<td colspan="2"><h5><label for="reason_for_study">Why do you wish to study through Southern Cross Institute of Tropical Medicine?('Give a Brief Account')</label></h5></td>
 								</tr>
 								<tr>
-								<td><textarea name="reason_for_study" class=" inputs input form-control reason_for_study"></textarea></td>							
+								<td><textarea rows="8" style="width:900px;" name="reason_for_study" class=" inputs input form-control reason_for_study"></textarea></td>	
+								<td>It is advisable to give a reason as it may improve your consideration chances</td>						
 								</tr>
 							</tbody>
 						</table>
@@ -731,8 +758,9 @@
 			
 				<tr>
 					<td>
-					    <input required = "required"  type="hidden" name="form_id" value="911261" />
-						<input required = "required"  id="saveForm" class="btn button_text button" type="submit" name="submit" value="Submit" />
+					<center>
+						<input required = "required"  id="saveForm" class="btn button_text button button-submit-app" type="submit" name="submit" value="Submit Application Form" />
+					</center>
 					</td>
 				</tr>
 			</table>
@@ -750,31 +778,6 @@
 		  </footer>
 	</div>
 	</div>
-
-
-
-	<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
-  		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.js' ?>"></script>
-  		<script>
-  			 $(function() {
-				$( "#datepicker" ).datepicker();
-				$( "#datepicker_work_from_1" ).datepicker();
-				$( "#datepicker_work_from_2" ).datepicker();
-				$( "#datepicker_work_from_3" ).datepicker();
-
-				$( "#datepicker_work_to_1" ).datepicker();
-				$( "#datepicker_work_to_2" ).datepicker();
-				$( "#datepicker_work_to_3" ).datepicker();
-
-				$( "#datepicker_duration_from_1" ).datepicker();
-				$( "#datepicker_duration_from_2" ).datepicker();
-				$( "#datepicker_duration_from_3" ).datepicker();
-
-				$( "#datepicker_duration_to_1" ).datepicker();
-				$( "#datepicker_duration_to_2" ).datepicker();
-				$( "#datepicker_duration_to_3" ).datepicker();
-				});
-  		</script>
+	<script type="text/javascript" src="<?php echo base_url().'assets/js/diploma_application_form.js' ?>"></script>
 </body>
 </html>

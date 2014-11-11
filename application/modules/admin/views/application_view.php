@@ -50,45 +50,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-<<<<<<< HEAD
                                    <?php echo $application; ?>
-=======
-                                    <?php
-                                        $i=1; 
-                                        foreach ($application as $value) {
-                                        $id = $value['applicant_id'];
-                                    ?>
-                                    <tr>
-                                        <td><?php echo $i; ?></td>
-                                        <td><?php echo $value['f_name'];?></td>
-                                        <td><?php echo $value['s_name'];?></td>
-                                        <td><?php echo $value['l_name'];?></td>
-                                        <td><?php echo $value['citizenship'];?></td>
-                                        <td><?php echo $value['gender'];?></td>
-                                        <td><?php echo $value['dob'];?></td>
-
-                                    <?php
-                                        if($value['status'] == 1)
-                                        {
-                                            $span = "<span class='label label-warning'>Pending</span>";
-                                        }else if ($value['status'] == 2)
-                                        {
-                                            $span = "<span class='label label-success'>Approved</span>";
-                                        }
-                                        else if ($value['status'] == 3)
-                                        {
-                                            $span = "<span class='label label-danger'>Rejected</span>";
-                                        }
-                                    ?>
-                                        
-                                        <td><center><?php echo $span;?></center></td>
-                                        <td><center><a href="javascript:void(null)" onclick="applications(<?php echo $value['applicant_id']?>,'<?php echo $value['f_name']?>','<?php echo $value['s_name']?>','<?php echo $value['l_name']?>','<?php echo $value['citizenship']?>','<?php echo $value['secondary_level']?>', '<?php echo $value['primary_level']?>', '<?php echo $value['institution_name']?>', '<?php echo $value['sponsor_names']?>',<?php echo $value['status']?>)"><span class="fa fa-edit" style="color:#0DCAF2"></span></a></center></td>
-                                    </tr>
-                                    <?php
-                                        $i++;
-                                        }
-                                    ?>
->>>>>>> 563767909a6b2d9d8cf2b4e6e9d3a32d6d9a24e4
                                 </tbody>
                             </table>
                         </div>
