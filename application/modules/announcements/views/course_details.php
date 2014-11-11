@@ -42,9 +42,8 @@
 								<li><a href="#course1" id="top-link" class="skel-layers-ignoreHref offered"><!-- <span class="icon fa-home"> -->1. CERIFICATE AND DIPLOMA IN COMMUNITY HEALTH & DEVELOPMENT</span></a></li>
 								<li><a href="#course2" id="portfolio-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-th"> -->2.	DIPLOMA IN CLINICAL MEDICINE & SURGERY</span></a></li>
 								<li><a href="#course3" id="about-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-user"> -->3. KENYA REGISTERED COMMUNITY HEALTH NURSING/ REGISTERED NURSE (RN)</span></a></li>
-								<li><a href="#course4" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->4. DIPLOMA IN PHARMACY</span></a></li>
-								<li><a href="#course5" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->5. DIPLOMA IN MEDICAL LABORATORY SCIENCES</span></a></li>
-								<li><a href="#course6" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->6. OTHER SHORT COURSES TO BE INTRODUCED</span></a></li>
+								<li><a href="#course5" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->4. DIPLOMA IN MEDICAL LABORATORY SCIENCES</span></a></li>
+								<li><a href="#course6" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->5. OTHER SHORT COURSES TO BE INTRODUCED</span></a></li>
 							</ul>
 						</nav>
 						
@@ -247,7 +246,7 @@
 
 			
 				<!-- Contact -->
-					<section id="course4" class="four">
+					<section id="course3" class="four">
 						<div class="container">
                             <header>
 								<h2>KENYA REGISTERED COMMUNITY HEALTH NURSING/ REGISTERED NURSE (RN)</h2>
