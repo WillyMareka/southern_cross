@@ -175,7 +175,7 @@
           <a href="#">
             <h1>
               Official opening of the college
-                </h1>
+            </h1>
         </a>
         </li>
       </ul>
@@ -193,8 +193,8 @@
       <nav>
         <ul>
           <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-          <li><a class="active" href="">About Us</a></li>
-          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcement</a></li>
+          <li><a class="active" href="">Preamble</a></li>
+          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
           <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
         </ul>
       </nav>
