@@ -40,8 +40,7 @@
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="<?php echo base_url(). 'admin/index'?>">Log-In</a></li> -->
-        
+        <li><a href="<?php echo base_url(). 'admin/index'?>">Log-In</a></li>        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
