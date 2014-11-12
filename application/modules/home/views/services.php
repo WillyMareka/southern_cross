@@ -53,9 +53,9 @@
               <ul style="backgound-color:#FFF;" class="sf-menu" style="color:#000">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <!-- <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li> -->
-               <li class="current"><a href="#">About Us</a></li>
+               <li;><a href="#">About Us</a></li>
                <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
-               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
+               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
                <li><a href="#" class="" data-toggle="modal" data-target="#login_modal">Login</a></li>
              </ul>
             </nav>
