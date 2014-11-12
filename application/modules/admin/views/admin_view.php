@@ -335,6 +335,7 @@
 
         <!-- AdminLTE for demo purposes -->
         <script src="<?php echo base_url().'assets/admin/js/AdminLTE/demo.js' ?>" type="text/javascript"></script>
+        
         <script type="text/javascript">
      $(function() {
                 //Datemask dd/mm/yyyy

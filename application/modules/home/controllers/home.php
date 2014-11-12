@@ -45,5 +45,9 @@ class Home extends MY_Controller
     $this->load->view('about');
   }
 
+  public function preamble(){
+    $this->load->view('preamble');
+  }
+
 
 }

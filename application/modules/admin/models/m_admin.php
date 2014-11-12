@@ -11,19 +11,38 @@ class M_admin extends MY_Model {
 
     public function applications()
     {
-       $query = $this->db->query(
-                "SELECT * FROM applicant_personal_info api
-               JOIN applicant_guardian_info agi ON agi.applicant_id = api.applicant_id
-               JOIN applicant_education_info aeinfo ON aeinfo.applicant_id = api.applicant_id
-               JOIN applicant_contact_info aci ON aci.applicant_id = api.applicant_id
-               JOIN applicant_course ac ON ac.applicant_id = api.applicant_id
-               JOIN courses ON courses.course_id = ac.course_id
-               JOIN application_approvals aa ON aa.applicant_id = api.applicant_id
-               WHERE aa.status = 0 
-               ");
-       $result = $query->result_array();
 
-       return $result;
+
+        $sql = "SELECT `api`.`applicant_id`,
+                        `api`.`f_name`,
+                        `api`.`s_name`,
+                        `api`.`l_name`,
+                        YEAR(`api`.`dob`) AS year,
+                        MONTH(`api`.`dob`) AS month,
+                        `api`.`gender`,
+                        `api`.`citizenship`,
+                        `api`.`status`,
+                        `aei`.`entry_id`,
+                        `aei`.`applicant_id`,
+                        `aei`.`yrs_of_english`,
+                        `aei`.`primary_level`,
+                        `aei`.`secondary_level`,
+                        `aeis`.`institution_name`,
+                        `agi`.`sponsor_names`
+                    FROM `applicant_personal_info` `api`
+                    LEFT JOIN `applicant_education_info` `aei`
+                    ON `api`.`applicant_id` = `aei`.`applicant_id`
+                    LEFT JOIN `applicant_educational_institutions` `aeis`
+                    ON `api`.`applicant_id` = `aeis`.`applicant_id`
+                    LEFT JOIN `applicant_guardian_info` `agi`
+                    ON `api`.`applicant_id` = `agi`.`applicant_id`
+                    ";
+
+                    // echo $sql;die();
+        $res = $this->db->query($sql);
+
+        return $res->result_array();
+
     }
 
     public function getApplicantInstitutions($a_id)
@@ -41,11 +60,13 @@ class M_admin extends MY_Model {
                     `o_names`,
                     `gender`,
                     `phone_no`,
+                    `identity`,
                     `email`,
-                    `registration_date`,
+                    YEAR(`registration_date`) AS year,
+                    MONTH(`registration_date`) AS month,
                     `status`
                 FROM 
-                    `lecturers`
+                    `staff`
                 ";
 
         $staff = $this->db->query($sql);
@@ -94,11 +115,12 @@ class M_admin extends MY_Model {
         $dob = $this->input->post('dob');
         $gender = $this->input->post('gender');
         $phone = $this->input->post('phonenumber');
+        $identification = $this->input->post('identification');
         $email = $this->input->post('staff_email');
         $location = strtoupper($this->input->post('location'));
        // $course = $this->input->post('course');
 
-        $query = "INSERT INTO staff VALUES(NULL, '$firstname', '$lastname', '$others', '$dob', '$gender', '$email', '$phone', '$path', NULL, 1, '$location')";
+        $query = "INSERT INTO staff VALUES(NULL, '$firstname', '$lastname', '$others', '$dob', '$gender', '$email', '$phone', '$identification', '$path', NULL, 1, '$location')";
         $result = $this->db->query($query);
     }
 
@@ -111,18 +133,21 @@ class M_admin extends MY_Model {
         return $result;
     }
 
-    function save_student($student_no, $course_short_code, $a_id)
+
+    public function get_gender_details()
     {
-        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.")");
-        if($query)
-        {
-            $query = $this->db->query("UPDATE application_approvals SET status = 1 WHERE applicant_id = " .$a_id);
-        }
-        else
-        {
-            echo "false";
-        }
+       $sql = "SELECT 
+                    COUNT(*) AS `total`,
+                    SUM(CASE WHEN `gender` = 'Female' AND `status` = 2 THEN 1 ELSE 0 END) AS `approved_female`,
+                    SUM(CASE WHEN `gender` = 'Male' AND `status` = 2 THEN 1 ELSE 0 END) AS `approved_male`,
+                    SUM(CASE WHEN `gender` = 'Female' AND `status` = 1 THEN 1 ELSE 0 END) AS `unapproved_female`,
+                    SUM(CASE WHEN `gender` = 'Male' AND `status` = 1 THEN 1 ELSE 0 END) AS `unapproved_male`,
+                SUM(CASE WHEN `gender` = 'Female' AND `status` = 3 THEN 1 ELSE 0 END) AS `rejected_female`,
+                    SUM(CASE WHEN `gender` = 'Male' AND `status` = 3 THEN 1 ELSE 0 END) AS `rejected_male`
+                FROM `applicant_personal_info`";
     }
+
+
 
    
 }

@@ -50,7 +50,61 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   <?php echo $application; ?>
+
+
+                                   <?php //echo $application; ?>
+
+                                    <?php
+                                        $i=1; 
+                                        foreach ($application as $value) {
+                                        $id = $value['applicant_id'];
+                                        switch ($value['month']) {
+                                             case '01': $month = "Jan";  break;
+                                             case '02': $month = "Feb";  break;
+                                             case '03': $month = "Mar";  break;
+                                             case '04': $month = "April";  break;
+                                             case '05': $month = "May";  break;
+                                             case '06': $month = "Jun";  break;
+                                             case '07': $month = "Jul"; break;
+                                             case '08': $month = "Aug";  break;
+                                             case '09': $month = "Sep";  break;
+                                             case '10': $month = "Oct";  break;
+                                             case '11': $month = "Nov";  break;
+                                             case '12': $month = "Dec";  break;
+                                             default:  $month = " ";     break;
+                                         }
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $i; ?></td>
+                                        <td><?php echo $value['f_name'];?></td>
+                                        <td><?php echo $value['s_name'];?></td>
+                                        <td><?php echo $value['l_name'];?></td>
+                                        <td><?php echo $value['citizenship'];?></td>
+                                        <td><?php echo $value['gender'];?></td>
+                                        <td><?php echo $month." ".$value['year'];?></td>
+
+                                    <?php
+                                        if($value['status'] == 1)
+                                        {
+                                            $span = "<span class='label label-warning'>Pending</span>";
+                                        }else if ($value['status'] == 2)
+                                        {
+                                            $span = "<span class='label label-success'>Approved</span>";
+                                        }
+                                        else if ($value['status'] == 3)
+                                        {
+                                            $span = "<span class='label label-danger'>Rejected</span>";
+                                        }
+                                    ?>
+                                        
+                                        <td><center><?php echo $span;?></center></td>
+                                        <td><center><a href="javascript:void(null)" onclick="applications(<?php echo $value['applicant_id']?>,'<?php echo $value['f_name']?>','<?php echo $value['s_name']?>','<?php echo $value['l_name']?>','<?php echo $value['citizenship']?>','<?php echo $value['secondary_level']?>', '<?php echo $value['primary_level']?>', '<?php echo $value['institution_name']?>', '<?php echo $value['sponsor_names']?>',<?php echo $value['status']?>)"><span class="fa fa-edit" style="color:#0DCAF2"></span></a></center></td>
+                                    </tr>
+                                    <?php
+                                        $i++;
+                                        }
+                                    ?>
+
                                 </tbody>
                             </table>
                         </div>
