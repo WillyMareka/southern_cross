@@ -85,7 +85,10 @@
             <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-cog"></div>Short Courses</div>
             </a>
-            
+            <a href="<?php echo base_url(). 'home/contacts'?>" class="banner "><div class="maxheight1">
+              <div class="fa fa-graph"></div>Preamble</div>
+            </a>
+
           </div>
           <div class="grid_5">
             <h2>Southern Cross Institute of Tropical Medicine</h2>
