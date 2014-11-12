@@ -11,7 +11,7 @@ class MY_Model extends CI_Model {
 
     public function getCourses()
     {
-    	$query = $this->db->query("SELECT * FROM courses");
+    	$query = $this->db->query("SELECT * FROM courses ORDER BY course_no");
     	$result = $query->result_array();
 
     	return $result;

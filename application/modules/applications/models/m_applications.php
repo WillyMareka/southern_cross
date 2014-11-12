@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class M_applications extends CI_Model {
+class M_applications extends MY_Model {
 
     function __construct()
     {
@@ -90,7 +90,8 @@ class M_applications extends CI_Model {
     	$this->db->insert_batch('applicant_personal_info',$personal_info_data);
     	$applicant_id = mysql_insert_id();
 
-        $query = $this->db->query("INSERT INTO application_approvals VALUES(NULL, ".$applicant_id.", NULL)");
+        $query = $this->db->query("INSERT INTO application_approvals VALUES(NULL, ".$applicant_id.", 0)");
+        $query = $this->db->query("INSERT INTO applicant_course (applicant_id, course_id, intake) VALUES (".$applicant_id.", ".$diploma_level.", ".$year_of_entry.")");
 		//have a foreach where it stores
 		$work_info_data = array();
 		$work_info = array(
