@@ -128,7 +128,7 @@ class Admin extends MY_Controller
 	public function ss_applicants_details($id)
 	{
 
-<<<<<<< HEAD
+
 	public function createApplications()
 	{
 		$this->applicant_row = '';
@@ -201,10 +201,7 @@ class Admin extends MY_Controller
 		$saved = $this->m_admin->save_student($student_no, $course_short_code, $a_id);
 
 		redirect("admin");
-=======
 
-		$info = $this->m_admin->applications($id);
->>>>>>> e2124f37d1417adf0c451f5af8c94c0db009115e
 
 		$this->load->view("admin_view", $data);
 	}
