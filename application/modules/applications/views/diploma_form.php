@@ -9,12 +9,11 @@
 		<link rel="stylesheet" href="<?php echo base_url(). 'assets/stylesheets/animate.css'?>">
     	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/css/custom.css'?>">
     	<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/stylesheets/style.css'?>">
- 		<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
   		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
   		<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-ui.js' ?>"></script>
   		<script>
   			 $(function() {
-				$( "#datepicker" ).datepicker();
+				$( "#datepicker_dob" ).datepicker();
 				$( "#datepicker_work_from_1" ).datepicker();
 				$( "#datepicker_work_from_2" ).datepicker();
 				$( "#datepicker_work_from_3" ).datepicker();
@@ -164,10 +163,10 @@
 							<td colspan="6">
 								<select required = "required" class=" form-control  select medium" id="yr_of_entry" name="yr_of_entry"> 
 									<option value="" selected="selected">--Select Option--</option>
-									<option value="1" >2015</option>
-									<option value="2" >2016</option>
-									<option value="3" >2017</option>
-									<option value="4" >2018</option>
+									<option value="2015" >2015</option>
+									<option value="2016" >2016</option>
+									<option value="2017" >2017</option>
+									<option value="2018" >2018</option>
 								</select>
 							</td>
 						</tr>
@@ -177,18 +176,8 @@
 						</td>
 						<td>
 						<select required = "required" class=" form-control  select medium" id="diploma_level" name="diploma_level"> 
-							<option value="" selected="selected">--Select Option--</option>
-							<option disabled="disabled">Diploma Level</option>
-							<option value="1" >Diploma in Community Health and Development Social Work.</option>
-							<option value="2" >Diploma in Counseling.</option>
-							<option class="divider"></option>
-							<option disabled="disabled">Certificate Level</option>
-							<option value="1" >Certificate in Community Health and Development Social W ork</option>
-							<option value="2" >Certificate in Counseling.</option>
-							<option value="3" >Certificate in H I V and Aids.</option>
-							<option class="divider"></option>
-							<option disabled="disabled">Coming Soon:</option>
-							<option value="1" >Diploma in Clinical Medicine and Counseling.</option>
+							<option>Select a Course</option>
+							<?php echo $course; ?>
 						</select>
 						</td>
 						</tr>
@@ -252,7 +241,7 @@
 						</td>
 						<td>
 						<div class=" form-group">
-						<input required = "required"  type="text" name="dob" id="datepicker" title="Enter Date Of Birth">
+						<input required = "required"  type="text" name="dob" id="datepicker_dob" title="Enter Date Of Birth">
 						</div>
 						</td>
 						</tr>

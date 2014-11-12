@@ -14,7 +14,7 @@ class Admin extends MY_Controller
 	{
 		$data['content_view'] = "application_view";
 
-		$data['application'] = $this->m_admin->applications();
+		$data['application'] = $this->createApplications();
 		
 
 		$this->load->view('admin_view', $data);
@@ -128,7 +128,7 @@ class Admin extends MY_Controller
 	public function ss_applicants_details($id)
 	{
 
-
+    }
 	public function createApplications()
 	{
 		$this->applicant_row = '';
