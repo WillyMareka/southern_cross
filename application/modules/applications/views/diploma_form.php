@@ -137,14 +137,14 @@
 							</td>
 						    </tr>
 							</tr>
-							<tr>
+							<!-- <tr>
 							<td>
 							<label class=" " for="applicant_picture">Picture:  </label>
 							</td>
 							<td colspan="4">
 							<input required = "required"  id="applicant_picture" name="applicant_picture" class=" input inputs" type="file"/> 
 							</td>
-							</tr>
+							</tr> -->
 							</tbody>
 						</table>
 					</tr>
