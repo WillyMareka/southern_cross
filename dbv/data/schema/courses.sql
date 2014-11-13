@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-CREATE TABLE `courses` (
-  `course_id` int(11) NOT NULL,
-=======
-=======
->>>>>>> 563767909a6b2d9d8cf2b4e6e9d3a32d6d9a24e4
+
+
 -- phpMyAdmin SQL Dump
 -- version 3.2.4
 -- http://www.phpmyadmin.net
@@ -34,7 +29,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `courses` (
   `course_id` int(11) NOT NULL AUTO_INCREMENT,
->>>>>>> 6692a8c4f87d9f127b35e0a78f661d790cc821d3
+
   `course_name` varchar(250) NOT NULL,
   `course_short_code` varchar(10) NOT NULL,
   `Description` text NOT NULL,

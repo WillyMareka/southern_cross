@@ -286,7 +286,7 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
         <?php
-            $this->load->view('admin_sidebar');
+           // $this->load->view('admin_sidebar');
         ?>
 
         <?php

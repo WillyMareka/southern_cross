@@ -23,7 +23,8 @@ class Applications extends MY_Controller
 	}
 
 	function diploma(){
-      $this->load->view('diploma_form');
+		$data['course'] = $this->createCoursesSection();
+      $this->load->view('diploma_form', $data);
 	}
 
 	function application_submit(){
@@ -56,6 +57,19 @@ class Applications extends MY_Controller
 		redirect(base_url().'home');
 
 		//echo "Success!";die;
+	}
+
+	function createCoursesSection()
+	{
+		$course_list = '';
+
+		$courses = $this->m_applications->getCourses();
+
+		foreach ($courses as $course) {
+			$course_list .= '<option value = "'.$course['course_id'].'">'.$course['course_name'].'</option>';
+		}
+
+		return $course_list;
 	}
 
 }

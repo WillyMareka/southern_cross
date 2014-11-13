@@ -50,7 +50,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
+
                                    <?php echo $application; ?>
+
+                                 
+                                   
+
                                 </tbody>
                             </table>
                         </div>

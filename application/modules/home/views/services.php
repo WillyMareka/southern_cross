@@ -53,10 +53,10 @@
               <ul style="backgound-color:#FFF;" class="sf-menu" style="color:#000">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                <!-- <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li> -->
-               <li class="current"><a href="#">About Us</a></li>
-              
+               <li;><a href="#">About Us</a></li>
                <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
-               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
+               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
+               <li><a href="#" class="" data-toggle="modal" data-target="#login_modal">Login</a></li>
              </ul>
             </nav>
             <div class="clear"></div>
@@ -71,6 +71,31 @@
           Content
 ======================-->
 <section id="content"><div class="ic">SouthernCross @ www.southerncrossinstitute.edu - July 28, 2014!</div>
+<!--Login modal -->
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+      <?php $attr = array('id' =>"login_form",'name' => "login_form"); echo form_open("users/login",$attr); ?>
+      <label for="user_name">User name:* </label>
+      <input type="text" class="input form-control user_name" name="user_name" required title="Please fill in the required fields">
+      <label for="password">Password:* </label>
+      <input type="password" class="input form-control password" name="password" required title="Please fill in the required fields">
+      <p class="warning_msg">**Please ensure all fields are filled**</p>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary margin-right-sm login_button">Login</button>
+        <?php echo form_close(); ?>
+      </div>
+  </div>
+</div>
+</div>
   <div class="container">
     <div class="row">
       <div class="grid_12">

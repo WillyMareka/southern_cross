@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Offered Courses</title>
+		<title>Course Details</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -42,9 +42,8 @@
 								<li><a href="#course1" id="top-link" class="skel-layers-ignoreHref offered"><!-- <span class="icon fa-home"> -->1. CERIFICATE AND DIPLOMA IN COMMUNITY HEALTH & DEVELOPMENT</span></a></li>
 								<li><a href="#course2" id="portfolio-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-th"> -->2.	DIPLOMA IN CLINICAL MEDICINE & SURGERY</span></a></li>
 								<li><a href="#course3" id="about-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-user"> -->3. KENYA REGISTERED COMMUNITY HEALTH NURSING/ REGISTERED NURSE (RN)</span></a></li>
-								<li><a href="#course4" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->4. DIPLOMA IN PHARMACY</span></a></li>
-								<li><a href="#course5" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->5. DIPLOMA IN MEDICAL LABORATORY SCIENCES</span></a></li>
-								<li><a href="#course6" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->6. OTHER SHORT COURSES TO BE INTRODUCED</span></a></li>
+								<li><a href="#course5" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->4. DIPLOMA IN MEDICAL LABORATORY SCIENCES</span></a></li>
+								<li><a href="#course6" id="contact-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-envelope"> -->5. OTHER SHORT COURSES TO BE INTRODUCED</span></a></li>
 							</ul>
 						</nav>
 						
@@ -74,7 +73,7 @@
               <nav>
                 <ul style="display:inline-block;" class="menu right">
                  <li class="current"><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-                 <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
+                 <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
                  <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
                  <li><a href="<?php echo base_url(). 'home/about'?>">Premeable</a></li>
                  
@@ -89,9 +88,8 @@
 									1.	CERIFICATE AND DIPLOMA IN COMMUNITY HEALTH & DEVELOPMENT<br>
 									2.	DIPLOMA IN CLINICAL MEDICINE & SURGERY<br>
 									3.	KENYA REGISTERED COMMUNITY HEALTH NURSING/ REGISTERED NURSE (RN)<br>
-									4.	DIPLOMA IN PHARMACY <br>
-									5.	DIPLOMA IN MEDICAL LABORATORY SCIENCES<br>
-									6.	OTHER SHORT COURSES TO BE INTRODUCED<br>
+									4.	DIPLOMA IN MEDICAL LABORATORY SCIENCES<br>
+									5.	OTHER SHORT COURSES TO BE INTRODUCED<br>
 								</p>
 							</header>
 							
@@ -246,57 +244,7 @@
 					</section>
 
 			
-				<!-- Contact -->
-					<section id="course4" class="four">
-						<div class="container">
-                            <header>
-								<h2>KENYA REGISTERED COMMUNITY HEALTH NURSING/ REGISTERED NURSE (RN)</h2>
-							</header>
-							
-							<p>This is a health profession that links the health sciences with the chemical sciences, and it is charged with ensuring the safe and effective use of medication.<p>
-						
-							<div class="row">
-								<div class="4u">
-									<header>
-											<h3>Intake Period</h3>
-										</header>
-									<article class="item">
-										•	January / March / September
-
-
-									</article>
-								</div>
-								<div class="4u">
-									<header>
-											<h3>Minimum Entry Requirements</h3>
-										</header>
-									<article class="item">
-										<p>Applicants should meet the following entry requirements:</p>
-                                        <p>• KCSE minimum aggregate C plain with the following specific requirements: C in English or Kiswahili and Chemistry or Physical Science and Biology.</p>
-                                        <p>• C in any one of the following: Physics, Mathematics.</p>
-
-                                              
-
-									</article>
-								</div>
-								<div class="4u">
-									<header>
-											<h3>Scope & Duration</h3>
-										</header>
-									<article class="item">
-										<p>This is a three year program consisting of:</p>
-
-                                        <p>•	2 years full time in class for lectures and practical in the laboratory</p>
-                                        <p>•	7 months attachment in hospitals, industries and community pharmacies</p>
-                                        <p>•	2 months in class after attachment to complete the remaining course work and prepare for qualifying examinations.</p>
-
-
-									</article>
-								</div>
-							</div>
-
-						</div>
-					</section>
+				
 
 					<section id="course5" class="two">
 						<div class="container">

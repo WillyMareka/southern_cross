@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>About</title>
+  <title>Premeable</title>
   <meta charset="utf-8">
   <meta name="description" content="About Southern Cross"/>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/reset.css'?>">
@@ -22,11 +22,10 @@
     <header class="wrapper dark">
       
       <nav>
-        <ul class="sf-menu">  
+        <ul class="sf-menu" style="color:#000 !important;">  
           <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-          <li><a class="active" href="">Premeable</a></li>
           <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
-          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcement</a></li>
+          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
           <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
         </ul>
       </nav>
@@ -176,7 +175,7 @@
           <a href="#">
             <h1>
               Official opening of the college
-                </h1>
+            </h1>
         </a>
         </li>
       </ul>
@@ -192,10 +191,10 @@
       </div>
 
       <nav>
-        <ul>
+        <ul >
           <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-          <li><a class="active" href="">About Us</a></li>
-          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcement</a></li>
+          <li><a class="active" href="">Preamble</a></li>
+          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
           <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
         </ul>
       </nav>
