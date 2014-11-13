@@ -9,7 +9,7 @@ class M_admin extends MY_Model {
         date_default_timezone_set('Africa/Nairobi');
     }
 
-    public function applications()
+    public function student_applications()
     {
        $query = $this->db->query(
                 "SELECT * FROM applicant_personal_info api
