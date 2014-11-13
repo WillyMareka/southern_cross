@@ -15,6 +15,7 @@
 .navigation {
   z-index: 999;
   position: relative;
+  /*left: -20px;*/
   padding: 35px 0;
 }
 .navigation .sf-menu {
@@ -43,11 +44,11 @@
   float: left;
   font-weight: 300;
   position: relative;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 22px;
 }
 .sf-menu > li + li {
-  margin-left: 43px;
+  margin-left: 15px;
 }
 .sf-menu > li + li:after {
   content: '';
@@ -60,10 +61,11 @@
 }
 .sf-menu > li > a {
   position: relative;
-  color: #FFF;
+  color: #666666;
   text-align: center;
   font-weight: 100;
   font-size: 30px;
+  margin-left: 35px;
 }
 .sf-menu > li > a.sf-with-ul:after {
   content: '|';
@@ -254,7 +256,9 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  font-weight: bolder;
 }
+
 .list-1 {
   padding-top: 1px;
 }
@@ -926,5 +930,24 @@ a.color1:hover {
   margin:0;
   width: 100%!important;
   height: 100%!important;
+}
+
+.margin-right-sm{
+  margin-right: 5px;
+}
+
+.float-left{
+  float: left;
+}
+
+.clear{
+  clear: both;
+}
+/*Overridden bootstrap*/
+.modal-sm .modal-content{
+  width:500px!important;
+}
+.btn{
+  border-radius: 0!important;
 }
 /****END OF CUSTOM CSS ****/

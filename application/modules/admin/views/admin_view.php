@@ -307,6 +307,7 @@
         <!-- Morris.js charts -->
         
         <script src="<?php echo base_url().'assets/admin/js/plugins/morris/morris.min.js' ?>" type="text/javascript"></script>
+        <script src="<?php echo base_url().'assets/admin/js/AdminLTE/dashboard.js'?>" type="text/javascript"></script>
         <!-- Sparkline -->
         <script src="<?php echo base_url().'assets/admin/js/plugins/sparkline/jquery.sparkline.min.js' ?>" type="text/javascript"></script>
         <!-- jvectormap -->

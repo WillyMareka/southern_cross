@@ -29,8 +29,8 @@ class Home extends MY_Controller
         }
       }
 
-  public function blog(){
-    $this->load->view('blog');
+  public function services(){
+    $this->load->view('services');
   }
 
    public function contacts(){

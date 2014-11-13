@@ -540,14 +540,16 @@
 		background: #222629 url('images/overlay.png');
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0,0,0,0.1);
 		text-align: right;
+		overflow: auto; 
 	}
 	
 		#header .top
 		{
-			position: absolute;
+			position: relative;
 			left: 0;
 			top: 0;
 			width: 100%;
+			 
 		}
 	
 		#header .bottom

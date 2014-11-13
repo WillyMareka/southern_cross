@@ -11,13 +11,14 @@ class M_user extends CI_Model {
     function check_login($username, $password)
     {
         $sha1_password = md5($password);
-        $sql = "SELECT user_id FROM users WHERE username = ? AND password = ? ";
+        $sql = "SELECT user_id FROM users WHERE username = '$username' AND password = '$sha1_password' ";
 
-        $results = $this->db->query($sql, array($username, $sha1_password));
-
+        //echo $sql;exit;
+        $results = $this->db->query($sql);
 
         if ($results->num_rows() == 1)
         {    
+            //echo "<pre>";print_r($results);echo "</pre>"; exit;
             return $results->row(0)->user_id;
         }
 
@@ -25,5 +26,16 @@ class M_user extends CI_Model {
         {
             return false;
         }
+    }
+
+    function get_details($user_id){
+        $sql = "SELECT * FROM users WHERE user_id = '$user_id'";
+
+        $result= $this->db->query($sql);
+
+        //$tester = $result->result_array();
+        //echo "<pre>";print_r($tester);echo "</pre>"; exit;
+        return $user_data = $result->result_array();
+
     }
 }

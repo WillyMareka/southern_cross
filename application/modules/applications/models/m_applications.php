@@ -90,6 +90,8 @@ class M_applications extends CI_Model {
     	array_push($personal_info_data, $personal_info);
     	$this->db->insert_batch('applicant_personal_info',$personal_info_data);
     	$applicant_id = mysql_insert_id();
+
+        $query = $this->db->query("INSERT INTO application_approvals VALUES(NULL, ".$applicant_id.", NULL)");
 		//have a foreach where it stores
 		$work_info_data = array();
 		$work_info = array(
