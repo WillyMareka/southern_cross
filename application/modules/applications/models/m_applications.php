@@ -84,7 +84,8 @@ class M_applications extends MY_Model {
     		'marital_status' =>$marital_status,
     		'disability' =>$applicant_disability,
     		'disability_info' =>$applicant_disability_info,
-    		'applicant_picture' =>$path
+    		'applicant_picture' =>$path,
+            'status' => 1
     		);
     	array_push($personal_info_data, $personal_info);
     	$this->db->insert_batch('applicant_personal_info',$personal_info_data);

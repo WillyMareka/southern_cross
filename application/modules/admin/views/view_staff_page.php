@@ -3,7 +3,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Applications
+                        Staff
                         <small>Control panel</small>
                     </h1>
                     <ol class="breadcrumb">
@@ -41,7 +41,7 @@
                                         <th rowspan="2">First Name</th>
                                         <th rowspan="2">Last Name</th>
                                         <th rowspan="2">Other Names</th>
-                                        
+                                        <th rowspan="2">ID/Passport</th>
                                         <th rowspan="2">Staff Phone</th>
                                         <th rowspan="2">Staff Email</th>
                                         <th rowspan="2">Registration Date</th>
@@ -58,16 +58,31 @@
                                         $i=1; 
                                         foreach ($staff as $value) {
                                          $id = $value['id'];
+                                         switch ($value['month']) {
+                                             case '01': $month = "Jan";  break;
+                                             case '02': $month = "Feb";  break;
+                                             case '03': $month = "Mar";  break;
+                                             case '04': $month = "April";  break;
+                                             case '05': $month = "May";  break;
+                                             case '06': $month = "Jun";  break;
+                                             case '07': $month = "Jul"; break;
+                                             case '08': $month = "Aug";  break;
+                                             case '09': $month = "Sep";  break;
+                                             case '10': $month = "Oct";  break;
+                                             case '11': $month = "Nov";  break;
+                                             case '12': $month = "Dec";  break;
+                                             default:  $month = " ";     break;
+                                         }
                                     ?>
                                     <tr>
                                         <td><?php echo $i; ?></td>
                                         <td><?php echo $value['f_name'];?></td>
                                         <td><?php echo $value['s_name'];?></td>
                                         <td><?php echo $value['o_names'];?></td>
-                                        
+                                        <td><?php echo $value['identity'];?></td>
                                         <td><?php echo $value['phone_no'];?></td>
                                         <td><?php echo $value['email'];?></td>
-                                        <td><?php echo $value['registration_date'];?></td>
+                                        <td><?php echo $month." ".$value['year'];?></td>
 
                                         <?php
                                         if($value['status'] == 1)
@@ -81,7 +96,7 @@
                                         
                                         <td><center><?php echo $span;?></center></td>
                                         <td><center><a href="admin/deactivate/lecturers/<?php echo $id;?>"><span style="font-size: 1.4em;color: #E80207;" class="glyphicon glyphicon-remove-sign"></span></a></center></td>
-                                        <td><center><a href="javascript:void(null);" onclick="edit_lecturer(<?php echo $value['id']; ?>,'<?php echo $value['f_name']; ?>','<?php echo $value['s_name']; ?>','<?php echo $value['o_names']; ?>','<?php echo $value['phone_no']; ?>','<?php echo $value['email']; ?>','<?php echo $value['gender']; ?>','<?php echo $value['registration_date']; ?>','<?php echo $value['status']; ?>')"><span style="color:#44D2F2;"><i class="fa fa-edit"></i></span></a></center></td>
+                                        <td><center><a href="javascript:void(null);" onclick="edit_lecturer(<?php echo $value['id']; ?>,'<?php echo $value['f_name']; ?>','<?php echo $value['s_name']; ?>','<?php echo $value['o_names']; ?>','<?php echo $value['identity']; ?>','<?php echo $value['phone_no']; ?>','<?php echo $value['email']; ?>','<?php echo $value['gender']; ?>','<?php echo $value['status']; ?>')"><span style="color:#44D2F2;"><i class="fa fa-edit"></i></span></a></center></td>
                                     </tr>
                                     <?php
                                         $i++;
@@ -139,11 +154,32 @@
                 <?php
                     }
                 ?>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Staff Analytics</h3>
+                                <div class="box-tools">
+                                    <div class="input-group">
+                                        <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
+                                        <div class="input-group-btn">
+                                           <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.box-header -->
+                            <div class="box-body table-responsive no-padding">
+                                <div id="fourth" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </section><!-- /.content -->
             </aside><!-- /.right-si-->
 </div>
 
-<div class="modal fade" id="applicant_details">
+<div class="modal fade" id="staff_details">
     <div class="modal-dialog" style="width:60%;margin-bottom:2px;">
             <div class="modal-content" >
                 <div class="modal-header">
@@ -172,7 +208,7 @@
                         <div>
 
                         <input type="hidden" name="editid" id="editid" />
-                           <!-- <div class="input-group" style="width: 100%;padding:4px;">
+                           <div class="input-group" style="width: 100%;padding:4px;">
                                 <span class="input-group-addon" style="width: 40%;" >First Name:</span>
                                 <input class="textfield form-control" type="text" name="f_name" id="f_name" required/>
                             </div>
@@ -189,20 +225,20 @@
                                 <input class="textfield form-control" type="text" name="phone" id="phone" required/>
                             </div>
                              <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;">Lecturer Email@: </span>
-                                <input class="textfield form-control" type="text" name="lemail" id="lemail" required/>
+                                <span class="input-group-addon" style="width: 40%;">Staff Email@: </span>
+                                <input class="textfield form-control" type="text" name="semail" id="semail" required/>
                             </div>
                             <div class="input-group" style="width: 100%;padding:4px;">
                                 <span class="input-group-addon" style="width: 40%;">Gender: </span>
-                                <input class="textfield form-control" type="text" name="lgender" id="lgender" readonly />
-                            </div> -->
-                            <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;">Registration Date: </span>
-                                <input class="textfield form-control" type="text" name="box1" id="box1" readonly/>
+                                <input class="textfield form-control" type="text" name="gender" id="gender" readonly />
                             </div>
                             <div class="input-group" style="width: 100%;padding:4px;">
-                                <span class="input-group-addon" style="width: 40%;">Course: </span>
-                                <input class="textfield form-control" type="text" name="box2" id="box2" readonly />
+                                <span class="input-group-addon" style="width: 40%;">Registration Date: </span>
+                                <input class="textfield form-control" type="text" name="registration" id="registration" readonly/>
+                            </div>
+                            <div class="input-group" style="width: 100%;padding:4px;">
+                                <span class="input-group-addon" style="width: 40%;">National Identification: </span>
+                                <input class="textfield form-control" type="text" name="identity" id="identity" readonly />
                            </div>
                            <div class="input-group" style="width: 100%;padding:4px;">
                             <span class="input-group-addon" style="width: 40%;"> Status :</span>
@@ -224,4 +260,4 @@
         </div>
 </div>
 
-<?php $this->load->view("application_footer_view"); ?>
+<?php $this->load->view("staff_page_footer"); ?>
