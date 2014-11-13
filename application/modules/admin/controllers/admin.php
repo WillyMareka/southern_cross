@@ -61,7 +61,7 @@ class Admin extends MY_Controller
 	public function view_staff_page()
 	{
 		$data['content_view'] = "view_staff_page";
-		$data['application'] = $this->m_admin->applications();
+		// $data['application'] = $this->m_admin->applications();
 		$data['staff'] = $this->m_admin->get_staff();
 
 		$this->load->view("admin_view", $data);
@@ -133,7 +133,7 @@ class Admin extends MY_Controller
 	{
 		$this->applicant_row = '';
 		$applicants = $this->m_admin->applications();
-		print_r($applicants);die();
+		// print_r($applicants);die();
 		$counter = 0;
 		foreach ($applicants as $key => $value) {
 			$counter++;

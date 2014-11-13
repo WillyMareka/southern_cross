@@ -17,6 +17,7 @@ class M_admin extends MY_Model {
                         `api`.`f_name`,
                         `api`.`s_name`,
                         `api`.`l_name`,
+                        `api`.`dob`,
                         YEAR(`api`.`dob`) AS year,
                         MONTH(`api`.`dob`) AS month,
                         `api`.`gender`,
