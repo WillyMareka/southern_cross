@@ -12,6 +12,13 @@ class Admin extends MY_Controller
     }
 	function index()
 	{
+		$data['content_view'] = "dashboard";
+
+		$this->load->view('admin_view', $data);
+	}
+
+	public function applications()
+	{
 		$data['content_view'] = "application_view";
 
 		$data['application'] = $this->createApplications();
