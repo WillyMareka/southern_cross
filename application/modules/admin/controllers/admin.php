@@ -149,6 +149,13 @@ class Admin extends MY_Controller
 
 	}
 
+	public function addstudentuser($username)
+	{
+		$done = $this->admin_model->addStudentUser($username);
+
+		return $done;
+	}
+
 	
 }
 

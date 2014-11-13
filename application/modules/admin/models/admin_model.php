@@ -24,4 +24,19 @@ class Admin_model extends MX_Controller
 
        return $result;
    }
+
+   public function addStudentUser($username)
+   {
+   	$password = md5('123456');
+   	$query = $this->db->query("INSERT INTO users VALUES(NULL, '".$username."', '".$password."', 'student', NULL, 0)");
+
+   	if ($query) {
+   		return true;
+   	}
+
+   	else
+   	{
+   		return false;
+   	}
+   }
 }
