@@ -9,8 +9,8 @@
 <link rel="<?php echo base_url() .'assets/css/icons/icon.css'?>" href="<?php echo base_url() .'assets/images/favicon.ico'?>">
 <link rel="shortcut icon" href="<?php echo base_url() .'assets/images/favicon.ico'?>" />
 <link rel="stylesheet" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
-<link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
 <link rel="stylesheet" href="<?php echo base_url() .'assets/stylesheets/style.css'?>">
+<link rel="stylesheet" href="<?php echo base_url() .'assets/css/home.css'?>">
 
 
 
@@ -57,6 +57,7 @@
                <!-- <li class="current"><a href="#">Contacts</a></li> -->
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
                <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
+               <li class="white-text"><a href="#" class="" data-toggle="modal" data-target="#login_modal">Login</a></li>
              </ul>
             </nav>
             <div class="clear"></div>
@@ -106,31 +107,38 @@
                   <div class="contact-form-loader"></div>
                   <fieldset>
                     <label class="name">
+
                       <input type="text" name="name" placeholder="Name:" value="" data-constraints="@Required @JustLetters"  />
                       <span class="empty-message">*This field is required.</span>
-                      <span class="error-message">*This is not a valid name.</span>
+                      <!-- <span class="error-message">*This is not a valid name.</span> -->
+                      
                     </label>
-                  
+                  <br>
                     <label class="email">
                      <br>
                       <input type="text" name="email" placeholder="E-mail:" value="" data-constraints="@Required @Email" />
                       <span class="empty-message">*This field is required.</span>
-                      <span class="error-message">*This is not a valid email.</span>
+                      <!-- <span class="error-message">*This is not a valid email.</span> -->
+                      
                     </label>
+                    <br>
 
                     <label class="phone">
                      <br>
                       <input type="text" name="phone" placeholder="Phone:" value="" data-constraints="@Required @JustNumbers" />
                       <span class="empty-message">*This field is required.</span>
-                      <span class="error-message">*This is not a valid phone.</span>
+                      <!-- <span class="error-message">*This is not a valid phone.</span> -->
+                      
                     </label>
-                   
+                   <br>
                     <label class="message">
                      <br>
                       <textarea name="message" placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
                       <span class="empty-message">*This field is required.</span>
-                      <span class="error-message">*The message is too short.</span>
+                      <!-- <span class="error-message">*The message is too short.</span> -->
+                      
                     </label>
+                    <br>
                     
                     <div class="clear"></div>
                     <div>
@@ -157,6 +165,33 @@
     </div>
   </div>
 </section>
+
+  <!--Login modal -->
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+      <?php $attr = array('id' =>"login_form",'name' => "login_form"); echo form_open("users/login",$attr); ?>
+      <label for="user_name">User name:* </label>
+      <input type="text" class="input form-control user_name" name="user_name" required title="Please fill in the required fields">
+      <label for="password">Password:* </label>
+      <input type="password" class="input form-control password" name="password" required title="Please fill in the required fields">
+      <p class="warning_msg">**Please ensure all fields are filled**</p>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary margin-right-sm login_button">Login</button>
+        <?php echo form_close(); ?>
+      </div>
+  </div>
+</div>
+</div>
+
 <!--==============================
               footer
 =================================-->

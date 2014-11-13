@@ -36,10 +36,12 @@
       <div class="row">
         <div class="grid_12 rel">
           <h1>
-            <a href="index.html">
+            <a href="#">
               <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "150">
             </a>
           </h1>
+
+          
         </div>
       </div>
     </div>
@@ -54,11 +56,11 @@
               <nav>
                 <ul class="sf-menu" style="color:#FFF">
                  <li class="current"><a href="#">Home</a></li>
-                 <!-- <li><a href="<?php //echo base_url(). 'announcements/announce'?>">Announcements</a></li> -->
-                 <li><a href="<?php echo base_url(). 'home/programs'?>">Programs Offered</a></li>
-                 <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li>
+                 <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
-                 
+                 <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+                 <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
+                 <li><a href="#" class="white-text" data-toggle="modal" data-target="#login_modal">Login</a></li>
                </ul>
         </nav>
               <div class="clear"></div>
@@ -72,19 +74,19 @@
       <div class="container">
         <div class="row">
           <div class="grid_4">
-            <a href="#" class="banner" data-toggle="modal" data-target="#login_modal"><div class="maxheight">
-              <i class="fa fa-user"></i>Login</div>
-            </a>
-            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight">
+            <a href="<?php echo base_url(). 'applications/certificate'?>" class="banner "><div class="maxheight">
               <div class="fa fa-globe"></div>Certificate</div>
             </a>
-            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'applications/diploma'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-briefcase"></div>Diploma</div>
             </a>
-            <a href="<?php echo base_url(). 'announcements/announce'?>" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-cog"></div>Short Courses</div>
             </a>
-            
+            <a href="<?php echo base_url(). 'home/about'?>" class="banner "><div class="maxheight">
+              <i class="fa fa-line-chart"></i>Preamble</div>
+            </a>
+
           </div>
           <div class="grid_5">
             <h2>Southern Cross Institute of Tropical Medicine</h2>
@@ -131,7 +133,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
       </div>
       <div class="modal-body">
       <?php $attr = array('id' =>"login_form",'name' => "login_form"); echo form_open("users/login",$attr); ?>
@@ -163,7 +165,7 @@
             <h4>
                Certification to the Medical Fraternity
             </h4>
-            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> <br > OR <br> <a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p>
+            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> </p>
             
           </div>
         </div>
@@ -294,6 +296,17 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
 
 
           </div>
+        <!--   <div class="grid_4 preffix_1">
+            <h3>Testimonials</h3>
+            <blockquote class="bq1">
+              <p>“Curabitur vel lorem sit amet nulla erero fermentum. In vitae varius auguectetu ligula. Etiam dui eros, laoreet site am est vel commodo venenatisipiscing... ”</p>
+              <span>Testimonial One</span>
+            </blockquote>
+            <blockquote class="bq1">
+              <p>“Burabitur vel lorem sit amet nulla erero fermentum. In vitae varius auguectetu ligula. Etiam dui eros, laoreet site am ast vel commodo venenatisipiscino... ”</p>
+              <span>Testimonial Two</span>
+            </blockquote>
+          </div> -->
         </div>
       </div>
     </article>
@@ -303,12 +316,20 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
           <h4>More about <span class="light-blue-color">Southern Cross</span></h4>
           <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="" class="img_inner fleft">
             <p>A limited liability company incorporated in Kenya, made up of a team of professionals with a combined experience in medical services, project management and finance. The consortium of professionals has been put together for the sole purpose of running a Mid-Level Medical College. </p>
+            <!-- <p class="offset__1">Eligulaam dui eros dertolisce dertolo adipiscing quam id risus sagittis</p>
+            Curabitur vel lorem sit amet nulla ullamcorper fermentum In vitae dert rius augue, eu consectetur larem dui eros dertolisce dertolo  -->
         </div>
-        <div class="grid_3">
-          <h4>Want to join us</h4>
-          <p>Apply <span><a href = "<?php echo base_url() .'applications/diploma'?>">Here(Online)</a></span> or </p>
-          <p><a href = "<?php echo base_url() .'information/application_form.pdf'?>" download>Download an offline version</a></p>
-        </div>
+        <!-- <div class="grid_4">
+          <h4>Other useful Links</h4>
+          <ul class="list-1">
+            <li><a href="#">Vivamus at magna non nunc tristique </a></li>
+            <li><a href="#">Aliquam nibh ante, egestas id</a></li>
+            <li><a href="#">Ommodo luctus libero</a></li>
+            <li><a href="#">Faucibus malesuada faucibusonec </a></li>
+            <li><a href="#">Laoreet metus id laoreet</a></li>
+            <li><a href="#">Jalesuadaorem ipsum dolor sit ame</a></li>
+          </ul>
+        </div> -->
         <div class="grid_3">
           <h4>Contact Info</h4>
           <address>
@@ -338,12 +359,7 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
   </footer>
   <a href="#" id="toTop" class="fa fa-chevron-up"></a>
 
-<script>
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
-</script>
+
 
 <script src="<?php echo base_url() .'assets/js/jquery.js'?>"></script>
 <script src="<?php echo base_url() .'assets/bootstrap/js/bootstrap.js'?>"></script>
@@ -359,12 +375,19 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
 <script src="<?php echo base_url() .'assets/js/jquery.mobilemenu.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/tmStickUp.js'?>"></script>
 <script src="<?php echo base_url() .'assets/js/jquery.ui.totop.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/js/script.js'?>"></script>
 <style type="text/css">
   .mynav > nav > ul > li > a
   {
     color: #fff !important;
   }
 </style>
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
 
 </body>
 </html>
