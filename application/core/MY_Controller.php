@@ -9,18 +9,7 @@ class MY_Controller extends MX_Controller
         $this->load->model('admin/m_admin');
     }
 
-   function send_email()  
-    {
-        
-        $id = $this->session->userdata("id");
-        $recepient = $this->input->post("recepients");
-        $subject   = $this->input->post("subject");
-        $message   = $this->input->post("message");
-
-        $this->email($id, $recepient, $subject, $message);
-    }
-
-    public function email($id, $recepient, $subject, $message)  
+   public function email($id, $recepient, $subject, $message)  
     {
         $time=date('Y-m-d');
         
