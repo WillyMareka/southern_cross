@@ -1,14 +1,10 @@
-<!-- Highcharts scripts -->
-<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js' ?>"></script>
-<script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/highcharts-3d.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
 <script>
-function edit_lecturer(id,f_name,s_name,o_names,identity,phone_no,email,gender,,status) {
+function edit_lecturer(id,f_name,s_name,o_names,identity,phone_no,email,gender,status) {
 	alert(id);alert(f_name);alert(s_name);alert(o_names);alert(identity);alert(phone_no);alert(email);alert(gender);;alert(status);
 	$('#editid').val(id);
-    $('#f_name').val(fname);
-    $('#s_name').val(sname);
+    $('#f_name').val(f_name);
+    $('#s_name').val(s_name);
     $('#o_name').val(o_name);
     $('#phone').val(phone_no);
     $('#semail').val(email);
