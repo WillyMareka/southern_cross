@@ -124,10 +124,13 @@ class Admin extends MY_Controller
 		
 	}
 	
+<<<<<<< HEAD
 	public function ss_applicants_details($id)
 	{
 
     }
+=======
+>>>>>>> 118fefc11d94d7347390b7beb7581e6a914a469e
 	public function createApplications()
 	{
 		$this->applicant_row = '';
@@ -200,9 +203,16 @@ class Admin extends MY_Controller
 		$saved = $this->m_admin->save_student($student_no, $course_short_code, $a_id);
 
 		redirect("admin");
+<<<<<<< HEAD
 
+=======
+	}
+	public function addstudentuser($username)
+	{
+		$done = $this->admin_model->addStudentUser($username);
+>>>>>>> 118fefc11d94d7347390b7beb7581e6a914a469e
 
-		$this->load->view("admin_view", $data);
+		return $done;
 	}
 }
 

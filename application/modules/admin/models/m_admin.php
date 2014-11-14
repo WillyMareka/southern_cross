@@ -131,7 +131,6 @@ class M_admin extends MY_Model {
         return $result;
     }
 
-
     function save_student($student_no, $course_short_code, $a_id)
     {
         $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.")");

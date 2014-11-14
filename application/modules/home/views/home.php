@@ -34,27 +34,25 @@
   <div class="tint">
     <div class="container">
       <div class="row">
-        <div class="grid_12 rel">
+        <div class="grid_2 rel">
           <h1>
             <a href="#">
               <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "150">
             </a>
           </h1>
-
-          
         </div>
-      </div>
-    </div>
-    <section id="stuck_container">
+
+
+      <section id="stuck_container">
     <!--==============================
                 Stuck menu
     =================================-->
       <div class="container">
         <div class="row">
-          <div class="grid_12 ">
+          <div class="grid_8 ">
             <div class="navigation mynav">
               <nav>
-                <ul class="sf-menu" style="color:#FFF">
+                <ul class="sf-menu">
                  <li class="current"><a href="#">Home</a></li>
                  <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
@@ -70,6 +68,11 @@
        </div> 
       </div> 
     </section>
+
+
+      </div>
+    </div>
+    
     <section class="page1_header">
       <div class="container">
         <div class="row">

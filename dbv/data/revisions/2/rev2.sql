@@ -1,0 +1,1 @@
+ALTER TABLE `student_course` ADD `user_id` INT NOT NULL , ADD INDEX (`user_id`) ;
