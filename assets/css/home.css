@@ -18,6 +18,8 @@
   /*left: -20px;*/
   padding: 35px 0;
   background: rgba(40, 40, 60, 0.5);
+  width:1100px;
+  margin-top: 10px;
 }
 .navigation .sf-menu {
   z-index: 990;
@@ -63,10 +65,10 @@
 .sf-menu > li > a {
   position: relative;
   color: #ffffff;
-  text-align: center;
+  /*text-align: center;*/
   font-weight: 100;
   font-size: 25px;
-  margin-left: 35px;
+  margin-left: 20px;
 }
 .sf-menu > li > a.sf-with-ul:after {
   content: '|';

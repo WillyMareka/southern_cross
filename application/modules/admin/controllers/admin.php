@@ -12,13 +12,6 @@ class Admin extends MY_Controller
     }
 	function index()
 	{
-		$data['content_view'] = "dashboard";
-
-		$this->load->view('admin_view', $data);
-	}
-
-	public function applications()
-	{
 		$data['content_view'] = "application_view";
 
 		$data['application'] = $this->createApplications();
@@ -68,7 +61,6 @@ class Admin extends MY_Controller
 	public function view_staff_page()
 	{
 		$data['content_view'] = "view_staff_page";
-		// $data['application'] = $this->m_admin->applications();
 		$data['staff'] = $this->m_admin->get_staff();
 
 		$this->load->view("admin_view", $data);
@@ -132,15 +124,17 @@ class Admin extends MY_Controller
 		
 	}
 	
+<<<<<<< HEAD
 	public function ss_applicants_details($id)
 	{
 
     }
+=======
+>>>>>>> 118fefc11d94d7347390b7beb7581e6a914a469e
 	public function createApplications()
 	{
 		$this->applicant_row = '';
-		$applicants = $this->m_admin->applications();
-		// print_r($applicants);die();
+		$applicants = $this->admin_model->student_applications();
 		$counter = 0;
 		foreach ($applicants as $key => $value) {
 			$counter++;
@@ -171,7 +165,7 @@ class Admin extends MY_Controller
 	public function getapplicantdetails($applicant_id)
 	{
 		$applicant_details = array();
-		$applicants = $this->m_admin->applications();
+		$applicants = $this->admin_model->student_applications();
 		foreach ($applicants as $applicant) {
 			if($applicant['applicant_id'] == $applicant_id)
 			{
@@ -209,9 +203,16 @@ class Admin extends MY_Controller
 		$saved = $this->m_admin->save_student($student_no, $course_short_code, $a_id);
 
 		redirect("admin");
+<<<<<<< HEAD
 
+=======
+	}
+	public function addstudentuser($username)
+	{
+		$done = $this->admin_model->addStudentUser($username);
+>>>>>>> 118fefc11d94d7347390b7beb7581e6a914a469e
 
-		$this->load->view("admin_view", $data);
+		return $done;
 	}
 }
 

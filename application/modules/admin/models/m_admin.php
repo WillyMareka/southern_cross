@@ -9,9 +9,7 @@ class M_admin extends MY_Model {
         date_default_timezone_set('Africa/Nairobi');
     }
 
-    public function applications()
-    {
-
+   public function applications(){
 
         $sql = "SELECT `api`.`applicant_id`,
                         `api`.`f_name`,
@@ -134,6 +132,18 @@ class M_admin extends MY_Model {
         return $result;
     }
 
+    function save_student($student_no, $course_short_code, $a_id)
+    {
+        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.")");
+        if($query)
+        {
+            $query = $this->db->query("UPDATE application_approvals SET status = 1 WHERE applicant_id = " .$a_id);
+        }
+        else
+        {
+            echo "false";
+        }
+    }
 
     public function get_gender_details()
     {
@@ -147,7 +157,6 @@ class M_admin extends MY_Model {
                     SUM(CASE WHEN `gender` = 'Male' AND `status` = 3 THEN 1 ELSE 0 END) AS `rejected_male`
                 FROM `applicant_personal_info`";
     }
-
 
 
    

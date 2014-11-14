@@ -137,14 +137,14 @@
 							</td>
 						    </tr>
 							</tr>
-							<tr>
+							<!-- <tr>
 							<td>
 							<label class=" " for="applicant_picture">Picture:  </label>
 							</td>
 							<td colspan="4">
 							<input required = "required"  id="applicant_picture" name="applicant_picture" class=" input inputs" type="file"/> 
 							</td>
-							</tr>
+							</tr> -->
 							</tbody>
 						</table>
 					</tr>
@@ -595,7 +595,7 @@
 						
 					</tr>
 
-					<tr>
+					<!-- <tr>
 					<table class=" table table-bordered padding_none">
 						<tr>
 							<th colspan="5">Occupational Experience</th>
@@ -603,7 +603,7 @@
 						<tr>
 							<td colspan="6">Mature Applicants Only</td>
 						</tr>
-						<!-- <tr>
+						 <tr>
 							<td>
 							<label class=" description" for="applicant_work_experience">Occupational Experience: </label>
 							</td>
@@ -612,7 +612,7 @@
 								<option value="yes">Yes</option>
 								<option value="no">No</option>
 							</select>
-						</tr> -->
+						</tr> 
 						<tr>
 							<table class=" margin_bottom table table-bordered">
 							<tbody>
@@ -656,7 +656,7 @@
 							</table>
 						</tr>
 					</table>
-					</tr>
+					</tr> -->
 
 					<tr>
 						<tr>
