@@ -133,10 +133,13 @@ class Admin extends MY_Controller
 	}
 	
 
+	public function ss_applicants_details($id)
+	{
+
+    }
 	public function createApplications()
 	{
 		$this->applicant_row = '';
-
 		$applicants = $this->m_admin->applications();
 		// print_r($applicants);die();
 
@@ -171,7 +174,7 @@ class Admin extends MY_Controller
 	public function getapplicantdetails($applicant_id)
 	{
 		$applicant_details = array();
-		$applicants = $this->admin_model->student_applications();
+		$applicants = $this->m_admin->applications();
 		foreach ($applicants as $applicant) {
 			if($applicant['applicant_id'] == $applicant_id)
 			{
@@ -210,13 +213,14 @@ class Admin extends MY_Controller
 
 		redirect("admin");
 
+
 	}
 	public function addstudentuser($username)
 	{
 		$done = $this->admin_model->addStudentUser($username);
 
 
-		return $done;
+		$this->load->view("admin_view", $data);
 	}
 }
 
