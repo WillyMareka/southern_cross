@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/announcements.css'?>">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/font-awesome/css/font-awesome.css'?>">
 </head>
+
 <body>
   <div class = "container">
   <nav class="navbar navbar-default" role="navigation">
