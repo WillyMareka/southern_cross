@@ -63,7 +63,7 @@
             <li>Diploma in Social Work</li>
             <li>Diploma in Clinical Medicine and Surgery <i>(Subject to accreditation)</i></li>
             <li>Diploma in Community Development <i>(Subject to accreditation)</i></li>
-            <li>Diploma in Pharmacy <i>(Subject to accreditation)</i></li>
+            
           </ol>
         </div>
       </div>
@@ -108,7 +108,7 @@
     <p>The curriculum under the <span><a href= "<?php echo base_url() .'courses/category/certificate'?>">Certificate Programs</a></span> is designed to allow students to upgrade to <span><a href = "<?php echo base_url() .'courses/category/diploma'?>">Diploma Level</a></span> on a 1 <sup>1</sup>/<sub>2</sub> year course upon graduation. The College is also seeking to collaborate with public Universities such as Maseno Uuniversity, JKUAT and MOI University for advancement to Degree course in Public Health for our Diploma Students. A strategic alliance with a USA based medical institution will also facilitate deployment of Nursing and Social Work students into the US Market</p>
 
     <center>
-    <p><h4><b>Registration of students begins on Friday 26th September 2014 until 30th September 2014 for new intakes <br/><a href = "<?php echo base_url() .'applications'?>">Apply here. </a></p>
+    <p><h4><b>Registration of students begins on Friday 26th September 2014 until 30th September 2014 for new intakes <br/><a href = "<?php echo base_url() .'applications/diploma'?>">Apply here. </a></p>
     <!-- <p>Continuing students are encouraged to register for progressive learning and continuity subject to certification of their course work</b></h4></p> -->
     </center>
 

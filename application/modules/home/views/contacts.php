@@ -52,11 +52,11 @@
               <ul class="sf-menu">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                
-               <li><a href="<?php echo base_url(). 'home/services'?>">Programs Offered</a></li>
+               <li><a href="<?php echo base_url(). 'home/about'?>">Preamble</a></li>
                
                <!-- <li class="current"><a href="#">Contacts</a></li> -->
-               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Announcements</a></li>
-               <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
+               <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
+               <li><a href="<?php echo base_url(). 'home/services'?>">About</a></li>
                <li class="white-text"><a href="#" class="" data-toggle="modal" data-target="#login_modal">Login</a></li>
              </ul>
             </nav>

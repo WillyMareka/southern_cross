@@ -14,7 +14,7 @@ class Admin extends MY_Controller
 	{
 		$data['content_view'] = "application_view";
 
-		$data['application'] = $this->m_admin->applications();
+		$data['application'] = $this->createApplications();
 		
 
 		$this->load->view('admin_view', $data);
@@ -61,7 +61,6 @@ class Admin extends MY_Controller
 	public function view_staff_page()
 	{
 		$data['content_view'] = "view_staff_page";
-		$data['application'] = $this->m_admin->applications();
 		$data['staff'] = $this->m_admin->get_staff();
 
 		$this->load->view("admin_view", $data);
@@ -125,15 +124,11 @@ class Admin extends MY_Controller
 		
 	}
 	
-	public function ss_applicants_details($id)
-	{
-
-
 
 	public function createApplications()
 	{
 		$this->applicant_row = '';
-		$applicants = $this->m_admin->applications();
+		$applicants = $this->admin_model->student_applications();
 		$counter = 0;
 		foreach ($applicants as $key => $value) {
 			$counter++;
@@ -151,13 +146,66 @@ class Admin extends MY_Controller
 		}
 
 
+		return $this->applicant_row;
+	}
+
+	public function viewapplicantdetails($a_id)
+	{
+		$applicant_array = $this->getapplicantdetails($a_id);
+		$data['content_view'] = "applicant_view";
+		$data['application'] = $applicant_array;
+		$data['education'] = $this->m_admin->getApplicantInstitutions($a_id);
+		$this->load->view('admin_view', $data);
+	}
+	public function getapplicantdetails($applicant_id)
+	{
+		$applicant_details = array();
+		$applicants = $this->admin_model->student_applications();
+		foreach ($applicants as $applicant) {
+			if($applicant['applicant_id'] == $applicant_id)
+			{
+				$applicant_details = $applicant;
+			}
+		}
+
+		return $applicant_details;
+	}
+
+	public function acceptApplicant($a_id)
+	{
+		$applicant_details = $this->getapplicantdetails($a_id);
+
+		$course_short_code = $applicant_details['course_short_code'];
+		$intake = $applicant_details['intake'];
+
+		$admission_month = date("m");
+
+		$students_in_course = $this->m_admin->getCourseById($course_short_code);
+		$noofstudents = count($students_in_course);
+		$noofstudents++;
+
+		if($noofstudents < 10)
+		{
+			$noofstudents = '00' . $noofstudents;
+		}
+		else if($noofstudents < 100)
+		{
+			$noofstudents = '0' . $noofstudents;
+		}
+
+
 
 		$info = $this->m_admin->applications($id);
 
 		redirect("admin");
 
+	}
+	public function addstudentuser($username)
+	{
+		$done = $this->admin_model->addStudentUser($username);
 
-		$this->load->view("admin_view", $data);
+
+		return $done;
 	}
 }
 

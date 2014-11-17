@@ -34,27 +34,25 @@
   <div class="tint">
     <div class="container">
       <div class="row">
-        <div class="grid_12 rel">
+        <div class="grid_2 rel">
           <h1>
             <a href="#">
               <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "150">
             </a>
           </h1>
-
-          
         </div>
-      </div>
-    </div>
-    <section id="stuck_container">
+
+
+      <section id="stuck_container">
     <!--==============================
                 Stuck menu
     =================================-->
       <div class="container">
         <div class="row">
-          <div class="grid_12 ">
+          <div class="grid_8 ">
             <div class="navigation mynav">
               <nav>
-                <ul class="sf-menu" style="color:#FFF">
+                <ul class="sf-menu">
                  <li class="current"><a href="#">Home</a></li>
                  <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
@@ -70,6 +68,11 @@
        </div> 
       </div> 
     </section>
+
+
+      </div>
+    </div>
+    
     <section class="page1_header">
       <div class="container">
         <div class="row">
@@ -94,7 +97,7 @@
             MID-LEVEL MEDICAL TRAINING COLLEGE
           </div>
         </div>
-        <div><span class="glyphicon glyphicon-circle-arrow-up"></span>Registrations</div>
+        <!-- <div><span class="glyphicon glyphicon-circle-arrow-up"></span>Registrations</div> -->
       </div>
     </section>
   </div>
@@ -165,7 +168,7 @@
             <h4>
                Certification to the Medical Fraternity
             </h4>
-            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> </p>
+            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> <br > OR <br> <a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p>
             
           </div>
         </div>
