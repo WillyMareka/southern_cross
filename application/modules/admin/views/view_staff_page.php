@@ -161,12 +161,11 @@
                             <div class="box-header">
                                 <h3 class="box-title">Staff Analytics</h3>
                                 <div class="box-tools">
-                                    <div class="input-group">
-                                        <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
-                                        <div class="input-group-btn">
-                                           <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
-                                        </div>
-                                    </div>
+                                    <div class="tab-content no-padding">
+                                    <!-- Morris chart - Sales -->
+                                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
+                                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+                                </div>
                                 </div>
                             </div><!-- /.box-header -->
                             <div class="box-body table-responsive no-padding">
@@ -174,6 +173,20 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="nav-tabs-custom">
+                                <!-- Tabs within a box -->
+                                <ul class="nav nav-tabs pull-right">
+                                    <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
+                                    <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
+                                    <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <!-- Morris chart - Sales -->
+                                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
+                                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+                                </div>
+                            </div><!-- /.nav-tabs-custom -->
                 </div>
                 </section><!-- /.content -->
             </aside><!-- /.right-si-->

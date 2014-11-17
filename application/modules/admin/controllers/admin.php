@@ -12,6 +12,13 @@ class Admin extends MY_Controller
     }
 	function index()
 	{
+		$data['content_view'] = "dashboard";
+
+		$this->load->view('admin_view', $data);
+	}
+
+	public function applications()
+	{
 		$data['content_view'] = "application_view";
 
 		$data['application'] = $this->createApplications();
@@ -61,6 +68,7 @@ class Admin extends MY_Controller
 	public function view_staff_page()
 	{
 		$data['content_view'] = "view_staff_page";
+
 		$data['staff'] = $this->m_admin->get_staff();
 
 		$this->load->view("admin_view", $data);
@@ -128,7 +136,10 @@ class Admin extends MY_Controller
 	public function createApplications()
 	{
 		$this->applicant_row = '';
-		$applicants = $this->admin_model->student_applications();
+
+		$applicants = $this->m_admin->applications();
+		// print_r($applicants);die();
+
 		$counter = 0;
 		foreach ($applicants as $key => $value) {
 			$counter++;

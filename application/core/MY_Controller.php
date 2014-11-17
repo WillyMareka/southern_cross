@@ -9,8 +9,74 @@ class MY_Controller extends MX_Controller
         $this->load->model('admin/m_admin');
     }
 
-    function index()
+   public function email($id, $recepient, $subject, $message)  
     {
-    	
+        $time=date('Y-m-d');
+        
+        $config = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => "chrisrichrads@gmail.com",
+            'smtp_pass' => "joshuaSUN"
+            );
+        
+        $this->load->library('email', $config);
+        $this->email->set_newline("\r\n");
+
+        $this->email->from('chrisrichrads@gmail.com', 'SOUTHERN CROSS INSTITUTE OF TROPICAL MEDICINE');
+        $this->email->to($recepient);
+        $this->email->subject($subject);
+        $this->email->message($message);
+        $this->email->set_mailtype("html");
+        // if(!is_null($attached_file)){
+        //  $this->email->attach($attached_file);
+        // }
+        
+        if($this->email->send())
+            {   
+
+               
+            } else 
+            {
+                show_error($this->email->print_debugger());
+            }
+        
     }
+
+
+    public function email_attachment($id, $recepient, $subject, $message, $attached_file =null)
+    {
+        $time=date('Y-m-d');
+       
+        $config = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => "chrisrichrads@gmail.com",
+            'smtp_pass' => "joshuaSUN"
+            );
+
+        $this->load->library('email', $config);
+        $this->email->set_newline("\r\n");
+
+        $this->email->from('chrisrichrads@gmail.com', 'SOUTHERN CROSS INSTITUTE OF TROPICAL MEDICINE');
+        $this->email->to($recepient);
+        $this->email->subject($subject);
+        $this->email->message($message);
+        $this->email->set_mailtype("html");
+        if(!is_null($attached_file)){
+            $this->email->attach($attached_file);
+        }
+        
+        if($this->email->send())
+            {   
+
+              
+            } else 
+            {
+                show_error($this->email->print_debugger());
+            }
+    }
+
 }
