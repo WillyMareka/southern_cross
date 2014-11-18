@@ -76,10 +76,11 @@
       <ul class="nav navbar-nav">
         <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
         <li></li>
-        <li class="appactive leftdist"><a href="#">Diploma</a></li>
-        <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li>
+        <li class="appactive leftdist"><a href="#">Diploma/Certificate</a></li>
+        <!-- <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li> -->
         <li><a href="<?php echo base_url().'applications/short_courses'?>">Short Courses</a></li>
         <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
+        <li class = "pull-right"><a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p></li>
         
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
