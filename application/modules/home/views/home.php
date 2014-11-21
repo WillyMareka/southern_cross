@@ -37,7 +37,7 @@
         <div class="grid_2 rel">
           <h1>
             <a href="#">
-              <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "150">
+              <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "120">
             </a>
           </h1>
         </div>
@@ -75,7 +75,7 @@
     
     <section class="page1_header">
       <div class="container">
-        <div class="row">
+        <div class="row margin-top-img">
           <div class="grid_4">
             <a style="width:370px" href="<?php echo base_url(). 'applications/diploma'?>" class="banner globe"><div class="maxheight">
               <div class="fa fa-globe"></div>Diploma / Certificate</div>

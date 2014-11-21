@@ -9,7 +9,7 @@ class Users extends MX_Controller
         $this->load->model('m_user');
         $this->load->model('admin/admin_model');
         $this->load->model('admin/m_admin');
-
+        //this is some random change
     }
 
 
@@ -43,7 +43,7 @@ class Users extends MX_Controller
 	}
 
 	function check_type($user_id){
-		//echo $user_id;
+		// echo "This".$user_id;exit;
 		$user_details =$this->m_user->get_details($user_id); 
 		// echo "<pre>";print_r($user_details[0]['user_type']);echo "</pre>"; exit;
 		switch ($user_details[0]['user_type']) {

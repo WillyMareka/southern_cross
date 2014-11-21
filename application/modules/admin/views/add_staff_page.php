@@ -71,7 +71,7 @@ $(function(){
 				                            <div class="input-group" style="width: 100%;padding:4px;">
 				                                <span class="input-group-addon" style="width: 40%;">Date of Birth: </span>
 				                                <!--  <input type="text" name="dob" id="dob" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask /> -->
-				                                <input class="textfield form-control" type="date" name="dob" id="dob" required/>
+				                                <input class="textfield form-control" type="text" name="dob" id="dob" required/>
 				                            </div>
 				                            <div class="input-group" style="width: 100%;padding:4px;">
 				                                <span class="input-group-addon" style="width: 40%;">Location: </span>
