@@ -209,7 +209,9 @@
                 <p> A strategic alliance with a USA based Medical Institution will also facilitate deployment of Nursing and Social Work student into the US market.</p>
                 <br>
                 <p style="font-size:15px"><strong class='marketbold'>Kenya’s Health Workforce Training Capacity: a Situation Analysis</strong></p>
-                 <a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">More</a>
+                 <a href="<?php echo base_url(). 'home/market'?>"><button type="button" class="btn btn-primary">More</button></a>
+
+                 <!-- <a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">More</a> -->
 
                  <!-- Button trigger modal -->
          <!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">

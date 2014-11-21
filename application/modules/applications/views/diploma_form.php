@@ -54,7 +54,7 @@
 		<p><strong class=" float_left clearfix clear_right">Tel Office: </strong> (+254) 0717 - 056 523</p>
 		<p><strong class=" float_left clearfix clear_right">Mobile: </strong> (+254) 0717 - 056 523</p>
 		</div>
-
+     <div class="well well-sm">Please fill all the fields with an star ( * )</div>
 </div>
 
 
