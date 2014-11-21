@@ -32,11 +32,11 @@ class MY_Controller extends MX_Controller
         // if(!is_null($attached_file)){
         //  $this->email->attach($attached_file);
         // }
-        
+        $this->m_admin->send_mail($id, $recepient, $subject, $message);
         if($this->email->send())
             {   
 
-               
+               $this->m_admin->send_mail();
             } else 
             {
                 show_error($this->email->print_debugger());
@@ -45,7 +45,7 @@ class MY_Controller extends MX_Controller
     }
 
 
-    public function email_attachment($id, $recepient, $subject, $message, $attached_file =null)
+    public function email_attachment($id, $recepient, $subject, $message, $attached_file=null)
     {
         $time=date('Y-m-d');
        

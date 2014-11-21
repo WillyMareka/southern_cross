@@ -16,4 +16,20 @@ class MY_Model extends CI_Model {
 
     	return $result;
     }
+
+    public function send_mail($id, $recepient, $subject, $message)
+    {
+        
+
+        $query = "INSERT INTO 
+                            `mailerlog` 
+                        VALUES 
+                            (NULL,
+                            '$recepient',
+                            '$subject',
+                            '$message',
+                            null,
+                            1)";
+        $this->db->query($query);
+    }
 }
