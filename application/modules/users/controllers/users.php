@@ -9,7 +9,7 @@ class Users extends MX_Controller
         $this->load->model('m_user');
         $this->load->model('admin/admin_model');
         $this->load->model('admin/m_admin');
-
+        //this is some random change
     }
 
 
@@ -34,18 +34,18 @@ class Users extends MX_Controller
 	
 	function login()
 	{
-			$username = $this->input->post('username');
-			$password = $this->input->post('password');
+			$username = 'MarekaWilly';
+			$password = 'mareks';
 
 			$user_id = $this->m_user->check_login($username, $password);
 
 			echo $user_id;
 	}
 
-	function check_type($user_id){
-		//echo $user_id;
+	function check_type($user_id = null){
+		// echo "This".$user_id;exit;
 		$user_details =$this->m_user->get_details($user_id); 
-		// echo "<pre>";print_r($user_details[0]['user_type']);echo "</pre>"; exit;
+		echo "<pre>";print_r($user_details[0]['user_type']);echo "</pre>"; exit;
 		switch ($user_details[0]['user_type']) {
 			case 'super_admin':
 				// echo "Successful admin login";
