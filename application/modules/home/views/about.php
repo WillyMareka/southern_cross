@@ -22,11 +22,11 @@
     <header class="wrapper dark">
       
       <nav>
-        <ul class="sf-menu" style="color:#000 !important;">  
-          <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-          <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
-          <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
-          <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+        <ul class="sf-menu">  
+          <li><a href="<?php echo base_url(). 'home/index'?>" style="color:#000000!important;">Home</a></li>
+          <li><a href="<?php echo base_url(). 'home/services'?>" style="color:#000000!important;">About Us</a></li>
+          <li><a href="<?php echo base_url(). 'announcements/announce'?>" style="color:#000000!important;">Programs</a></li>
+          <li><a href="<?php echo base_url(). 'home/contacts'?>" style="color:#000000!important;">Contacts</a></li>
         </ul>
       </nav>
     </header>
