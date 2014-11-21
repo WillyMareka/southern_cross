@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Administrators</title>
+        <title>Member of Staff</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="<?php echo base_url().'assets/admin/css/bootstrap.min.css' ?>" rel="stylesheet" type="text/css" />
@@ -40,7 +40,7 @@
         <header class="header">
             <a href="" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                <?php echo $loggedinas;?>Administrator
+                Memmber Of Staff
             </a>
 			<!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -245,14 +245,14 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span>Mareka Willy <i class="caret"></i></span>
+                                <span>Staff Member<i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     <img src="../img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        Mareka Willy - Web Developer
+                                       Staff Member - Staff Member
                                         <small>Member since Nov. 2015</small>
                                     </p>
                                 </li>

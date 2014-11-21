@@ -14,7 +14,7 @@ class Staff extends MY_Controller
 	public function index()
 	{
 		$data['content_view'] = "dashboard";
-		$data['loggedinas '] = "";
+		$data['loggedinas '] = "Staff Member";
 
 		$this->load->view("staff_view", $data);
 	}
