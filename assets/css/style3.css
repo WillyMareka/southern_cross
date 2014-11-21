@@ -29,6 +29,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    /*opacity: 0.6;*/
 }
 /*---start-wrap----*/
 .wrap{

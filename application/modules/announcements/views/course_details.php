@@ -76,7 +76,7 @@
                  <li class="current"><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
                  <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
-                 <li><a href="<?php echo base_url(). 'home/about'?>">Premeable</a></li>
+                 <li><a href="<?php echo base_url(). 'home/about'?>">Preamble</a></li>
                  
                  
                </ul>
