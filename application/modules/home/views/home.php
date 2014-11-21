@@ -165,14 +165,16 @@
       <div class="row">
         <div class="grid_10 preffix_1 ta__center">
           <div class="greet">
-            <h2 class="head__1">
+            <div class="jumbotron home-bot-image">
+              <div class="homeopac">
+              <h2 class="head__1">
               Welcome
             </h2>
             <h4>
                Certification to the Medical Fraternity
             </h4>
-            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> <br > <!-- OR <br> <a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p> -->
-            
+            <p class="para">To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> <br > 
+            </div>
           </div>
         </div>
       </div>

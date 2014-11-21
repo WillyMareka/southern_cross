@@ -585,8 +585,18 @@ margin: 30px 20px;
 }
 
 .billboard .caption.dark h1, h4{
-  color:#001A66;
-  
+  color:#FFF;
+  font-size: 15px;
+}
+
+p.para{
+  color:#FFF;
+}
+
+.homeopac{
+  background-color: #000;
+  opacity: 0.7;
+  height: 380px;
 }
 
 .topabout{
@@ -666,10 +676,11 @@ color: #FFFFFF !important;
   height:500px;
 }
 
-.greet{
+/*.greet{
   height: 700px;
- background: url(../images/graduate.jpg) center 0 no-repeat !important;
-  /*background-image: url('../images/graduate.jpg');*/
+  width: 100%;
+ background: url(../images/uni5.jpg) center 0 no-repeat !important;
+  
   background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -677,14 +688,30 @@ color: #FFFFFF !important;
      -moz-background-size: cover;
        -o-background-size: cover;
     background-size: cover;
-}
+  
+}*/
 
 .head__1{
-  margin-top: 200px;
+  margin: 0px;
+  color: #FFF;
 }
 
-.welcomeimg{
-    
+.jumbotron{
+    margin: 0;
+    height: 700px;
+    width: 100% !important;
+    bottom: 0;
+    z-index: -2;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: auto;
+}
+
+.home-bot-image{
+    background-image: url('../images/uni5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
