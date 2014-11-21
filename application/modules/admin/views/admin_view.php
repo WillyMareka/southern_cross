@@ -286,7 +286,7 @@
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
         <?php
-            $this->load->view('admin_sidebar');
+           $this->load->view('admin_sidebar');
         ?>
 
         <?php
@@ -298,6 +298,7 @@
 
 
         <!-- jQuery 2.0.2 -->
+        
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- jQuery UI 1.10.3 -->
         <script src="<?php echo base_url().'assets/js/jquery.js'?>" type="text/javascript"></script>
@@ -307,6 +308,7 @@
         <!-- Morris.js charts -->
         
         <script src="<?php echo base_url().'assets/admin/js/plugins/morris/morris.min.js' ?>" type="text/javascript"></script>
+        <!--<script src="<?php echo base_url().'assets/admin/js/AdminLTE/dashboard.js'?>" type="text/javascript"></script>-->
         <!-- Sparkline -->
         <script src="<?php echo base_url().'assets/admin/js/plugins/sparkline/jquery.sparkline.min.js' ?>" type="text/javascript"></script>
         <!-- jvectormap -->
@@ -335,6 +337,7 @@
 
         <!-- AdminLTE for demo purposes -->
         <script src="<?php echo base_url().'assets/admin/js/AdminLTE/demo.js' ?>" type="text/javascript"></script>
+       
         
         <script type="text/javascript">
      $(function() {
