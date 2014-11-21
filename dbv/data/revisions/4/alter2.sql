@@ -1,0 +1,1 @@
+ALTER TABLE `staff` ADD `staff_role_id` INT NOT NULL ;

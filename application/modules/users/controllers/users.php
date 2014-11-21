@@ -40,10 +40,10 @@ class Users extends MX_Controller
 			$user_id = $this->m_user->check_login($username, $password);
 
 			echo $user_id;
+
 	}
 
 	function check_type($user_id){
-		//echo $user_id;
 		$user_details =$this->m_user->get_details($user_id); 
 		// echo "<pre>";print_r($user_details[0]['user_type']);echo "</pre>"; exit;
 		switch ($user_details[0]['user_type']) {
