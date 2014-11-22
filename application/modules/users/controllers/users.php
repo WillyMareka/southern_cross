@@ -9,7 +9,7 @@ class Users extends MX_Controller
         $this->load->model('m_user');
         $this->load->model('admin/admin_model');
         $this->load->model('admin/m_admin');
-
+        //this is some random change
     }
 
 
@@ -40,23 +40,28 @@ class Users extends MX_Controller
 			$user_id = $this->m_user->check_login($username, $password);
 
 			echo $user_id;
-
 	}
 
 	function check_type($user_id){
+		
 		$user_details =$this->m_user->get_details($user_id); 
+
 		// echo "<pre>";print_r($user_details[0]['user_type']);echo "</pre>"; exit;
 		switch ($user_details[0]['user_type']) {
 			case 'super_admin':
 				// echo "Successful admin login";
 				$data['user_details']=$user_details;
-				$data['content_view'] = "admin/application_view";
+				$data['content_view'] = "admin/dashboard";
 				$data['application'] = $this->m_admin->applications();
 				
 				$this->load->view('admin/admin_view', $data);
 				break;
 			case 'staff':
-				// echo "Successful staff login";
+				$data["user_id"] = $user_details[0]["user_id"];
+				$data["username"] = $user_details[0]["username"];
+
+				$this->session->set_userdata($data);
+				redirect("staff");
 				break;
 			case 'lecturer':
 				// echo "Successful lecturer login";

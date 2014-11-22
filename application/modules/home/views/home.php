@@ -77,18 +77,21 @@
       <div class="container">
         <div class="row margin-top-img">
           <div class="grid_4">
-            <a href="<?php echo base_url(). 'applications/certificate'?>" class="banner "><div class="maxheight">
-              <div class="fa fa-globe"></div>Certificate</div>
+            <a style="width:370px" href="<?php echo base_url(). 'applications/diploma'?>" class="banner globe"><div class="maxheight">
+              <div class="fa fa-globe"></div>Diploma / Certificate</div>
             </a>
-            <a href="<?php echo base_url(). 'applications/diploma'?>" class="banner "><div class="maxheight1">
-              <div class="fa fa-briefcase"></div>Diploma</div>
+            <a style="height:186px" href="<?php echo base_url(). 'home/about'?>" class="banner brief"><div class="maxheight">
+              <div class="fa fa-briefcase"></div>Preamble</div>
             </a>
-            <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight1">
+            <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight">
               <div class="fa fa-cog"></div>Short Courses</div>
             </a>
-            <a href="<?php echo base_url(). 'home/about'?>" class="banner "><div class="maxheight">
+            <!-- <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight">
+              <div class="fa fa-cog"></div>Short Courses</div>
+            </a> -->
+            <!-- <a href="<?php echo base_url(). 'home/about'?>" class="banner "><div class="maxheight">
               <i class="fa fa-line-chart"></i>Preamble</div>
-            </a>
+            </a> -->
 
           </div>
           <div class="grid_5">
@@ -168,7 +171,7 @@
             <h4>
                Certification to the Medical Fraternity
             </h4>
-            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> <br > OR <br> <a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p>
+            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> <br > <!-- OR <br> <a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p> -->
             
           </div>
         </div>
@@ -206,7 +209,9 @@
                 <p> A strategic alliance with a USA based Medical Institution will also facilitate deployment of Nursing and Social Work student into the US market.</p>
                 <br>
                 <p style="font-size:15px"><strong class='marketbold'>Kenya’s Health Workforce Training Capacity: a Situation Analysis</strong></p>
-                 <a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">More</a>
+                 <a href="<?php echo base_url(). 'home/market'?>"><button type="button" class="btn btn-primary">More</button></a>
+
+                 <!-- <a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">More</a> -->
 
                  <!-- Button trigger modal -->
          <!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">

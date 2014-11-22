@@ -9,6 +9,14 @@ class MY_Controller extends MX_Controller
         $this->load->model('admin/m_admin');
     }
 
+   
+    public function logout()
+    {
+        $this->session->sess_destroy();
+
+        redirect(base_url().'home');
+    }
+
    public function email($id, $recepient, $subject, $message)  
     {
         $time=date('Y-m-d');

@@ -50,11 +50,11 @@ $(".warning_msg").hide();
             'password':pwd
             },
             success:function(msg){
-              //alert(msg);
+              // alert(msg);return;
               var redirection = "users/check_type/";
               var full_url = redirection.concat(msg);
 
-              //alert(full_url);return;
+              // alert(full_url);return;
               window.location.href = full_url;
             }
     });
