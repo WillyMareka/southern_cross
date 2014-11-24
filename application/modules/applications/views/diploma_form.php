@@ -51,8 +51,8 @@
 			<p><strong class=" float_left clearfix">Email: </strong>  southerncrossinstitute@gmail.com</p>
 		</div>
 		<div class="logo_more_information float_right">
-		<p><strong class=" float_left clearfix clear_right">Tel Office: </strong> (+254) 0717 - 056 523</p>
-		<p><strong class=" float_left clearfix clear_right">Mobile: </strong> (+254) 0717 - 056 523</p>
+		<p><strong class=" float_left clearfix clear_right">Tel Office: </strong> (+254) 0706 40 33 70</p>
+		<p><strong class=" float_left clearfix clear_right">Tel Office(2):</strong> (+254) 0736 40 33 70</p>
 		</div>
      
 </div>

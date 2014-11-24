@@ -54,8 +54,8 @@ $(".warning_msg").hide();
               var redirection = "users/check_type/";
               var full_url = redirection.concat(msg);
 
-              alert(full_url);return;
-              // window.location.href = full_url;
+              //alert(full_url);return;
+               window.location.href = full_url;
             }
     });
   };
