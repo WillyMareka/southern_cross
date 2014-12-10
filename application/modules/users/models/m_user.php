@@ -13,7 +13,7 @@ class M_user extends CI_Model {
         $sha1_password = md5($password);
         $sql = "SELECT user_id FROM users WHERE username = '$username' AND password = '$sha1_password' ";
 
-        // echo $s;exit;
+        //echo $sql;exit;
         $results = $this->db->query($sql);
 
         if ($results->num_rows() == 1)

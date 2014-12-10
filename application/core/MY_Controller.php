@@ -9,18 +9,15 @@ class MY_Controller extends MX_Controller
         $this->load->model('admin/m_admin');
     }
 
-   function send_email()  
+   
+    public function logout()
     {
-        
-        $id = $this->session->userdata("id");
-        $recepient = $this->input->post("recepients");
-        $subject   = $this->input->post("subject");
-        $message   = $this->input->post("message");
+        $this->session->sess_destroy();
 
-        $this->email($id, $recepient, $subject, $message);
+        redirect(base_url().'home');
     }
 
-    public function email($id, $recepient, $subject, $message)  
+   public function email($id, $recepient, $subject, $message)  
     {
         $time=date('Y-m-d');
         
@@ -43,11 +40,11 @@ class MY_Controller extends MX_Controller
         // if(!is_null($attached_file)){
         //  $this->email->attach($attached_file);
         // }
-        
+        $this->m_admin->send_mail($id, $recepient, $subject, $message);
         if($this->email->send())
             {   
 
-               
+               $this->m_admin->send_mail();
             } else 
             {
                 show_error($this->email->print_debugger());
@@ -56,7 +53,7 @@ class MY_Controller extends MX_Controller
     }
 
 
-    public function email_attachment($id, $recepient, $subject, $message, $attached_file =null)
+    public function email_attachment($id, $recepient, $subject, $message, $attached_file=null)
     {
         $time=date('Y-m-d');
        
