@@ -28,7 +28,7 @@ class Applications extends MY_Controller
 	}
 
 	function application_submit(){
-		
+		/*
 		$path = '';
 		$config['upload_path'] = './applicant_data/applicant_pictures/';
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
@@ -49,11 +49,13 @@ class Applications extends MY_Controller
 			}
 			// echo "THIS WORkS".$path;die;
 
-			$value = $this->m_applications->add_applicant($path);
+			$value = $this->m_applications->add_applicant();
 			echo $value;die;
 
 		}
-
+		*/
+		$value = $this->m_applications->add_applicant();
+			echo $value;die;
 		redirect(base_url().'home');
 
 		//echo "Success!";die;

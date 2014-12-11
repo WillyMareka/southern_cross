@@ -29,6 +29,7 @@
 				});
   		</script>
 </head>
+
 <body>
 	<div class=" content container ">
 
@@ -155,10 +156,15 @@
 							<td><h5>Enrollment Information</h5></td>
 						</tr>
 						<tr>
+<<<<<<< HEAD
 						<td colspan="6"><label class=" description" for="yr_of_entry">Year of Entry *</label></td>
+=======
+						<td><label class=" description" for="yr_of_entry">Year of Entry </label></td>
+						<td><label class="description" for="entry_month">Month of Entry</label></td>
+>>>>>>> 50d8652abfaaa9df6694f074864fac2749e0dc3b
 						</tr>
 						<tr>
-							<td colspan="6">
+							<td colspan="">
 								<select required = "required" class=" form-control  select medium" id="yr_of_entry" name="yr_of_entry"> 
 									<option value="" selected="selected">--Select Option--</option>
 									<option value="2015" >2015</option>
@@ -166,6 +172,36 @@
 									<option value="2017" >2017</option>
 									<option value="2018" >2018</option>
 								</select>
+							</td>
+							<td colspan="3">
+							<center>
+							<table  class=" table-embedded table table-bordered">
+							<tbody>
+							<tr>
+							<td  colspan="1">Jan</td>
+							<td  colspan="1">May</td>
+							<td  colspan="1">Sept</td>
+							</tr>
+							<tr>
+							<td  colspan="1">
+							<center>
+								<input type="radio" class="month_of_entry" name="entry_month" required>
+							</center>
+							</td>
+							<td  colspan="1">
+							<center>
+								<input type="radio" class="month_of_entry" name="entry_month" required>
+							</center>
+							</td>
+							<td  colspan="1">
+							<center>
+								<input type="radio" class="month_of_entry" name="entry_month" required>
+							</center>
+							</td>
+							</tr>
+							</tbody>
+							</table>
+							</center>
 							</td>
 						</tr>
 						<tr>

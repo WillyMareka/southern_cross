@@ -33,6 +33,7 @@ $(function(){
   }
  }
 // CUSTOM JS
+//random change to enable commit
 $(".warning_msg").hide();
  $(".login_button").click(function(e){
   e.preventDefault();
