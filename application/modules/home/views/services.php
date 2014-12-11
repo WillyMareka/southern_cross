@@ -41,22 +41,24 @@
       </div>
     </div>
   </div>
-  <section id="stuck_container">
+   <section id="stuck_container">
   <!--==============================
               Stuck menu
   =================================-->
-    <div class="container">
+    <div class="container" class="not_home">
       <div class="row">
         <div class="grid_12 ">
-          <div class="navigation ">
+          <div class="navigation">
             <nav>
-              <ul style="backgound-color:#FFF;" class="sf-menu" style="color:#000">
+              <ul class="sf-menu">
                <li><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
-               <!-- <li><a href="<?php echo base_url(). 'home/about'?>">About</a></li> -->
-               <li;><a href="#">About Us</a></li>
-               <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
                <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
-               <li><a href="#" class="" data-toggle="modal" data-target="#login_modal">Login</a></li>
+               <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
+               
+               <!-- <li class="current"><a href="#">Contacts</a></li> -->
+               
+               <li><a href="#">About</a></li>
+               <li class="white-text"><a href="#" class="" data-toggle="modal" data-target="#login_modal">Login</a></li>
              </ul>
             </nav>
             <div class="clear"></div>
@@ -101,13 +103,13 @@
       <div class="grid_12">
         <h3>Mission</h3>    
       </div>
-      <div class="grid_2">
+      <div class="grid_3">
         <div class="text2 color1"><a href="#">Specialized Training</a></div>To provide not just education, but specialized training to make our students experts in their primary medical fields while maintaining high levels of professionalism, honesty and integrity
       </div>
       <div class="grid_2">
         <div class="text2 color1"><a href="#">Vision</a></div>We are committed to being the most sort after mid-level) medical training college in Kenya and beyond
       </div>
-      <div class="grid_2">
+      <div class="grid_3">
         <div class="text2 color1"><a href="#">Medical Standards</a></div>Providing tertiary education that meets the current trends in medicare provisions in Kenya and beyond)
       </div>
       <div class="grid_3">
@@ -134,7 +136,7 @@
             
           </ul>
         </div>
-        <div class="grid_3">
+        <div class="grid_4">
           <h3>Keys To Success</h3>
           <div class="block-2">
             <!-- <img src="images/page3_img1.jpg" alt="" class="img_inner fleft"> -->
@@ -155,7 +157,7 @@
             </div>
           </div> -->
         </div>
-        <div class="grid_4 preffix_1">
+        <div class="grid_3 preffix_1">
           <h3>Objectives</h3>
           <div class="block-2">
               <!-- <div class="text1"><a href="#"> Ipsumen Dertol</a></div> -->
@@ -212,7 +214,7 @@
       </div>
       <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
-  Click for larger View
+  Click for Larger View
 </button>
 
 <!-- Modal -->
@@ -245,7 +247,7 @@
   <div class="container">
     <div class="row">
       <div class="grid_12"> 
-        <div class="copyright"><span class="brand">SouthernCross</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+        <div class="copyright"><span class="brand">SouthernCrossInstitute</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
           <div class="sub-copy">www.southerncrossinstitute.edu</div>
         </div>
       </div>

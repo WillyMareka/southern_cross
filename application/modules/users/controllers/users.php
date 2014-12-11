@@ -43,20 +43,25 @@ class Users extends MX_Controller
 	}
 
 	function check_type($user_id){
-		//echo $user_id;
+		
 		$user_details =$this->m_user->get_details($user_id); 
+
 		// echo "<pre>";print_r($user_details[0]['user_type']);echo "</pre>"; exit;
 		switch ($user_details[0]['user_type']) {
 			case 'super_admin':
 				// echo "Successful admin login";
 				$data['user_details']=$user_details;
-				$data['content_view'] = "admin/application_view";
+				$data['content_view'] = "admin/dashboard";
 				$data['application'] = $this->m_admin->applications();
 				
 				$this->load->view('admin/admin_view', $data);
 				break;
 			case 'staff':
-				// echo "Successful staff login";
+				$data["user_id"] = $user_details[0]["user_id"];
+				$data["username"] = $user_details[0]["username"];
+
+				$this->session->set_userdata($data);
+				redirect("staff");
 				break;
 			case 'lecturer':
 				// echo "Successful lecturer login";

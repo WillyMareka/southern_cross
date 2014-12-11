@@ -16,6 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/style-wide.css'?>" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/style-normal.css'?>" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/style.css'?>" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/stylesheet/style.css'?>" />
 		
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
@@ -38,7 +39,7 @@
 						<nav id="nav" class="side-course">
 							
 							<ul>
-								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Courses Offered</span></a></li>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref course1link"><span class="icon fa-home">Courses Offered</span></a></li>
 								<li><a href="#course1" id="top-link" class="skel-layers-ignoreHref offered"><!-- <span class="icon fa-home"> -->1. CERIFICATE AND DIPLOMA IN COMMUNITY HEALTH & DEVELOPMENT</span></a></li>
 								<li><a href="#course2" id="portfolio-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-th"> -->2.	DIPLOMA IN CLINICAL MEDICINE & SURGERY</span></a></li>
 								<li><a href="#course3" id="about-link" class="skel-layers-ignoreHref"><!-- <span class="icon fa-user"> -->3. KENYA REGISTERED COMMUNITY HEALTH NURSING/ REGISTERED NURSE (RN)</span></a></li>
@@ -75,7 +76,7 @@
                  <li class="current"><a href="<?php echo base_url(). 'home/index'?>">Home</a></li>
                  <li><a href="<?php echo base_url(). 'announcements/announce'?>">Programs</a></li>
                  <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
-                 <li><a href="<?php echo base_url(). 'home/about'?>">Premeable</a></li>
+                 <li><a href="<?php echo base_url(). 'home/about'?>">Preamble</a></li>
                  
                  
                </ul>

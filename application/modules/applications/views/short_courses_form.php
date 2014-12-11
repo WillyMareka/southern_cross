@@ -58,8 +58,8 @@
       <ul class="nav navbar-nav">
         <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
         <li></li>
-        <li class="leftdist"><a href="<?php echo base_url().'applications/diploma'?>">Diploma</a></li>
-        <li><a href="<?php echo base_url(). 'applications/certificate'?>">Certificate</a></li>
+        <li class="leftdist"><a href="<?php echo base_url().'applications/diploma'?>">Diploma/Certificate</a></li>
+        
         <li class="appactive"><a href="#">Short Courses</a></li>
         <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
         

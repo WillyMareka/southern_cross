@@ -18,7 +18,6 @@ class M_user extends CI_Model {
 
         if ($results->num_rows() == 1)
         {    
-            //echo "<pre>";print_r($results);echo "</pre>"; exit;
             return $results->row(0)->user_id;
         }
 

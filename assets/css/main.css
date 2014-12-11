@@ -317,21 +317,30 @@ header.dark nav ul li a:hover{
     height: 350px;
     text-align: center;
     margin-top: 100px;
-    background: url('../images/video.jpg') no-repeat;    
+    background: url('../images/video1.jpg') no-repeat;    
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .video .video_logo{
     margin-top: 85px;
 }
 
+.video_back{
+    background-color: #000;
+    opacity:0.7;
+}
+
 .video h3{
     color: #fff;
     font-family: "raleway-regular";
-    font-size: 14px;
+    font-size: 36px;
     font-weight: normal!important;
     margin: 20px 0 0 0;
 }

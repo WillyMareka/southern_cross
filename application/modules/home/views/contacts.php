@@ -199,7 +199,7 @@
   <div class="container">
     <div class="row">
       <div class="grid_12"> 
-        <div class="copyright"><span class="brand">SouthernCross</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+        <div class="copyright"><span class="brand">SouthernCrossInstitute</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
           <div class="sub-copy">www.southerncrossinstitute.edu</div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Premeable</title>
+  <title>Preamble</title>
   <meta charset="utf-8">
   <meta name="description" content="About Southern Cross"/>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/css/reset.css'?>">
@@ -41,7 +41,7 @@
     <div class="shadow"></div>
   </section><!--  End billboard  -->
 
-    <!-- <section class="preamble">
+     <section class="preamble">
 
      <div class="premcontent animated wow fadeInDown">
       <p class="buzconc">BUSINESS CONCEPT</p>
@@ -58,15 +58,18 @@
     </div>
 
 <div class="shadow"></div>
-    </section> -->
+    </section> 
 
 
   <section class="video no-margin">
     <div class="shadow"></div>
 
     <img  alt="" class="video_logo animated wow fadeInDown"/>
+    <div class="video_back">
     <h3 class="animated wow fadeInDown">Video about Southern Cross</h3>
-    <a href="http://www.youtube.com/watch?v=uBcVE3tyI1w" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>
+    <a href="<?php echo base_url(). 'assets/mediaelement/media/inspiration.mp4'?>" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a>
+    <!-- <a href="https://www.youtube.com/watch?v=Wl2_knlv_xw" id="play_btn" class="fancybox animated wow flipInX" data-wow-duration="2s"></a> -->
+    </div>
   </section><!--  End video  -->
 
 

@@ -55,8 +55,13 @@ $(".warning_msg").hide();
               var redirection = "users/check_type/";
               var full_url = redirection.concat(msg);
 
+<<<<<<< HEAD
               //alert(full_url);return;
+               window.location.href = full_url;
+=======
+              // alert(full_url);return;
               window.location.href = full_url;
+>>>>>>> dadde0b7f18f6d80dde9d2ecde7ae72c0a1794c7
             }
     });
   };
