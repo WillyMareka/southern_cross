@@ -132,6 +132,7 @@
   ======================-->
   <!--Login modal -->
 <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- Random text -->
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
