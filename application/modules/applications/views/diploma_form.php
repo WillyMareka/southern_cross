@@ -29,6 +29,7 @@
 				});
   		</script>
 </head>
+
 <body>
 	<div class=" content container ">
 
@@ -54,7 +55,7 @@
 		<p><strong class=" float_left clearfix clear_right">Tel Office: </strong> (+254) 0717 - 056 523</p>
 		<p><strong class=" float_left clearfix clear_right">Mobile: </strong> (+254) 0717 - 056 523</p>
 		</div>
-     <div class="well well-sm">Please fill all the fields with an star ( * )</div>
+
 </div>
 
 
@@ -76,11 +77,10 @@
       <ul class="nav navbar-nav">
         <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
         <li></li>
-        <li class="appactive leftdist"><a href="#">Diploma/Certificate</a></li>
-        <!-- <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li> -->
+        <li class="appactive leftdist"><a href="#">Diploma</a></li>
+        <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li>
         <li><a href="<?php echo base_url().'applications/short_courses'?>">Short Courses</a></li>
         <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
-        <li class = "pull-right"><a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p></li>
         
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
@@ -158,10 +158,11 @@
 							<td><h5>Enrollment Information</h5></td>
 						</tr>
 						<tr>
-						<td colspan="6"><label class=" description" for="yr_of_entry">Year of Entry </label></td>
+						<td><label class=" description" for="yr_of_entry">Year of Entry </label></td>
+						<td><label class="description" for="entry_month">Month of Entry</label></td>
 						</tr>
 						<tr>
-							<td colspan="6">
+							<td colspan="">
 								<select required = "required" class=" form-control  select medium" id="yr_of_entry" name="yr_of_entry"> 
 									<option value="" selected="selected">--Select Option--</option>
 									<option value="2015" >2015</option>
@@ -169,6 +170,36 @@
 									<option value="2017" >2017</option>
 									<option value="2018" >2018</option>
 								</select>
+							</td>
+							<td colspan="3">
+							<center>
+							<table  class=" table-embedded table table-bordered">
+							<tbody>
+							<tr>
+							<td  colspan="1">Jan</td>
+							<td  colspan="1">May</td>
+							<td  colspan="1">Sept</td>
+							</tr>
+							<tr>
+							<td  colspan="1">
+							<center>
+								<input type="radio" class="month_of_entry" name="entry_month" required>
+							</center>
+							</td>
+							<td  colspan="1">
+							<center>
+								<input type="radio" class="month_of_entry" name="entry_month" required>
+							</center>
+							</td>
+							<td  colspan="1">
+							<center>
+								<input type="radio" class="month_of_entry" name="entry_month" required>
+							</center>
+							</td>
+							</tr>
+							</tbody>
+							</table>
+							</center>
 							</td>
 						</tr>
 						<tr>
