@@ -26,6 +26,7 @@
                             <h3 class="box-title">Students Details</h3>
                             <div class="box-tools">
                                 <div class="input-group">
+                                    <button class = "btn btn-primary" data-url = ""><i class = "fa fa-print" style = "margin-right: 4px;"></i> Print</button>
                                     <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
                                     <div class="input-group-btn">
                                        <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
