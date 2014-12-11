@@ -84,13 +84,15 @@
               <div class="clear"></div>
             </div>  
 							<header>
-								<h2 style="text-decoration: underline;" class="alt">Southern Cross Offered Courses</h2>
+								<h2 style="text-decoration: ;" class="alt">Southern Cross Offered Courses</h2>
 								<p>
-									1.	CERIFICATE AND DIPLOMA IN COMMUNITY HEALTH & DEVELOPMENT<br>
-									2.	DIPLOMA IN CLINICAL MEDICINE & SURGERY<br>
-									3.	KENYA REGISTERED COMMUNITY HEALTH NURSING/ REGISTERED NURSE (RN)<br>
-									4.	DIPLOMA IN MEDICAL LABORATORY SCIENCES<br>
-									5.	OTHER SHORT COURSES TO BE INTRODUCED<br>
+									<a href="#course1">1.	CERTIFICATE AND DIPLOMA IN COMMUNITY HEALTH & DEVELOPMENT</a><br>
+									<a href="#course2">2.	DIPLOMA IN CLINICAL MEDICINE & SURGERY</a><br>
+									<a href="#course3">3.	KENYA REGISTERED COMMUNITY HEALTH NURSING/ REGISTERED NURSE (RN)</a><br>
+									
+									<a href="#course4">4.	DIPLOMA IN MEDICAL LABORATORY SCIENCES</a><br>
+									<a href="#course5">5.	OTHER SHORT COURSES TO BE INTRODUCED</a><br>
+
 								</p>
 							</header>
 							
@@ -247,7 +249,7 @@
 			
 				
 
-					<section id="course5" class="two">
+					<section id="course4" class="two">
 						<div class="container">
 					
 							<header>
@@ -294,7 +296,7 @@
 						</div>
 					</section>
 
-					<section id="course6" class="four">
+					<section id="course5" class="four">
 						<div class="container">
 
 							<header>

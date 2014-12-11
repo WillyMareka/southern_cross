@@ -37,7 +37,7 @@
         <div class="grid_2 rel">
           <h1>
             <a href="#">
-              <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "120">
+              <img class="top_icon" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="Logo alt" width = "150">
             </a>
           </h1>
         </div>
@@ -75,23 +75,20 @@
     
     <section class="page1_header">
       <div class="container">
-        <div class="row margin-top-img">
+        <div class="row">
           <div class="grid_4">
-            <a style="width:370px" href="<?php echo base_url(). 'applications/diploma'?>" class="banner globe"><div class="maxheight">
-              <div class="fa fa-globe"></div>Diploma / Certificate</div>
+            <a href="<?php echo base_url(). 'applications/certificate'?>" class="banner "><div class="maxheight">
+              <div class="fa fa-globe"></div>Certificate</div>
             </a>
-            <a style="height:186px" href="<?php echo base_url(). 'home/about'?>" class="banner brief"><div class="maxheight">
-              <div class="fa fa-briefcase"></div>Preamble</div>
+            <a href="<?php echo base_url(). 'applications/diploma'?>" class="banner "><div class="maxheight1">
+              <div class="fa fa-briefcase"></div>Diploma</div>
             </a>
-            <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight">
+            <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight1">
               <div class="fa fa-cog"></div>Short Courses</div>
             </a>
-            <!-- <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight">
-              <div class="fa fa-cog"></div>Short Courses</div>
-            </a> -->
-            <!-- <a href="<?php echo base_url(). 'home/about'?>" class="banner "><div class="maxheight">
+            <a href="<?php echo base_url(). 'home/preamble'?>" class="banner "><div class="maxheight">
               <i class="fa fa-line-chart"></i>Preamble</div>
-            </a> -->
+            </a>
 
           </div>
           <div class="grid_5">
@@ -135,7 +132,6 @@
   ======================-->
   <!--Login modal -->
 <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<!-- Random text -->
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
@@ -166,16 +162,14 @@
       <div class="row">
         <div class="grid_10 preffix_1 ta__center">
           <div class="greet">
-            <div class="jumbotron home-bot-image">
-              <div class="homeopac">
-              <h2 class="head__1">
+            <h2 class="head__1">
               Welcome
             </h2>
             <h4>
                Certification to the Medical Fraternity
             </h4>
-            <p class="para">To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> <br > 
-            </div>
+            <p>To the <span class="light-blue-color">Southern Cross Institute</span> Homepage. <br> Register for Courses <a href="<?php echo base_url(). 'applications/diploma'?>" rel="nofollow" class="color1">Here</a> <br > OR <br> <a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p>
+            
           </div>
         </div>
       </div>
@@ -209,13 +203,10 @@
               <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/nursework.jpg'?>" alt="" class="img_inner fleft">
               <div class="extra_wrapper">
                 <div class="text1"><a href="#">Marketability</a></div>
-                <p> Partnerships and alliances with local NGO's and relevant employers in the region through collaboration in thier recruitment and refresher course requirements will present a unique and competitive advantage for our students.<br/> <br/> 
-                  A strategic alliance with a USA based Medical Institution will also facilitate deployment of Nursing and Social Work student into the US market.</p>
+                <p> A strategic alliance with a USA based Medical Institution will also facilitate deployment of Nursing and Social Work student into the US market.</p>
                 <br>
                 <p style="font-size:15px"><strong class='marketbold'>Kenya’s Health Workforce Training Capacity: a Situation Analysis</strong></p>
-                 <a href="<?php echo base_url(). 'home/market'?>"><button type="button" class="btn btn-primary">More</button></a>
-
-                 <!-- <a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">More</a> -->
+                 <a class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">More</a>
 
                  <!-- Button trigger modal -->
          <!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -325,7 +316,7 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
     <div class="container">
       <div class="row">
         <div class="grid_5">
-          <h4>More about <span class="light-blue-color">Southern Cross Institute</span></h4>
+          <h4>More about <span class="light-blue-color">Southern Cross</span></h4>
           <img width="170px" height="170px" src="<?php echo base_url() .'assets/images/siteimage.jpg'?>" alt="" class="img_inner fleft">
             <p>A limited liability company incorporated in Kenya, made up of a team of professionals with a combined experience in medical services, project management and finance. The consortium of professionals has been put together for the sole purpose of running a Mid-Level Medical College. </p>
             <!-- <p class="offset__1">Eligulaam dui eros dertolisce dertolo adipiscing quam id risus sagittis</p>
@@ -348,8 +339,8 @@ colspan="7">Table 1: Kenya's Health WorkForce</td></strong>
             <ul class="cont_address">
               <li>P.O. Box 1280-40100, Kisumu Kenya</li>
               <li>Email:<a href="#">southerncrossinstitute@gmail.com</a></li>
-              <li><a href="#">Tel Office: (+254) 0706 40 33 70</a></li>
-              <li><a href="#">Tel Office(2): (+254) 0736 40 33 70</a></li>
+              <li><a href="#">Tel Office:  +254(0)717 - 056 523</a></li>
+              <li><a href="#">Mobile: +254(0)717 - 056 523</a></li>
             </ul>
           </address>
         </div>
