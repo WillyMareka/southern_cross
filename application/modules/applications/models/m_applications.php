@@ -9,7 +9,7 @@ class M_applications extends MY_Model {
         date_default_timezone_set('Africa/Nairobi');
     }
 
-    public function add_applicant($path){
+    public function add_applicant(){
     	//echo "<pre>";print_r($this->input->post());echo "</pre>";exit;
     	// echo "<pre>";print_r(count($this->input->post()));echo "</pre>";exit;
     	$f_name = $_POST['f_name'];
@@ -58,14 +58,13 @@ class M_applications extends MY_Model {
 
     	$applicant_denomination = $_POST['applicant_denomination'];
     	// $applicant_work_experience = $_POST['applicant_work_experience'];
-
+        /*
     	$applicant_work_employer_1 = $_POST['applicant_work_employer_1'];
     	$applicant_work_type_1 = $_POST['applicant_work_type_1'];
     	$applicant_work_to_1 = $_POST['applicant_work_to_1'];
     	$applicant_work_from_1 = $_POST['applicant_work_from_1'];
     	$applicant_work_title_1 = $_POST['applicant_work_title_1'];
-
-
+        */
     	$source_of_discovery = $_POST['source_of_discovery'];
     	$reason_for_study = $_POST['reason_for_study'];
     	$applicant_declaration = $_POST['applicant_declaration'];
@@ -84,7 +83,6 @@ class M_applications extends MY_Model {
     		'marital_status' =>$marital_status,
     		'disability' =>$applicant_disability,
     		'disability_info' =>$applicant_disability_info,
-    		'applicant_picture' =>$path,
             'status' => 1
     		);
     	array_push($personal_info_data, $personal_info);
@@ -94,7 +92,8 @@ class M_applications extends MY_Model {
         $query = $this->db->query("INSERT INTO application_approvals VALUES(NULL, ".$applicant_id.", 0)");
         $query = $this->db->query("INSERT INTO applicant_course (applicant_id, course_id, intake) VALUES (".$applicant_id.", ".$diploma_level.", ".$year_of_entry.")");
 		//have a foreach where it stores
-		$work_info_data = array();
+		/*
+        $work_info_data = array();
 		$work_info = array(
     		'applicant_id' =>$applicant_id,
     		'employer' =>$applicant_work_employer_1,
@@ -108,7 +107,7 @@ class M_applications extends MY_Model {
     	// echo "<pre>";print_r($work_info_data);echo "</pre>";exit;
 
     	$this->db->insert_batch('applicant_work_info',$work_info_data);
-
+        */
     	$religion_info_data = array();
     	$religion_info = array(
     		'applicant_id' =>$applicant_id,
