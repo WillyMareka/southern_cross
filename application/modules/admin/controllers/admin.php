@@ -139,7 +139,7 @@ class Admin extends MY_Controller
 	public function createApplications()
 	{
 		$this->applicant_row = '';
-		$applicants = $this->m_admin->applications();
+		$applicants = $this->admin_model->student_applications();
 		// print_r($applicants);die();
 		$counter = 0;
 		foreach ($applicants as $key => $value) {
@@ -171,7 +171,7 @@ class Admin extends MY_Controller
 	public function getapplicantdetails($applicant_id)
 	{
 		$applicant_details = array();
-		$applicants = $this->m_admin->applications();
+		$applicants = $this->admin_model->student_applications();
 		foreach ($applicants as $applicant) {
 			if($applicant['applicant_id'] == $applicant_id)
 			{
