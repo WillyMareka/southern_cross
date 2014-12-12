@@ -75,7 +75,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
+        <li><a href="<?php echo base_url().'home'?>">Home</a></li>
         <li></li>
         <li class="appactive leftdist"><a href="#">Diploma</a></li>
         <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li>
@@ -183,17 +183,17 @@
 							<tr>
 							<td  colspan="1">
 							<center>
-								<input type="radio" class="month_of_entry" name="entry_month" required>
+								<input type="radio" class="month_of_entry" name="month_of_entry" value="January" required>
 							</center>
 							</td>
 							<td  colspan="1">
 							<center>
-								<input type="radio" class="month_of_entry" name="entry_month" required>
+								<input type="radio" class="month_of_entry" name="month_of_entry" value="May" required>
 							</center>
 							</td>
 							<td  colspan="1">
 							<center>
-								<input type="radio" class="month_of_entry" name="entry_month" required>
+								<input type="radio" class="month_of_entry" name="month_of_entry" value="September" required>
 							</center>
 							</td>
 							</tr>
@@ -291,16 +291,11 @@
 						<input required = "required"  id="birth_country" name="birth_country" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="applicant_gender">Gender:  </label>
+						<label class="description" for="id_passport">Passport No*./<br>ID No</label>
 						</td>
 						<td>
-						<select required = "required" name="applicant_gender" class="form-control select">
-							<option value="">--Select Gender--</option>
-							<option value="male">Male</option>
-							<option value="female">Female</option>
-						</select>
+						<input required = "required"  id="id_passport" name="id_passport" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
-							
 						</tr>
 						<tr>
 						<td>
@@ -310,38 +305,48 @@
 						<select required = "required" class=" form-control select medium" id="marital_status" name="marital_status"> 
 							<option value="" selected="selected">--Select Option--</option>
 							<option value="Single" >Single</option>
-							<!-- <option value="Married" >Married</option>
+							<option value="Married" >Married</option>
 							<option value="Divorced" >Divorced</option>
-							<option value="Widowed" >Widowed</option> -->
+							<option value="Widowed" >Widowed</option>
+						</select>
+						</td>
+						<td>
+						<label class=" description" for="applicant_gender">Gender:  </label>
+						</td>
+						<td>
+						<select required = "required" name="applicant_gender" class="form-control select">
+							<option value="">--Select Gender--</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
 						</select>
 						</td>
 						</tr>
 						<tr>
 						<td rowspan="2">
-						<label class=" description" for="yrs_of_english_education">Years of formal education in English : </label>
+						<label class=" description" for="yrs_of_english_education">Years of formal education in English(total) : </label>
 						</td>
 						<td rowspan="2">
-						<input required = "required"  id="yrs_of_english_education" name="yrs_of_english_education" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="yrs_of_english_education" name="yrs_of_english_education" class=" form-control  " type="number" maxlength="255" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="educ_primary_level">Level: Primary </label>
 						</td>
 						<td>
-						<input required = "required"  id="educ_primary_level" name="educ_primary_level" class=" form-control  " type="text" maxlength="255" value="" /> 
+						<input required = "required"  id="educ_primary_level" name="educ_primary_level" class=" form-control  " type="number" maxlength="255" value="" /> 
 						</td>
 						<td>
-						<label class=" educ_secondary_level" for="educ_secondary_level">Secondary: </label>
+						<label class=" educ_secondary_level" for="educ_secondary_level">Level: Secondary: </label>
 						</td>
 						<td>
-						<input required = "required"  id="educ_secondary_level" name="educ_secondary_level" class=" form-control  " type="text" maxlength="255" value="" />  	
+						<input required = "required"  id="educ_secondary_level" name="educ_secondary_level" class=" form-control  " type="number" maxlength="255" value="" />  	
 						</td>
 						<tr>
 						<td>
 						<!-- seth -->
-						<label class=" description" for="educ_post_secondary"> Post Secondary:  </label>
+						<label class=" description" for="educ_post_secondary">Level: Post Secondary:  </label>
 						</td>
 						<td>
-						<input required = "required"  id="educ_post_secondary" name="educ_post_secondary" class=" form-control  " type="text" maxlength="255" value="" /> 
+						<input required = "required"  id="educ_post_secondary" name="educ_post_secondary" class=" form-control  " type="number" maxlength="255" value="" /> 
 						</td>
 						</tr>
 						</tr>
@@ -596,7 +601,7 @@
 						<table class=" table table-bordered margin_bottom">
 						<tbody>
 						<tr>
-							<th colspan="5">Religious Affiliations</th>
+							<th colspan="3">Religious Affiliations</th>
 						</tr>
 						
 						<tr>
@@ -619,7 +624,32 @@
 							<input  class=" input" class=" " type="text" id="denomination_other" name="denomination_other">
 							</div>
 						</td> 
-						
+						<td colspan="2">
+						<table  class=" table-embedded table table-bordered">
+						<tbody>
+						<th colspan="2">For divinity applicants only*:</th>
+							<tr>
+								<td colspan="1">
+								<label class=" description" for="applicant_denomination">Ordained</label>
+								</td>
+								<td colspan="1">
+								<label class=" description" for="applicant_denomination">To be Ordained</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="1">
+								<center>
+								<input type="radio" name="ordinance" value="ordained" required>
+								</center>
+								</td>
+								<td colspan="1">
+								<center>
+								<input type="radio" name="ordinance" value="to_be_ordained" required>
+								</center>
+								</td>
+							</tr>
+							</tbody>
+						</table>
 						</td>
 						</tr>	
 						</tbody>

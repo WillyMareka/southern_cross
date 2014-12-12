@@ -1,3 +1,4 @@
+<?php //echo "<pre>";print_r($application_status);echo "</pre>";exit; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
