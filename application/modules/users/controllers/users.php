@@ -39,9 +39,19 @@ class Users extends MX_Controller
 			$password = $this->input->post('password');
 
 			$user_id = $this->m_user->check_login($username, $password);
+<<<<<<< HEAD
 			// echo md5(mareks);
 			//echo $user_id;exit;
 			$this->check_type($user_id);
+=======
+
+			// if ($user_id = false) {
+			// 	echo "NOPE. NOPE NOPE NOPE.";exit;
+			// }
+			//$this->check_type($user_id);
+
+			echo $user_id;
+>>>>>>> f169954f3eb4021899b05f42edb345b534dd1255
 	}
 
 	function check_type($user_id){
