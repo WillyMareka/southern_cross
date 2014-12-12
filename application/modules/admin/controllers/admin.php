@@ -12,7 +12,7 @@ class Admin extends MY_Controller
     }
 	function index()
 	{
-		$data['content_view'] = "dashboard";
+		$data['content_view'] = "new_dashboard";
 
 		$this->load->view('template/londonium_template', $data);
 	}
