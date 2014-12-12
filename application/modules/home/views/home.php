@@ -145,7 +145,7 @@
       <div class="modal-body">
       <?php $attr = array('id' =>"login_form",'name' => "login_form"); echo form_open("users/login",$attr); ?>
       <label for="user_name">User name:* </label>
-      <input type="text" class="input form-control user_name" name="user_name" required title="Please fill in the required fields">
+      <input type="text" class="input form-control user_name" name="username" required title="Please fill in the required fields">
       <label for="password">Password:* </label>
       <input type="password" class="input form-control password" name="password" required title="Please fill in the required fields">
       <p class="warning_msg">**Please ensure all fields are filled**</p>
