@@ -14,7 +14,7 @@ class Admin extends MY_Controller
 	{
 		$data['content_view'] = "dashboard";
 
-		$this->load->view('admin_view', $data);
+		$this->load->view('template/londonium_template', $data);
 	}
 
 	public function applications()
