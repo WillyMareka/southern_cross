@@ -34,19 +34,31 @@ class Users extends MX_Controller
 	
 	function login()
 	{
+		//echo "This works";exit;
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 
 			$user_id = $this->m_user->check_login($username, $password);
+<<<<<<< HEAD
+			// echo md5(mareks);
+			//echo $user_id;exit;
+			$this->check_type($user_id);
+=======
+
+			// if ($user_id = false) {
+			// 	echo "NOPE. NOPE NOPE NOPE.";exit;
+			// }
+			//$this->check_type($user_id);
 
 			echo $user_id;
+>>>>>>> f169954f3eb4021899b05f42edb345b534dd1255
 	}
 
 	function check_type($user_id){
 		
 		$user_details =$this->m_user->get_details($user_id); 
 
-		// echo "<pre>";print_r($user_details[0]['user_type']);echo "</pre>"; exit;
+		//echo "<pre>";print_r($user_details[0]['user_type']);echo "</pre>"; exit;
 		switch ($user_details[0]['user_type']) {
 			case 'super_admin':
 				// echo "Successful admin login";

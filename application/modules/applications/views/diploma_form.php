@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
 		
-		<title>Diploma/Certificate Application Form</title>
+		<title>Diploma Application Form</title>
 		<link rel="icon" type="image/x-icon" href="<?php echo base_url(). 'assets/icons/hospital.ico'?>" />
 		<link rel="stylesheet" type="text/css" href= "<?php echo base_url(). 'assets/bootstrap/css/bootstrap.css'?>"/>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/kickstart/css/fonts/font-awesome/css/font-awesome.min.css'?>">
@@ -42,7 +42,7 @@
 		<center><p class="top_header clearfix ">SOUTHERN CROSS</p></center>
 		<center><p class="top_mini_header clearfix">INSTITUTE OF TROPICAL MEDICINE</p></center>
 		 -->
-		<div class="form_title"><strong><h2>DIPLOMA/CERTIFICATE APPLICATION FORM</h2></strong></div>
+		<div class="form_title"><strong><h2>DIPLOMA APPLICATION FORM</h2></strong></div>
 		<div class=" logo_information">
 		</div>
 		
@@ -52,10 +52,10 @@
 			<p><strong class=" float_left clearfix">Email: </strong>  southerncrossinstitute@gmail.com</p>
 		</div>
 		<div class="logo_more_information float_right">
-		<p><strong class=" float_left clearfix clear_right">Tel Office: </strong> (+254) 0706 40 33 70</p>
-		<p><strong class=" float_left clearfix clear_right">Tel Office(2):</strong> (+254) 0736 40 33 70</p>
+		<p><strong class=" float_left clearfix clear_right">Tel Office: </strong> (+254) 0717 - 056 523</p>
+		<p><strong class=" float_left clearfix clear_right">Mobile: </strong> (+254) 0717 - 056 523</p>
 		</div>
-     
+
 </div>
 
 
@@ -69,19 +69,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><strong>Diploma/Certificate</strong></a>
+      <a class="navbar-brand" href="#"><strong>Diploma</strong></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="<?php echo base_url().'home/index'?>">Home</a></li>
+        <li><a href="<?php echo base_url().'home'?>">Home</a></li>
         <li></li>
-        <li class="appactive leftdist"><a href="#">Diploma/Certificate</a></li>
-        <!-- <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li> -->
+        <li class="appactive leftdist"><a href="#">Diploma</a></li>
+        <li><a href="<?php echo base_url().'applications/certificate'?>">Certificate</a></li>
         <li><a href="<?php echo base_url().'applications/short_courses'?>">Short Courses</a></li>
         <li><a href="<?php echo base_url(). 'home/programs'?>">Programs</a></li>
-        <li class = "pull-right"><a href = "<?php echo base_url() .'information/application_form.pdf'?>" download> <i class = "fa fa-file-pdf-o"></i> Download the Application Form</a></p></li>
         
         <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Applications<span class="caret"></span></a>
@@ -100,7 +99,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<p class="bg-warning">Please fill all the fields with an star ( * )</p>
+
 
 	<!-- <div class=" large_bcg_img"></div> -->
 		<?php $attr = array('id' => 'application_form','class' => 'application_form','enctype'=>'multipart/form-data'); echo form_open(base_url().'applications/application_submit',$attr) ?>
@@ -113,15 +112,18 @@
 						<table class="table table-bordered margin_bottom">
 							<tbody>
 							<tr>
+								<td><h5>Required*</h5></td>
+							</tr>
+							<tr>
 							<td>
-							<label class=" name form-name" for="top_f_name">First Name *</label>
+							<label class=" name form-name" for="top_f_name">First Name </label>
 							</td>
 							<td>
 							<input required = "required"  id="element_1" name="top_f_name" class=" form-control form-inputing" type="text" maxlength="20" value=""/> 	
 							</td>
 							<tr>
 							<td>
-							<label class=" description" for="top_s_name">Middle Name *</label>
+							<label class=" description" for="top_s_name">Middle Name </label>
 							</td>
 							<td>
 							<input required = "required"  id="element_2" name="top_s_name" class=" form-control form-inputing " type="text" maxlength="20" value=""/> 
@@ -129,21 +131,21 @@
 						    </tr>
 							<tr>
 							<td>
-							<label class=" description" for="top_l_name">Last Name *</label>
+							<label class=" description" for="top_l_name">Last Name </label>
 							</td>
 							<td>
 							<input required = "required"  id="element_3" name="top_l_name" class=" form-control form-inputing " type="text" maxlength="20" value="" /> 
 							</td>
 						    </tr>
 							</tr>
-							<tr>
+							<!-- <tr>
 							<td>
-							<label class=" " for="applicant_picture">Picture: *</label>
+							<label class=" " for="applicant_picture">Picture:  </label>
 							</td>
 							<td colspan="4">
 							<input required = "required"  id="applicant_picture" name="applicant_picture" class=" input inputs" type="file"/> 
 							</td>
-							</tr>
+							</tr> -->
 							</tbody>
 						</table>
 					</tr>
@@ -157,11 +159,16 @@
 						</tr>
 						<tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<td colspan="6"><label class=" description" for="yr_of_entry">Year of Entry *</label></td>
 =======
 						<td><label class=" description" for="yr_of_entry">Year of Entry </label></td>
 						<td><label class="description" for="entry_month">Month of Entry</label></td>
 >>>>>>> 50d8652abfaaa9df6694f074864fac2749e0dc3b
+=======
+						<td><label class=" description" for="yr_of_entry">Year of Entry </label></td>
+						<td><label class="description" for="entry_month">Month of Entry</label></td>
+>>>>>>> f169954f3eb4021899b05f42edb345b534dd1255
 						</tr>
 						<tr>
 							<td colspan="">
@@ -185,17 +192,17 @@
 							<tr>
 							<td  colspan="1">
 							<center>
-								<input type="radio" class="month_of_entry" name="entry_month" required>
+								<input type="radio" class="month_of_entry" name="month_of_entry" value="January" required>
 							</center>
 							</td>
 							<td  colspan="1">
 							<center>
-								<input type="radio" class="month_of_entry" name="entry_month" required>
+								<input type="radio" class="month_of_entry" name="month_of_entry" value="May" required>
 							</center>
 							</td>
 							<td  colspan="1">
 							<center>
-								<input type="radio" class="month_of_entry" name="entry_month" required>
+								<input type="radio" class="month_of_entry" name="month_of_entry" value="September" required>
 							</center>
 							</td>
 							</tr>
@@ -206,7 +213,7 @@
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="course_selection">I would like to be considered for *</label>
+						<label class=" description" for="course_selection">I would like to be considered for </label>
 						</td>
 						<td>
 						<select required = "required" class=" form-control  select medium" id="diploma_level" name="diploma_level"> 
@@ -226,7 +233,7 @@
 					<tbody>
 						<tr>
 						<td class="desc1">
-						<label class=" description " for="study_campus">Campus of Study : Kisumu Main Campus *</label>
+						<label class=" description " for="study_campus">Campus of Study : Kisumu Main Campus</label>
 						</td>
 						<td class="desc2">
 						<label class=" choice " for="study_campus">Regular Day Classes</label>
@@ -251,19 +258,19 @@
 						<tr class="">
 						
 						<td>
-						<label class=" description" for="l_name">Last (family) Name *</label>
+						<label class=" description" for="l_name">Last (family) Name </label>
 						</td>
 						<td>
 						<input required = "required"  id="last_fam_name" name="l_name" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="s_name">Middle Name *</label>
+						<label class=" description" for="s_name">Middle Name </label>
 						</td>
 						<td>
 						<input required = "required"  id="element_10" name="s_name" class=" form-control  " type="text" maxlength="255" value="" /> 
 						</td>
 						<td>
-						<label class=" description" for="f_name">First Name *</label>
+						<label class=" description" for="f_name">First Name</label>
 						</td>
 						<td>
 						<input required = "required"  id="element_11" name="f_name" class=" form-control  " type="text" maxlength="255" value="" />  
@@ -271,7 +278,7 @@
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="dob">Date of Birth *</label>
+						<label class=" description" for="dob">Date of Birth </label>
 						</td>
 						<td>
 						<div class=" form-group">
@@ -281,32 +288,27 @@
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="citizenship">Citizenship *</label>
+						<label class=" description" for="citizenship">Citizenship </label>
 						</td>
 						<td>
 						<input required = "required"  id="citizenship" name="citizenship" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="birth_country">Country of Birth *</label>
+						<label class=" description" for="birth_country">Country of Birth </label>
 						</td>
 						<td>
 						<input required = "required"  id="birth_country" name="birth_country" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="applicant_gender">Gender:  *</label>
+						<label class="description" for="id_passport">Passport No*./<br>ID No</label>
 						</td>
 						<td>
-						<select required = "required" name="applicant_gender" class="form-control select">
-							<option value="">--Select Gender--</option>
-							<option value="male">Male</option>
-							<option value="female">Female</option>
-						</select>
+						<input required = "required"  id="id_passport" name="id_passport" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
-							
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="marital_status">Marital Status:  *</label>
+						<label class=" description" for="marital_status">Marital Status:  </label>
 						</td>
 						<td>
 						<select required = "required" class=" form-control select medium" id="marital_status" name="marital_status"> 
@@ -317,39 +319,49 @@
 							<option value="Widowed" >Widowed</option>
 						</select>
 						</td>
+						<td>
+						<label class=" description" for="applicant_gender">Gender:  </label>
+						</td>
+						<td>
+						<select required = "required" name="applicant_gender" class="form-control select">
+							<option value="">--Select Gender--</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+						</td>
 						</tr>
 						<tr>
 						<td rowspan="2">
-						<label class=" description" for="yrs_of_english_education">Years of formal education in English : *</label>
+						<label class=" description" for="yrs_of_english_education">Years of formal education in English(total) : </label>
 						</td>
 						<td rowspan="2">
-						<input required = "required"  id="yrs_of_english_education" name="yrs_of_english_education" class=" form-control  " type="text" maxlength="255" value="" />  
+						<input required = "required"  id="yrs_of_english_education" name="yrs_of_english_education" class=" form-control  " type="number" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="educ_primary_level">Level: Primary *</label>
+						<label class=" description" for="educ_primary_level">Level: Primary </label>
 						</td>
 						<td>
-						<input required = "required"  id="educ_primary_level" name="educ_primary_level" class=" form-control  " type="text" maxlength="255" value="" /> 
+						<input required = "required"  id="educ_primary_level" name="educ_primary_level" class=" form-control  " type="number" maxlength="255" value="" /> 
 						</td>
 						<td>
-						<label class=" educ_secondary_level" for="educ_secondary_level">Secondary: *</label>
+						<label class=" educ_secondary_level" for="educ_secondary_level">Level: Secondary: </label>
 						</td>
 						<td>
-						<input required = "required"  id="educ_secondary_level" name="educ_secondary_level" class=" form-control  " type="text" maxlength="255" value="" />  	
+						<input required = "required"  id="educ_secondary_level" name="educ_secondary_level" class=" form-control  " type="number" maxlength="255" value="" />  	
 						</td>
 						<tr>
 						<td>
 						<!-- seth -->
-						<label class=" description" for="educ_post_secondary"> Post Secondary:  *</label>
+						<label class=" description" for="educ_post_secondary">Level: Post Secondary:  </label>
 						</td>
 						<td>
-						<input required = "required"  id="educ_post_secondary" name="educ_post_secondary" class=" form-control  " type="text" maxlength="255" value="" /> 
+						<input required = "required"  id="educ_post_secondary" name="educ_post_secondary" class=" form-control  " type="number" maxlength="255" value="" /> 
 						</td>
 						</tr>
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="other_languages">Other Languages spoken or written:  *</label>
+						<label class=" description" for="other_languages">Other Languages spoken or written:  </label>
 						</td>
 						<td>
 						<input required = "required"  id="other_languages" name="other_languages" class=" form-control  " type="text" maxlength="255" value="" />
@@ -358,7 +370,7 @@
 						<tr>
 							
 						<td>
-						<label class=" description" for="applicant_disability">Do you have any disability?  *</label>
+						<label class=" description" for="applicant_disability">Do you have any disability?  </label>
 						</td>
 						<td>
 						<select required = "required" id="applicant_disability" name="applicant_disability">
@@ -395,14 +407,14 @@
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="applicant_postal_address">Postal Address: *</label>
+						<label class=" description" for="applicant_postal_address">Postal Address: </label>
 						</td>
 						</td>
 						<td>
 						<input required = "required"  id="applicant_postal_address" name="applicant_postal_address" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="applicant_postal_code">Postal Code: *</label>
+						<label class=" description" for="applicant_postal_code">Postal Code: </label>
 						</td>
 						<td>
 						<input required = "required"  id="applicant_postal_code" name="applicant_postal_code" class=" form-control  " type="text" maxlength="255" value="" />  
@@ -410,13 +422,13 @@
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="applicant_city">City/Town  *</label>
+						<label class=" description" for="applicant_city">City/Town  </label>
 						</td>
 						<td>
 						<input required = "required"  id="applicant_city" name="applicant_city" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="applicant_country">Country:  *</label>
+						<label class=" description" for="applicant_country">Country:  </label>
 						</td>
 						<td>
 						<input required = "required"  id="applicant_country" name="applicant_country" class=" form-control  " type="text" maxlength="255" value="" />  
@@ -424,7 +436,7 @@
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="applicant_email">Email:  *</label>
+						<label class=" description" for="applicant_email">Email:  </label>
 						</td>
 						<td colspan="3">
 						<input required = "required"  id="applicant_email" name="applicant_email" class=" form-control form-email " type="email" maxlength="255" value="" />  
@@ -434,7 +446,7 @@
 						<label class=" description" for="applicant_telephone_no">Telephone (Home): </label>
 						</td>
 						<td>
-						<input   id="applicant_telephone_no" name="applicant_telephone_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="25" value="" />  
+						<input required = "required"  id="applicant_telephone_no" name="applicant_telephone_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="25" value="" />  
 						</td>
 						<td>
 						<label class=" description" for="applicant_office_no">(Office):  </label>
@@ -443,10 +455,10 @@
 						<input id="applicant_office_no" name="applicant_office_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="applicant_mobile_no">Mobile: *</label>
+						<label class=" description" for="applicant_mobile_no">Mobile: </label>
 						</td>
 						<td>
-						<input required="required" id="applicant_mobile_no" name="applicant_mobile_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" /> 
+						<input id="applicant_mobile_no" name="applicant_mobile_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" /> 
 						</td>
 						</tr>
 						</tr>
@@ -464,13 +476,13 @@
 					</tr>
 					<tr>
 						<td>
-						<label class=" description" for="sponsor_names">Names: *</label>			 
+						<label class=" description" for="sponsor_names">Names: </label>			 
 						</td>
 						<td>
 						<input required = "required"  id="sponsor_names" name="sponsor_names" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="sponsor_relation">Relation to Applicant: *</label>
+						<label class=" description" for="sponsor_relation">Relation to Applicant: </label>
 						</td>
 						<td>
 						<input required = "required"  id="sponsor_relation" name="sponsor_relation" class=" form-control  " type="text" maxlength="255" value="" />  
@@ -479,7 +491,7 @@
 					<tr>
 						
 						<td>
-						<label class=" description" for="sponsor_address">Address: *</label>
+						<label class=" description" for="sponsor_address">Address: </label>
 						</td>
 						<td>
 						<input required = "required"  id="sponsor_address" name="sponsor_address" class=" form-control  " type="text" maxlength="255" value="" />  
@@ -488,20 +500,20 @@
 						<label class=" description" for="sponsor_telephone_no">Telephone (Home): </label>
 						</td>
 						<td>
-						<input  id="sponsor_telephone_no" name="sponsor_telephone_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" />  
+						<input required = "required"  id="sponsor_telephone_no" name="sponsor_telephone_no" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" />  
 						</td>
 						
 					</tr>
 					<tr>
 						
 						<td>
-						<label class=" description" for="sponsor_email">Email:  *</label>
+						<label class=" description" for="sponsor_email">Email:  </label>
 						</td>
 						<td>
 						<input required = "required"  id="sponsor_email" name="sponsor_email" class=" form-control  " type="email" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="sponsor_mobile">Mobile: *</label>
+						<label class=" description" for="sponsor_mobile">Mobile: </label>
 						</td>
 						<td>
 						<input required = "required"  id="sponsor_mobile" name="sponsor_mobile" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="13" value="" />  
@@ -509,13 +521,13 @@
 						</tr>
 						<tr>
 						<td>
-						<label class=" description" for="sponsor_occupation">Occupation: *</label>
+						<label class=" description" for="sponsor_occupation">Occupation: </label>
 						</td>
 						<td>
 						<input required = "required"  id="sponsor_occupation" name="sponsor_occupation" class=" form-control  " type="text" maxlength="255" value="" />  
 						</td>
 						<td>
-						<label class=" description" for="sponsor_monthly_income">Monthly Income(No Comma's): *</label>
+						<label class=" description" for="sponsor_monthly_income">Monthly Income(No Comma's): </label>
 						</td>
 						<td>
 						<input required = "required"  id="sponsor_monthly_income" name="sponsor_monthly_income" class=" form-control  " type="number" title = "Please enter only numbers"  maxlength="255" value="" />  
@@ -540,15 +552,15 @@
 							</tr>
 							<tr>
 								
-								<td class="institute" rowspan="2">Name of Institution *</td>
-								<td class="level" rowspan="2">Level *</td>
-								<td rowspan="2">Area of Study *</td>
+								<td class="institute" rowspan="2">Name of Institution</td>
+								<td class="level" rowspan="2">Level</td>
+								<td rowspan="2">Area of Study</td>
 								<td colspan="2">
 								<center>
-								Duration of Study *
+								Duration of Study
 								</center>
 								</td>
-								<td rowspan="2">Degree/Diploma/Certificates attained *</td>
+								<td rowspan="2">Degree/Diploma/Certificates attained</td>
 								
 							</tr>
 							<tr>
@@ -598,12 +610,12 @@
 						<table class=" table table-bordered margin_bottom">
 						<tbody>
 						<tr>
-							<th colspan="5">Religious Affiliations</th>
+							<th colspan="3">Religious Affiliations</th>
 						</tr>
 						
 						<tr>
 						<td>
-						<label class=" description" for="applicant_denomination">Denomination: *</label>
+						<label class=" description" for="applicant_denomination">Denomination: </label>
 						</td>
 						<td>
 						<select required="required" class=" form-control input" id="applicant_denomination" name="applicant_denomination">
@@ -621,7 +633,32 @@
 							<input  class=" input" class=" " type="text" id="denomination_other" name="denomination_other">
 							</div>
 						</td> 
-						
+						<td colspan="2">
+						<table  class=" table-embedded table table-bordered">
+						<tbody>
+						<th colspan="2">For divinity applicants only*:</th>
+							<tr>
+								<td colspan="1">
+								<label class=" description" for="applicant_denomination">Ordained</label>
+								</td>
+								<td colspan="1">
+								<label class=" description" for="applicant_denomination">To be Ordained</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="1">
+								<center>
+								<input type="radio" name="ordinance" value="ordained" required>
+								</center>
+								</td>
+								<td colspan="1">
+								<center>
+								<input type="radio" name="ordinance" value="to_be_ordained" required>
+								</center>
+								</td>
+							</tr>
+							</tbody>
+						</table>
 						</td>
 						</tr>	
 						</tbody>
@@ -700,7 +737,7 @@
 								<td colspan="7">Additional Information</td>
 							</tr>
 							<tr>
-								<th colspan="10"><label  for="source_of_discovery">How did you learn about Southern Cross Institute of Tropical Medicine? *</label></th>
+								<th colspan="10"><label  for="source_of_discovery">How did you learn about Southern Cross Institute of Tropical Medicine? </label></th>
 								<tr>
 									<td>
 									<select required = "required" class="form-control select" id="source_of_discovery" name="source_of_discovery">
@@ -745,7 +782,7 @@
 						<table  class=" table table-bordered margin_bottom">
 							<tbody>
 							<tr>
-								<h5><label for="applicant_declaration">Student Declaration: *</label></h5>
+								<h5><label for="applicant_declaration">Student Declaration: </label></h5>
 							</tr>
 							<tr>
 								<td>

@@ -23,7 +23,7 @@ class M_user extends CI_Model {
 
         else
         {
-            return false;
+            return "No credentials";
         }
     }
 
