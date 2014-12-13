@@ -8,7 +8,7 @@
               <h6 class="panel-title"><i class="icon-file"></i> Bordered datatable inside panel</h6>
             </div>
             <div class = "datatable"><table class="table table-bordered" id = "awesomedata"><thead><tr><th>#</th><th>First Name</th><th>Action</th></tr></thead><tbody id = "applicant">
-            <tr><td>1</td><td>Kuma</td><td>Lamba</td></tr></tr>
+            <?php echo $application;?>
             </tbody></table></div>
           </div>
           <!-- /bordered datatable inside panel -->

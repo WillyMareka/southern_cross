@@ -66,7 +66,7 @@
             </div>
           </div>
       <div class="text-right">
-        <button type="submit" class="btn btn-primary"><span> Send Message </span> <i class = "icon-paper-plane"></i> </button>
+        <button type="submit" class="btn btn-primary"> <i class = "icon-paper-plane"></i> <span> Send Message </span></button>
       </div>
         </form>
         </div>
