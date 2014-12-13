@@ -7,6 +7,8 @@ class MY_Controller extends MX_Controller
         // Call the Model constructor
         parent::__construct();
         $this->load->model('admin/m_admin');
+        $this->load->module('auth');
+        $this->m_admin->getalltables();
 
     }
 
@@ -89,6 +91,39 @@ class MY_Controller extends MX_Controller
             {
                 show_error($this->email->print_debugger());
             }
+    }
+
+    function userdetails($userid, $usertype)
+    {
+        $users = array('ADMIN' => 'administrator', 'Lecturer' => 'lecturers', 'Student' => 'student_course');
+
+        foreach ($users as $key => $value) {
+            if($key == $usertype)
+            {
+                $details = $this->db->get_where($value, array('user_id' => $userid), 1);
+                $user_details = $details -> result_array();
+            }
+        }
+
+        return $user_details;
+    }
+
+    function checkLogin($current)
+    {
+        if(!$this->session->userdata('logged_in'))
+        {
+            redirect(base_url() . 'auth');
+        }
+
+        else
+        {
+            $usertype = $this->session->userdata('usertype');
+
+            if($usertype != $current)
+            {
+                redirect(base_url() . 'auth');
+            }
+        }
     }
 
 }

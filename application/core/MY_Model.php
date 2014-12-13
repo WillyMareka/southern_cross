@@ -9,6 +9,31 @@ class MY_Model extends CI_Model {
         date_default_timezone_set('Africa/Nairobi');
     }
 
+    public function getalltables()
+    {
+      $table_columns = array();
+      $query = $this->db->query("SHOW TABLES FROM scitm");
+      $result = $query->result_array();
+
+      foreach ($result as $key => $value) {
+
+        $cols = array();
+        $columns = $this->db->query("SHOW FIELDS FROM ".$value['Tables_in_scitm']);
+
+      $c_result = $columns->result_array();
+
+      foreach ($c_result as $k => $v) {
+        $cols[$v['Field']] = $v;
+      }
+
+      $table_columns[$value['Tables_in_scitm']] = $cols;
+      }
+
+      
+
+      return $table_columns;
+    }
+
     public function getCourses()
     {
     	$query = $this->db->query("SELECT * FROM courses ORDER BY course_no");
