@@ -7,9 +7,13 @@ class MY_Controller extends MX_Controller
         // Call the Model constructor
         parent::__construct();
         $this->load->model('admin/m_admin');
+
     }
 
-   
+   public function showbase()
+   {
+    echo base_url();
+   }
     public function logout()
     {
         $this->session->sess_destroy();

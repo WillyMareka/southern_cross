@@ -47,11 +47,20 @@ class MY_Model extends CI_Model {
                ");
        $result = $query->result_array();
        $data['applications'] = $result[0]['applicants'];
-       
+
         $query = $this->db->query("SELECT count(id) as lecturers FROM lecturers");
        $result = $query->result_array();
        $data['lecturers'] = $result[0]['lecturers'];
 
-       return $result;
+        $query = $this->db->query("SELECT count(student_course_id) as students FROM student_course");
+       $result = $query->result_array();
+       $data['students'] = $result[0]['students'];
+
+       $query = $this->db->query("SELECT count(course_id) as courses FROM courses");
+       $result = $query->result_array();
+       $data['courses'] = $result[0]['courses'];
+
+       // echo "<pre>";print_r($data);die;
+       return $data;
     }
 }

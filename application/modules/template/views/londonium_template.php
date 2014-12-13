@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Londinium - premium responsive admin template by Eugene Kopyov</title>
+<title>Southern Cross - <?php echo $pagetitle; ?></title>
 <link href="<?php echo base_url(); ?>assets/londonium/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url(); ?>assets/londonium/css/londinium-theme.min.css" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url(); ?>assets/londonium/css/styles.min.css" rel="stylesheet" type="text/css">
@@ -45,6 +45,10 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/londonium/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/bower_components/highcharts/highcharts.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/bower_components/highcharts/modules/exporting.js"></script>
+<script type="text/javascript">
+   base_url='<?php  echo base_url(); ?>';
+</script>
+<script type="text/javascript" src = "<?php echo base_url(); ?>assets/script/custom_admin.js"></script>
 <!--<script type="text/javascript" src="<?php echo base_url(); ?>assets/londonium/js/application_blank.js"></script>-->
 
 <!--<script type="text/javascript" src="<?php echo base_url(); ?>assets/londonium/js/charts/widgets/updating_1.js"></script>
@@ -134,9 +138,9 @@
       <!-- /user dropdown -->
       <!-- Main navigation -->
       <ul class="navigation">
-        <li class="active"><a href=""><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
-        <li><a href=""><span>Messages</span> <i class="icon-bubble-user"></i></a></li>
-        <li><a href="#"><span>Applications</span> <i class="icon-quill2"></i></a></li>
+        <li class="active"><a href="<?php echo base_url(); ?>admin"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
+        <li><a href="<?php echo base_url(); ?>admin"><span>Messages</span> <i class="icon-bubble-user"></i></a></li>
+        <li><a href="<?php echo base_url(); ?>admin/applications"><span>Applications</span> <i class="icon-quill2"></i></a></li>
         <li><a href="#" class = "expand"><span>Staff</span> <i class="icon-vcard"></i></a>
           <ul>
             <li><a href = "#"><i class = "icon-user4 text-muted"></i> Teaching Staff </a></li>
@@ -166,6 +170,52 @@
   <!-- Page content -->
   <div class="page-content">
     <!-- Page header -->
+        <div class="page-header">
+      <div class="page-title">
+        <h3><?php echo $pagetitle; ?> <small><?php echo $pagedescription; ?></small></h3>
+      </div>
+      <div id="reportrange" class="range">
+        <div class="visible-xs header-element-toggle"><a class="btn btn-primary btn-icon"><i class="icon-calendar"></i></a></div>
+        <div class="date-range"></div>
+        <span class="label label-danger">9</span></div>
+    </div>
+    <!-- /page header -->
+    <!-- Breadcrumbs line -->
+    <div class="breadcrumb-line">
+      <ul class="breadcrumb">
+        <li><a href="index.html"><?php echo $pagetitle; ?></a></li>
+      </ul>
+      <div class="visible-xs breadcrumb-toggle"><a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target=".breadcrumb-buttons"><i class="icon-menu2"></i></a></div>
+      <ul class="breadcrumb-buttons collapse">
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
+          <div class="popup dropdown-menu dropdown-menu-right">
+            <div class="popup-header"><a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a><span>Quick search</span><a href="#" class="pull-right"><i class="icon-new-tab"></i></a></div>
+            <form action="#" class="breadcrumb-search">
+              <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+              <div class="row">
+                <div class="col-xs-6">
+                  <label class="radio">
+                    <input type="radio" name="search-option" class="styled" checked="checked">
+                    Students</label>
+                  <label class="radio">
+                    <input type="radio" name="search-option" class="styled">
+                    Lecturers</label>
+                </div>
+                <div class="col-xs-6">
+                  <label class="radio">
+                    <input type="radio" name="search-option" class="styled">
+                    Users</label>
+                  <label class="radio">
+                    <input type="radio" name="search-option" class="styled">
+                    Courses</label>
+                </div>
+              </div>
+              <input type="submit" class="btn btn-block btn-success" value="Search">
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
 
     <?php $this->load->view($content_view); ?>
     <!-- Footer -->
@@ -178,7 +228,7 @@
   <!-- /page content -->
 </div>
 <!-- /content -->
-<script type="text/javascript" src = "<?php echo base_url(); ?>assets/script/custom_admin.js"></script>
+
 
 </body>
 </html>

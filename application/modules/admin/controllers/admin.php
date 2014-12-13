@@ -2,17 +2,21 @@
 
 class Admin extends MY_Controller
 {
-	var $applicant_row;
+	var $applicant_row, $counts;
 	function __construct()
     {
         // Call the Model constructor
         parent::__construct();
         $this->load->model('admin_model');
         $this->load->model('m_admin');
+        $this->counts = $this->m_admin->getAdminCounts();
     }
 	function index()
 	{
 		$data['content_view'] = "new_dashboard";
+		$data['counts'] = $this->counts;
+		$data['pagetitle'] = "Administrator Dashboard";
+		$data['pagedescription'] = "The Administrator's home page";
 
 		$this->load->view('template/londonium_template', $data);
 	}
@@ -20,11 +24,12 @@ class Admin extends MY_Controller
 	public function applications()
 	{
 		$data['content_view'] = "application_view";
-
+		$data['pagetitle'] = "Applications";
+		$data['pagedescription'] = "Student Applications";
 		$data['application'] = $this->createApplications();
 		
 
-		$this->load->view('admin_view', $data);
+		$this->load->view('template/londonium_template', $data);
 	}
 
 	function register()
@@ -138,7 +143,7 @@ class Admin extends MY_Controller
     }
 	public function createApplications()
 	{
-		$this->applicant_row = '';
+		// $this->applicant_row = '';
 		$applicants = $this->admin_model->student_applications();
 		// print_r($applicants);die();
 		$counter = 0;
@@ -212,6 +217,13 @@ class Admin extends MY_Controller
 
 
 		$this->load->view("admin_view", $data);
+	}
+
+	public function getApplicants()
+	{
+		$applicants = $this->admin_model->student_applications();
+
+		echo json_encode($applicants);
 	}
 }
 

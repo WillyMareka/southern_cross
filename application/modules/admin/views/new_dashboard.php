@@ -1,49 +1,4 @@
-    <div class="page-header">
-      <div class="page-title">
-        <h3>Administrator Dashboard <small>The Administrator's home page</small></h3>
-      </div>
-      <div id="reportrange" class="range">
-        <div class="visible-xs header-element-toggle"><a class="btn btn-primary btn-icon"><i class="icon-calendar"></i></a></div>
-        <div class="date-range"></div>
-        <span class="label label-danger">9</span></div>
-    </div>
-    <!-- /page header -->
-    <!-- Breadcrumbs line -->
-    <div class="breadcrumb-line">
-      <ul class="breadcrumb">
-        <li><a href="index.html">Dashboard</a></li>
-      </ul>
-      <div class="visible-xs breadcrumb-toggle"><a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target=".breadcrumb-buttons"><i class="icon-menu2"></i></a></div>
-      <ul class="breadcrumb-buttons collapse">
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
-          <div class="popup dropdown-menu dropdown-menu-right">
-            <div class="popup-header"><a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a><span>Quick search</span><a href="#" class="pull-right"><i class="icon-new-tab"></i></a></div>
-            <form action="#" class="breadcrumb-search">
-              <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
-              <div class="row">
-                <div class="col-xs-6">
-                  <label class="radio">
-                    <input type="radio" name="search-option" class="styled" checked="checked">
-                    Students</label>
-                  <label class="radio">
-                    <input type="radio" name="search-option" class="styled">
-                    Lecturers</label>
-                </div>
-                <div class="col-xs-6">
-                  <label class="radio">
-                    <input type="radio" name="search-option" class="styled">
-                    Users</label>
-                  <label class="radio">
-                    <input type="radio" name="search-option" class="styled">
-                    Employees</label>
-                </div>
-              </div>
-              <input type="submit" class="btn btn-block btn-success" value="Search">
-            </form>
-          </div>
-        </li>
-      </ul>
-    </div>
+
     <!-- /breadcrumbs line -->
 
     <!-- Default panel -->
@@ -56,10 +11,10 @@
     <!-- /default panel -->
     <div class="info-buttons">
       <div class="row block-inner">
-        <div class="col-md-3"><a href="#"><i class="fa fa-mortar-board"></i> <span>Students</span> <strong class="label label-danger">0</strong></a></div>
-        <div class="col-md-3"><a href="#"><i class="icon-vcard"></i> <span>Employees</span> <strong class="label label-success">0</strong></a></div>
-        <div class="col-md-3"><a href="#"><i class="icon-user4"></i> <span>Lecturers</span> <strong class="label label-warning">0</strong></a></div>
-        <div class="col-md-3"><a href="#"><i class="icon-quill2"></i> <span>Applications</span> <strong class="label label-info">0</strong></a></div>
+        <div class="col-md-3"><a href="#"><i class="fa fa-mortar-board"></i> <span>Students</span> <strong class="label label-danger"><?php echo $counts['students'];?></strong></a></div>
+        <div class="col-md-3"><a href="#"><i class="icon-book2"></i> <span>Courses</span> <strong class="label label-success"><?php echo $counts['courses'];?></strong></a></div>
+        <div class="col-md-3"><a href="#"><i class="icon-user4"></i> <span>Lecturers</span> <strong class="label label-warning"><?php echo $counts['lecturers'];?></strong></a></div>
+        <div class="col-md-3"><a href="#"><i class="icon-quill2"></i> <span>Applications</span> <strong class="label label-info"><?php echo $counts['applications'];?></strong></a></div>
       </div>
     </div>
 
