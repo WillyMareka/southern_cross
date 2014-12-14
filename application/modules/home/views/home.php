@@ -84,7 +84,7 @@
             <a style="height:186px" href="<?php echo base_url(). 'home/about'?>" class="banner brief"><div class="maxheight">
               <div class="fa fa-briefcase"></div>Preamble</div>
             </a>
-            <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight">
+            <a style="height:186px" href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight">
               <div class="fa fa-cog"></div>Short Courses</div>
             </a>
             <!-- <a href="<?php echo base_url(). 'applications/short_courses'?>" class="banner "><div class="maxheight">
