@@ -96,6 +96,7 @@ class MY_Controller extends MX_Controller
     function userdetails($userid, $usertype)
     {
         $users = array('ADMIN' => 'administrator', 'Lecturer' => 'lecturers', 'Student' => 'student_course');
+        $user_details = array();
 
         foreach ($users as $key => $value) {
             if($key == $usertype)
@@ -106,6 +107,8 @@ class MY_Controller extends MX_Controller
         }
 
         return $user_details;
+
+        
     }
 
     function checkLogin($current)
