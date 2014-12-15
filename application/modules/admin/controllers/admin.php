@@ -162,6 +162,7 @@ class Admin extends MY_Controller
 			$this->applicant_row .= '<td><a href = "'.base_url().'admin/viewapplicantdetails/'.$value['applicant_id'].'">View More</a></td>';
 			$this->applicant_row .= '<tr>';
 		}
+		
 
 		return $this->applicant_row;
 	}
