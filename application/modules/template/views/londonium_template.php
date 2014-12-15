@@ -98,12 +98,12 @@
         </table>
       </div>
     </li>
-    <li class="user dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><img src="<?php base_url(); ?>assets/londonium/images/demo/users/face15.png" alt="user-image"><span>Scitm Admin</span><i class="caret"></i></a>
+    <li class="user dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo base_url(); ?>assets/londonium/images/demo/users/face15.png" alt="user-image"><span>Scitm Admin</span><i class="caret"></i></a>
       <ul class="dropdown-menu dropdown-menu-right icons-right">
         <li><a href="#"><i class="icon-user"></i> Profile</a></li>
         <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
         <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
-        <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+        <li><a href="<?php echo base_url(); ?>auth"><i class="icon-exit"></i> Logout</a></li>
       </ul>
     </li>
   </ul>
@@ -115,12 +115,12 @@
   <div class="sidebar collapse">
     <div class="sidebar-content">
       <!-- User dropdown -->
-      <div class="user-menu dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php base_url(); ?>assets/londonium/images/demo/users/face15.png" alt="">
+      <div class="user-menu dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo base_url(); ?>assets/londonium/images/demo/users/face15.png" alt="">
         <div class="user-info">Scitm Admin <span>Administrator</span></div>
         </a>
         <div class="popup dropdown-menu dropdown-menu-right">
           <div class="thumbnail">
-            <div class="thumb"><img alt="" src="<?php base_url(); ?>assets/londonium/images/demo/users/face15.png">
+            <div class="thumb"><img alt="" src="<?php echo base_url(); ?>assets/londonium/images/demo/users/face15.png">
               <div class="thumb-options"><span><a href="#" class="btn btn-icon btn-success"><i class="icon-pencil"></i></a><a href="#" class="btn btn-icon btn-success"><i class="icon-remove"></i></a></span></div>
             </div>
             <div class="caption text-center">
@@ -161,7 +161,7 @@
             <li><a href="">System Settings</a></li>
           </ul>
         </li>
-        <li><a href = "#"><span>Log Out</span> <i class = "icon-lock"></i></a></li>
+        <li><a href = "<?php echo base_url(); ?>auth"><span>Log Out</span> <i class = "icon-lock"></i></a></li>
       </ul>
       <!-- /main navigation -->
     </div>
