@@ -33,13 +33,17 @@ $(function(){
   }
  }
 // CUSTOM JS
+//random change to enable commit
 $(".warning_msg").hide();
  $(".login_button").click(function(e){
   e.preventDefault();
+  $(".login_button").html("<i class=\"fa fa-spin fa-circle-o-notch\"></i>");
   var pwd=$(".password").val();
   var uname = $(".user_name").val();
 
   if (pwd == "" || uname == "") {
+    $(".warning_msg").html("**Please ensure all fields are filled**");
+    $(".login_button").html("Login").delay( 2000 );
     $(".warning_msg").slideDown();
   }else{
     //alert(pwd);alert(uname);return;
@@ -50,12 +54,18 @@ $(".warning_msg").hide();
             'password':pwd
             },
             success:function(msg){
-              //alert(msg);
+              // alert(msg);return;
+              if (msg == false) {
+                //alert("Your credentials are faulty");
+                $(".warning_msg").html("**Your credentials are faulty**");
+                $(".warning_msg").slideDown();
+                $(".login_button").html("Login").delay( 2000 );
+              }else{
               var redirection = "users/check_type/";
               var full_url = redirection.concat(msg);
 
-              //alert(full_url);return;
               window.location.href = full_url;
+              };
             }
     });
   };

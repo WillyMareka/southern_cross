@@ -14,12 +14,12 @@
 
 .navigation {
   z-index: 999;
-  position: relative;
-  /*left: -20px;*/
-  padding: 35px 0;
-  background: rgba(40, 40, 60, 0.5);
-  width:1100px;
-  margin-top: 10px;
+position: relative;
+left: -80px;
+padding: 42px 0;
+background: rgba(40, 40, 60, 0.5);
+width: 1050px;
+margin-top: 2px;
 }
 .navigation .sf-menu {
   z-index: 990;
@@ -180,16 +180,16 @@ body {
 }
 
 .ic {
-	border:0;
-	float:right;
-	background:#fff;
-	color:#f00;
-	width:50%;
-	line-height:10px;
-	font-size:10px;
-	margin:-220% 0 0 0;
-	overflow:hidden;
-	padding:0
+  border:0;
+  float:right;
+  background:#fff;
+  color:#f00;
+  width:50%;
+  line-height:10px;
+  font-size:10px;
+  margin:-220% 0 0 0;
+  overflow:hidden;
+  padding:0
 }
 
 strong {
@@ -235,7 +235,7 @@ h2.head__1 {
   padding-top: 74px;
   font-size: 72px;
   margin-bottom: 26px;
-  color: #000000;
+  color: #FFF;
 }
 h3 {
   font-size: 36px;
@@ -406,6 +406,7 @@ header {
   position: relative;
   z-index: 999;
   width: 100%!important;
+  height: 100%!important;
   background: url(../images/university.jpg) center 0 no-repeat;
   background-size: cover;
 }
@@ -896,7 +897,7 @@ a.color1:hover {
 .top_icon{
   max-width: 165px;
   max-height: 219px;
-  margin:10px 0;
+  margin:2px 0;
 }
 .login_link{
     right: 0;
@@ -936,10 +937,10 @@ a.color1:hover {
 
 .tint{
   background: rgba(43, 44, 44, 0.6);
-  padding-bottom: 50px;
+  padding: 46px 0px 60px;
   margin:0;
   width: 100%!important;
-  height: 100%!important;
+  height: 100vh!important;
 }
 
 .margin-right-sm{

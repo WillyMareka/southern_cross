@@ -37,6 +37,10 @@ class Home extends MY_Controller
     $this->load->view('contacts');
   }
 
+  public function market(){
+    $this->load->view('marketability');
+  }
+
    public function programs(){
     $this->load->view('programs');
   }

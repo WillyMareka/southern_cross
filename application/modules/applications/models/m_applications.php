@@ -9,16 +9,19 @@ class M_applications extends MY_Model {
         date_default_timezone_set('Africa/Nairobi');
     }
 
-    public function add_applicant($path){
-    	//echo "<pre>";print_r($this->input->post());echo "</pre>";exit;
+    public function add_applicant(){
+    	// echo "<pre>";print_r($this->input->post());echo "</pre>";exit;
     	// echo "<pre>";print_r(count($this->input->post()));echo "</pre>";exit;
     	$f_name = $_POST['f_name'];
     	$s_name = $_POST['s_name'];
     	$l_name = $_POST['l_name'];
     	$dob = $_POST['dob'];
     	$year_of_entry = $_POST['yr_of_entry'];
+        $month_of_entry=$_POST['month_of_entry'];
     	$diploma_level = $_POST['diploma_level'];
     	// $certificate_level = $_POST['certificate_level'];
+
+        $id_passport = $_POST['id_passport'];
     	$citizenship = $_POST['citizenship'];
     	$birth_country = $_POST['birth_country'];
     	$applicant_gender = $_POST['applicant_gender'];
@@ -56,16 +59,18 @@ class M_applications extends MY_Model {
     	$applicant_educ_certificates_1 = $_POST['applicant_educ_certificates_1'];
 
 
-    	$applicant_denomination = $_POST['applicant_denomination'];
-    	// $applicant_work_experience = $_POST['applicant_work_experience'];
+        $applicant_denomination = $_POST['applicant_denomination'];
+        $applicant_ordinance = $_POST['ordinance'];
+    	$applicant_denomination_other = $_POST['denomination_other'];
 
+    	// $applicant_work_experience = $_POST['applicant_work_experience'];
+        /*
     	$applicant_work_employer_1 = $_POST['applicant_work_employer_1'];
     	$applicant_work_type_1 = $_POST['applicant_work_type_1'];
     	$applicant_work_to_1 = $_POST['applicant_work_to_1'];
     	$applicant_work_from_1 = $_POST['applicant_work_from_1'];
     	$applicant_work_title_1 = $_POST['applicant_work_title_1'];
-
-
+        */
     	$source_of_discovery = $_POST['source_of_discovery'];
     	$reason_for_study = $_POST['reason_for_study'];
     	$applicant_declaration = $_POST['applicant_declaration'];
@@ -78,23 +83,34 @@ class M_applications extends MY_Model {
     		's_name' =>$s_name,
     		'l_name' =>$l_name,
     		'dob' =>$dob,
+            'id_passport'=>$id_passport,
     		'citizenship' =>$citizenship,
     		'birth_country' =>$birth_country,
     		'gender' =>$applicant_gender,
     		'marital_status' =>$marital_status,
     		'disability' =>$applicant_disability,
     		'disability_info' =>$applicant_disability_info,
-    		'applicant_picture' =>$path,
             'status' => 1
     		);
     	array_push($personal_info_data, $personal_info);
     	$this->db->insert_batch('applicant_personal_info',$personal_info_data);
     	$applicant_id = mysql_insert_id();
 
+        $course_info_data = array();
+        $course_info = array(
+            'applicant_id' => $applicant_id, 
+            'course_id'=>$diploma_level,
+            'intake_month'=> $month_of_entry,
+            'intake'=>$year_of_entry
+            );
+        array_push($course_info_data, $course_info);
+        $this->db->insert_batch('applicant_course',$course_info_data);
+
         $query = $this->db->query("INSERT INTO application_approvals VALUES(NULL, ".$applicant_id.", 0)");
-        $query = $this->db->query("INSERT INTO applicant_course (applicant_id, course_id, intake) VALUES (".$applicant_id.", ".$diploma_level.", ".$year_of_entry.")");
+        //$query = $this->db->query("INSERT INTO applicant_course (applicant_id, course_id, intake) VALUES (".$applicant_id.", ".$diploma_level.", ".$year_of_entry.")");
 		//have a foreach where it stores
-		$work_info_data = array();
+		/*
+        $work_info_data = array();
 		$work_info = array(
     		'applicant_id' =>$applicant_id,
     		'employer' =>$applicant_work_employer_1,
@@ -108,11 +124,13 @@ class M_applications extends MY_Model {
     	// echo "<pre>";print_r($work_info_data);echo "</pre>";exit;
 
     	$this->db->insert_batch('applicant_work_info',$work_info_data);
-
+        */
     	$religion_info_data = array();
     	$religion_info = array(
     		'applicant_id' =>$applicant_id,
-    		'denomination' =>$applicant_denomination
+            'ordinance'=>$applicant_ordinance,
+    		'denomination' =>$applicant_denomination,
+            'specified_other'=>$applicant_denomination_other
     		);
     	array_push($religion_info_data, $religion_info);
     	$this->db->insert_batch('applicant_religion_info',$religion_info_data);
@@ -182,7 +200,11 @@ class M_applications extends MY_Model {
     	array_push($additional_info_data, $additional_info);
     	$this->db->insert_batch('applicant_additional_info',$additional_info_data);
 
-    	echo "Successful Entry of Applicant Information";
+    	//echo "Successful Entry of Applicant Information";
+        $status = array();//used to pass data from and to the controller. simply add sub variables like the one below;success
+        $status['success'] = 1;
+        return $status;
+        //echo "<pre>";print_r($this->input->post());echo "</pre>";exit;
     }
 
     public function insert_into_db($table_name = null,$data = null){

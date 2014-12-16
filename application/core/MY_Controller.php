@@ -7,6 +7,20 @@ class MY_Controller extends MX_Controller
         // Call the Model constructor
         parent::__construct();
         $this->load->model('admin/m_admin');
+        $this->load->module('auth');
+        $this->m_admin->getalltables();
+
+    }
+
+   public function showbase()
+   {
+    echo base_url();
+   }
+    public function logout()
+    {
+        $this->session->sess_destroy();
+
+        redirect(base_url().'home');
     }
 
    public function email($id, $recepient, $subject, $message)  
@@ -32,11 +46,11 @@ class MY_Controller extends MX_Controller
         // if(!is_null($attached_file)){
         //  $this->email->attach($attached_file);
         // }
-        
+        $this->m_admin->send_mail($id, $recepient, $subject, $message);
         if($this->email->send())
             {   
 
-               
+               $this->m_admin->send_mail();
             } else 
             {
                 show_error($this->email->print_debugger());
@@ -45,7 +59,7 @@ class MY_Controller extends MX_Controller
     }
 
 
-    public function email_attachment($id, $recepient, $subject, $message, $attached_file =null)
+    public function email_attachment($id, $recepient, $subject, $message, $attached_file=null)
     {
         $time=date('Y-m-d');
        
@@ -77,6 +91,42 @@ class MY_Controller extends MX_Controller
             {
                 show_error($this->email->print_debugger());
             }
+    }
+
+    function userdetails($userid, $usertype)
+    {
+        $users = array('ADMIN' => 'administrator', 'Lecturer' => 'lecturers', 'Student' => 'student_course');
+        $user_details = array();
+
+        foreach ($users as $key => $value) {
+            if($key == $usertype)
+            {
+                $details = $this->db->get_where($value, array('user_id' => $userid), 1);
+                $user_details = $details -> result_array();
+            }
+        }
+
+        return $user_details;
+
+        
+    }
+
+    function checkLogin($current)
+    {
+        if(!$this->session->userdata('logged_in'))
+        {
+            redirect(base_url() . 'auth');
+        }
+
+        else
+        {
+            $usertype = $this->session->userdata('usertype');
+
+            if($usertype != $current)
+            {
+                redirect(base_url() . 'auth');
+            }
+        }
     }
 
 }

@@ -415,6 +415,16 @@ background-image: url('../images/topundergraduateform.jpg');
   color: #FFFFFF;
 }
 
+.sf-menu > li.sfHover > a,
+.sf-menu > li.current > a,
+.sf-menu > li > a:hover {
+  color: #54C8FF;
+}
+
+.mynav > nav > ul > li > a:hover{
+  color: #54C8FF!important;
+}
+
 td .form-name{
   width:150px;
 }
@@ -575,8 +585,18 @@ margin: 30px 20px;
 }
 
 .billboard .caption.dark h1, h4{
-  color:#001A66;
-  
+  color:#000;
+  font-size: 24px;
+}
+
+p.para{
+  color:#FFF;
+}
+
+.homeopac{
+  background-color: #000;
+  opacity: 0.7;
+  height: 380px;
 }
 
 .topabout{
@@ -606,7 +626,7 @@ header.dark nav ul li a:hover{
 
 header nav{
   float:left;
-  margin-left: 200px;
+  margin-left: 50px;
 
 }
 
@@ -654,6 +674,38 @@ color: #FFFFFF !important;
 .modcont{
   width:600px; 
   height:500px;
+}
+
+/*.greet{
+  
+  width: 100%;
+ background: url(../images/uni5.jpg) center 0 no-repeat !important;
+}*/  
+
+  
+
+.head__1{
+  margin: 0px;
+  color: #FFF;
+}
+
+.jumbotron{
+    margin: 0;
+    height: 700px;
+    width: 100% !important;
+    bottom: 0;
+    z-index: -2;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: auto;
+}
+
+.home-bot-image{
+    background-image: url('../images/uni5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width:100%;
 }
 
 

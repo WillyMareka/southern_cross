@@ -191,3 +191,7 @@ a:hover{
 :-ms-input-placeholder {  
    color: gray;  
 }
+
+#nav ul li a.course1link{
+  font-size: 24px;
+}
