@@ -37,7 +37,7 @@ class Auth extends MY_Controller
 			);
 
 			$this->session->set_userdata($data);
-			// print_r($this->session->all_userdata());die;
+			// echo "<pre>";print_r($this->session->all_userdata());die;
 
 			redirect(base_url() . $redirect_url);
 		}

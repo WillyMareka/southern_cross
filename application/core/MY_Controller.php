@@ -2,7 +2,7 @@
 
 class MY_Controller extends MX_Controller
 {
-    public $tables;
+    public $tables, $get_userdetails;
 	function __construct()
     {
         // Call the Model constructor
@@ -125,6 +125,15 @@ class MY_Controller extends MX_Controller
                 redirect(base_url() . 'auth');
             }
         }
+    }
+
+    function fetchuserdetails()
+    {
+        $userid = $this->session->userdata('userid');
+        $usertype = $this->session->userdata('usertype');
+        $this->get_userdetails = $this->userdetails($userid, $usertype);
+
+        return $this->get_userdetails;
     }
 
 }

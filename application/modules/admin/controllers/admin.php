@@ -11,6 +11,7 @@ class Admin extends MY_Controller
         $this->load->model('m_admin');
         $this->counts = $this->m_admin->getAdminCounts();
         $this->checkLogin('ADMIN');
+        $this->get_userdetails = $this->fetchuserdetails();
     }
 	function index()
 	{
