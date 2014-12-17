@@ -2,13 +2,14 @@
 
 class MY_Controller extends MX_Controller
 {
+    public $tables;
 	function __construct()
     {
         // Call the Model constructor
         parent::__construct();
         $this->load->model('admin/m_admin');
         $this->load->module('auth');
-        $this->m_admin->getalltables();
+        $this->tables = $this->m_admin->getalltables();
 
     }
 
