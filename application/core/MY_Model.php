@@ -73,9 +73,9 @@ class MY_Model extends CI_Model {
        $result = $query->result_array();
        $data['applications'] = $result[0]['applicants'];
 
-        $query = $this->db->query("SELECT count(id) as lecturers FROM lecturers");
-       $result = $query->result_array();
-       $data['lecturers'] = $result[0]['lecturers'];
+      // $query = $this->db->query("SELECT count(id) as lecturers FROM lecturers");
+      // $result = $query->result_array();
+      $data['lecturers'] = 0;
 
         $query = $this->db->query("SELECT count(student_course_id) as students FROM student_course");
        $result = $query->result_array();
