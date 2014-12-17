@@ -96,7 +96,7 @@ class MY_Controller extends MX_Controller
 
     function userdetails($userid, $usertype)
     {
-        $users = array('ADMIN' => 'administrator', 'Lecturer' => 'lecturers', 'Student' => 'student_course');
+        $users = array('ADMIN' => 'administrator', 'Staff' => 'staff', 'Student' => 'student_course');
 
         foreach ($users as $key => $value) {
             if($key == $usertype)
