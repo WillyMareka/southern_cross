@@ -1,0 +1,2 @@
+DROP TABLE lecturers_courses;
+DROP TABLE `comments`, `examinations`, `home_comments`, `lecturers`, `lecturer_messages`, `mailerlog`, `menus`, `messages`, `notifications`, `student_groups`, `student_messages`, `timetables`, `topics`, `topic_description`, `uploaded_notes`;
