@@ -9,7 +9,7 @@ class Staff extends MY_Controller
 	{
 		parent::__construct();
 		$this->load->model("staff_model");
-		
+		$this->checkLogin('ADMIN');
 		
 	}
 
@@ -29,20 +29,20 @@ class Staff extends MY_Controller
 		// echo "<pre>";print_r($role);echo "</pre>";die();
 		switch ($role) {
 			case 'Principal':
-				redirect("staff/principal");
-				break;
+				// redirect("staff/principal");
+				// break;
 			case 'Dean of students':
-				redirect("staff/dean");
-				break;
+				// redirect("staff/dean");
+				// break;
 			case 'Head of department':
-				redirect("staff/hod");
-				break;
+				// redirect("staff/hod");
+				// break;
 			case 'Administrative Staff':
-				redirect("staff/administrative");
-				break;
+				// redirect("staff/administrative");
+				// break;
 			case 'Subordinate Staff':
-				redirect("staff/subordinate");
-				break;
+				// redirect("staff/subordinate");
+				// break;
 		}
 
 	}
