@@ -2,7 +2,7 @@
 
 class MY_Controller extends MX_Controller
 {
-    public $tables, $get_userdetails;
+    public $tables, $get_userdetails, $group_combo;
 	function __construct()
     {
         // Call the Model constructor
@@ -10,6 +10,7 @@ class MY_Controller extends MX_Controller
         $this->load->model('admin/m_admin');
         $this->load->module('auth');
         $this->tables = $this->m_admin->getalltables();
+        $this->group_combo = $this->creategroupcombo();
 
     }
 
@@ -134,6 +135,38 @@ class MY_Controller extends MX_Controller
         $this->get_userdetails = $this->userdetails($userid, $usertype);
 
         return $this->get_userdetails;
+    }
+
+    public function creategroupcombo()
+    {
+        $groups = $this->m_admin->get_staffgroups();
+
+        if($groups)
+        {
+            foreach ($groups as $key => $value) {
+                $this->group_combo .= '<option value = "'. $value['sg_id'] . '">'.$value['group_name'].'</option>';
+            }
+        }
+        else
+        {
+            $this->group_combo = '<optgroup>No Group</optgroup>';
+        }
+
+        return $this->group_combo;
+    }
+
+    public function get_staffsubgroups($group_id)
+    {
+        $sub_groups = $this->m_admin->get_staffsubgroups($group_id);
+
+        if($sub_groups)
+        {
+            echo json_encode($sub_groups);
+        }
+        else
+        {
+            echo "No group found";
+        }
     }
 
 }
