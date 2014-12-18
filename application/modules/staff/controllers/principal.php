@@ -15,6 +15,18 @@ class Principal extends MY_Controller
 
 	public function index($value=NULL)
 	{
+		if ($value == NULL) {
+			redirect('home');
+			// print_r($value);die();
+		}elseif ($value != NULL) {
+			$this->index_page();
+		}
+		
+	}
+
+	public function index_page()
+	{
+		
 		$data['content_view'] = "p_dashboard";
 		$data['menu'] = "principal_menu";
 		$data['loggedinas'] = "School Principal";
@@ -24,6 +36,8 @@ class Principal extends MY_Controller
 
 		$this->load->view("staff_view", $data);
 	}
+
+	
 	 public function principal($fn)
 	 {
 	 	switch ($fn) {
