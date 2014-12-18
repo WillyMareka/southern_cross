@@ -59,7 +59,7 @@
                  <li><a href="<?php echo base_url(). 'announcements/course_details'?>">Courses Details</a></li>
                  <li><a href="<?php echo base_url(). 'home/contacts'?>">Contacts</a></li>
                  <li><a href="<?php echo base_url(). 'home/services'?>">About Us</a></li>
-                 <li><a href="#" class="white-text" data-toggle="modal" data-target="#login_modal">Login</a></li>
+                 <li><a href="<?php echo base_url(). 'auth'; ?>" class="white-text">Login</a></li>
                </ul>
         </nav>
               <div class="clear"></div>

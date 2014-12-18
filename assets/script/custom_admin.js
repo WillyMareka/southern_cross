@@ -32,6 +32,28 @@ $(document).ready(function(){
           alert("failed");
         }
 	});
+	get_staff_sub_groups(2);
 
-	$('#awesomedata').dataTable();
+	// $('#awesomedata').dataTable();
 });
+
+function get_staff_sub_groups(group_id)
+{
+	$.ajax({
+		url: base_url + 'admin/get_staffsubgroups/'+group_id,
+        beforeSend: function(xhr) {
+          xhr.overrideMimeType("text/plain; charset=x-user-defined");
+        },
+        success: function(data)
+        {
+        	obj = jQuery.parseJSON(data);
+        	for (var i = obj.length - 1; i >= 0; i--) {
+        		console.log(obj[i].sg_id);
+        	};
+        },
+        fail: function()
+        {
+          alert("failed");
+        }
+	});
+}

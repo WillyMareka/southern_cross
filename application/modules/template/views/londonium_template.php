@@ -141,12 +141,7 @@
         <li class="active"><a href="<?php echo base_url(); ?>admin"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
         <li><a href="<?php echo base_url(); ?>admin"><span>Messages</span> <i class="icon-bubble-user"></i></a></li>
         <li><a href="<?php echo base_url(); ?>admin/applications"><span>Applications</span> <i class="icon-quill2"></i></a></li>
-        <li><a href="#" class = "expand"><span>Staff</span> <i class="icon-vcard"></i></a>
-          <ul>
-            <li><a href = "#"><i class = "icon-user4 text-muted"></i> Teaching Staff </a></li>
-            <li><a href = "#"><i class = "icon-people text-muted"></i> Support Staff </a></li>
-          </ul>
-        </li>
+        <li><a href="<?php echo base_url(); ?>admin/staff"><span>Staff</span> <i class="icon-vcard"></i></a></li>
         <li><a href="#"><span>Students</span> <i class="fa fa-mortar-board"></i></a></li>
         <li><a href="#"><span>User Management</span> <i class="icon-users"></i></a></li>
         <li><a href="#" class="expand" id="second-level"><span>School Setup</span> <i class="icon-cogs"></i></a>
