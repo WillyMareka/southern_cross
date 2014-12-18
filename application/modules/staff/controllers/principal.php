@@ -5,7 +5,7 @@
 class Principal extends MY_Controller
 {
 	
-	function __construct()
+	function __construct($value=NULL)
 	{
 		parent::__construct();
 		$this->load->model("staff_model");
@@ -13,9 +13,8 @@ class Principal extends MY_Controller
 		
 	}
 
-	public function index()
+	public function index($value=NULL)
 	{
-		
 		$data['content_view'] = "p_dashboard";
 		$data['menu'] = "principal_menu";
 		$data['loggedinas'] = "School Principal";
@@ -25,6 +24,23 @@ class Principal extends MY_Controller
 
 		$this->load->view("staff_view", $data);
 	}
+	 public function principal($fn)
+	 {
+	 	switch ($fn) {
+	 		case 1:
+	 			
+	 			break;
+	 		case 2:
+	 			
+	 			break;
+	 		case 3:
+	 			
+	 			break;
+	 		case 4:
+	 			
+	 			break;
+	 	}
+	 }
 
 
 }
