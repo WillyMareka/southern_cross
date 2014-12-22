@@ -161,12 +161,15 @@ class MY_Controller extends MX_Controller
 
         if($sub_groups)
         {
-            echo json_encode($sub_groups);
+            foreach ($sub_groups as $key => $value) {
+                $data[] = array('id'=>$value['ssg_id'], 'text' => $value['ssg_name']);
+            }
         }
         else
         {
-            echo "No group found";
+            $data = array();
         }
+        echo json_encode($data);
     }
 
 }

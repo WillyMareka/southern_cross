@@ -99,8 +99,22 @@ class MY_Model extends CI_Model {
 
     public function get_staffsubgroups($group_id)
     {
-      $query = $this->db->get_where('staff_sub_groups', array('sg_id' => $group_id));
+      $query = $this->db->query('SELECT * FROM staff_sub_groups WHERE sg_id = '.$group_id .' ORDER BY sg_id');
 
+      $result = $query->result_array();
+
+      return $result;
+    }
+
+    public function get_staff_searched($staff_id)
+    {
+      $query = "select * from
+        (((`staff` `s`
+        join `staff_ssg` `sssg` ON ((`sssg`.`staff_id` = `s`.`id`)))
+        join `staff_sub_groups` `ssg` ON ((`ssg`.`ssg_id` = `sssg`.`ssg_id`)))
+        join `staff_groups` `sg` ON ((`ssg`.`sg_id` = `sg`.`sg_id`)))
+      WHERE s.id = " . $staff_id;
+      $query = $this->db->query($query);
       $result = $query->result_array();
 
       return $result;
