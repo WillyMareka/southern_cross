@@ -2,13 +2,15 @@
 
 class MY_Controller extends MX_Controller
 {
+    public $tables, $get_userdetails, $group_combo;
 	function __construct()
     {
         // Call the Model constructor
         parent::__construct();
         $this->load->model('admin/m_admin');
         $this->load->module('auth');
-        $this->m_admin->getalltables();
+        $this->tables = $this->m_admin->getalltables();
+        $this->group_combo = $this->creategroupcombo();
 
     }
 
@@ -95,8 +97,12 @@ class MY_Controller extends MX_Controller
 
     function userdetails($userid, $usertype)
     {
+<<<<<<< HEAD
         $users = array('ADMIN' => 'administrator', 'Lecturer' => 'lecturers', 'Student' => 'student_course');
         $user_details = array();
+=======
+        $users = array('ADMIN' => 'administrator', 'Staff' => 'staff', 'Student' => 'student_course');
+>>>>>>> 69aa5f56e3b4b5f256bc7665b266b28f81484133
 
         foreach ($users as $key => $value) {
             if($key == $usertype)
@@ -126,6 +132,47 @@ class MY_Controller extends MX_Controller
             {
                 redirect(base_url() . 'auth');
             }
+        }
+    }
+
+    function fetchuserdetails()
+    {
+        $userid = $this->session->userdata('userid');
+        $usertype = $this->session->userdata('usertype');
+        $this->get_userdetails = $this->userdetails($userid, $usertype);
+
+        return $this->get_userdetails;
+    }
+
+    public function creategroupcombo()
+    {
+        $groups = $this->m_admin->get_staffgroups();
+
+        if($groups)
+        {
+            foreach ($groups as $key => $value) {
+                $this->group_combo .= '<option value = "'. $value['sg_id'] . '">'.$value['group_name'].'</option>';
+            }
+        }
+        else
+        {
+            $this->group_combo = '<optgroup>No Group</optgroup>';
+        }
+
+        return $this->group_combo;
+    }
+
+    public function get_staffsubgroups($group_id)
+    {
+        $sub_groups = $this->m_admin->get_staffsubgroups($group_id);
+
+        if($sub_groups)
+        {
+            echo json_encode($sub_groups);
+        }
+        else
+        {
+            echo "No group found";
         }
     }
 

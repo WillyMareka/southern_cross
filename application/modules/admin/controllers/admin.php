@@ -11,6 +11,7 @@ class Admin extends MY_Controller
         $this->load->model('m_admin');
         $this->counts = $this->m_admin->getAdminCounts();
         $this->checkLogin('ADMIN');
+        $this->get_userdetails = $this->fetchuserdetails();
     }
 	function index()
 	{
@@ -226,6 +227,15 @@ class Admin extends MY_Controller
 		$applicants = $this->admin_model->student_applications();
 
 		echo json_encode($applicants);
+	}
+
+	public function staff()
+	{
+		$data['pagetitle'] = 'Staff Page';
+		$data['pagedescription'] = 'Contains details about staff members';
+		$data['groups'] = $this->group_combo;
+		$data['content_view'] = 'staff/staff';
+		$this->load->view('template/londonium_template', $data);
 	}
 }
 

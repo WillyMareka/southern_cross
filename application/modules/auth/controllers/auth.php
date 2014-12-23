@@ -29,15 +29,17 @@ class Auth extends MY_Controller
 			$user_id = $authentication['user_id'];
 			$user_type = $authentication['usertype'];
 			$user_details = $this->userdetails($user_id, $user_type);
-			$redirect_url = $this->getRedirect($user_type);
+			
 			$data = array(
 				'logged_in' => TRUE,
 				'userid' => $user_id,
 				'usertype' => $user_type
 			);
 
+			$redirect_url = $this->getRedirect($user_type);
+
 			$this->session->set_userdata($data);
-			// print_r($this->session->all_userdata());die;
+			// echo "<pre>";print_r($this->session->all_userdata());die;
 
 			redirect(base_url() . $redirect_url);
 		}
@@ -49,11 +51,18 @@ class Auth extends MY_Controller
 
 	function getRedirect($usertype)
 	{
-		$redirections = array('ADMIN' => 'admin', 'Lecturer' => 'lecturer', 'Student' => 'student');
+		$redirections = array('ADMIN' => 'admin', 'Staff' => '', 'Student' => 'student');
 
 		foreach ($redirections as $key => $value) {
-			if ($key == $usertype) {
-				return $value;
+			if($usertype == 'Staff')
+			{
+				$this->fetchuserdetails();
+			}
+			else
+			{
+				if ($key == $usertype) {
+					return $value;
+				}
 			}
 		}
 	}

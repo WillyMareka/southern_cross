@@ -73,13 +73,13 @@ class MY_Model extends CI_Model {
        $result = $query->result_array();
        $data['applications'] = $result[0]['applicants'];
 
-        $query = $this->db->query("SELECT count(id) as lecturers FROM lecturers");
-       $result = $query->result_array();
-       $data['lecturers'] = $result[0]['lecturers'];
+      // $query = $this->db->query("SELECT count(id) as lecturers FROM lecturers");
+      // $result = $query->result_array();
+      $data['lecturers'] = 0;
 
-        $query = $this->db->query("SELECT count(student_course_id) as students FROM student_course");
-       $result = $query->result_array();
-       $data['students'] = $result[0]['students'];
+      $query = $this->db->query("SELECT count(student_course_id) as students FROM student_course");
+      $result = $query->result_array();
+      $data['students'] = $result[0]['students'];
 
        $query = $this->db->query("SELECT count(course_id) as courses FROM courses");
        $result = $query->result_array();
@@ -87,5 +87,22 @@ class MY_Model extends CI_Model {
 
        // echo "<pre>";print_r($data);die;
        return $data;
+    }
+
+    public function get_staffgroups()
+    {
+      $query = $this->db->query("SELECT * FROM staff_groups");
+      $result = $query->result_array();
+
+      return $result;
+    }
+
+    public function get_staffsubgroups($group_id)
+    {
+      $query = $this->db->get_where('staff_sub_groups', array('sg_id' => $group_id));
+
+      $result = $query->result_array();
+
+      return $result;
     }
 }
