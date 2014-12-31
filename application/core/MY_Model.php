@@ -97,6 +97,15 @@ class MY_Model extends CI_Model {
       return $result;
     }
 
+    public function getssg()
+    {
+      $query = $this->db->query('SELECT * FROM staff_sub_groups ORDER BY ssg_id');
+
+      $result = $query->result_array();
+
+      return $result;
+    }
+
     public function get_staffsubgroups($group_id)
     {
       $query = $this->db->query('SELECT * FROM staff_sub_groups WHERE sg_id = '.$group_id .' ORDER BY sg_id');
@@ -118,5 +127,95 @@ class MY_Model extends CI_Model {
       $result = $query->result_array();
 
       return $result;
+    }
+
+     public function create_username($firstname, $surname, $othernames, $smasher)
+    {
+        $username = '';
+        switch ($smasher) {
+            case 1:
+                $firstletter = substr($firstname, 0, 1);
+                $username = $firstletter . $surname;
+                break;
+             case 2:
+                $firstletter = substr($othernames, 0, 1);
+                $username = $firstletter . $surname;
+                break;
+            case 3:
+                $username = $firstname .'.'. $surname;
+                break;
+            case 4:
+                $username = $othernames .'.'. $surname;
+                break;
+            case 5:
+                $firstletter = substr($firstname, 0, 1);
+                $secondletter = substr($othernames, 0, 1);
+                $username = $firstletter . $secondletter . $surname;
+                break;
+            default:
+                return false;
+                break;
+        }
+
+        return $username;
+    }
+
+    public function checkusernameexists($username)
+    {
+        $query = $this->db->query("SELECT count(user_id) as users FROM users WHERE username = '" . $username . "'");
+        $count = $query->row();
+
+        if($count->users > 0)
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+    }
+
+    public function register_user($username, $utype)
+    {
+      $defult_password = md5('123456');
+      $query = $this->db->query("INSERT INTO users VALUES(NULL, '".$username."', '".$defult_password."','".$utype."', NULL, 1)");
+
+      if($query)
+      {
+        return mysql_insert_id();
+      }
+      else
+      {
+        return false;
+      }
+    }
+
+    public function generate_staff_no($ssg_id)
+    {
+      $staff_no = '';
+      $staff_code = '';
+      $subgroups = $this->getssg();
+
+      foreach ($subgroups as $key => $value) {
+        if($value['ssg_id'] == $ssg_id)
+        {
+          $staff_code = $value['admission_code'];
+        }
+      }
+
+      $query = $this->db->query("SELECT COUNT(staff_id) as numbers FROM staff_ssg WHERE ssg_id = " . $ssg_id);
+      $count = $query->row();
+
+      $staff_id = $count->numbers + 1;
+      if($staff_id < 10)
+      {
+        $staff_id = '0' . $staff_id;
+      }
+
+      $year_of_admission = date("y");
+
+      $staff_no = $staff_code . '/'. $staff_id . '/' . $year_of_admission;
+
+      return $staff_no;
     }
 }

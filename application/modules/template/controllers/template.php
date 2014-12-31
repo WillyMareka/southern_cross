@@ -19,5 +19,11 @@ class Template extends MY_Controller
  	$this->load->view('flat_template', $data);
  }
 
+ public function load_lecturer_template($data)
+ {
+ 	$data['messages'] = 5;
+ 	$this->load->view('lecturer_template', $data);
+ }
+
 }
 ?>

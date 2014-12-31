@@ -229,13 +229,5 @@ class Admin extends MY_Controller
 		echo json_encode($applicants);
 	}
 
-	public function staff()
-	{
-		$data['pagetitle'] = 'Staff Page';
-		$data['pagedescription'] = 'Contains details about staff members';
-		$data['groups'] = $this->group_combo;
-		$data['content_view'] = 'staff/staff';
-		$this->load->view('template/londonium_template', $data);
-	}
 }
 

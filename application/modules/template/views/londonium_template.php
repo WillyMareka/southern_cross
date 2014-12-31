@@ -11,6 +11,8 @@
 <link href="<?php echo base_url(); ?>assets/londonium/css/icons.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/font-awesome/css/font-awesome.min.css">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/datepicker/css/datepicker.css'?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() .'assets/datepicker/css/datepicker3.css'?>">
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>-->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.js"></script>
@@ -45,8 +47,9 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/londonium/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/bower_components/highcharts/highcharts.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/bower_components/highcharts/modules/exporting.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/datepicker/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript">
-   base_url='<?php  echo base_url(); ?>';
+   base_url = '<?php  echo base_url(); ?>';
 </script>
 <script type="text/javascript" src = "<?php echo base_url(); ?>assets/script/custom_admin.js"></script>
 <!--<script type="text/javascript" src="<?php echo base_url(); ?>assets/londonium/js/application_blank.js"></script>-->

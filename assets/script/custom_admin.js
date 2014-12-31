@@ -1,8 +1,12 @@
 $(document).ready(function(){
 
 	// get_staff_sub_groups(2);
-
-	// $('#awesomedata').dataTable();
+	sourceurl = base_url + 'admin/search/json_search';
+	$('#stafftable').dataTable();
+	$('.datepicker').datepicker({
+	    format: "yyyy-m-d",
+	    autoclose: 'true'
+	});
 });
 
 function get_staff_sub_groups(group_id)
