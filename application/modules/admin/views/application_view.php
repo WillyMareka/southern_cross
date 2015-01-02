@@ -1,3 +1,4 @@
+<?php //echo "<pre>";print_r($applicants);echo "</pre>";exit;?>    
     <aside class="right-side">
                 <!-- Main content -->
                 <section class="content">
@@ -21,7 +22,7 @@
                 </tr>
             </thead>
             <tbody id = "applicant">
-            <?php //echo $application;?>
+            <?php echo $this->applicant_row;?>
             </tbody></table></div>
           </div>
           <!-- /bordered datatable inside panel -->

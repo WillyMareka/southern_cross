@@ -149,7 +149,7 @@ class Admin extends MY_Controller
 
 		// $this->applicant_row = '';
 		$applicants = $this->admin_model->student_applications();
-		// print_r($applicants);die();
+		
 		$counter = 0;
 		foreach ($applicants as $key => $value) {
 			$counter++;
@@ -166,7 +166,7 @@ class Admin extends MY_Controller
 			$this->applicant_row .= '<tr>';
 		}
 		
-
+			//echo "<pre>";print_r($this->applicant_row);echo "</pre>";exit;
 		return $this->applicant_row;
 	}
 
