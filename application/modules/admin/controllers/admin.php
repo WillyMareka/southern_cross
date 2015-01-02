@@ -149,6 +149,20 @@ class Admin extends MY_Controller
 		$applicants = $this->admin_model->student_applications();
 		// print_r($applicants);die();
 		$counter = 0;
+		$this->applicant_row .= "
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Second Name</th>
+				<th>Last Name</th>
+				<th>Citizenship</th>
+				<th>Gender</th>
+				<th>Date of Birth</th>
+				<th colspan = '2'>Action</th>
+			</tr>
+		</thead>
+		<tbody>";
 		foreach ($applicants as $key => $value) {
 			$counter++;
 			$this->applicant_row .= '<tr>';
@@ -163,6 +177,7 @@ class Admin extends MY_Controller
 			$this->applicant_row .= '<td><a href = "'.base_url().'admin/viewapplicantdetails/'.$value['applicant_id'].'">View More</a></td>';
 			$this->applicant_row .= '<tr>';
 		}
+		$this->applicant_row .= '</tbody>';
 		
 
 		return $this->applicant_row;

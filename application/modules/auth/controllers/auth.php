@@ -29,12 +29,23 @@ class Auth extends MY_Controller
 			$user_id = $authentication['user_id'];
 			$user_type = $authentication['usertype'];
 			$user_details = $this->userdetails($user_id, $user_type);
-			
+
 			$data = array(
 				'logged_in' => TRUE,
 				'userid' => $user_id,
 				'usertype' => $user_type
 			);
+
+			foreach ($user_details[0] as $key => $value) {
+				if($key == 'id')
+				{
+					$data['id'] = $value;
+				}
+				else if($key == 'student_course_id')
+				{
+					$data['id'] = $value;
+				}
+			}
 
 			$redirect_url = $this->getRedirect($user_type, $user_id);
 

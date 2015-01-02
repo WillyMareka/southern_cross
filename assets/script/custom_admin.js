@@ -3,6 +3,7 @@ $(document).ready(function(){
 	// get_staff_sub_groups(2);
 	sourceurl = base_url + 'admin/search/json_search';
 	$('#stafftable').dataTable();
+  $('#awesomedata').dataTable();
 	$('.datepicker').datepicker({
 	    format: "yyyy-m-d",
 	    autoclose: 'true'
@@ -34,7 +35,7 @@ function get_staff_sub_groups(group_id)
 }
 
 function loadData(base_url, function_url, value, container, placeholder_text) {
-	alert(placeholder_text);
+	// alert(placeholder_text);
   if (value !== '') {
     ajax_url = base_url + 'admin/' + function_url + '/' + value
   } else {

@@ -18,26 +18,27 @@
 
 </style>
 <div class="profile-full-name">
-	<span class="text-semibold">Denise Steiner</span>
+	<span class="text-semibold"><?php echo $f_name . ' ' . $s_name; ?></span>
 </div>
 
 <div class="profile-row">
 			<div class="left-col">
 				<div class="profile-block">
 					<div class="panel profile-photo">
-						<img src="<?php echo base_url(); ?>assets/lecturer/demo/avatars/1.jpg" alt="">
+						<img src="<?php echo $profile_picture; ?>" alt="">
 					</div><br>
 				</div>
 				
 				<div class="panel panel-transparent">
 					<div class="panel-heading">
-						<span class="panel-title">Denise Steiner</span>
+						<span class="panel-title"><?php echo $f_name . ' ' . $s_name; ?></span>
 					</div>
 					<div class="panel-body">
 						<div class="list-group">
-							<a href="#" class="list-group-item"><i class = "ion-calendar"></i>&nbsp;&nbsp;<span class="text-sm">25th January 2015</span></a>
-							<a href="#" class="list-group-item"><i class = "ion-email"></i>&nbsp;&nbsp;<span class="text-sm">john.otaalo@strathmore.edu</span></a>
-							<a href="#" class="list-group-item"><i class = "ion-iphone"></i>&nbsp;&nbsp;<span class="text-sm">0725160399</span></a>
+							<a href="#" class="list-group-item"><i class = "ion-card"></i>&nbsp;&nbsp;<span class="text-sm"><?php echo $staff_no;?></span></a>
+							<a href="#" class="list-group-item"><i class = "ion-calendar"></i>&nbsp;&nbsp;<span class="text-sm"><?php echo $dob;?></span></a>
+							<a href="#" class="list-group-item"><i class = "ion-email"></i>&nbsp;&nbsp;<span class="text-sm"><?php echo $email;?></span></a>
+							<a href="#" class="list-group-item"><i class = "ion-iphone"></i>&nbsp;&nbsp;<span class="text-sm"><?php echo $phone_no; ?></span></a>
 						</div>
 					</div>
 				</div>
@@ -56,7 +57,7 @@
 										<!-- Stat panel bg icon -->
 										<i class="ion ion-ios-book-outline bg-icon"></i>
 										<!-- Extra large text -->
-										<span class="text-xlg"><strong>2</strong></span><br>
+										<span class="text-xlg"><strong><?php echo $units; ?></strong></span><br>
 										<!-- Big text -->
 										<span class="text-bg">Units</span><br>
 										<!-- Small text -->
@@ -91,7 +92,7 @@
 										<!-- Stat panel bg icon -->
 										<i class="ion ion-calendar bg-icon"></i>
 										<!-- Extra large text -->
-										<span class="text-xlg"><strong><?php echo date('d'); ?></strong></span><br>
+										<span class="text-xlg"><strong><?php echo date('jS'); ?></strong></span><br>
 										<!-- Big text -->
 										<span class="text-bg"><?php echo date('F Y'); ?></span><br>
 										<!-- Small text -->

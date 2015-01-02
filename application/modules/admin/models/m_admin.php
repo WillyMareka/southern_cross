@@ -134,7 +134,7 @@ class M_admin extends MY_Model {
 
     function save_student($student_no, $course_short_code, $a_id)
     {
-        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.")");
+        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.", 0)");
         if($query)
         {
             $query = $this->db->query("UPDATE application_approvals SET status = 1 WHERE applicant_id = " .$a_id);

@@ -49,6 +49,11 @@ Use search to find needed section.
 	<link href="<?php echo base_url(); ?>assets/lecturer/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/bower_components/ionicons/css/ionicons.min.css">
 	<script type="text/javascript" src = "<?php echo base_url(); ?>assets/js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			base_url = "<?php echo base_url(); ?>";
+		});
+	</script>
 
 	<!--[if lt IE 9]>
 		<script src="<?php echo base_url(); ?>assets/lecturer/javascripts/ie.min.js"></script>
@@ -69,7 +74,7 @@ Use search to find needed section.
 	* 'main-menu-fixed'    - Fixes the main menu
 	* 'main-menu-animated' - Animate main menu
 -->
-<body class="theme-default main-menu-animated">
+<body class="theme-frost main-menu-animated">
 
 <script>var init = [];</script>
 <!-- Demo script --> <script src="<?php echo base_url(); ?>assets/lecturer/demo/demo.js"></script> <!-- / Demo script -->
@@ -310,7 +315,7 @@ Use search to find needed section.
 
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
-									<img src="<?php echo base_url(); ?>assets/lecturer/demo/avatars/1.jpg" alt="">
+									<img src="<?php echo $profile_picture; ?>" alt="">
 									<span>John Doe</span>
 								</a>
 								<ul class="dropdown-menu">
@@ -363,7 +368,7 @@ Use search to find needed section.
 				<div>
 					<div class="text-bg"><span class="text-slim">Welcome,</span> <span class="text-semibold">John</span></div>
 
-					<img src="<?php echo base_url(); ?>assets/lecturer/demo/avatars/1.jpg" alt="" class="">
+					<img src="<?php echo $profile_picture; ?>" alt="" class="">
 					<div class="btn-group">
 						<a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-envelope"></i></a>
 						<a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-user"></i></a>
@@ -394,6 +399,10 @@ Use search to find needed section.
 				<li>
 					<a href="<?php echo base_url(). 'staff/lecturer/mailbox'; ?>"><i class="menu-icon fa fa-inbox"></i><span class="mm-text">Mailbox</span></a>
 				</li>
+
+				<li>
+					<a href="<?php echo base_url(). 'staff/lecturer/account'; ?>"><i class="menu-icon ion-settings"></i><span class="mm-text">Account</span></a>
+				</li>
 				
 			</ul> <!-- / .navigation -->
 			<div class="menu-content">
@@ -404,12 +413,13 @@ Use search to find needed section.
 <!-- /4. $MAIN_MENU -->
 
 	<div id="content-wrapper">
-		<ul class="breadcrumb breadcrumb-page">
-			<div class="breadcrumb-label text-light-gray">You are here: </div>
-			<li><a href="#">Home</a></li>
-			<li class="active"><a href="#"><?php echo $title; ?></a></li>
-		</ul>
+		<?php if($title == 'Dashboard') { ?>
 		<div class="page-header">
+			<ul class="breadcrumb breadcrumb-page">
+				<div class="breadcrumb-label text-light-gray">You are here: </div>
+				<li><a href="#">Home</a></li>
+				<li class="active"><a href="#"><?php echo $title; ?></a></li>
+			</ul>
 			
 			<div class="row">
 				<!-- Page header, center on small screens -->
@@ -433,6 +443,11 @@ Use search to find needed section.
 				</div>
 			</div>
 		</div> <!-- / .page-header -->
+		<?php }else{ ?>
+		<div class="page-header">
+			<h1><i class="<?php echo $icon; ?> page-header-icon"></i>&nbsp;&nbsp;<?php echo $title; ?></h1>
+		</div> <!-- / .page-header -->
+		<?php } ?>
 		<div class = "row">
 			<?php $this->load->view($content_view); ?>
 		</div>

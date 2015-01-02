@@ -2,10 +2,15 @@
 
 class Template extends MY_Controller
 {
+	var $userdata = '';
  
  function __construct()
  {
  	parent::__construct();
+ 	$utype = $this->session->userdata('usertype');
+ 	$uid = $this->session->userdata('userid');
+ 	$this->userdata = $this->userdetails($uid, $utype);
+
 
  }	
 
@@ -21,7 +26,9 @@ class Template extends MY_Controller
 
  public function load_lecturer_template($data)
  {
- 	$data['messages'] = 5;
+ 	foreach ($this->userdata[0] as $key => $value) {
+ 		$data[$key] = $value;
+ 	}
  	$this->load->view('lecturer_template', $data);
  }
 
