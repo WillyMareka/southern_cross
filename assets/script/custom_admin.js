@@ -1,37 +1,62 @@
 $(document).ready(function(){
 
+	// get_staff_sub_groups(2);
+	sourceurl = base_url + 'admin/search/json_search';
+	$('#stafftable').dataTable();
+  $('#awesomedata').dataTable();
+	$('.datepicker').datepicker({
+	    format: "yyyy-m-d",
+	    autoclose: 'true'
+	});
+});
+
+function get_staff_sub_groups(group_id)
+{
 	$.ajax({
-		url: base_url + 'admin/getApplicants',
+		url: base_url + 'admin/get_staffsubgroups/'+group_id,
         beforeSend: function(xhr) {
           xhr.overrideMimeType("text/plain; charset=x-user-defined");
         },
         success: function(data)
         {
-        	mydatatable = '<div class = "datatable"><table class="table table-bordered" id = "awesomedata"><thead><tr><th>#</th><th>First Name</th><th>Action</th></tr></thead><tbody id = "applicant">';
-        	counter = 0; 
-			obj = jQuery.parseJSON(data);
-			total = obj.length;
-			for (var i = obj.length - 1; i >= 0; i--) {
-				counter++;
-				mydatatable += '<tr>';
-				mydatatable += '<td>' + counter +'</td>';
-				mydatatable += '<td>' + obj[i].f_name +'</td>';
-				mydatatable += '<td>' +  obj[i].l_name +'</td>';
-				mydatatable += '</tr>';
-			};
-
-			mydatatable += '</tbody></table></div>';
-			console.log(mydatatable);
-
-			var data_div = document.getElementById('dt');
-
-			data_div.innerHTML = mydatatable;
+        	obj = jQuery.parseJSON(data);
+        	var option_result = '';
+        	for (var i = obj.length - 1; i >= 0; i--) {
+        		option_result += '<option value = "'+obj[i].ssg_id+'">' +obj[i].ssg_name+ '</option>';
+        	};
+        	$('#option').innerHTML = 'Administartive Staff';
+        	$('#details').innerHTML = option_result;
         },
         fail: function()
         {
           alert("failed");
         }
 	});
+}
 
-	//$('#awesomedata').dataTable();
-});
+function loadData(base_url, function_url, value, container, placeholder_text) {
+	// alert(placeholder_text);
+  if (value !== '') {
+    ajax_url = base_url + 'admin/' + function_url + '/' + value;
+  } else {
+    ajax_url = base_url + 'admin/' + function_url;
+  }
+  $.ajax({
+    url: ajax_url,
+    async: false,
+    beforeSend: function(xhr) {
+      xhr.overrideMimeType("text/plain; charset=x-user-defined");
+
+      $(container).empty();
+    },
+    success: function(data) {
+      obj = jQuery.parseJSON(data);
+      $(container).select2({
+        placeholder: placeholder_text,
+        data: obj
+      });
+
+    }
+  });
+}
+

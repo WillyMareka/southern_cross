@@ -1,5 +1,5 @@
 CREATE TABLE `mailerlog` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `recipient` varchar(100) NOT NULL,
   `subject` varchar(200) NOT NULL,
   `message` text NOT NULL,

@@ -4,27 +4,11 @@
                 <section class="content">
             <div class="row">
                  <!-- Bordered datatable inside panel -->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h6 class="panel-title"><i class="icon-file"></i> Bordered datatable inside panel</h6>
-            </div>
-            <div class = "datatable"><table class="table table-bordered" id = "awesomedata">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Second Name</th>
-                    <th>Last Name</th>
-                    <th>Citizenship</th>
-                    <th>Gender</th>
-                    <th>Date of Birth</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id = "applicant">
-            <?php echo $this->applicant_row;?>
-            </tbody></table></div>
-          </div>
+
+            <table class="table table-bordered" id = "stafftable">
+                <?php echo $application;?>
+            </table>
+
           <!-- /bordered datatable inside panel -->
                 </div>
 
