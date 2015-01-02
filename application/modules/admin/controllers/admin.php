@@ -75,7 +75,9 @@ class Admin extends MY_Controller
 	public function view_staff_page()
 	{
 		$data['content_view'] = "view_staff_page";
+
 		// $data['application'] = $this->m_admin->applications();
+
 		$data['staff'] = $this->m_admin->get_staff();
 
 		$this->load->view("admin_view", $data);
@@ -138,13 +140,14 @@ class Admin extends MY_Controller
 		$this->index();
 		
 	}
-	
+
 	public function ss_applicants_details($id)
 	{
 
     }
 	public function createApplications()
 	{
+
 		// $this->applicant_row = '';
 		$applicants = $this->admin_model->student_applications();
 		// print_r($applicants);die();
@@ -233,13 +236,14 @@ class Admin extends MY_Controller
 
 		redirect("admin");
 
-
 		$this->load->view("admin_view", $data);
+
 	}
 
 	public function getApplicants()
 	{
 		$applicants = $this->admin_model->student_applications();
+
 
 		echo json_encode($applicants);
 	}
