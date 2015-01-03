@@ -53,5 +53,13 @@ class Home extends MY_Controller
     $this->load->view('preamble');
   }
 
+  public function exceltest()
+  {
+    $data[0] = array();
+    $filename = 'myname';
+    $form = 'pdf';
+    $this->export->generate($data, $filename, $form,$identifier='');
+  }
+
 
 }
