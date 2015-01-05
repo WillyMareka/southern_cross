@@ -89,7 +89,7 @@ class M_admin extends MY_Model {
 
     }
 
-    function add_application($path)
+    function add_application($path = NULL)
     {
         $firstname = strtoupper($this->input->post('firstname'));
         $lastname = strtoupper($this->input->post('lastname'));
@@ -134,10 +134,35 @@ class M_admin extends MY_Model {
 
     function save_student($student_no, $course_short_code, $a_id)
     {
-        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.")");
+        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.",1002)");
+
         if($query)
         {
             $query = $this->db->query("UPDATE application_approvals SET status = 1 WHERE applicant_id = " .$a_id);
+            $details = $this->student_details($a_id);
+
+            $student_data = array();
+
+            $student_info = array(
+                'student_no' =>$student_no,
+                'firstname' => $details[0]['f_name'], 
+                'lastname' => $details[0]['s_name'], 
+                'othernames' => $details[0]['l_name'], 
+                'student_phone' => $details[0]['mobile_no'], 
+                'parent_phone' => $details[0]['sponsor_telephone_no'], 
+                'student_email' => $details[0]['email'], 
+                'parent_email' => $details[0]['sponsor_email'], 
+                'location' => $details[0]['current_city'], 
+                'photo' => NULL, 
+                'admission_date' => NULL, 
+                'group_id' => 1 
+                );
+
+            array_push($student_data, $student_info);
+
+            $this->db->insert_batch('students',$student_data);
+            echo "SUCCESSFUL STUDENT REGISTRY. APPLICANT ID No. ".$a_id;
+            // echo "<pre>";print_r($details);echo "</pre>";exit;
         }
         else
         {
@@ -158,6 +183,22 @@ class M_admin extends MY_Model {
                 FROM `applicant_personal_info`";
     }
 
+    public function student_details($st_id=NULL)
+    {
+        $kuchoka = (isset($st_id))? "WHERE aa.applicant_id = $st_id": NULL;
+       $query = $this->db->query(
+                "SELECT * FROM applicant_personal_info api
+               JOIN applicant_guardian_info agi ON agi.applicant_id = api.applicant_id
+               JOIN applicant_education_info aeinfo ON aeinfo.applicant_id = api.applicant_id
+               JOIN applicant_contact_info aci ON aci.applicant_id = api.applicant_id
+               JOIN applicant_course ac ON ac.applicant_id = api.applicant_id
+               JOIN courses ON courses.course_id = ac.course_id
+               JOIN application_approvals aa ON aa.applicant_id = api.applicant_id
+                $kuchoka
+               ");
+       $result = $query->result_array();
 
+       return $result;
+   }
    
 }

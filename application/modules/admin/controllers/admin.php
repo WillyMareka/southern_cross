@@ -10,7 +10,7 @@ class Admin extends MY_Controller
         $this->load->model('admin_model');
         $this->load->model('m_admin');
         $this->counts = $this->m_admin->getAdminCounts();
-        $this->checkLogin('ADMIN');
+        //$this->checkLogin('ADMIN');
     }
 	function index()
 	{
@@ -179,6 +179,7 @@ class Admin extends MY_Controller
 	{
 		$applicant_details = array();
 		$applicants = $this->admin_model->student_applications();
+		//echo "<pre>";print_r($applicants);echo "</pre>";exit;
 		foreach ($applicants as $applicant) {
 			if($applicant['applicant_id'] == $applicant_id)
 			{
@@ -212,9 +213,10 @@ class Admin extends MY_Controller
 		}
 
 		$student_no = $course_short_code .'/' . $noofstudents . '/' . $admission_month . '/' . $intake;
-
+		//echo $student_no.$course_short_code." ".$a_id;exit;
 		$saved = $this->m_admin->save_student($student_no, $course_short_code, $a_id);
 
+		// echo "<pre>";print_r($saved);echo "</pre>";exit;
 		redirect("admin");
 
 
@@ -226,6 +228,12 @@ class Admin extends MY_Controller
 		$applicants = $this->admin_model->student_applications();
 
 		echo json_encode($applicants);
+	}
+
+	public function query_tester(){
+		$daata=$this->m_admin->student_details(19);
+
+		echo "<pre>";print_r($daata);echo "</pre>";exit;
 	}
 }
 

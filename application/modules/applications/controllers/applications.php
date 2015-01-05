@@ -28,7 +28,7 @@ class Applications extends MY_Controller
 	}
 
 	function application_submit(){
-		/*
+		/*PICTURE UPLOAD CODE
 		$path = '';
 		$config['upload_path'] = './applicant_data/applicant_pictures/';
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
@@ -53,7 +53,7 @@ class Applications extends MY_Controller
 			echo $value;die;
 
 		}
-		*/
+		END OF PICTURE UPLOAD CODE*/
 		$result = $this->m_applications->add_applicant();
 		//echo $result;die;
 		if ($result['success']=1) {
@@ -61,9 +61,10 @@ class Applications extends MY_Controller
 		}else{
 			$data['application_status'] = 2;//failed application submission
 		}
-		$this->load->view('home/home',$data);
+
+		// $this->load->view('home/home',$data);
 		// echo "<pre>";print_r($result);echo "<pre>";exit;
-		// redirect(base_url().'home');
+		redirect(base_url().'home');
 
 		//echo "Success!";die;
 	}
