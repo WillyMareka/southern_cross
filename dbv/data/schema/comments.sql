@@ -1,5 +1,5 @@
 CREATE TABLE `comments` (
-  `comm_id` int(11) NOT NULL,
+  `comm_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `mobile` int(12) NOT NULL,

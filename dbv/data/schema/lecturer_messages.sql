@@ -1,5 +1,5 @@
 CREATE TABLE `lecturer_messages` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `message` varchar(250) NOT NULL,
   `subject` varchar(250) NOT NULL,
   `origin` int(11) NOT NULL,

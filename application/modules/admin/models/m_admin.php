@@ -89,7 +89,7 @@ class M_admin extends MY_Model {
 
     }
 
-    function add_application($path = NULL)
+    function add_application($path)
     {
         $firstname = strtoupper($this->input->post('firstname'));
         $lastname = strtoupper($this->input->post('lastname'));
@@ -134,35 +134,10 @@ class M_admin extends MY_Model {
 
     function save_student($student_no, $course_short_code, $a_id)
     {
-        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.",1002)");
-
+        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.", 0)");
         if($query)
         {
             $query = $this->db->query("UPDATE application_approvals SET status = 1 WHERE applicant_id = " .$a_id);
-            $details = $this->student_details($a_id);
-
-            $student_data = array();
-
-            $student_info = array(
-                'student_no' =>$student_no,
-                'firstname' => $details[0]['f_name'], 
-                'lastname' => $details[0]['s_name'], 
-                'othernames' => $details[0]['l_name'], 
-                'student_phone' => $details[0]['mobile_no'], 
-                'parent_phone' => $details[0]['sponsor_telephone_no'], 
-                'student_email' => $details[0]['email'], 
-                'parent_email' => $details[0]['sponsor_email'], 
-                'location' => $details[0]['current_city'], 
-                'photo' => NULL, 
-                'admission_date' => NULL, 
-                'group_id' => 1 
-                );
-
-            array_push($student_data, $student_info);
-
-            $this->db->insert_batch('students',$student_data);
-            echo "SUCCESSFUL STUDENT REGISTRY. APPLICANT ID No. ".$a_id;
-            // echo "<pre>";print_r($details);echo "</pre>";exit;
         }
         else
         {
@@ -183,22 +158,93 @@ class M_admin extends MY_Model {
                 FROM `applicant_personal_info`";
     }
 
-    public function student_details($st_id=NULL)
+    public function staffregistration($path)
     {
-        $kuchoka = (isset($st_id))? "WHERE aa.applicant_id = $st_id": NULL;
-       $query = $this->db->query(
-                "SELECT * FROM applicant_personal_info api
-               JOIN applicant_guardian_info agi ON agi.applicant_id = api.applicant_id
-               JOIN applicant_education_info aeinfo ON aeinfo.applicant_id = api.applicant_id
-               JOIN applicant_contact_info aci ON aci.applicant_id = api.applicant_id
-               JOIN applicant_course ac ON ac.applicant_id = api.applicant_id
-               JOIN courses ON courses.course_id = ac.course_id
-               JOIN application_approvals aa ON aa.applicant_id = api.applicant_id
-                $kuchoka
-               ");
-       $result = $query->result_array();
+        $stafftable = array();
+        $staff_subgrouptable = array();
+        foreach ($this->input->post() as $key => $value) {
+            if($value)
+            {
+                if($key != 'ssg_id')
+                {
+                    $stafftable[$key] = $value;
+                }
+                else
+                {
+                    $staff_subgrouptable[$key] = $value;
+                }
+            }
+        }
+        $stafftable['profile_picture'] = $path;
+        $staff_no = $this->generate_staff_no($staff_subgrouptable['ssg_id']);
+        $staff_subgrouptable['staff_no'] = $staff_no;
 
-       return $result;
-   }
+
+        $firstname = $stafftable['f_name'];
+        $surname = $stafftable['s_name'];
+        $othernames = $stafftable['o_names'];
+
+        $assigned = 0;
+        $smasher = 1;
+
+        while ($assigned == 0) {
+            if($smasher <= 5)
+            {
+                $username = $this->create_username($firstname, $surname, $othernames, $smasher);
+                if($username)
+                {
+                    $exists = $this->checkusernameexists($username);
+
+                    if($exists == false)
+                    {
+                        $assigned = 1;
+                    }
+                }
+                else
+                {
+                    echo "Nothing";die;
+                }
+            }
+            else
+            {
+                $username = $stafftable['email'];
+                $assigned = 1;
+            }
+            $smasher++;
+
+        }
+
+        $username = strtolower($username);
+
+        $user_id = $this->register_user($username, 'Staff');
+
+        $stafftable['user_id'] = $user_id;
+
+        $insertion = $this->db->insert('staff', $stafftable);
+        if($insertion)
+        {
+            $staff_id = mysql_insert_id();
+            $staff_subgrouptable['staff_id'] = $staff_id;
+            $staff_subgrouptable['is_current'] = 1;
+
+            $subgroup_insertion = $this->db->insert('staff_ssg', $staff_subgrouptable);
+
+            $staff_data = array();
+
+            $staff_data['staff_no'] = $staff_no;
+            $staff_data['firstname'] = $stafftable['f_name'];
+            $staff_data['surname'] = $stafftable['s_name'];
+            $staff_data['username'] = $username;
+            $staff_data['email'] = $stafftable['email'];
+
+            return $staff_data;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
    
 }
