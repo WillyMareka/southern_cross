@@ -97,21 +97,28 @@ class MY_Controller extends MX_Controller
 
     function userdetails($userid, $usertype)
     {
+        // echo $userid." type ".$usertype;die();
         $users = array('ADMIN' => 'administrator', 'Staff' => 'staff', 'Student' => 'student_course');
-
+        
         foreach ($users as $key => $value) {
-            if($key == $usertype)
+           
+            if($value == $usertype)
             {
+                // echo $value;die();
                 $details = $this->db->get_where($value, array('user_id' => $userid), 1);
-                $user_details = $details -> result_array();
-            }
-        }
+                $user_details = $details->result_array();
 
+            }
+            
+        }
+        
+        // print_r($user_details);die();
         return $user_details;
     }
 
     function checkLogin($current)
     {
+        
         if(!$this->session->userdata('logged_in'))
         {
             redirect(base_url() . 'auth');
@@ -120,7 +127,7 @@ class MY_Controller extends MX_Controller
         else
         {
             $usertype = $this->session->userdata('usertype');
-
+           
             if($usertype != $current)
             {
                 redirect(base_url() . 'auth');
@@ -167,6 +174,20 @@ class MY_Controller extends MX_Controller
         {
             echo "No group found";
         }
+    }
+
+    public function checkStaff($log)
+    {
+       $user_id = $this->session->userdata('userid');
+       $ssg_name = $this->m_admin->get_ssgName($user_id);
+       $ssg_name = $ssg_name[0]['ssg_name'];
+       $red = strtolower($ssg_name);
+       // echo $red;echo $log;die();
+       // print_r($ssg_name);die();
+
+       if ($log != $ssg_name) {
+           redirect(base_url().'staff/'.$red);
+       } 
     }
 
 }

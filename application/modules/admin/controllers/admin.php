@@ -139,10 +139,6 @@ class Admin extends MY_Controller
 		
 	}
 	
-	public function ss_applicants_details($id)
-	{
-
-    }
 	public function createApplications()
 	{
 		// $this->applicant_row = '';
@@ -176,6 +172,7 @@ class Admin extends MY_Controller
 		$data['education'] = $this->m_admin->getApplicantInstitutions($a_id);
 		$this->load->view('admin_view', $data);
 	}
+	
 	public function getapplicantdetails($applicant_id)
 	{
 		$applicant_details = array();

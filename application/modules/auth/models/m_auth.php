@@ -12,6 +12,7 @@ class M_auth extends MY_Model {
     {
     	$user = array();
     	$query = $this->db->get_where('users', array('username' => $username, 'password' => $password, 'is_active' => 1), 1);
+        
     	$details = $query->result_array();
 
     	if($details)
@@ -26,6 +27,8 @@ class M_auth extends MY_Model {
     	}
 
     	// echo "<pre>";print_r($user);die;
+
+        
     	return $user;
     }
    

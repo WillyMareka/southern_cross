@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class MY_Model extends MX_Model {
+class MY_Model extends CI_Model {
 
 	function __construct()
     {
@@ -42,7 +42,7 @@ class MY_Model extends MX_Model {
     	return $result;
     }
 
-    public function send_mail($id, $recepient, $subject, $message)
+  public function send_mail($id, $recepient, $subject, $message)
     {
         
 
@@ -58,7 +58,7 @@ class MY_Model extends MX_Model {
         $this->db->query($query);
     }
 
-    public function getAdminCounts()
+  public function getAdminCounts()
     {
         $query = $this->db->query(
                 "SELECT count(api.applicant_id) as applicants FROM applicant_personal_info api
@@ -89,7 +89,7 @@ class MY_Model extends MX_Model {
        return $data;
     }
 
-    public function get_staffgroups()
+  public function get_staffgroups()
     {
       $query = $this->db->query("SELECT * FROM staff_groups");
       $result = $query->result_array();
@@ -97,7 +97,7 @@ class MY_Model extends MX_Model {
       return $result;
     }
 
-    public function get_staffsubgroups($group_id)
+  public function get_staffsubgroups($group_id)
     {
       $query = $this->db->get_where('staff_sub_groups', array('sg_id' => $group_id));
 
@@ -105,4 +105,38 @@ class MY_Model extends MX_Model {
 
       return $result;
     }
+
+  public function get_all_staff_details($user_id)
+   {
+      $sql = "SELECT  *
+          FROM `staff` `stf`
+            LEFT JOIN `staff_ssg` `sssg`
+              ON `sssg`.`staff_id` = `stf`.`id`
+            LEFT JOIN `staff_sub_groups` `ssg`
+              ON `sssg`.`ssg_id` = `ssg`.`ssg_id`
+
+          WHERE `stf`.`user_id` = '$user_id'
+            AND `sssg`.`is_current` = 1";
+
+      $result = $this->db->query($sql);
+
+        return $result->result_array();
+   }
+
+   public function get_ssgName($user_id)
+   {
+     $sql = "SELECT  `ssg`.`ssg_name`
+              FROM `staff` `stf`
+                LEFT JOIN `staff_ssg` `sssg`
+                  ON `sssg`.`staff_id` = `stf`.`id`
+                LEFT JOIN `staff_sub_groups` `ssg`
+                  ON `sssg`.`ssg_id` = `ssg`.`ssg_id`
+
+              WHERE `stf`.`user_id` = '$user_id'
+                AND `sssg`.`is_current` = 1";
+
+       $result = $this->db->query($sql);
+
+        return $result->result_array();
+   }
 }

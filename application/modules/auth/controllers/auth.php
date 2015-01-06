@@ -24,12 +24,16 @@ class Auth extends MY_Controller
 
 		$authentication = $this->m_auth->getUser($username, $hashed_password);
 
+		// print_r($authentication['auth']);die();
+
+
 		if($authentication['auth'] == TRUE)
 		{
 			$user_id = $authentication['user_id'];
 			$user_type = $authentication['usertype'];
-			$user_details = $this->userdetails($user_id, $user_type);
+			// $user_details = $this->userdetails($user_id, $user_type);
 			
+			// echo($user_type); die();
 			$data = array(
 				'logged_in' => TRUE,
 				'userid' => $user_id,
@@ -37,10 +41,10 @@ class Auth extends MY_Controller
 			);
 
 			$redirect_url = $this->getRedirect($user_type);
-
+			// echo $redirect_url;die();
 			$this->session->set_userdata($data);
 			// echo "<pre>";print_r($this->session->all_userdata());die;
-
+			
 			redirect(base_url() . $redirect_url);
 		}
 		else
@@ -51,12 +55,16 @@ class Auth extends MY_Controller
 
 	function getRedirect($usertype)
 	{
-		$redirections = array('ADMIN' => 'admin', 'Staff' => '', 'Student' => 'student');
-
+		$redirections = array('ADMIN' => 'admin', 'Staff' => 'staff', 'Student' => 'student');
+		// echo $usertype;die();
 		foreach ($redirections as $key => $value) {
-			if($usertype == 'Staff')
+
+			if($key == 'Staff')
 			{
-				$this->fetchuserdetails();
+				// $staff_details = $this->fetchuserdetails();
+				// echo "<pre>";print_r($staff_details);
+				return $value;
+				// redirect(base_url().'staff');
 			}
 			else
 			{
@@ -65,6 +73,8 @@ class Auth extends MY_Controller
 				}
 			}
 		}
+		
+
 	}
 
 	function logout()

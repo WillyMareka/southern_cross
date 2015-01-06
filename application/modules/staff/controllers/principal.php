@@ -4,56 +4,49 @@
 */
 class Principal extends MY_Controller
 {
-	
-	function __construct($value=NULL)
+	function __construct()
 	{
 		parent::__construct();
 		$this->load->model("staff_model");
-		
-		
-	}
-
-	public function index($value=NULL)
-	{
-		if ($value == NULL) {
-			redirect('home');
-			// print_r($value);die();
-		}elseif ($value != NULL) {
-			$this->index_page();
-		}
+		$this->checkLogin('staff');
+		$this->checkStaff('Principal');
+		// $data = $this->staff_model->get_all_staff_details($this->session->userdata("userid"));
+		// Should be changed to checkStaffLogin due to the different structure of the staff
 		
 	}
 
-	public function index_page()
+	public function index()
 	{
-		
 		$data['content_view'] = "p_dashboard";
 		$data['menu'] = "principal_menu";
-		$data['loggedinas'] = "School Principal";
-		$data['username'] = $this->session->userdata("username");
+		$data['school'] = $this->config->item('institution');
+		$data['userdetails'] = $this->staff_model->get_all_staff_details($this->session->userdata("userid"));
+		
 
 		// echo "<pre>";print_r($data);echo "</pre>";die();
 
-		$this->load->view("staff_view", $data);
+		$this->load->view("staff_v", $data);
 	}
 
-	
-	 public function principal($fn)
+	public function principal($fn)
 	 {
-	 	switch ($fn) {
-	 		case 1:
-	 			
-	 			break;
-	 		case 2:
-	 			
-	 			break;
-	 		case 3:
-	 			
-	 			break;
-	 		case 4:
-	 			
-	 			break;
+	 	if ($fn == 1) {
+	 		$this->view_hod();
+	 	} elseif ($fn == 2) {
+	 		# code...
+	 	} elseif ($fn == 3) {
+	 		# code...
 	 	}
+	}
+
+	 public function view_hod()
+	 {
+	 	$data['content_view'] = "p_hod_view";
+		$data['menu'] = "principal_menu";
+		$data['school'] = $this->config->item('institution');
+		$data['userdetails'] = $this->staff_model->get_all_staff_details($this->session->userdata("userid"));
+
+	 	$this->load->view("staff_view", $data);
 	 }
 
 
