@@ -12,7 +12,8 @@ class Auth extends MY_Controller
 	function index()
 	{
 		$this->logout();
-		$this->load->view('auth');
+		$data['error'] = '';
+		$this->load->view('auth', $data);
 	}
 
 	function login()
@@ -56,7 +57,8 @@ class Auth extends MY_Controller
 		}
 		else
 		{
-			echo "No User Found";
+			$data['error'] = 'Login Error! Please Try Again';
+			$this->load->view('auth', $data);
 		}
 	}
 
