@@ -50,13 +50,8 @@ class Auth extends MY_Controller
 			$redirect_url = $this->getRedirect($user_type, $user_id);
 
 			$this->session->set_userdata($data);
-<<<<<<< HEAD
-			// print_r($this->session->all_userdata());die;
-			// echo $redirect_url;exit;
-=======
 			// echo "<pre>";print_r($this->session->all_userdata());die;
 
->>>>>>> d077f05975471ef7ab1c79ef7448803e444dd812
 			redirect(base_url() . $redirect_url);
 		}
 		else
