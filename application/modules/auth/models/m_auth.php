@@ -31,5 +31,16 @@ class M_auth extends MY_Model {
         
     	return $user;
     }
+
+    public function staff_usertype($staff_id)
+    {
+        $query = $this->db->query("SELECT r.redirect as redirection 
+            FROM staff_ssg s
+            JOIN staff_redirect r ON r.ssg_id = s.ssg_id
+            WHERE s.staff_id = " . $staff_id . " AND s.is_current = 1 LIMIT 1");
+        $usertype = $query->row();
+
+        return $usertype->redirection;
+    }
    
 }

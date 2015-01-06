@@ -1,16 +1,23 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+    
+error_reporting(1);
+ini_set('memory_limit', '-1');
+ini_set('max_execution_time', '-1');
 
 class MY_Controller extends MX_Controller
 {
-    public $tables, $get_userdetails, $group_combo;
+    public $tables, $get_userdetails, $group_combo, $sub_group_combo;
 	function __construct()
     {
         // Call the Model constructor
         parent::__construct();
         $this->load->model('admin/m_admin');
         $this->load->module('auth');
+        $this->load->module('template');
+        $this->load->module('export');
         $this->tables = $this->m_admin->getalltables();
         $this->group_combo = $this->creategroupcombo();
+        $this->sub_group_combo = $this->createsubgroupscombo();
 
     }
 
@@ -97,28 +104,21 @@ class MY_Controller extends MX_Controller
 
     function userdetails($userid, $usertype)
     {
-        // echo $userid." type ".$usertype;die();
         $users = array('ADMIN' => 'administrator', 'Staff' => 'staff', 'Student' => 'student_course');
-        
-        foreach ($users as $key => $value) {
-           
-            if($value == $usertype)
-            {
-                // echo $value;die();
-                $details = $this->db->get_where($value, array('user_id' => $userid), 1);
-                $user_details = $details->result_array();
+        $user_details = array();
 
+        foreach ($users as $key => $value) {
+            if($key == $usertype)
+            {
+                $details = $this->db->get_where($value, array('user_id' => $userid), 1);
+                $user_details = $details -> result_array();
             }
-            
         }
-        
-        // print_r($user_details);die();
         return $user_details;
     }
 
     function checkLogin($current)
     {
-        
         if(!$this->session->userdata('logged_in'))
         {
             redirect(base_url() . 'auth');
@@ -127,7 +127,7 @@ class MY_Controller extends MX_Controller
         else
         {
             $usertype = $this->session->userdata('usertype');
-           
+
             if($usertype != $current)
             {
                 redirect(base_url() . 'auth');
@@ -137,9 +137,11 @@ class MY_Controller extends MX_Controller
 
     function fetchuserdetails()
     {
+        $details = array();
         $userid = $this->session->userdata('userid');
         $usertype = $this->session->userdata('usertype');
-        $this->get_userdetails = $this->userdetails($userid, $usertype);
+        //echo "<pre>";print_r($this->session->all_userdata());die;
+        $details = $this->userdetails($userid, $usertype);
 
         return $this->get_userdetails;
     }
@@ -168,26 +170,57 @@ class MY_Controller extends MX_Controller
 
         if($sub_groups)
         {
-            echo json_encode($sub_groups);
+            foreach ($sub_groups as $key => $value) {
+                $data[] = array('id'=>$value['ssg_id'], 'text' => $value['ssg_name']);
+            }
         }
         else
         {
-            echo "No group found";
+            $data = array();
+        }
+        echo json_encode($data);
+    }
+
+    public function createsubgroupscombo()
+    {
+        $sub_groups = $this->m_admin->getssg();
+
+        if ($sub_groups) {
+            foreach ($sub_groups as $key => $value) {
+                $this->sub_group_combo .= '<option value = "'. $value['ssg_id'] . '">'.$value['ssg_name'].'</option>';
+            }
+        }
+        else
+        {
+            $this->sub_group_combo = '<optgroup>No Sub Group</optgroup>';
+        }
+
+        return $this->sub_group_combo;
+
+    }
+
+    public function uploader($file)
+    {
+        $path = '';
+        $upload_path = 'school/lecturers/images/';
+        $config['upload_path'] = './' . $upload_path;
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload($file))
+        {
+            $error = array('error' => $this->upload->display_errors());
+            return $error;
+        }
+        else
+        {
+            $data = array('upload_data' => $this->upload->data());
+            foreach ($data as $key => $value) {
+                $path = base_url().$upload_path.$value['file_name'];
+            }
+            return $path;
         }
     }
 
-    public function checkStaff($log)
-    {
-       $user_id = $this->session->userdata('userid');
-       $ssg_name = $this->m_admin->get_ssgName($user_id);
-       $ssg_name = $ssg_name[0]['ssg_name'];
-       $red = strtolower($ssg_name);
-       // echo $red;echo $log;die();
-       // print_r($ssg_name);die();
-
-       if ($log != $ssg_name) {
-           redirect(base_url().'staff/'.$red);
-       } 
-    }
 
 }

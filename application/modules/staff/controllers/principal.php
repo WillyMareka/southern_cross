@@ -8,7 +8,7 @@ class Principal extends MY_Controller
 	{
 		parent::__construct();
 		$this->load->model("staff_model");
-		$this->checkLogin('staff');
+		$this->checkLogin('Staff');
 		$this->checkStaff('Principal');
 		// $data = $this->staff_model->get_all_staff_details($this->session->userdata("userid"));
 		// Should be changed to checkStaffLogin due to the different structure of the staff

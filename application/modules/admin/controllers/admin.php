@@ -75,7 +75,9 @@ class Admin extends MY_Controller
 	public function view_staff_page()
 	{
 		$data['content_view'] = "view_staff_page";
+
 		// $data['application'] = $this->m_admin->applications();
+
 		$data['staff'] = $this->m_admin->get_staff();
 
 		$this->load->view("admin_view", $data);
@@ -138,13 +140,32 @@ class Admin extends MY_Controller
 		$this->index();
 		
 	}
-	
+
+	public function ss_applicants_details($id)
+	{
+
+    }
 	public function createApplications()
 	{
+
 		// $this->applicant_row = '';
 		$applicants = $this->admin_model->student_applications();
 		// print_r($applicants);die();
 		$counter = 0;
+		$this->applicant_row .= "
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Second Name</th>
+				<th>Last Name</th>
+				<th>Citizenship</th>
+				<th>Gender</th>
+				<th>Date of Birth</th>
+				<th colspan = '2'>Action</th>
+			</tr>
+		</thead>
+		<tbody>";
 		foreach ($applicants as $key => $value) {
 			$counter++;
 			$this->applicant_row .= '<tr>';
@@ -159,6 +180,7 @@ class Admin extends MY_Controller
 			$this->applicant_row .= '<td><a href = "'.base_url().'admin/viewapplicantdetails/'.$value['applicant_id'].'">View More</a></td>';
 			$this->applicant_row .= '<tr>';
 		}
+		$this->applicant_row .= '</tbody>';
 		
 
 		return $this->applicant_row;
@@ -172,7 +194,6 @@ class Admin extends MY_Controller
 		$data['education'] = $this->m_admin->getApplicantInstitutions($a_id);
 		$this->load->view('admin_view', $data);
 	}
-	
 	public function getapplicantdetails($applicant_id)
 	{
 		$applicant_details = array();
@@ -215,24 +236,17 @@ class Admin extends MY_Controller
 
 		redirect("admin");
 
-
 		$this->load->view("admin_view", $data);
+
 	}
 
 	public function getApplicants()
 	{
 		$applicants = $this->admin_model->student_applications();
 
+
 		echo json_encode($applicants);
 	}
 
-	public function staff()
-	{
-		$data['pagetitle'] = 'Staff Page';
-		$data['pagedescription'] = 'Contains details about staff members';
-		$data['groups'] = $this->group_combo;
-		$data['content_view'] = 'staff/staff';
-		$this->load->view('template/londonium_template', $data);
-	}
 }
 
