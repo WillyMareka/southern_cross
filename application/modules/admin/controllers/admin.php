@@ -10,7 +10,8 @@ class Admin extends MY_Controller
         $this->load->model('admin_model');
         $this->load->model('m_admin');
         $this->counts = $this->m_admin->getAdminCounts();
-        //$this->checkLogin('ADMIN');
+        $this->checkLogin('ADMIN');
+        $this->get_userdetails = $this->fetchuserdetails();
     }
 	function index()
 	{
@@ -74,7 +75,9 @@ class Admin extends MY_Controller
 	public function view_staff_page()
 	{
 		$data['content_view'] = "view_staff_page";
+
 		// $data['application'] = $this->m_admin->applications();
+
 		$data['staff'] = $this->m_admin->get_staff();
 
 		$this->load->view("admin_view", $data);
@@ -137,17 +140,32 @@ class Admin extends MY_Controller
 		$this->index();
 		
 	}
-	
+
 	public function ss_applicants_details($id)
 	{
 
     }
 	public function createApplications()
 	{
+
 		// $this->applicant_row = '';
 		$applicants = $this->admin_model->student_applications();
 		// print_r($applicants);die();
 		$counter = 0;
+		$this->applicant_row .= "
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Second Name</th>
+				<th>Last Name</th>
+				<th>Citizenship</th>
+				<th>Gender</th>
+				<th>Date of Birth</th>
+				<th colspan = '2'>Action</th>
+			</tr>
+		</thead>
+		<tbody>";
 		foreach ($applicants as $key => $value) {
 			$counter++;
 			$this->applicant_row .= '<tr>';
@@ -162,6 +180,7 @@ class Admin extends MY_Controller
 			$this->applicant_row .= '<td><a href = "'.base_url().'admin/viewapplicantdetails/'.$value['applicant_id'].'">View More</a></td>';
 			$this->applicant_row .= '<tr>';
 		}
+		$this->applicant_row .= '</tbody>';
 		
 
 		return $this->applicant_row;
@@ -179,7 +198,6 @@ class Admin extends MY_Controller
 	{
 		$applicant_details = array();
 		$applicants = $this->admin_model->student_applications();
-		//echo "<pre>";print_r($applicants);echo "</pre>";exit;
 		foreach ($applicants as $applicant) {
 			if($applicant['applicant_id'] == $applicant_id)
 			{
@@ -213,27 +231,22 @@ class Admin extends MY_Controller
 		}
 
 		$student_no = $course_short_code .'/' . $noofstudents . '/' . $admission_month . '/' . $intake;
-		//echo $student_no.$course_short_code." ".$a_id;exit;
+
 		$saved = $this->m_admin->save_student($student_no, $course_short_code, $a_id);
 
-		// echo "<pre>";print_r($saved);echo "</pre>";exit;
 		redirect("admin");
 
-
 		$this->load->view("admin_view", $data);
+
 	}
 
 	public function getApplicants()
 	{
 		$applicants = $this->admin_model->student_applications();
 
+
 		echo json_encode($applicants);
 	}
 
-	public function query_tester(){
-		$daata=$this->m_admin->student_details(19);
-
-		echo "<pre>";print_r($daata);echo "</pre>";exit;
-	}
 }
 

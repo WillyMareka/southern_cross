@@ -29,16 +29,34 @@ class Auth extends MY_Controller
 			$user_id = $authentication['user_id'];
 			$user_type = $authentication['usertype'];
 			$user_details = $this->userdetails($user_id, $user_type);
-			$redirect_url = $this->getRedirect($user_type);
+
 			$data = array(
 				'logged_in' => TRUE,
 				'userid' => $user_id,
 				'usertype' => $user_type
 			);
 
+			foreach ($user_details[0] as $key => $value) {
+				if($key == 'id')
+				{
+					$data['id'] = $value;
+				}
+				else if($key == 'student_course_id')
+				{
+					$data['id'] = $value;
+				}
+			}
+
+			$redirect_url = $this->getRedirect($user_type, $user_id);
+
 			$this->session->set_userdata($data);
+<<<<<<< HEAD
 			// print_r($this->session->all_userdata());die;
 			// echo $redirect_url;exit;
+=======
+			// echo "<pre>";print_r($this->session->all_userdata());die;
+
+>>>>>>> d077f05975471ef7ab1c79ef7448803e444dd812
 			redirect(base_url() . $redirect_url);
 		}
 		else
@@ -47,13 +65,25 @@ class Auth extends MY_Controller
 		}
 	}
 
-	function getRedirect($usertype)
+	function getRedirect($usertype, $userid)
 	{
-		$redirections = array('ADMIN' => 'admin', 'Lecturer' => 'lecturer', 'Student' => 'student');
+		$redirections = array('ADMIN' => 'admin', 'Staff' => '', 'Student' => 'student');
 
 		foreach ($redirections as $key => $value) {
-			if ($key == $usertype) {
-				return $value;
+			if($usertype == 'Staff')
+			{
+				$staff_redirect = array();
+				$details = $this->userdetails($userid, $usertype);
+				$staff_id = $details[0]['id'];
+				$redirect = $this->m_auth->staff_usertype($staff_id);
+
+				return $redirect;
+			}
+			else
+			{
+				if ($key == $usertype) {
+					return $value;
+				}
 			}
 		}
 	}

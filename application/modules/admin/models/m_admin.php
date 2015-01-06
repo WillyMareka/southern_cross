@@ -134,8 +134,12 @@ class M_admin extends MY_Model {
 
     function save_student($student_no, $course_short_code, $a_id)
     {
+<<<<<<< HEAD
         $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.",1002)");
 
+=======
+        $query = $this->db->query("INSERT INTO student_course VALUES(NULL, '".$student_no."', '".$course_short_code."', NULL, ".$a_id.", 0)");
+>>>>>>> d077f05975471ef7ab1c79ef7448803e444dd812
         if($query)
         {
             $query = $this->db->query("UPDATE application_approvals SET status = 1 WHERE applicant_id = " .$a_id);
@@ -183,6 +187,7 @@ class M_admin extends MY_Model {
                 FROM `applicant_personal_info`";
     }
 
+<<<<<<< HEAD
     public function student_details($st_id=NULL)
     {
         $kuchoka = (isset($st_id))? "WHERE aa.applicant_id = $st_id": NULL;
@@ -200,5 +205,95 @@ class M_admin extends MY_Model {
 
        return $result;
    }
+=======
+    public function staffregistration($path)
+    {
+        $stafftable = array();
+        $staff_subgrouptable = array();
+        foreach ($this->input->post() as $key => $value) {
+            if($value)
+            {
+                if($key != 'ssg_id')
+                {
+                    $stafftable[$key] = $value;
+                }
+                else
+                {
+                    $staff_subgrouptable[$key] = $value;
+                }
+            }
+        }
+        $stafftable['profile_picture'] = $path;
+        $staff_no = $this->generate_staff_no($staff_subgrouptable['ssg_id']);
+        $staff_subgrouptable['staff_no'] = $staff_no;
+
+
+        $firstname = $stafftable['f_name'];
+        $surname = $stafftable['s_name'];
+        $othernames = $stafftable['o_names'];
+
+        $assigned = 0;
+        $smasher = 1;
+
+        while ($assigned == 0) {
+            if($smasher <= 5)
+            {
+                $username = $this->create_username($firstname, $surname, $othernames, $smasher);
+                if($username)
+                {
+                    $exists = $this->checkusernameexists($username);
+
+                    if($exists == false)
+                    {
+                        $assigned = 1;
+                    }
+                }
+                else
+                {
+                    echo "Nothing";die;
+                }
+            }
+            else
+            {
+                $username = $stafftable['email'];
+                $assigned = 1;
+            }
+            $smasher++;
+
+        }
+
+        $username = strtolower($username);
+
+        $user_id = $this->register_user($username, 'Staff');
+
+        $stafftable['user_id'] = $user_id;
+
+        $insertion = $this->db->insert('staff', $stafftable);
+        if($insertion)
+        {
+            $staff_id = mysql_insert_id();
+            $staff_subgrouptable['staff_id'] = $staff_id;
+            $staff_subgrouptable['is_current'] = 1;
+
+            $subgroup_insertion = $this->db->insert('staff_ssg', $staff_subgrouptable);
+
+            $staff_data = array();
+
+            $staff_data['staff_no'] = $staff_no;
+            $staff_data['firstname'] = $stafftable['f_name'];
+            $staff_data['surname'] = $stafftable['s_name'];
+            $staff_data['username'] = $username;
+            $staff_data['email'] = $stafftable['email'];
+
+            return $staff_data;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+>>>>>>> d077f05975471ef7ab1c79ef7448803e444dd812
    
 }
