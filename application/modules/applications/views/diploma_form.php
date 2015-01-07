@@ -158,17 +158,8 @@
 							<td><h5>Enrollment Information</h5></td>
 						</tr>
 						<tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-						<td colspan="6"><label class=" description" for="yr_of_entry">Year of Entry *</label></td>
-=======
 						<td><label class=" description" for="yr_of_entry">Year of Entry </label></td>
 						<td><label class="description" for="entry_month">Month of Entry</label></td>
->>>>>>> 50d8652abfaaa9df6694f074864fac2749e0dc3b
-=======
-						<td><label class=" description" for="yr_of_entry">Year of Entry </label></td>
-						<td><label class="description" for="entry_month">Month of Entry</label></td>
->>>>>>> f169954f3eb4021899b05f42edb345b534dd1255
 						</tr>
 						<tr>
 							<td colspan="">
@@ -281,9 +272,7 @@
 						<label class=" description" for="dob">Date of Birth </label>
 						</td>
 						<td>
-						<div class=" form-group">
 						<input required = "required"  type="text" name="dob" id="datepicker_dob" title="Enter Date Of Birth">
-						</div>
 						</td>
 						</tr>
 						<tr>
@@ -569,7 +558,7 @@
 							</tr>
 							<tr>
 								
-								<td><input required = "required"  type="text" name="applicant_educ_institution_name_1" class=" form-control inputs institutions "></td>
+								<td><input required = "required"  type="text" name="applicant_educ_institution_name_1" class=" form-control inputs institutions" title="Please enter atleast one Institution of Education"></td>
 								<td><input required = "required"  type="text" name="applicant_educ_level_1" class=" form-control inputs institutions "></td>
 								<td><input required = "required"  type="text" name="applicant_educ_study_area_1" class=" form-control inputs institutions"></td>
 								<td><input required = "required"  type="text" id="datepicker_duration_from_1" name="applicant_educ_duration_from_1" class=" form-control inputs institutions width_sm "></td>
@@ -580,7 +569,7 @@
 
 							<tr>
 								
-								<td><input type="text" name="applicant_educ_institution_name_2" class=" form-control inputs input institutions "></td>
+								<td><input type="text" name="applicant_educ_institution_name_2" class=" form-control inputs input institutions" title="Please enter atleast one Institution of Education"></td>
 								<td><input type="text" name="applicant_educ_level_2" class=" form-control inputs input institutions "></td>
 								<td><input type="text" name="applicant_educ_study_area_2" class=" form-control inputs input institutions "></td>
 								<td><input type="text" id="datepicker_duration_from_2" name="applicant_educ_duration_from_2" class=" form-control inputs input institutions width_sm"></td>
@@ -591,7 +580,7 @@
 
 							<tr>
 								
-								<td><input  type="text" name="applicant_educ_institution_name_3" class=" form-control inputs input institutions "></td>
+								<td><input  type="text" name="applicant_educ_institution_name_3" class=" form-control inputs input institutions" title="Please enter atleast one Institution of Education"></td>
 								<td><input  type="text" name="applicant_educ_level_3" class=" form-control inputs input institutions "></td>
 								<td><input  type="text" name="applicant_educ_study_area_3" class=" form-control inputs input institutions "></td>
 								<td><input  type="text" id="datepicker_duration_from_3" name="applicant_educ_duration_from_3" class=" form-control inputs input institutions width_sm "></td>

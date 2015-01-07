@@ -37,9 +37,9 @@ function get_staff_sub_groups(group_id)
 function loadData(base_url, function_url, value, container, placeholder_text) {
 	// alert(placeholder_text);
   if (value !== '') {
-    ajax_url = base_url + 'admin/' + function_url + '/' + value
+    ajax_url = base_url + 'admin/' + function_url + '/' + value;
   } else {
-    ajax_url = base_url + 'admin/' + function_url
+    ajax_url = base_url + 'admin/' + function_url;
   }
   $.ajax({
     url: ajax_url,
@@ -59,3 +59,4 @@ function loadData(base_url, function_url, value, container, placeholder_text) {
     }
   });
 }
+

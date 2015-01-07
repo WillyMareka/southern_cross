@@ -40,18 +40,12 @@ class Users extends MX_Controller
 
 			$user_id = $this->m_user->check_login($username, $password);
 
-			// echo md5(mareks);
-			//echo $user_id;exit;
-			$this->check_type($user_id);
-
-
 			// if ($user_id = false) {
 			// 	echo "NOPE. NOPE NOPE NOPE.";exit;
 			// }
 			//$this->check_type($user_id);
 
 			echo $user_id;
-
 	}
 
 	function check_type($user_id){

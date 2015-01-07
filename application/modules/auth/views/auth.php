@@ -38,6 +38,13 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/londonium/js/plugins/interface/collapsible.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/londonium/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/londonium/js/application.js"></script>
+<script>
+$(document).ready(function(){
+  <?php if($error){?>
+    $.jGrowl('<?php echo $error; ?>', { sticky: true, theme: 'growl-error', header: 'Error!' });
+  <?php } ?>
+});
+</script>
 </head>
 <body class="full-width page-condensed">
 <!-- Navbar -->
@@ -81,6 +88,10 @@
         </div>
         <div class="col-xs-6">
           <button type="submit" class="btn btn-warning pull-right"><i class="icon-lock"></i> Sign in</button>
+        </div>
+
+        <div class = "col-xs-12">
+          <center><p><?php if(isset($error)){echo $error;}else{echo "Login Above" ;}?></p></center>
         </div>
       </div>
     </div>

@@ -316,7 +316,7 @@ Use search to find needed section.
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
 									<img src="<?php echo $profile_picture; ?>" alt="">
-									<span>John Doe</span>
+									<span><?php echo $f_name . ' ' . $s_name?></span>
 								</a>
 								<ul class="dropdown-menu">
 									<li><a href="#"><span class="label label-warning pull-right">New</span>Profile</a></li>
@@ -366,7 +366,7 @@ Use search to find needed section.
 					 Javascript: html/<?php echo base_url(); ?>assets/lecturer/demo/demo.js
 				 -->
 				<div>
-					<div class="text-bg"><span class="text-slim">Welcome,</span> <span class="text-semibold">John</span></div>
+					<div class="text-bg"><span class="text-slim">Welcome,</span> <span class="text-semibold"><?php echo $f_name; ?></span></div>
 
 					<img src="<?php echo $profile_picture; ?>" alt="" class="">
 					<div class="btn-group">
@@ -392,8 +392,19 @@ Use search to find needed section.
 					<a href="<?php echo base_url(). 'staff/lecturer/elearning'; ?>"><i class="menu-icon fa fa-book"></i><span class="mm-text">E-Learning</span></a>
 				</li>
 
-				<li>
-					<a href="<?php echo base_url(). 'staff/lecturer/assessment'; ?>"><i class="menu-icon fa fa-sort-numeric-desc"></i><span class="mm-text">Assessment</span></a>
+				<li class="mm-dropdown mm-dropdown-root active">
+					<a href="#"><i class="menu-icon fa fa-sort-numeric-desc"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Assessment</span></a>
+					<ul style="" class="mmc-dropdown-delay animated fadeInLeft">
+						<li>
+							<a tabindex="-1" href="<?php echo base_url(). 'staff/lecturer/assessment'; ?>"><span class="mm-text">Feed Marks</span></a>
+						</li>
+						<li>
+							<a tabindex="-1" href=""><span class="mm-text">Assessment Types</span></a>
+						</li>
+						<li>
+							<a tabindex="-1" href=""><span class="mm-text">Assessment Reports</span></a>
+						</li>
+					</ul>
 				</li>
 
 				<li>

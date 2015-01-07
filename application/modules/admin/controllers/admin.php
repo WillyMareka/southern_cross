@@ -150,7 +150,7 @@ class Admin extends MY_Controller
 
 		// $this->applicant_row = '';
 		$applicants = $this->admin_model->student_applications();
-		// print_r($applicants);die();
+		
 		$counter = 0;
 		$this->applicant_row .= "
 		<thead>
@@ -182,7 +182,7 @@ class Admin extends MY_Controller
 		}
 		$this->applicant_row .= '</tbody>';
 		
-
+			//echo "<pre>";print_r($this->applicant_row);echo "</pre>";exit;
 		return $this->applicant_row;
 	}
 
