@@ -222,5 +222,18 @@ class MY_Controller extends MX_Controller
         }
     }
 
+     public function checkStaff($log)
+    {
+        $user_id = $this->session->userdata('userid');
+        $ssg_name = $this->m_admin->get_ssgName($user_id);
+        $ssg_name = $ssg_name[0]['ssg_name'];
+        $red = strtolower($ssg_name);
+        // echo $red;echo $log;die();
+        // print_r($ssg_name);die();
+        if ($log != $ssg_name) {
+        redirect(base_url().'staff/'.$red);
+        }
+    }
+
 
 }

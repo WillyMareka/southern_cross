@@ -218,4 +218,32 @@ class MY_Model extends CI_Model {
 
       return $staff_no;
     }
+
+    public function get_all_staff_details($user_id)
+    {
+      $sql = "SELECT *
+                FROM `staff` `stf`
+                LEFT JOIN `staff_ssg` `sssg`
+                ON `sssg`.`staff_id` = `stf`.`id`
+                LEFT JOIN `staff_sub_groups` `ssg`
+                ON `sssg`.`ssg_id` = `ssg`.`ssg_id`
+                WHERE `stf`.`user_id` = '$user_id'
+                AND `sssg`.`is_current` = 1";
+      $result = $this->db->query($sql);
+      return $result->result_array();
+    }
+
+    public function get_ssgName($user_id)
+    {
+      $sql = "SELECT `ssg`.`ssg_name`
+                FROM `staff` `stf`
+                LEFT JOIN `staff_ssg` `sssg`
+                ON `sssg`.`staff_id` = `stf`.`id`
+                LEFT JOIN `staff_sub_groups` `ssg`
+                ON `sssg`.`ssg_id` = `ssg`.`ssg_id`
+                WHERE `stf`.`user_id` = '$user_id'
+                AND `sssg`.`is_current` = 1";
+      $result = $this->db->query($sql);
+      return $result->result_array();
+    }
 }
