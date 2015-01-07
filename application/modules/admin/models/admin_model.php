@@ -21,8 +21,9 @@ class Admin_model extends MX_Controller
                WHERE aa.status = 0 
                ");
        $result = $query->result_array();
-
+	   
        return $result;
+	   
    }
    
    public function addStudentUser($username)

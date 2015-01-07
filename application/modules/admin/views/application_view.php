@@ -1,12 +1,14 @@
+<?php //echo "<pre>";print_r($applicants);echo "</pre>";exit;?>    
     <aside class="right-side">
                 <!-- Main content -->
                 <section class="content">
             <div class="row">
                  <!-- Bordered datatable inside panel -->
+
             <table class="table table-bordered" id = "stafftable">
                 <?php echo $application;?>
             </table>
-   
+
           <!-- /bordered datatable inside panel -->
                 </div>
 
