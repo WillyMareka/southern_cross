@@ -16,7 +16,7 @@ class Student extends MY_Controller
 
 	public function index()
 	{
-		
+		$this->load->view("student_home");
 		
 	}
 

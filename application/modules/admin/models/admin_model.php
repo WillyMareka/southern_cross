@@ -24,7 +24,7 @@ class Admin_model extends MX_Controller
 
        return $result;
    }
-
+   
    public function addStudentUser($username)
    {
    	$password = md5('123456');
