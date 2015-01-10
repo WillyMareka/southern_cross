@@ -138,14 +138,14 @@
 							</td>
 						    </tr>
 							</tr>
-							<!-- <tr>
+							<tr>
 							<td>
 							<label class=" " for="applicant_picture">Picture:  </label>
 							</td>
 							<td colspan="4">
 							<input required = "required"  id="applicant_picture" name="applicant_picture" class=" input inputs" type="file"/> 
 							</td>
-							</tr> -->
+							</tr>
 							</tbody>
 						</table>
 					</tr>
@@ -158,17 +158,10 @@
 							<td><h5>Enrollment Information</h5></td>
 						</tr>
 						<tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-						<td colspan="6"><label class=" description" for="yr_of_entry">Year of Entry *</label></td>
-=======
+
 						<td><label class=" description" for="yr_of_entry">Year of Entry </label></td>
 						<td><label class="description" for="entry_month">Month of Entry</label></td>
->>>>>>> 50d8652abfaaa9df6694f074864fac2749e0dc3b
-=======
-						<td><label class=" description" for="yr_of_entry">Year of Entry </label></td>
-						<td><label class="description" for="entry_month">Month of Entry</label></td>
->>>>>>> f169954f3eb4021899b05f42edb345b534dd1255
+
 						</tr>
 						<tr>
 							<td colspan="">
