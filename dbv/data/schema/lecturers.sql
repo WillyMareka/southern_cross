@@ -1,9 +1,17 @@
 CREATE TABLE `lecturers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD
+=======
+  `assigned_id` varchar(250) DEFAULT NULL,
+>>>>>>> 915d3293ffa83c2040b82272361f5f821f4d5cb5
   `course` int(11) NOT NULL,
   `f_name` varchar(100) NOT NULL,
   `s_name` varchar(100) NOT NULL,
   `o_names` varchar(100) NOT NULL,
+<<<<<<< HEAD
+=======
+  `national_id` varchar(250) NOT NULL,
+>>>>>>> 915d3293ffa83c2040b82272361f5f821f4d5cb5
   `dob` varchar(30) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `email` varchar(100) NOT NULL,

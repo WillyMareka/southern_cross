@@ -9,39 +9,41 @@ class Staff extends MY_Controller
 	{
 		parent::__construct();
 		$this->load->model("staff_model");
-		
+		$this->checkLogin('staff');
 		
 	}
 
 	public function index()
 	{
-		$user_id = $this->session->userdata("user_id");
+		$user_id = $this->session->userdata("userid");
 		$this->determine_staff_type($user_id);
 	}
 
 
 	public function determine_staff_type($user_id)
 	{
-		$this->load->model("staff_model");
-		$data = $this->staff_model->get_staff_details($user_id);
-
-		$role = $data[0]['role_name'];
-		// echo "<pre>";print_r($role);echo "</pre>";die();
+		$data = $this->staff_model->get_all_staff_details($user_id);
+		// echo "<pre>";print_r($data);echo "</pre>";die();
+		$role = strtolower($data[0]['ssg_name']);
+		$redirection ="staff/".$role;
 		switch ($role) {
-			case 'Principal':
-				redirect("staff/principal");
+			case 'principal':
+				redirect(base_url().$redirection);
 				break;
-			case 'Dean of students':
-				redirect("staff/dean");
+			case 'deputy principal':
+				redirect(base_url().'principal');
 				break;
-			case 'Head of department':
-				redirect("staff/hod");
+			case 'dean of students':
+				redirect(base_url().$redirection);
 				break;
-			case 'Administrative Staff':
-				redirect("staff/administrative");
+			case 'head of department':
+				redirect(base_url().$redirection);
 				break;
-			case 'Subordinate Staff':
-				redirect("staff/subordinate");
+			case 'administrative':
+				redirect(base_url().$redirection);
+				break;
+			case 'subordinate':
+				redirect(base_url().$redirection);
 				break;
 		}
 

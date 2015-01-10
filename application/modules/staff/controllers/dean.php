@@ -9,7 +9,8 @@ class Dean extends MY_Controller
 	{
 		parent::__construct();
 		$this->load->model("staff_model");
-		
+		$this->checkLogin('staff');
+		$this->checkStaff('dean');
 		
 	}
 

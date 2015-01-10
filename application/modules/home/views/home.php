@@ -1,4 +1,4 @@
-<?php //echo "<pre>";print_r($application_status);echo "</pre>";exit; ?>
+<?php //echo md5(adima);exit;//echo "<pre>";print_r($application_status);echo "</pre>";exit; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,6 +100,7 @@
             <h2>Southern Cross Institute of Tropical Medicine</h2>
 
             MID-LEVEL MEDICAL TRAINING COLLEGE
+            
           </div>
         </div>
         <!-- <div><span class="glyphicon glyphicon-circle-arrow-up"></span>Registrations</div> -->

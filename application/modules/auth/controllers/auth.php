@@ -12,7 +12,8 @@ class Auth extends MY_Controller
 	function index()
 	{
 		$this->logout();
-		$this->load->view('auth');
+		$data['error'] = '';
+		$this->load->view('auth', $data);
 	}
 
 	function login()
@@ -48,7 +49,7 @@ class Auth extends MY_Controller
 			}
 
 			$redirect_url = $this->getRedirect($user_type, $user_id);
-
+			// echo $redirect_url;die();
 			$this->session->set_userdata($data);
 			// echo "<pre>";print_r($this->session->all_userdata());die;
 
@@ -56,7 +57,8 @@ class Auth extends MY_Controller
 		}
 		else
 		{
-			echo "No User Found";
+			$data['error'] = 'Login Error! Please Try Again';
+			$this->load->view('auth', $data);
 		}
 	}
 

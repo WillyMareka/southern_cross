@@ -6,7 +6,7 @@
                 </li>
 
                 <li class="">
-                    <a href="<?php echo base_url().'staff/'?>">
+                    <a href="<?php echo base_url().'staff/principal/view_hod'?>">
                         <i class="fa fa-sitemap"></i> <span>Heads of Department</span>
                     </a>
                 </li>
