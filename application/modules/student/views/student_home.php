@@ -1,1657 +1,1050 @@
-<?php //echo "<pre>";print_r($this->session->all_userdata());echo "</pre>";exit; ?>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
+<!-- Mirrored from revox.io/webarch/2.7/dashboard_v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Dec 2014 17:42:26 GMT -->
 <head>
-    <meta charset="utf-8">
-    <!--   <meta content="IE=edge" http-equiv="X-UA-Compatible"> -->
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="" name="description">
-    <meta content="" name="author">
-    <link href="<?php echo base_url().'assets/modules/students/ico/favicon.ico'?>" rel="shortcut icon">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<meta charset="utf-8"/>
+<title>Student Portal | Southern Cross</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+ 
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:1418273546,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok2v=1613a3a185/"},atok:"1385a9e91bdca74d19df2352f88cf4b1",petok:"0c9283cfd4bdc85c1df3c0e24367ca48eb9d0cb4-1418838020-1800",zone:"revox.io",rocket:"0",apps:{}}];CloudFlare.push({"apps":{"ape":"47262fe02bf2a16d337de1e6a5ee9bcb"}});!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="<?php echo base_url().'assets/scripts/cloudflare.min.js'?>",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
 
-    <title>Student Portal | Southern Cross</title>
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/css/responsive.css'?>">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/css/animate.min.css'?>">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/css/custom-icon-set.css'?>">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/css/bootstrap.css'?>">
-
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/css/theme.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/css/dashboard.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/css/style.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/css/dripicon.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/css/typicons.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/css/font-awesome.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/css/responsive.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/js/tip/tooltipster.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/js/vegas/jquery.vegas.css'?>">
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/js/tip/js/number-progress-bar/number-pb.css'?>">
-
-    <link rel="stylesheet" href="<?php echo base_url().'assets/modules/students/js/pace/themes/orange/pace-theme-flash.css'?>">
-
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/pace/pace-theme-flash.css'?>" media="screen">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/gritter/css/jquery.gritter.css'?>" media="screen">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/jquery-ricksaw-chart/css/rickshaw.css'?>" media="screen">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/jquery-morris-chart/css/morris.css'?>" media="screen">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/bootstrap-select2/select2.css'?>" media="screen">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/jquery-jvectormap/css/jquery-jvectormap-1.2.2.css'?>" media="screen">
+ 
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/boostrapv3/css/bootstrap.min.css'?>">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/font-awesome/css/font-awesome.css'?>">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/plugins/jquery-scrollbar/jquery.scrollbar.css'?>">
+<link rel="stylesheet" href="<?php echo base_url().'assets/students/css/style.css'?>">
+ 
 </head>
-
-<body role="document">
-    <div id="preloader">
-        <div id="status">&nbsp;</div>
-    </div>
-
-    <!-- TOPNAV -->
-
-    <div class="row">
-        <div class="col-lg-3">
-            <ul class="nav navbar-nav navbar-left list-unstyled list-inline text-amber date-list">
-                <li><i class="fontello-th text-amber"></i>
-                </li>
-                <li id="Date"></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-left list-unstyled list-inline text-amber date-list">
-                <li><i class="fontello-stopwatch text-amber"></i>
-                </li>
-                <li id="hours"></li>
-                <li class="point">:</li>
-                <li id="min"></li>
-                <li class="point">:</li>
-                <li id="sec"></li>
-            </ul>
-
-
-        </div>
-        <div class="col-lg-6">
-            <div style="margin-bottom:0;" class="alert text-white ">
-                <button data-dismiss="alert" class="close" type="button">×</button>
-                <span class="entypo-info-circled"></span>
-                <strong>Welcome back!</strong>&nbsp;&nbsp;Dave, your last loggin was 1 day ago. Have a nice day
-            </div>
-        </div>
-
-        <div class="col-lg-3">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a data-toggle="dropdown" class="dropdown-toggle text-white" href="#">
-                        <img alt="" class="admin-pic img-circle" src="../../../../api.randomuser.me/portraits/thumb/men/23.jpg">Hi, Dave Mattew <b class="caret"></b>
-                    </a>
-                    <ul style="margin:25px 15px 0 0;" role="menu" class="dropdown-setting dropdown-menu bg-amber">
-                        <li>
-                            <a href="#">
-                                <span class="entypo-user"></span>&nbsp;&nbsp;My Profile</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="entypo-vcard"></span>&nbsp;&nbsp;Account Setting</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="entypo-lifebuoy"></span>&nbsp;&nbsp;Help</a>
-                        </li>
-
-                        <li>
-                            <a href="http://themeforest.net/item/apricot-navigation-admin-dashboard-template/7664475?WT.ac=category_item&amp;WT.z_author=themesmile">
-                                <span class="entypo-basket"></span>&nbsp;&nbsp; Purchase</a>
-                        </li>
-                    </ul>
-                </li>
-
-<!--                 <li>
-                    <a data-toggle="dropdown" class="dropdown-toggle text-white" href="#">
-                        <i class="icon-gear"></i>&nbsp;Setting <b class="caret"></b>
-                    </a>
-                    <ul style="margin:25px 15px 0 0;" role="menu" class="theme-bg dropdown-setting dropdown-menu bg-amber">
-
-                        <li>
-                            <div id="button-bg"></div>
-                        </li>
-                        <li>
-                            <div id="button-bg2"></div>
-                        </li>
-                        <li>
-                            <div id="button-bg3"></div>
-                        </li>
-                        <li>
-                            <div id="button-bg4"></div>
-                        </li>
-                        <li>
-                            <div id="button-bg5"></div>
-                        </li>
-                        <li>
-                            <div id="button-bg6"></div>
-                        </li>
-
-                    </ul>
-                </li> -->
-
-            </ul>
-        </div>
-
-    </div>
-    <!-- END OF TOPNAV -->
-    <!-- Comtainer -->
-    <div class="container-fluid paper-wrap bevel tlbr">
-        <div id="paper-top">
-            <div class="row">
-                <div class="col-sm-4 no-pad">
-
-                    <a class="navbar-brand logo-text" href="#">Student Dashboard</a>
-
-                    <ul class="list-unstyled list-inline noft-btn">
-                        <li data-toggle="tooltip" data-placement="bottom" title="Profile"><i class=" icon-user"></i>
-                        </li>
-
-                        <li data-toggle="tooltip" data-placement="bottom" title="Log Out"> <a href="login.html" class="text-white"><i class="icon-upload"></i></a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="col-sm-5 no-pad">
-                    <ul style="margin-top:8px;" class="nav navbar-nav navbar-left list-unstyled list-inline text-gray date-list news-list">
-                        <!-- <li><i class="fontello-doc-text text-gray"></i>
-                        </li> -->
-                        <li>
-                            <ul class="list-unstyled top-newsticker text-gray news-list">
-                                <li><i class="fontello-cloud-flash-inv text-gray"></i>&nbsp;&nbsp;
-                                    <strong>Yogyakarta,</strong>Achmad Dhani Partly Cloudy Feels Like &nbsp;<b>22 °C</b>
-                                </li>
-                                <li><i class="fontello-cloud-sun-inv text-gray"></i>&nbsp;&nbsp;
-                                    <strong>Bandung,</strong>Jln Sudirman, Sunny Feels Like &nbsp;<b>31 °C</b>
-                                </li>
-                                <li><i class="fontello-rain-inv text-gray"></i>&nbsp;&nbsp;
-                                    <strong>Jakarta,</strong>Tomang, Rain Like &nbsp;<b>19 °C</b>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                </div>
-
-
-
-                <div class="col-sm-3 no-pad">
-                    <!-- menu right -->
-                    <div class="navbar-right">
-                        <ul class="nav navbar-nav margin-left">
-                            <!-- Messages: style can be found in dropdown.less-->
-                            <li class="dropdown messages-menu">
-                                <div class="drop-btn dropdown-toggle bg-white" data-toggle="dropdown">
-                                    <i class="fa  fa-envelope text-navy"></i>
-                                    <span class="label label-success label-drop">4</span>
-                                </div>
-                                <ul class="dropdown-menu drop-msg ">
-                                    <li class="header bg-green">
-                                        You have 4 messages</li>
-
-                                    <li>
-                                        <!-- inner menu: contains the actual data -->
-                                        <ul class="menu bg-white">
-                                            <li>
-                                                <!-- start message -->
-                                                <a href="#">
-                                                    <div class="pull-left">
-                                                        <img src="../../../../api.randomuser.me/portraits/thumb/men/37.jpg" class="img-circle" alt="User Image" />
-                                                    </div>
-                                                    <h4>
-                                                        Developer
-                                                        <!-- <small><i class="fa fa-clock-o"></i> 5 mins</small> -->
-                                                    </h4>
-                                                    <p>Bug fixed level 90%</p>
-                                                </a>
-                                            </li>
-                                            <!-- end message -->
-                                            <li>
-                                                <a href="#">
-                                                    <div class="pull-left">
-                                                        <img src="../../../../api.randomuser.me/portraits/thumb/women/36.jpg" class="img-circle" alt="user image" />
-                                                    </div>
-                                                    <h4>
-                                                        Aplication Support
-
-                                                    </h4>
-                                                    <p>There is some bug in your last submit</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="pull-left">
-                                                        <img src="../../../../api.randomuser.me/portraits/thumb/men/35.jpg" class="img-circle" alt="user image" />
-                                                    </div>
-                                                    <h4>
-                                                        Lead Developers
-
-                                                    </h4>
-                                                    <p>Please check again your submit</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="pull-left">
-                                                        <img src="../../../../api.randomuser.me/portraits/thumb/women/34.jpg" class="img-circle" alt="user image" />
-                                                    </div>
-                                                    <h4>
-                                                        Web Designer
-
-                                                    </h4>
-                                                    <p>Art has done</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="pull-left">
-                                                        <img src="../../../../api.randomuser.me/portraits/thumb/men/33.jpg" class="img-circle" alt="user image" />
-                                                    </div>
-                                                    <h4>
-                                                        General Manager
-
-                                                    </h4>
-                                                    <p>Employed newslatter</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="footer-green">
-                                        <!--    <div class="btn btn-xs bg-opacity-white-btn  fontello-arrows-cw"></div>
-                                        <div class="btn btn-xs bg-opacity-white-btn fontello-trash"></div>
-                                        <div class="btn btn-xs bg-opacity-white-btn fontello-eye-outline"></div> -->
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- Notifications: style can be found in dropdown.less -->
-                            <li class="dropdown notifications-menu">
-                                <div class="drop-btn dropdown-toggle bg-white" data-toggle="dropdown">
-                                    <i class="fa  fa-exclamation-triangle text-navy"></i>
-                                    <span class="label bg-aqua label-drop">7</span>
-                                </div>
-                                <ul class="dropdown-menu drop-noft">
-
-                                    <li class="header bg-aqua">
-                                        You have 10 notifications</li>
-
-                                    <li>
-                                        <!-- inner menu: contains the actual data -->
-                                        <ul class="menu bg-white">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa icon-user"></i> New developer registered
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa icon-cloud"></i> 2 item commit
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa icon-download"></i> 3 members joined
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa icon-tag"></i> 22 sales made
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa icon-document"></i> New task from manager
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="footer-blue">
-
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- Tasks: style can be found in dropdown.less -->
-                            <li class="dropdown tasks-menu">
-                                <div class="drop-btn bg-white dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-briefcase text-navy"></i>
-                                    <span class="label bg-red label-drop">9</span>
-                                </div>
-                                <ul class="dropdown-menu drop-task">
-
-                                    <li class="header bg-red">
-                                        <span></span>You have 9 tasks</li>
-
-                                    <li>
-                                        <!-- inner menu: contains the actual data -->
-                                        <ul class="menu bg-white">
-                                            <li>
-                                                <!-- Task item -->
-                                                <div class="task-list-item">
-                                                    <h2>Wed, 25 Mar 2014
-                                                        <span>9:32
-                                                            <small>PM</small>
-                                                        </span>
-                                                    </h2>
-                                                    <h1>Finished task Testing.</h1>
-                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
-                                                </div>
-                                            </li>
-                                            <!-- end task item -->
-                                            <li>
-                                                <!-- Task item -->
-
-                                                <div class="task-list-item">
-                                                    <h2>Thu, 23 Mar 2014
-                                                        <span>7:54
-                                                            <small>PM</small>
-                                                        </span>
-                                                    </h2>
-                                                    <h1>Creat the documentation</h1>
-                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
-                                                </div>
-
-                                            </li>
-                                            <!-- end task item -->
-                                            <li>
-                                                <!-- Task item -->
-                                                <div class="task-list-item">
-                                                    <h2>Wed, 21 Mar 2014
-                                                        <span>12:43
-                                                            <small>PM</small>
-                                                        </span>
-                                                    </h2>
-                                                    <h1>Repository you file now!</h1>
-                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
-                                                </div>
-                                            </li>
-                                            <!-- end task item -->
-                                            <li>
-                                                <!-- Task item -->
-                                                <div class="task-list-item">
-                                                    <h2>Fri, 20 Mar 2014
-                                                        <span>8:00
-                                                            <small>PM</small>
-                                                        </span>
-                                                    </h2>
-                                                    <h1>Fill the job description</h1>
-                                                    <p>Lorem ipsum dollor si amet amet jabang bayi</p>
-                                                </div>
-                                            </li>
-                                            <!-- end task item -->
-                                        </ul>
-                                    </li>
-
-                                    <li class="footer-red">
-
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                </div>
-                <!-- end of menu right -->
-            </div>
-        </div>
-
-        <!-- SIDE MENU -->
-        <div class="wrap-sidebar-content">
-            <div id="skin-select">
-                <a id="toggle">
-                    <span class="fa icon-menu"></span>
-                </a>
-
-                <div class="skin-part">
-                    <div id="tree-wrap">
-                        <div class="side-bar">
-                            <ul id="menu-showhide" class="topnav">
-                                <li class="devider-title">
-                                    <h3>
-                                        <span>Navigation</span>
-                                    </h3>
-                                </li>
-                                <li >
-                                    <a style="border-left:4px solid #5F9BDB; padding:0 0 0 16px;" class="tooltip-tip" href="index.html" title="Dashboard">
-                                        <i class="fontello-desktop-1"></i>
-                                        <span>Home</span>
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="tooltip-tip" href="#" title="Mail">
-                                        <i class=" fontello-mail-1"></i>
-                                        <span>Messages</span>
-
-                                    </a>
-                                    <ul>
-                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
-                                        <li>
-                                            <!-- class="active" -->
-                                            <a href="mail.html" title="Index">Inbox</a>
-                                        </li>
-                                        <li>
-                                            <!-- class="active" -->
-                                            <a href="compose.html" title="Compose">Compose</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="tooltip-tip" href="#" title="UI">
-                                        <i class="fontello-note"></i>
-                                        <span>Attendance</span>
-                                    </a>
-                                    <ul>
-                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
-                                        <li>
-                                            <!-- class="active" -->
-                                            <a href="element.html" title="Element">Element</a>
-                                        </li>
-                                        <li><a href="button.html" title="Button">
-                                            Button
-                                        </a>
-                                        </li>
-                                        <li>
-                                            <a href="wizard.html" title="Tab & Accordion">Wizard</a>
-                                        </li>
-                                        <li>
-                                            <a href="calendar.html" title="Calender">Calendar</a>
-                                        </li>
-                                        <li>
-                                            <a href="tree.html" title="Tree View">Tree View</a>
-                                        </li>
-                                        <li>
-                                            <a href="grids.html" title="Grids">Grids</a>
-                                        </li>
-                                        <li>
-                                            <a href="chart.html" title="Chart">Chart</a>
-                                        </li>
-                                        <li>
-                                            <a href="typhography.html" title="Typhoghrapy">
-                                                
-                                                Typhoghrapy
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <!-- END OF CUT CONTENT -->
-                                <li>
-                                    <a class="tooltip-tip" href="#" title="Layout">
-                                        <i class=" fontello-pencil-1"></i>
-                                        <span>Progress Report&nbsp;
-                                            <!-- <small class="side-menu-noft bg-aqua">new</small> -->
-                                        </span>
-
-                                    </a>
-                                    <ul>
-                                        <!--  <li class="hide-min-toggle">UI Element</li> -->
-                                        <li>
-                                            <!-- class="active" -->
-                                            <a href="nopadding.html" title="Index">full width</a>
-                                        </li>
-                                        <li>
-                                            <!-- class="active" -->
-                                            <a href="minimize.html" title="Compose">minimize</a>
-                                        </li>
-                                        <li>
-                                            <!-- class="active" -->
-                                            <a href="rightmenu.html" title="Compose">Right Side bar</a>
-                                        </li>
-                                        <li>
-                                            <!-- class="active" -->
-                                            <a href="topmenu.html" title="Compose">Top menu</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a class="tooltip-tip" href="#" title="Bg">
-                                        <i class="fontello-photo"></i>
-                                        <span>Background&nbsp;
-                                            <small class="side-menu-noft bg-aqua">new</small>
-                                        </span>
-
-                                    </a>
-                                    <ul>
-                                        <li>
-                                            <a href="imagebg.html" title="Image">Image </a>
-                                        </li>
-                                        <li>
-                                            <a href="videobg.html" title="Video">Video </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-                                <li class="devider-horizontal"></li>
-                                <li class="devider-title">
-                                    <h3>
-                                        <span>Component</span>
-                                    </h3>
-                                </li>
-                                <li>
-                                    <a class="tooltip-tip" href="#" title="Form">
-                                        <i class="fontello-doc-1"></i>
-                                        <span>Form</span>
-                                    </a>
-                                    <ul>
-                                        <li>
-                                            <a href="form-element.html" title="Form Elements">Form Elements</a>
-                                        </li>
-                                        <li>
-                                            <a href="andvance-form.html" title="Andvance Form">Andvance Form</a>
-                                        </li>
-                                        <li>
-                                            <a href="text-editor.html" title="Text Editor">Text Editor</a>
-                                        </li>
-                                        <li>
-                                            <a href="file-upload.html" title="File Upload">File Upload</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="tooltip-tip" href="#" title="Tables">
-                                        <i class="fontello-calendar-1"></i>
-                                        <span>Tables</span>
-                                    </a>
-                                    <ul>
-                                        <li>
-                                            <a href="table-static.html" title="Table Static">Table Static</a>
-                                        </li>
-                                        <li>
-                                            <a href="table-dynamic.html" title="Table Dynamic">Table Dynamic</a>
-
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="tooltip-tip" href="icon.html" title="Icons">
-                                        <i class="fontello-food"></i>
-                                        <span>Icons</span>
-                                        <div class="noft-blue bg-green" style="display: inline-block; float: none;">New</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="tooltip-tip" href="map.html" title="Map">
-                                        <i class="fontello-location-1"></i>
-                                        <span>Map</span>
-
-                                    </a>
-                                </li>
-                                <li class="devider-horizontal"></li>
-                                <li class="devider-title">
-                                    <h3>
-                                        <span>Special Page</span>
-                                    </h3>
-                                </li>
-                                <li>
-                                    <a class="tooltip-tip" href="#" title="Extra">
-                                        <i class="fontello-beaker"></i>
-                                        <span>Extra</span>
-                                    </a>
-                                    <ul>
-                                        <li>
-                                            <a href="invoice.html" title="Invoice">Invoice</a>
-                                        </li>
-                                        <li>
-                                            <a href="pricing_table.html" title="Pricing Table">Pricing Table</a>
-                                        </li>
-                                        <li>
-                                            <a href="time-line.html" title="Time Line">Time Line</a>
-                                        </li>
-                                        <li>
-                                            <a href="404.html" title="404 Error Page">404 Error Page</a>
-                                        </li>
-                                        <li>
-                                            <a href="500.html" title="500 Error Page">500 Error Page</a>
-                                        </li>
-                                        <li>
-                                            <a href="lock-screen.html" title="Lock Screen">Lock Screen</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a class="tooltip-tip " href="login.html" title="login">
-                                        <i class=" fontello-lock-1"></i>
-                                        <span>Login</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="side-dash">
-                                <h3>
-                                    <span>Task Progress</span>
-                                </h3>
-                                <ul class="side-dashh-list">
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3 class="fontello-leaf">
-                                                Tidy up your files
-                                                <small class="pull-right">35%</small>
-                                            </h3>
-                                            <div class="progress xs bg-opacity-one height-tiny">
-                                                <div class="progress-bar bg-blue " style="width: 35%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">35% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3 class="fontello-box">
-                                                Check server status
-                                                <small class="pull-right">40%</small>
-                                            </h3>
-                                            <div class="progress xs bg-opacity-one height-tiny">
-                                                <div class="progress-bar bg-aqua" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">40% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3 class="fontello-headphones">
-                                                Support costumer
-                                                <small class="pull-right">60%</small>
-                                            </h3>
-                                            <div class="progress xs bg-opacity-one height-tiny">
-                                                <div class="progress-bar bg-red-orange" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <h3>
-                                    <span>Reply</span>
-                                </h3>
-                                <div id="doughnutChart" class="chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #/skin-select -->
-            <!-- END OF SIDE MENU -->
-
-            <!-- Breadcrumb -->
-            <div class="sub-board">
-                <span class="header-icon"><i class="fontello-home"></i>
-                </span>
-                <ol class="breadcrumb newcrumb ng-scope">
-                    <li>
-                        <a href="#">
-                            <span>
-                            </span>dashboard</a>
-                    </li>
-
-                </ol>
-
-
-                <div class="dark" style="visibility: visible;">
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control search rounded id_search" placeholder="Search">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- End of Breadcrumb -->
-
-
-
-
-
-
-            <!-- CONTENT -->
-            <div class="wrap-fluid" id="paper-bg">
-              
-              <div class="row">
-                  <div class="col-lg-6">
-                      <div class="box">
-                          <!-- /.box-header -->
-                          <div class="box-body">
-                              <div class="news-widget">
-                                  <h2>
-                                      <span class="bg-green">Today</span>
-                                  </h2>
-                                  <i class="fontello-shop-1"></i>
-                                  <h4 class="text-green">832</h4>
-                                  <h5>SALES</h5>
-                                  <div style="clear:both;"></div>
-                              </div>
-                          </div>
-                          <!-- /.box-body -->
-                      </div>
-                      <!-- /.box -->
-                  </div>
-
-                  <div class="col-lg-6">
-                      <div class="box">
-                          <div class="box-body">
-                              <div class="news-widget">
-                                  <h2>
-                                      <span class="bg-aqua">Today</span>
-                                  </h2>
-                                  <i class="fontello-cup"></i>
-                                  <h4 class="text-aqua">7,356</h4>
-                                  <h5>Visitors</h5>
-                                  <div style="clear:both;"></div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- /.box -->
-                  </div>
-              </div>
-
-              <div class="row">
-                  <div class="col-lg-6">
-                      <div class="box">
-                          <!-- /.box-header -->
-                          <div class="box-body">
-                              <div class="news-widget">
-                                  <h2>
-                                      <span class="bg-red">Last Month</span>
-                                  </h2>
-                                  <i class="fontello-money"></i>
-                                  <h4 class="text-red">
-                                      <small>$</small>8,475</h4>
-                                  <h5>Earning</h5>
-                                  <div style="clear:both;"></div>
-                              </div>
-                          </div>
-                          <!-- /.box-body -->
-                      </div>
-                      <!-- /.box -->
-                  </div>
-
-                  <div class="col-lg-6">
-                      <div class="box">
-                          <!-- /.box-header -->
-                          <div class="box-body">
-                              <div class="news-widget">
-                                  <h2>
-                                      <span class="bg-blue">Today</span>
-                                  </h2>
-                                  <i class="fontello-user-1"></i>
-                                  <h4 class="text-blue">1645</h4>
-                                  <h5>New User</h5>
-                                  <div style="clear:both;"></div>
-                              </div>
-                          </div>
-                          <!-- /.box-body -->
-                      </div>
-                      <!-- /.box -->
-                  </div>
-              </div>
-
-
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="box">
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <div class="btn-group" id="realtime" data-toggle="btn-toggle">
-                                    <button type="button" class="btn btn-default btn-xs" data-toggle="on">On</button>
-                                    <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
-                                </div>
-                                <div id="interactive" style="height: 200px;"></div>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="box">
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <div id="line-chart" style="height: 235px;"></div>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="content-bg">
-                            <div class="content-icon">
-                                <i class="fontello-twitter bg-green"></i>
-                                <h2 class="text-green">5,455</h2>
-                                <p>Followers</p>
-
-                                <ul class="list-unstyled list-inline soc-widget bg-green">
-                                    <li>
-                                        <span class="fontello-pen"></span>
-                                    </li>
-                                    <li>
-                                        <span class="fontello-loop-alt"></span>
-                                    </li>
-                                    <li>
-                                        <span class=" fontello-post"></span>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="content-bg">
-
-                            <div class="content-icon">
-                                <i class="fontello-facebook bg-aqua"></i>
-                                <h2 class="text-aqua">182</h2>
-                                <p class="text-aqua">Friends</p>
-                                <ul class="list-unstyled list-inline soc-widget bg-aqua">
-                                    <li>
-                                        <span class="fontello-pen"></span>
-                                    </li>
-                                    <li>
-                                        <span class="fontello-loop-alt"></span>
-                                    </li>
-                                    <li>
-                                        <span class=" fontello-post"></span>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="content-bg">
-
-                            <div class="content-icon text-white">
-                                <i class="fa fa-google-plus bg-red"></i>
-                                <h2 class="text-red">564</h2>
-                                <p class="text-red">Circle</p>
-                                <ul class="list-unstyled list-inline soc-widget bg-red">
-                                    <li>
-                                        <span class="fontello-pen"></span>
-                                    </li>
-                                    <li>
-                                        <span class="fontello-loop-alt"></span>
-                                    </li>
-                                    <li>
-                                        <span class=" fontello-post"></span>
-                                    </li>
-                                </ul>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-
-
-                        <div class="box">
-                            <div class="box-header">
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <span class="box-btn bg-green"><i class="fontello-wrench-outline"></i>
-                                    </span>
-
-                                </div>
-                                <div class="media direction">
-                                    <span class="pull-left">
-                                        <i class="media-object fontello-chart-alt-outline"></i>
-                                    </span>
-                                    <div class="media-body">
-                                        <h5 style="margin:-2px 0 0" class="media-heading">Statitic</h5>
-                                        <h4>Trans Studio, Kiara Condong</h4>
-                                        <span class="pull-right"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-body no-padding">
-
-                                <ul class="list-unstyled newsticker">
-                                    <li class="bg-red">
-                                        <ul class="list-unstyled jalur-nest">
-                                            <li>
-                                                "Happy brithday to you hunny"
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-google-plus"></i>
-                                                <i class="fontello-chronograph"></i>&nbsp;&nbsp;11 Menit 24 Detik</li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="bg-green">
-                                        <ul class="list-unstyled jalur-nest ">
-                                            <li>
-                                                <strong>Jalur 2 : Tomang</strong>
-                                            </li>
-                                            <li>
-                                                <i class="fontello-facebook"></i>
-                                                <i class="fontello-chronograph"></i>&nbsp;&nbsp;23 Menit 53 Detik</li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="bg-aqua">
-                                        <ul class="list-unstyled jalur-nest">
-                                            <li>
-                                                <strong>Jalur 3 : Cengkareng</strong>
-                                            </li>
-                                            <li>
-                                                <i class="fontello-facebook"></i>
-                                                <i class="fontello-chronograph"></i>&nbsp;&nbsp;45 Menit 23 Detik</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <br>
-                                <br>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="box">
-                            <div class="box-header">
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <span class="box-btn bg-green"><i class="fontello-wrench-outline"></i>
-                                    </span>
-
-                                </div>
-                                <h3 class="box-title"><i class="bg-green fontello-waves"></i> 
-                                    <span class="text-green">Weave Loader</span>
-                                </h3>
-                            </div>
-                            <div class="box-body">
-                                <div class="loader"></div>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-                    </div>
-
-                    <div class="col-lg-8">
-                        <div class="box">
-                            <div class="box-header">
-                                <!-- tools box -->
-                                <div class="pull-right box-tools">
-                                    <span class="box-btn bg-green"><i class=" fontello-wrench-outline"></i>
-                                    </span>
-
-                                    <span class="box-btn bg-aqua" data-widget="collapse"><i class="fa fa-minus"></i>
-                                    </span>
-                                    <span class="box-btn bg-red" data-widget="remove"><i class="fa fa-times"></i>
-                                    </span>
-                                </div>
-                                <h3 class="box-title"><i class="bg-aqua fontello-chart-alt-outline"></i> 
-                                    <span class="text-aqua">Social Stat</span>
-                                </h3>
-                            </div>
-                            <div class="box-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <td style="width:180px">
-                                                    <strong>Google Plus page value</strong>
-                                                    <br>Averga Persetance
-                                                </td>
-                                                <td>
-                                                    <div id="step">
-                                                        <div style="margin: 15px 0 0;" class="number-pb">
-                                                            <div class="number-pb-shown sun"></div>
-                                                            <div class="number-pb-num">0/0</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td style="width:100px">
-                                                    <div class="pull-right text-red">
-                                                        <small>$</small>7,086,050</div>
-                                                    <br>
-                                                    <small class="pull-right">21,00%</small>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <strong>Twitter page value</strong>
-                                                    <br>Averga Persetance</td>
-                                                <td>
-                                                    <div id="basic">
-                                                        <div style="margin: 15px 0 0;" class="number-pb">
-                                                            <div class="number-pb-shown"></div>
-                                                            <div class="number-pb-num">0</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="pull-right text-green">
-                                                        <small>$</small>1,346,232</div>
-                                                    <br>
-                                                    <small class="pull-right">56,00%</small>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                                <td>
-                                                    <strong>Facebook page value</strong>
-                                                    <br>Averga Persetance</td>
-                                                <td>
-                                                    <div id="percentage">
-                                                        <div style="margin: 15px 0 0;" class="number-pb">
-                                                            <div class="number-pb-shown dream"></div>
-                                                            <div class="number-pb-num">0%</div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="pull-right text-aqua">
-                                                        <small>$</small>3,734,858</div>
-                                                    <br>
-                                                    <small class="pull-right">78,00%</small>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="plan">
-                            <h3 class="plan-title">Started</h3>
-                            <p class="plan-price">
-                                <small>$</small>19
-                                <span class="plan-unit">per month</span>
-                            </p>
-                            <ul class="plan-features">
-                                <li>2
-                                    <span class="plan-feature-name">websites</span>
-                                </li>
-                                <li>5
-                                    <span class="plan-feature-unit">GB</span>
-                                    <span class="plan-feature-name">storage</span>
-                                </li>
-                                <li>3
-                                    <span class="plan-feature-name">users</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="plan-button">Choose Plan</a>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-3">
-                        <div class="plan plan-highlight">
-                            <p class="plan-recommended">Recommended</p>
-                            <h3 class="plan-title">Team</h3>
-                            <p class="plan-price">
-                                <small>$</small>49
-                                <span class="plan-unit">per month</span>
-                            </p>
-                            <ul class="plan-features">
-                                <li>5
-                                    <span class="plan-feature-name">websites</span>
-                                </li>
-                                <li>20
-                                    <span class="plan-feature-unit">GB</span>
-                                    <span class="plan-feature-name">storage</span>
-                                </li>
-                                <li>10
-                                    <span class="plan-feature-name">users</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="plan-button">Choose Plan</a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3">
-                        <div class="plan">
-                            <h3 class="plan-title">Premium</h3>
-                            <p class="plan-price">
-                                <small>$</small>99
-                                <span class="plan-unit">per month</span>
-                            </p>
-                            <ul class="plan-features">
-                                <li>20
-                                    <span class="plan-feature-name">websites</span>
-                                </li>
-                                <li>50
-                                    <span class="plan-feature-unit">GB</span>
-                                    <span class="plan-feature-name">storage</span>
-                                </li>
-                                <li>25
-                                    <span class="plan-feature-name">users</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="plan-button">Choose Plan</a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3">
-                        <div class="plan">
-                            <h3 class="plan-title">Corporate</h3>
-                            <p class="plan-price">
-                                <small>$</small>249
-                                <span class="plan-unit">per month</span>
-                            </p>
-                            <ul class="plan-features">
-                                <li>&infin;
-                                    <span class="plan-feature-name">websites</span>
-                                </li>
-                                <li>200
-                                    <span class="plan-feature-unit">GB</span>
-                                    <span class="plan-feature-name">storage</span>
-                                </li>
-                                <li>&infin;
-                                    <span class="plan-feature-name">users</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="plan-button">Choose Plan</a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- #/paper bg -->
-        </div>
-        <!-- ./wrap-sidebar-content -->
-
-        <!-- / END OF CONTENT -->
-
-        <!-- FOOTER -->
-        <div id="footer">
-            <div class="devider-footer-left"></div>
-            <div class="time">
-                <p id="spanDate"></p>
-                <p id="clock"></p>
-            </div>
-            <div class="copyright">Copyright &copy; 2014 <a href="http://ndesaintheme.com/">Themesmile</a> Made with <i class="fontello-heart-filled text-red"></i>
-            </div>
-            <div class="devider-footer"></div>
-            <ul>
-                <li><i class="fa fa-facebook-square"></i>
-                </li>
-                <li><i class="fa fa-twitter-square"></i>
-                </li>
-                <li><i class="fa fa-instagram"></i>
-                </li>
-            </ul>
-        </div>
-        <!-- / FOOTER -->
-    </div>
-    <!-- Container -->
-
-    <!-- 
-    ================================================== -->
-        <!-- Main jQuery Plugins -->
-    <script src="<?php echo base_url() .'assets/modules/students/js/jquery.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/js/jquery2.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/bootstrap/js/bootstrap.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/pace/pace.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/date.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/slimscroll/jquery.slimscroll.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/jquery.nicescroll.min.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/sliding-menu.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/scriptbreaker-multiple-accordion-1.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/tip/jquery.tooltipster.min.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/donut-chart/jquery.drawDoughnutChart.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/tab/jquery.newsTicker.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/tab/app.ticker.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/app.js'?>"></script>
-
-    <script src="<?php echo base_url() .'assets/modules/students/js/vegas/jquery.vegas.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/image-background.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/jquery.tabSlideOut.v1.3.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/bg-changer.js'?>"></script>
-
-    <script src="<?php echo base_url() .'assets/modules/students/js/number-progress-bar/jquery.velocity.min.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/number-progress-bar/number-pb.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/loader/loader.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/loader/demo.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/skycons/skycons.js'?>"></script>
-
-    <script src="<?php echo base_url() .'assets/modules/students/js/flot/jquery.flot.min.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/flot/jquery.flot.resize.min.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/flot/jquery.flot.pie.min.js'?>"></script>
-    <script src="<?php echo base_url() .'assets/modules/students/js/flot/jquery.flot.categories.min.js'?>"></script>
-    <!--
-    <script src="js/pace/pace.js"></script>
-    <script type='text/javascript' src='js/date.js'></script>
-    <script type='text/javascript' src='js/slimscroll/jquery.slimscroll.js'></script>
-    <script type='text/javascript' src='js/jquery.nicescroll.min.js'></script>
-    <script type='text/javascript' src='js/sliding-menu.js'></script>
-    <script type='text/javascript' src='js/scriptbreaker-multiple-accordion-1.js'></script>
-    <script type='text/javascript' src='js/tip/jquery.tooltipster.min.js'></script>
-    <script type='text/javascript' src="js/donut-chart/jquery.drawDoughnutChart.js"></script>
-    <script type='text/javascript' src="js/tab/jquery.newsTicker.js"></script>
-    <script type='text/javascript' src="js/tab/app.ticker.js"></script>
-    <script type='text/javascript' src='js/app.js'></script>
-
-    <script type='text/javascript' src='js/vegas/jquery.vegas.js'></script>
-    <script type='text/javascript' src='js/image-background.js'></script>
-    <script type="text/javascript" src="js/jquery.tabSlideOut.v1.3.js"></script>
-    <script type="text/javascript" src="js/bg-changer.js"></script>
-
-    <script type='text/javascript' src="js/number-progress-bar/jquery.velocity.min.js"></script>
-    <script type='text/javascript' src="js/number-progress-bar/number-pb.js"></script>
-    <script src="js/loader/loader.js" type="text/javascript"></script>
-    <script src="js/loader/demo.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/skycons/skycons.js"></script>
-    -->
-    <!-- TAB SLIDER -->
-
-
-    <script>
-    //Weather Icons
-    (function($) {
-        "use strict";
-        var icons = new Skycons({
-                "stroke": 0.08,
-                "color": "Gray",
-                "cloudColor": "#65C3DF",
-                "sunColor": "#0090d9",
-                "moonColor": "DodgerBlue",
-                "rainColor": "RoyalBlue",
-                "snowColor": "LightGray",
-                "windColor": "LightSteelBlue",
-                "fogColor": "#65C3DF"
-            }),
-            list = [
-                "clear-day", "clear-night", "partly-cloudy-day",
-                "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-                "fog"
-            ],
-            i;
-
-        for (i = list.length; i--;)
-            icons.set(list[i], list[i]);
-        icons.play();
-    })(jQuery);
-
-    //Animation Slider
-    $(function() {
-        function randomPercentage() {
-            return Math.floor(Math.random() * 100);
-        }
-
-        function randomInterval() {
-            var min = Math.floor(Math.random() * 30);
-            var max = min + (Math.floor(Math.random() * 40) + 70);
-            return [min, max];
-        }
-
-        function randomStep() {
-            return Math.floor(Math.random() * 10) + 5;
-        }
-
-        // setup
-        var $basic = $('#basic');
-        var interval = randomInterval();
-        var basicBar = $basic.find('.number-pb').NumberProgressBar({
-            style: 'basic',
-            min: interval[0],
-            max: interval[1]
-        })
-        $basic.find('.title span').text('[Min: ' + interval[0] + ', Max: ' + interval[1] + ']');
-
-        var percentageBar = $('#percentage .number-pb').NumberProgressBar({
-            style: 'percentage'
-        })
-
-        var $step = $('#step');
-        var maxStep = randomStep()
-        var stepBar = $('#step .number-pb').NumberProgressBar({
-            style: 'step',
-            max: maxStep
-        })
-        $step.find('.title span').text('[Max step: ' + maxStep + ']');
-
-        // loop
-        var basicLoop = function() {
-            basicBar.reach(undefined, {
-                complete: percentageLoop
-            });
-        }
-
-        var percentageLoop = function() {
-            percentageBar.reach(undefined, {
-                complete: stepLoop
-            });
-        }
-
-        var stepLoop = function() {
-            stepBar.reach(undefined, {
-                complete: basicLoop
-            });
-        }
-
-        // start
-        basicLoop();
-    });
-    </script>
-
-    <script type="text/javascript">
-    $(function() {
-        "use strict";
-        /*
-         * Flot Interactive Chart
-         * -----------------------
-         */
-        // We use an inline data source in the example, usually data would
-        // be fetched from a server
-        var data = [],
-            totalPoints = 100;
-
-        function getRandomData() {
-
-            if (data.length > 0)
-                data = data.slice(1);
-
-            // Do a random walk
-            while (data.length < totalPoints) {
-
-                var prev = data.length > 0 ? data[data.length - 1] : 50,
-                    y = prev + Math.random() * 10 - 5;
-
-                if (y < 0) {
-                    y = 0;
-                } else if (y > 100) {
-                    y = 100;
-                }
-
-                data.push(y);
-            }
-
-            // Zip the generated y values with the x values
-            var res = [];
-            for (var i = 0; i < data.length; ++i) {
-                res.push([i, data[i]]);
-            }
-
-            return res;
-        }
-
-        var interactive_plot = $.plot("#interactive", [getRandomData()], {
-            grid: {
-                borderColor: "#f3f3f3",
-                borderWidth: 1,
-                tickColor: "#f3f3f3"
-            },
-            series: {
-                shadowSize: 0, // Drawing is faster without shadows
-                color: "#03B2B4"
-            },
-            lines: {
-                fill: true, //Converts the line chart to area chart
-                color: "#03B2B4"
-            },
-            yaxis: {
-                min: 0,
-                max: 100,
-                show: true
-            },
-            xaxis: {
-                show: true
-            }
-        });
-
-        var updateInterval = 500; //Fetch data ever x milliseconds
-        var realtime = "on"; //If == to on then fetch data every x seconds. else stop fetching
-        function update() {
-
-            interactive_plot.setData([getRandomData()]);
-
-            // Since the axes don't change, we don't need to call plot.setupGrid()
-            interactive_plot.draw();
-            if (realtime === "on")
-                setTimeout(update, updateInterval);
-        }
-
-        //INITIALIZE REALTIME DATA FETCHING
-        if (realtime === "on") {
-            update();
-        }
-        //REALTIME TOGGLE
-        $("#realtime .btn").click(function() {
-            if ($(this).data("toggle") === "on") {
-                realtime = "on";
-            } else {
-                realtime = "off";
-            }
-            update();
-        });
-        /*
-         * END INTERACTIVE CHART
-         */
-
-
-        /*
-         * LINE CHART
-         * ----------
-         */
-        //LINE randomly generated data
-
-        var sin = [],
-            cos = [];
-        for (var i = 0; i < 14; i += 0.5) {
-            sin.push([i, Math.sin(i)]);
-            cos.push([i, Math.cos(i)]);
-        }
-        var line_data1 = {
-            data: sin,
-            color: "#3c8dbc"
-        };
-        var line_data2 = {
-            data: cos,
-            color: "#03B2B4"
-        };
-        $.plot("#line-chart", [line_data1, line_data2], {
-            grid: {
-                hoverable: true,
-                borderColor: "#f3f3f3",
-                borderWidth: 1,
-                tickColor: "#f3f3f3"
-            },
-            series: {
-                shadowSize: 0,
-                lines: {
-                    show: true
-                },
-                points: {
-                    show: true
-                }
-            },
-            lines: {
-                fill: false,
-                color: ["#3c8dbc", "#f56954"]
-            },
-            yaxis: {
-                show: true,
-            },
-            xaxis: {
-                show: true
-            }
-        });
-        //Initialize tooltip on hover
-        $("<div class='tooltip-inner' id='line-chart-tooltip'></div>").css({
-            position: "absolute",
-            display: "none",
-            opacity: 0.8
-        }).appendTo("body");
-        $("#line-chart").bind("plothover", function(event, pos, item) {
-
-            if (item) {
-                var x = item.datapoint[0].toFixed(2),
-                    y = item.datapoint[1].toFixed(2);
-
-                $("#line-chart-tooltip").html(item.series.label + " of " + x + " = " + y)
-                    .css({
-                        top: item.pageY + 5,
-                        left: item.pageX + 5
-                    })
-                    .fadeIn(200);
-            } else {
-                $("#line-chart-tooltip").hide();
-            }
-
-        });
-        /* END LINE CHART */
-
-        /*
-         * FULL WIDTH STATIC AREA CHART
-         * -----------------
-         */
-        var areaData = [
-            [2, 88.0],
-            [3, 93.3],
-            [4, 102.0],
-            [5, 108.5],
-            [6, 115.7],
-            [7, 115.6],
-            [8, 124.6],
-            [9, 130.3],
-            [10, 134.3],
-            [11, 141.4],
-            [12, 146.5],
-            [13, 151.7],
-            [14, 159.9],
-            [15, 165.4],
-            [16, 167.8],
-            [17, 168.7],
-            [18, 169.5],
-            [19, 168.0]
-        ];
-        $.plot("#area-chart", [areaData], {
-            grid: {
-                borderWidth: 0
-            },
-            series: {
-                shadowSize: 0, // Drawing is faster without shadows
-                color: "#00c0ef"
-            },
-            lines: {
-                fill: true //Converts the line chart to area chart                        
-            },
-            yaxis: {
-                show: false
-            },
-            xaxis: {
-                show: false
-            }
-        });
-
-        /* END AREA CHART */
-
-        /*
-         * BAR CHART
-         * ---------
-         */
-
-        var bar_data = {
-            data: [
-                ["January", 10],
-                ["February", 8],
-                ["March", 4],
-                ["April", 13],
-                ["May", 17],
-                ["June", 9]
-            ],
-            color: "#3c8dbc"
-        };
-        $.plot("#bar-chart", [bar_data], {
-            grid: {
-                borderWidth: 1,
-                borderColor: "#f3f3f3",
-                tickColor: "#f3f3f3"
-            },
-            series: {
-                bars: {
-                    show: true,
-                    barWidth: 0.5,
-                    align: "center"
-                }
-            },
-            xaxis: {
-                mode: "categories",
-                tickLength: 0
-            }
-        });
-        /* END BAR CHART */
-
-        /*
-         * DONUT CHART
-         * -----------
-         */
-
-        var donutData = [{
-            label: "Series2",
-            data: 30,
-            color: "#3c8dbc"
-        }, {
-            label: "Series3",
-            data: 20,
-            color: "#0073b7"
-        }, {
-            label: "Series4",
-            data: 50,
-            color: "#00c0ef"
-        }];
-        $.plot("#donut-chart", donutData, {
-            series: {
-                pie: {
-                    show: true,
-                    radius: 1,
-                    innerRadius: 0.5,
-                    label: {
-                        show: true,
-                        radius: 2 / 3,
-                        formatter: labelFormatter,
-                        threshold: 0.1
-                    }
-
-                }
-            },
-            legend: {
-                show: false
-            }
-        });
-        /*
-         * END DONUT CHART
-         */
-
-    });
-
-    /*
-     * Custom Label formatter
-     * ----------------------
-     */
-    function labelFormatter(label, series) {
-        return "<div style='font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
-    }
-    </script>
-
-
-
-
-
+ 
+ 
+<body class="">
+ 
+<div class="header navbar navbar-inverse ">
+ 
+<div class="navbar-inner">
+<div class="header-seperation">
+<ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display:none">
+<li class="dropdown"> <a id="main-menu-toggle" href="#main-menu" class="">
+<div class="iconset top-menu-toggle-white"></div>
+</a> </li>
+</ul>
+ 
+<a href="index.html"><img src="assets/img/logo.png" class="logo" alt="" data-src="assets/img/logo.png" data-src-retina="assets/img/logo2x.png" width="106" height="21"/></a>
+ 
+<ul class="nav pull-right notifcation-center">
+<li class="dropdown" id="header_task_bar"> <a href="index.html" class="dropdown-toggle active" data-toggle="">
+<i class="fa fa-home"></i>
+</a> </li>
+<li class="dropdown" id="header_inbox_bar"> <a href="email.html" class="dropdown-toggle">
+<i class="fa fa-envelope"></i>
+<span class="badge" id="msgs-badge">2</span> </a></li>
+<li class="dropdown" id="portrait-chat-toggler" style="display:none"> <a href="#sidr" class="chat-menu-toggle">
+<div class="iconset top-chat-white "></div>
+</a> </li>
+</ul>
+</div>
+ 
+<div class="header-quick-nav">
+ 
+<div class="pull-left">
+<ul class="nav quick-section">
+<li class="quicklinks"> <a href="#" class="" id="layout-condensed-toggle">
+<i class="fa fa-bars"></i>
+</a> </li>
+</ul>
+<ul class="nav quick-section">
+<li class="quicklinks"> <a href="#" class="">
+<i class="fa fa-cog"></i>
+</a> </li>
+<li class="quicklinks"> <span class="h-seperate"></span></li>
+<li class="quicklinks"> <a href="#" class="">
+<i class="fa fa-file"></i>
+</a> </li>
+<li class="m-r-10 input-prepend inside search-form no-boarder"> <span class="add-on"> <i class="fa fa-search"></i></span>
+<input name="" type="text" class="no-boarder " placeholder="Search Dashboard" style="width:250px;">
+</li>
+</ul>
+</div>
+ 
+ 
+<div class="pull-right">
+<div class="chat-toggler"> <a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom" data-content='' data-toggle="dropdown" data-original-title="Notifications">
+<div class="user-details">
+<div class="username"> <span class="badge badge-important">3</span> John <span class="bold">Smith</span> </div>
+</div>
+<div class="iconset top-down-arrow"></div>
+</a>
+<div id="notification-list" style="display:none">
+<div style="width:300px">
+<div class="notification-messages info">
+<div class="user-profile"> <img src="assets/img/profiles/d.jpg" alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35"> </div>
+<div class="message-wrapper">
+<div class="heading"> David Nester - Commented on your wall </div>
+<div class="description"> Meeting postponed to tomorrow </div>
+<div class="date pull-left"> A min ago </div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="notification-messages danger">
+<div class="iconholder"> <i class="icon-warning-sign"></i> </div>
+<div class="message-wrapper">
+<div class="heading"> Server load limited </div>
+<div class="description"> Database server has reached its daily capicity </div>
+<div class="date pull-left"> 2 mins ago </div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="notification-messages success">
+<div class="user-profile"> <img src="assets/img/profiles/h.jpg" alt="" data-src="assets/img/profiles/h.jpg" data-src-retina="assets/img/profiles/h2x.jpg" width="35" height="35"> </div>
+<div class="message-wrapper">
+<div class="heading"> You haveve got 150 messages </div>
+<div class="description"> 150 newly unread messages in your inbox </div>
+<div class="date pull-left"> An hour ago </div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div class="profile-pic"> <img src="assets/img/profiles/avatar_small.jpg" alt="" data-src="assets/img/profiles/avatar_small.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="35" height="35"/> </div>
+</div>
+<ul class="nav quick-section ">
+<li class="quicklinks"> <a data-toggle="dropdown" class="dropdown-toggle  pull-right " href="#" id="user-options">
+<i class="fa fa-cogs"></i>
+</a>
+<ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="user-options">
+<li><a href="user-profile.html"> My Account</a> </li>
+<li><a href="calender.html">My Calendar</a> </li>
+<li><a href="email.html"> My Inbox&nbsp;&nbsp;<span class="badge badge-important animated bounceIn">2</span></a> </li>
+<li class="divider"></li>
+<li><a href="login.html"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
+</ul>
+</li>
+<li class="quicklinks"> <span class="h-seperate"></span></li>
+<li class="quicklinks"> <a id="chat-menu-toggle" href="#sidr" class="chat-menu-toggle">
+<i class="fa fa-group"><span class="badge badge-important hide" id="chat-message-count">1</span></i>
+</a>
+<div class="simple-chat-popup chat-menu-toggle hide">
+<div class="simple-chat-popup-arrow"></div>
+<div class="simple-chat-popup-inner">
+<div style="width:100px">
+<div class="semi-bold">David Nester</div>
+<div class="message">Hey you there </div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+ 
+</div>
+ 
+</div>
+ 
+</div>
+ 
+ 
+<div class="page-container row">
+ 
+<div class="page-sidebar" id="main-menu">
+ 
+<div class="page-sidebar-wrapper scrollbar-dynamic" id="main-menu-wrapper">
+<div class="user-info-wrapper">
+<div class="profile-wrapper"> <img src="assets/img/profiles/avatar.jpg" alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" width="69" height="69"/> </div>
+<div class="user-info">
+<div class="greeting">Welcome</div>
+<div class="username">John <span class="semi-bold">Smith</span></div>
+<div class="status">Status<a href="#">
+<i class="fa fa-circle-o green-icon"></i>
+Online</a></div>
+</div>
+</div>
+ 
+ 
+<p class="menu-title">BROWSE <span class="pull-right"><a href="javascript:;"><i class="fa fa-refresh"></i></a></span></p>
+<ul>
+<li class="start active open "> <a href="index.html"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> <span class="arrow open"></span> </a>
+<ul class="sub-menu">
+<li class="active"> <a href="dashboard_v1.html"> Dashboard v1 </a> </li>
+<li> <a href="index.html"> Dashboard v2 <span class=" label label-info pull-right m-r-30">NEW</span></a></li>
+</ul>
+</li>
+<li class=""> <a href="widgets.html"> <i class="fa fa-th"></i> <span class="title">Widgets</span> <span class="label label-important pull-right ">HOT</span></a> </li>
+<li class=""> <a href="email.html"> <i class="fa fa-envelope"></i> <span class="title">Email</span> <span class=" badge badge-disable pull-right ">203</span></a> </li>
+<li class=""> <a href="http://revox.io/frontend/index.html"> <i class="fa fa-flag"></i> <span class="title">Frontend</span></a></li>
+<li class=""> <a href="javascript:;"> <i class="fa fa fa-adjust"></i> <span class="title">Themes</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="theme_coporate.html">Coporate </a> </li>
+<li> <a href="theme_simple.html">Simple</a> </li>
+<li> <a href="theme_elegant.html">Elegant</a> </li>
+</ul>
+</li>
+<li class=""> <a href="javascript:;"> <i class="fa fa-file-text"></i> <span class="title">Layouts</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="layout_options.html"> Layout Options </a> </li>
+<li> <a href="boxed_layout.html">Boxed Layout </a> </li>
+<li> <a href="boxed_layout_v2.html">Inner Boxed Layout </a> </li>
+<li> <a href="extended_layout.html">Extended Layout</a> </li>
+<li> <a href="RTL.html">RTL Layout</a> </li>
+<li> <a href="horizontal_menu.html">Horizontal Menu</a> </li>
+<li> <a href="horizontal_menu_boxed.html">Horizontal Menu & Boxed</a> </li>
+</ul>
+</li>
+<li class=""> <a href="javascript:;"> <i class="icon-custom-ui"></i> <span class="title">UI Elements</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="typography.html"> Typography </a> </li>
+<li> <a href="messages_notifications.html"> Messages & Notifications </a> </li>
+<li> <a href="notifications.html"> Notifications </a> </li>
+<li> <a href="icons.html">Icons</a> </li>
+<li> <a href="buttons.html">Buttons</a> </li>
+<li> <a href="tabs_accordian.html"> Tabs & Accordions </a> </li>
+<li> <a href="sliders.html">Sliders</a> </li>
+<li> <a href="group_list.html">Group list </a> </li>
+</ul>
+</li>
+<li class=""> <a href="javascript:;"> <i class="icon-custom-form"></i> <span class="title">Forms</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="form_elements.html">Form Elements </a> </li>
+<li> <a href="form_validations.html">Form Validations</a> </li>
+</ul>
+</li>
+<li class=""> <a href="javascript:;"> <i class="icon-custom-portlets"></i> <span class="title">Grids</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="grids_simple.html">Simple Grids</a> </li>
+<li> <a href="grids_draggable.html">Draggable Grids </a> </li>
+</ul>
+</li>
+<li class=""> <a href="javascript:;"> <i class="icon-custom-thumb"></i> <span class="title">Tables</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="tables.html"> Basic Tables </a> </li>
+<li> <a href="datatables.html"> Data Tables </a> </li>
+</ul>
+</li>
+<li class=""> <a href="javascript:;"> <i class="icon-custom-map"></i> <span class="title">Maps</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="google_map.html"> Google Maps </a> </li>
+<li> <a href="vector_map.html"> Vector Maps </a> </li>
+</ul>
+</li>
+<li class=""> <a href="charts.html"> <i class="icon-custom-chart"></i> <span class="title">Charts</span> </a> </li>
+<li class=""> <a href="javascript:;"> <i class="icon-custom-extra"></i> <span class="title">Extra</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="user-profile.html"> User Profile </a> </li>
+<li> <a href="time_line.html"> Time line </a> </li>
+<li> <a href="support_ticket.html"> Support Ticket </a> </li>
+<li> <a href="gallery.html"> Gallery</a> </li>
+<li class=""><a href="calender.html"> Calendar</a> </li>
+<li> <a href="search_results.html"> Search Results </a> </li>
+<li> <a href="invoice.html"> Invoice </a> </li>
+<li> <a href="404.html"> 404 Page </a> </li>
+<li> <a href="500.html"> 500 Page </a> </li>
+<li> <a href="blank_template.html"> Blank Page </a> </li>
+<li> <a href="login.html"> Login </a> </li>
+<li> <a href="login_v2.html">Login v2</a> </li>
+<li> <a href="lockscreen.html"> Lockscreen </a> </li>
+</ul>
+</li>
+<li class=""> <a href="javascript:;"> <i class="fa fa-folder-open"></i> <span class="title">Menu Levels</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="javascript:;"> Level 1 </a> </li>
+<li> <a href="javascript:;"> <span class="title">Level 2</span> <span class="arrow "></span> </a>
+<ul class="sub-menu">
+<li> <a href="javascript:;"> Sub Menu </a> </li>
+<li> <a href="ujavascript:;"> Sub Menu </a> </li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="hidden-lg hidden-md hidden-xs" id="more-widgets"> <a href="javascript:;"> <i class="fa fa-plus"></i></a>
+<ul class="sub-menu">
+<li class="side-bar-widgets">
+<p class="menu-title">FOLDER <span class="pull-right"><a href="#" class="create-folder"><i class="icon-plus"></i></a></span></p>
+<ul class="folders">
+<li><a href="#">
+<div class="status-icon green"></div>
+My quick tasks </a> </li>
+<li><a href="#">
+<div class="status-icon red"></div>
+To do list </a> </li>
+<li><a href="#">
+<div class="status-icon blue"></div>
+Projects </a> </li>
+<li class="folder-input" style="display:none">
+<input type="text" placeholder="Name of folder" class="no-boarder folder-name" name="" id="folder-name">
+</li>
+</ul>
+<p class="menu-title">PROJECTS </p>
+<div class="status-widget">
+<div class="status-widget-wrapper">
+<div class="title">Freelancer<a href="#" class="remove-widget"><i class="icon-custom-cross"></i></a></div>
+<p>Redesign home page</p>
+</div>
+</div>
+<div class="status-widget">
+<div class="status-widget-wrapper">
+<div class="title">envato<a href="#" class="remove-widget"><i class="icon-custom-cross"></i></a></div>
+<p>Statistical report</p>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<div class="side-bar-widgets">
+<p class="menu-title">FOLDER <span class="pull-right"><a href="#" class="create-folder"> <i class="fa fa-plus"></i></a></span></p>
+<ul class="folders">
+<li><a href="#">
+<div class="status-icon green"></div>
+My quick tasks </a> </li>
+<li><a href="#">
+<div class="status-icon red"></div>
+To do list </a> </li>
+<li><a href="#">
+<div class="status-icon blue"></div>
+Projects </a> </li>
+<li class="folder-input" style="display:none">
+<input type="text" placeholder="Name of folder" class="no-boarder folder-name" name="">
+</li>
+</ul>
+<p class="menu-title">PROJECTS </p>
+<div class="status-widget">
+<div class="status-widget-wrapper">
+<div class="title">Freelancer<a href="#" class="remove-widget"><i class="icon-custom-cross"></i></a></div>
+<p>Redesign home page</p>
+</div>
+</div>
+<div class="status-widget">
+<div class="status-widget-wrapper">
+<div class="title">envato<a href="#" class="remove-widget"><i class="icon-custom-cross"></i></a></div>
+<p>Statistical report</p>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+ 
+</div>
+</div>
+<a href="#" class="scrollup">Scroll</a>
+<div class="footer-widget">
+<div class="progress transparent progress-small no-radius no-margin">
+<div class="progress-bar progress-bar-success animate-progress-bar" data-percentage="79%" style="width: 79%;"></div>
+</div>
+<div class="pull-right">
+<div class="details-status"> <span class="animate-number" data-value="86" data-animation-duration="560">86</span>% </div>
+<a href="lockscreen.html"><i class="fa fa-power-off"></i></a></div>
+</div>
+ 
+ 
+<div class="page-content">
+ 
+<div id="portlet-config" class="modal hide">
+<div class="modal-header">
+<button data-dismiss="modal" class="close" type="button"></button>
+<h3>Widget Settings</h3>
+</div>
+<div class="modal-body"> Widget settings form goes here </div>
+</div>
+<div class="clearfix"></div>
+<div class="content ">
+
+<div class="col-md-12">
+	<div class=" tiles white col-md-12 no-padding">
+	<div class="tiles green cover-pic-wrapper">
+	<div class="overlayer bottom-right">
+	<div class="overlayer-wrapper">
+	<div class="padding-10 hidden-xs">
+	<button type="button" class="btn btn-primary btn-small"><i class="fa fa-check"></i>&nbsp;&nbsp;Following</button> <button type="button" class="btn btn-primary btn-small">Add</button>
+	</div>
+	</div>
+	</div>
+	<img src="assets/img/cover_pic.png" alt="">
+	</div>
+	<div class="tiles white">
+	<div class="row">
+	<div class="col-md-3 col-sm-3">
+	<div class="user-profile-pic">
+	<img width="69" height="69" data-src-retina="assets/img/profiles/avatar2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg" alt="">
+	</div>
+	<div class="user-mini-description">
+	<h3 class="text-success semi-bold">
+	2548
+	</h3>
+	<h5>Followers</h5>
+	<h3 class="text-success semi-bold">
+	457
+	</h3>
+	<h5>Following</h5>
+	</div>
+	</div>
+	<div class="col-md-5 user-description-box  col-sm-5">
+	<h4 class="semi-bold no-margin">John Smith</h4>
+	<h6 class="no-margin">CEO of web-arch.co.uk</h6>
+	<br>
+	<p><i class="fa fa-briefcase"></i>UI & Graphic Design</p>
+	<p><i class="fa fa-globe"></i>www.google.com</p>
+	<p><i class="fa fa-file-o"></i>Download Resume</p>
+	<p><i class="fa fa-envelope"></i>Send Message</p>
+	</div>
+	<div class="col-md-3  col-sm-3">
+	<h5 class="normal">Friends ( <span class="text-success">1223</span> )</h5>
+	<ul class="my-friends">
+	<li><div class="profile-pic">
+	<img width="35" height="35" data-src-retina="assets/img/profiles/d2x.jpg" data-src="assets/img/profiles/d.jpg" src="assets/img/profiles/d.jpg" alt="">
+	</div>
+	</li>
+	<li><div class="profile-pic">
+	<img width="35" height="35" data-src-retina="assets/img/profiles/c2x.jpg" data-src="assets/img/profiles/c.jpg" src="assets/img/profiles/c.jpg" alt="">
+	</div>
+	</li>
+	<li><div class="profile-pic">
+	<img width="35" height="35" data-src-retina="assets/img/profiles/h2x.jpg" data-src="assets/img/profiles/h.jpg" src="assets/img/profiles/h.jpg" alt="">
+	</div>
+	</li>
+	<li><div class="profile-pic">
+	<img width="35" height="35" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar_small.jpg" src="assets/img/profiles/avatar_small.jpg" alt="">
+	</div>
+	</li>
+	<li><div class="profile-pic">
+	<img width="35" height="35" data-src-retina="assets/img/profiles/e2x.jpg" data-src="assets/img/profiles/e.jpg" src="assets/img/profiles/e.jpg" alt="">
+	</div>
+	</li>
+	<li><div class="profile-pic">
+	<img width="35" height="35" data-src-retina="assets/img/profiles/b2x.jpg" data-src="assets/img/profiles/b.jpg" src="assets/img/profiles/b.jpg" alt="">
+	</div>
+	</li>
+	<li><div class="profile-pic">
+	<img width="35" height="35" data-src-retina="assets/img/profiles/h2x.jpg" data-src="assets/img/profiles/h.jpg" src="assets/img/profiles/h.jpg" alt="">
+	</div>
+	</li>
+	<li><div class="profile-pic">
+	<img width="35" height="35" data-src-retina="assets/img/profiles/d2x.jpg" data-src="assets/img/profiles/d.jpg" src="assets/img/profiles/d.jpg" alt="">
+	</div>
+	</li>
+	</ul>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	<div class="tiles-body">
+	<div class="row">
+	<div class="post col-md-12">
+
+	<div class="clearfix"></div>
+	<br>
+	<br>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+
+<div class="page-title">
+<h3>Dashboard </h3>
+</div>
+<div id="container">
+<div class="row 2col">
+<div class="col-md-3 col-sm-6 spacing-bottom-sm spacing-bottom">
+<div class="tiles blue added-margin">
+<div class="tiles-body">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<div class="tiles-title"> TODAY’S SERVER LOAD </div>
+<div class="heading"> <span class="animate-number" data-value="26.8" data-animation-duration="1200">0</span>% </div>
+<div class="progress transparent progress-small no-radius">
+<div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="26.8%"></div>
+</div>
+<div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 4% higher <span class="blend">than last month</span></span></div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 spacing-bottom-sm spacing-bottom">
+<div class="tiles green added-margin">
+<div class="tiles-body">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<div class="tiles-title"> TODAY’S VISITS </div>
+<div class="heading"> <span class="animate-number" data-value="2545665" data-animation-duration="1000">0</span> </div>
+<div class="progress transparent progress-small no-radius">
+<div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="79%"></div>
+</div>
+<div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 2% higher <span class="blend">than last month</span></span></div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 spacing-bottom">
+<div class="tiles red added-margin">
+<div class="tiles-body">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<div class="tiles-title"> TODAY’S SALES </div>
+<div class="heading"> $ <span class="animate-number" data-value="14500" data-animation-duration="1200">0</span> </div>
+<div class="progress transparent progress-white progress-small no-radius">
+<div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="45%"></div>
+</div>
+<div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 5% higher <span class="blend">than last month</span></span></div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6">
+<div class="tiles purple added-margin">
+<div class="tiles-body">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<div class="tiles-title"> TODAY’S FEEDBACKS </div>
+<div class="row-fluid">
+<div class="heading"> <span class="animate-number" data-value="1600" data-animation-duration="700">0</span> </div>
+<div class="progress transparent progress-white progress-small no-radius">
+<div class="progress-bar progress-bar-white animate-progress-bar" data-percentage="12%"></div>
+</div>
+</div>
+<div class="description"><i class="icon-custom-up"></i><span class="text-white mini-description ">&nbsp; 3% higher <span class="blend">than last month</span></span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8 spacing-bottom">
+<div class="row tiles-container tiles white spacing-bottom">
+<div class="tile-more-content col-md-4 col-sm-4 no-padding">
+<div class="tiles green">
+<div class="tiles-body">
+<div class="heading"> Statistical </div>
+<p>Status : live</p>
+</div>
+<div class="tile-footer">
+<div class="iconplaceholder"><i class="fa fa-map-marker"></i></div>
+258 Countries, 4835 Cities </div>
+</div>
+<div class="tiles-body">
+<ul class="progress-list">
+<li>
+<div class="details-wrapper">
+<div class="name">Foreign Visits</div>
+<div class="description">Our Overseas visits</div>
+</div>
+<div class="details-status pull-right"> <span class="animate-number" data-value="89" data-animation-duration="800">0</span>% </div>
+<div class="clearfix"></div>
+<div class="progress progress-small no-radius">
+<div class="progress-bar progress-bar-success animate-progress-bar" data-percentage="89%"></div>
+</div>
+</li>
+<li>
+<div class="details-wrapper">
+<div class="name">Local Visits</div>
+<div class="description">Our Overseas visits</div>
+</div>
+<div class="details-status pull-right"> <span class="animate-number" data-value="45" data-animation-duration="600">0</span>% </div>
+<div class="clearfix"></div>
+<div class="progress progress-small no-radius ">
+<div class="progress-bar progress-bar-warning animate-progress-bar" data-percentage="45%"></div>
+</div>
+</li>
+<li>
+<div class="details-wrapper">
+<div class="name">Other Visits</div>
+<div class="description">Our Overseas visits</div>
+</div>
+<div class="details-status pull-right"> <span class="animate-number" data-value="12" data-animation-duration="200">0</span>% </div>
+<div class="clearfix"></div>
+<div class="progress progress-small no-radius">
+<div class="progress-bar progress-bar-danger animate-progress-bar" data-percentage="12%"></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="tiles white col-md-8 col-sm-8 no-padding">
+<div class="tiles-chart">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<div class="tiles-body">
+<div class="tiles-title">GEO-LOCATIONS</div>
+<div class="heading"> 8,545,654 <i class="fa fa-map-marker"></i> </div>
+</div>
+<div id="world-map" style="height:405px"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<div class="row tiles-container spacing-bottom tiles grey">
+<div class="tiles white col-md-8 col-sm-8 no-padding">
+<div class="tiles-body">
+<div class="row">
+<div class="col-md-6 col-sm-6">
+<div class="mini-chart-wrapper">
+<div class="chart-details-wrapper">
+<div class="chartname"> New Orders </div>
+<div class="chart-value"> 17,555 </div>
+</div>
+<div class="mini-chart">
+<div id="mini-chart-orders"></div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6">
+<div class="mini-chart-wrapper">
+<div class="chart-details-wrapper">
+<div class="chartname"> My Balance </div>
+<div class="chart-value"> $17,555 </div>
+</div>
+<div class="mini-chart">
+<div id="mini-chart-other"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<div id="ricksaw"></div>
+<div class="clearfix"></div>
+</div>
+<div class="col-md-4 col-sm-4 no-padding">
+<div class="tiles grey ">
+<div class="tiles white no-margin">
+<div class="tiles-body">
+<div class="tiles-title blend"> OVERALL VIEWS </div>
+<div class="heading"> <span data-animation-duration="1000" data-value="432852" class="animate-number">0</span> </div>
+44% higher <span class="blend">than last month</span> </div>
+</div>
+<div id="legend"></div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8 col-sm-8">
+<div class="tiles white">
+<div class="tiles-body">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<div class="tiles-title"> NOTIFICATIONS </div>
+<br>
+<div class="notification-messages info">
+<div class="user-profile"> <img src="assets/img/profiles/c.jpg" alt="" data-src="assets/img/profiles/c.jpg" data-src-retina="assets/img/profiles/c2x.jpg" width="35" height="35"> </div>
+<div class="message-wrapper">
+<div class="heading"> David Nester - Commented on your wall </div>
+<div class="description"> Meeting postponed to tomorrow </div>
+</div>
+<div class="date pull-right"> Just now </div>
+<div class="clearfix"></div>
+</div>
+<div class="notification-messages danger">
+<div class="iconholder"> <i class="icon-warning-sign"></i> </div>
+<div class="message-wrapper">
+<div class="heading"> Server load limited </div>
+<div class="description"> Database server has reached its daily capicity </div>
+</div>
+<div class="date pull-right"> Yesterday </div>
+<div class="clearfix"></div>
+</div>
+<div class="notification-messages success">
+<div class="user-profile"> <img src="assets/img/profiles/h.jpg" alt="" data-src="assets/img/profiles/h.jpg" data-src-retina="assets/img/profiles/h2x.jpg" width="35" height="35"> </div>
+<div class="message-wrapper">
+<div class="heading"> You have've got 150 messages </div>
+<div class="description"> 150 newly unread messages in your inbox </div>
+</div>
+<div class="date pull-right"> Yesterday </div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 no-padding">
+<div class="tiles red weather-widget ">
+<div class="tiles-body">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<div class="tiles-title"> TODAY’S WEATHER </div>
+<div class="heading">
+<div class="pull-left"> Tuesday </div>
+<div class="pull-right"> 55 </div>
+<div class="clearfix"></div>
+</div>
+<div class="big-icon">
+<canvas id="partly-cloudy-day" width="120" height="120"></canvas>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="tile-footer">
+<div class="pull-left">
+<canvas id="wind" width="32" height="32"></canvas>
+<span class="text-white small-text-description">Windy</span> </div>
+<div class="pull-right">
+<canvas id="rain" width="32" height="32"></canvas>
+<span class="text-white small-text-description">Humidity</span> </div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="row spacing-bottom ">
+<div class="col-md-12">
+<div class="tiles white added-margin">
+<div class="tiles-body">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<div class="tiles-title"> SERVER LOAD </div>
+<div class="heading text-black "> 250 GB </div>
+<div class="progress  progress-small no-radius">
+<div class="progress-bar progress-bar-success animate-progress-bar" data-percentage="25%"></div>
+</div>
+<div class="description"> <span class="mini-description"><span class="text-black">250GB</span> of <span class="text-black">1,024GB</span> used</span> </div>
+</div>
+</div>
+<div class="tiles white added-margin">
+<div id="chart"> </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 col-sm-6 spacing-bottom">
+<div class="widget">
+<div class="widget-title dark">
+<div class="pull-left ">
+<button class="btn  btn-dark  btn-small" type="button"><i class="fa fa-plus"></i></button>
+</div>
+Todo list
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+</div>
+<div class="widget-body">
+<div class="col-md-12">
+<input type="text" class="form-control dark m-b-25" id="date">
+</div>
+<br>
+<div class="row-fluid">
+<div class="checkbox check-success  ">
+<input type="checkbox" value="1" id="chk_todo01" class="todo-list">
+<label for="chk_todo01">Send email to David, new signups</label>
+</div>
+</div>
+<div class="row-fluid">
+<div class="checkbox check-success  ">
+<input type="checkbox" checked="checked" value="1" id="chk_todo02" class="todo-list">
+<label for="chk_todo02" class="done">Call Jane!!</label>
+</div>
+</div>
+<div class="row-fluid">
+<div class="checkbox check-success  ">
+<input type="checkbox" value="1" id="chk_todo03" class="todo-list">
+<label for="chk_todo03">Server upgrades ASAP</label>
+</div>
+</div>
+<div class="row-fluid">
+<div class="checkbox check-success  ">
+<input type="checkbox" value="1" id="chk_todo04" class="todo-list">
+<label for="chk_todo04">Hello, new task</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-12 white col-sm-6">
+<div class="tiles purple added-margin" style="max-height:345px">
+<div class="tiles-body">
+<div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
+<h3 class="text-white "> <br>
+<br>
+<br>
+<span class="semi-bold">Steve Jobs</span> Time Capsule` is
+Finally Unearthed on <span class="semi-bold">Skyace News</span> </h3>
+<div class="blog-post-controls-wrapper">
+<div class="blog-post-control"> <a class="text-white" href="#"><i class="icon-heart"></i> 47k</a> </div>
+<div class="blog-post-control"> <a class="text-white" href="#"><i class="icon-comment"></i> 1584</a> </div>
+</div>
+<br>
+</div>
+</div>
+<div class="tiles white added-margin">
+<div class="tiles-body">
+<div class="row">
+<div class="user-comment-wrapper col-mid-12">
+<div class="profile-wrapper"> <img src="assets/img/profiles/d.jpg" alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35"> </div>
+<div class="comment">
+<div class="user-name"> David <span class="semi-bold">Cooper</span> </div>
+<div class="preview-wrapper"> What's the progress on the new project? </div>
+<div class="more-details-wrapper">
+<div class="more-details"> <i class="icon-time"></i> 12 mins ago </div>
+<div class="more-details"> <i class="icon-map-marker"></i> Near Florida </div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ 
+</div>
+</div>
+ 
+<div class="chat-window-wrapper">
+<div id="main-chat-wrapper" class="inner-content">
+<div class="chat-window-wrapper scroller scrollbar-dynamic" id="chat-users">
+<div class="chat-header">
+<div class="pull-left">
+<input type="text" placeholder="search">
+</div>
+<div class="pull-right">
+<a href="#" class=""><div class="iconset top-settings-dark "></div> </a>
+</div>
+</div>
+<div class="side-widget">
+<div class="side-widget-title">group chats</div>
+<div class="side-widget-content">
+<div id="groups-list">
+<ul class="groups">
+<li><a href="#"><div class="status-icon green"></div>Office work</a></li>
+<li><a href="#"><div class="status-icon green"></div>Personal vibes</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="side-widget fadeIn">
+<div class="side-widget-title">favourites</div>
+<div id="favourites-list">
+<div class="side-widget-content">
+<div class="user-details-wrapper active" data-chat-status="online" data-chat-user-pic="assets/img/profiles/d.jpg" data-chat-user-pic-retina="assets/img/profiles/d2x.jpg" data-user-name="Jane Smith">
+<div class="user-profile">
+<img src="assets/img/profiles/d.jpg" alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="user-name">
+Jane Smith
+</div>
+<div class="user-more">
+Hello you there?
+</div>
+</div>
+<div class="user-details-status-wrapper">
+<span class="badge badge-important">3</span>
+</div>
+<div class="user-details-count-wrapper">
+<div class="status-icon green"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="user-details-wrapper" data-chat-status="busy" data-chat-user-pic="assets/img/profiles/d.jpg" data-chat-user-pic-retina="assets/img/profiles/d2x.jpg" data-user-name="David Nester">
+<div class="user-profile">
+<img src="assets/img/profiles/c.jpg" alt="" data-src="assets/img/profiles/c.jpg" data-src-retina="assets/img/profiles/c2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="user-name">
+David Nester
+</div>
+<div class="user-more">
+Busy, Do not disturb
+</div>
+</div>
+<div class="user-details-status-wrapper">
+<div class="clearfix"></div>
+</div>
+<div class="user-details-count-wrapper">
+<div class="status-icon red"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="side-widget">
+<div class="side-widget-title">more friends</div>
+<div class="side-widget-content" id="friends-list">
+<div class="user-details-wrapper" data-chat-status="online" data-chat-user-pic="assets/img/profiles/d.jpg" data-chat-user-pic-retina="assets/img/profiles/d2x.jpg" data-user-name="Jane Smith">
+<div class="user-profile">
+<img src="assets/img/profiles/d.jpg" alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="user-name">
+Jane Smith
+</div>
+<div class="user-more">
+Hello you there?
+</div>
+</div>
+<div class="user-details-status-wrapper">
+</div>
+<div class="user-details-count-wrapper">
+<div class="status-icon green"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="user-details-wrapper" data-chat-status="busy" data-chat-user-pic="assets/img/profiles/d.jpg" data-chat-user-pic-retina="assets/img/profiles/d2x.jpg" data-user-name="David Nester">
+<div class="user-profile">
+<img src="assets/img/profiles/h.jpg" alt="" data-src="assets/img/profiles/h.jpg" data-src-retina="assets/img/profiles/h2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="user-name">
+David Nester
+</div>
+<div class="user-more">
+Busy, Do not disturb
+</div>
+</div>
+<div class="user-details-status-wrapper">
+<div class="clearfix"></div>
+</div>
+<div class="user-details-count-wrapper">
+<div class="status-icon red"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="user-details-wrapper" data-chat-status="online" data-chat-user-pic="assets/img/profiles/d.jpg" data-chat-user-pic-retina="assets/img/profiles/d2x.jpg" data-user-name="Jane Smith">
+<div class="user-profile">
+<img src="assets/img/profiles/c.jpg" alt="" data-src="assets/img/profiles/c.jpg" data-src-retina="assets/img/profiles/c2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="user-name">
+Jane Smith
+</div>
+<div class="user-more">
+Hello you there?
+</div>
+</div>
+<div class="user-details-status-wrapper">
+</div>
+<div class="user-details-count-wrapper">
+<div class="status-icon green"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="user-details-wrapper" data-chat-status="busy" data-chat-user-pic="assets/img/profiles/d.jpg" data-chat-user-pic-retina="assets/img/profiles/d2x.jpg" data-user-name="David Nester">
+<div class="user-profile">
+<img src="assets/img/profiles/h.jpg" alt="" data-src="assets/img/profiles/h.jpg" data-src-retina="assets/img/profiles/h2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="user-name">
+David Nester
+</div>
+<div class="user-more">
+Busy, Do not disturb
+</div>
+</div>
+<div class="user-details-status-wrapper">
+<div class="clearfix"></div>
+</div>
+<div class="user-details-count-wrapper">
+<div class="status-icon red"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="chat-window-wrapper" id="messages-wrapper" style="display:none">
+<div class="chat-header">
+<div class="pull-left">
+<input type="text" placeholder="search">
+</div>
+<div class="pull-right">
+<a href="#" class=""><div class="iconset top-settings-dark "></div> </a>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="chat-messages-header">
+<div class="status online"></div><span class="semi-bold">Jane Smith(Typing..)</span>
+<a href="#" class="chat-back"><i class="icon-custom-cross"></i></a>
+</div>
+<div class="chat-messages scrollbar-dynamic clearfix">
+<div class="inner-scroll-content clearfix">
+<div class="sent_time">Yesterday 11:25pm</div>
+<div class="user-details-wrapper ">
+<div class="user-profile">
+<img src="assets/img/profiles/d.jpg" alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="bubble">
+Hello, You there?
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="sent_time off">Yesterday 11:25pm</div>
+</div>
+<div class="user-details-wrapper ">
+<div class="user-profile">
+<img src="assets/img/profiles/d.jpg" alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="bubble">
+How was the meeting?
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="sent_time off">Yesterday 11:25pm</div>
+</div>
+<div class="user-details-wrapper ">
+<div class="user-profile">
+<img src="assets/img/profiles/d.jpg" alt="" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35">
+</div>
+<div class="user-details">
+<div class="bubble">
+Let me know when you free
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="sent_time off">Yesterday 11:25pm</div>
+</div>
+<div class="sent_time ">Today 11:25pm</div>
+<div class="user-details-wrapper pull-right">
+<div class="user-details">
+<div class="bubble sender">
+Let me know when you free
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="sent_time off">Sent On Tue, 2:45pm</div>
+</div>
+</div>
+</div>
+<div class="chat-input-wrapper" style="display:none">
+<textarea id="chat-message-input" rows="1" placeholder="Type your message"></textarea>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+ 
+ 
+</div>
+    
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-1.8.3.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/boostrapv3/js/bootstrap.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/breakpoints.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-unveil/jquery.unveil.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-scrollbar/jquery.scrollbar.min.js'?>"></script>
+
+<script src="<?php echo base_url() .'assets/students/plugins/pace/pace.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-numberAnimate/jquery.animateNumbers.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-block-ui/jqueryblockui.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/bootstrap-select2/select2.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-ricksaw-chart/js/raphael-min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-ricksaw-chart/js/d3.v2.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-ricksaw-chart/js/rickshaw.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-morris-chart/js/morris.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-slider/jquery.sidr.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-jvectormap/js/jquery-jvectormap-1.2.2.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-jvectormap/js/jquery-jvectormap-us-lcc-en.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-sparkline/jquery-sparkline.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-flot/jquery.flot.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/jquery-flot/jquery.flot.animator.min.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/plugins/skycons/skycons.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/js/core.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/js/chat.js'?>"></script>
+<script src="<?php echo base_url() .'assets/students/js/demo.js'?>"></script>
 </body>
-
-
-<!-- Mirrored from ndesaintheme.com/themes/cannavaro/v1.3/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Dec 2014 20:03:00 GMT -->
 </html>
