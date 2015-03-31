@@ -10,7 +10,7 @@ class Student extends MY_Controller
 		parent::__construct();
 		$this->load->model("student_model");
 		$this->checkLogin('Student');
-		print_r($this->fetchuserdetails());die;	
+		// print_r($this->fetchuserdetails());die;	
 		
 	}
 
